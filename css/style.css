@@ -1,0 +1,209 @@
+/* COMMON CORE STYLES */
+
+html, body{
+   overflow-x: hidden;
+ }
+ body {
+   font-family: Helvetica, Arial, sans-serif;
+   color:#333333;
+   background-color: #FFFFFF;
+   font-size: small;
+ }
+ h1, h2, h3, h4, h5, h6 {
+   font-family: Helvetica, Arial, sans-serif;
+   margin: 0;
+   padding: 0;
+ }
+
+ h2 {
+   font-size:28px;
+   font-weight: normal;
+   margin-bottom: 5px;
+ }
+
+ p {
+   font-size:16px;
+   line-height: 19px;
+   font-weight: 100;
+   margin: 0;
+   padding: 0;
+ }
+
+ ul{
+   padding: 0;
+   margin: 0;
+   list-style: none;
+ }
+
+div {
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+}
+
+
+/* ==================  GRID DESIGN  ================== */
+
+.grid-container {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(8 50px);
+  border: 1px solid black;
+  grid-template-areas:
+  "about about"
+  "project1 project2"
+  "project1 project2"
+  "project3 project4"
+  "project5 project5"
+  "project6 project6";
+  margin: auto;
+  margin-top: 10vw;
+  margin-bottom: 10vw;
+  border:0;
+}
+
+.project {
+  position: relative;
+}
+
+.about-me {
+  grid-area: about;
+  padding-top:50%;
+}
+.project-one {
+  grid-area: project1;
+  padding-top:200%;
+}
+.project-two {
+  grid-area: project2;
+  padding-top:200%;
+}
+.project-three {
+  grid-area: project3;
+  padding-top:100%;
+}
+.project-four {
+  grid-area: project4;
+  padding-top:100%;
+}
+.project-five {
+  grid-area: project5;
+  padding-top:50%;
+}
+.project-six {
+  grid-area: project6;
+  padding-top:50%;
+}
+
+.project > div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+/* ==================  RESPONSIVE DESIGN  ================== */
+
+@media (min-width: 376px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "project1 about about"
+    "project1 project3 project4"
+    "project5 project5 project2"
+    "project6 project6 project2";
+  }
+  .project-one {
+    padding-top:100%;
+  }
+  .project-two {
+    padding-top:100%;
+  }
+}
+
+
+@media (min-width: 769px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "project1 about about project2"
+    "project1 project5 project5 project2"
+    "project6 project6 project3 project4";
+  }
+}
+
+/* =========== TILE DESIGN ======================= */
+
+.project > div {
+  /*display: none;*/
+}
+
+.project > div.visible {
+  display: inline-block;
+}
+
+
+.project > div {
+  width: 100%;
+  height: 100%;
+}
+
+.side1 {
+  z-index: 10;
+}
+
+.side2 {
+  z-index: 5;
+}
+
+.about-me .side1 {
+    background-color: #287324;
+
+}
+.about-me .side2 {
+    background-color: #085304;
+}
+
+.project-one .side1 {
+    background-color: #947498;
+}
+.project-one .side2 {
+    background-color: #745478;
+}
+
+.project-two .side1 {
+  background-color: #939847;
+}
+.project-two .side2 {
+  background-color: #737827;
+}
+
+.project-three .side1 {
+  background-color: #509684;
+}
+.project-three .side2 {
+  background-color: #307664;
+}
+
+.project-four .side1 {
+  background-color: #492612;
+}
+.project-four .side2 {
+  background-color: #290600;
+}
+
+.project-five .side1 {
+  background-color: #490375;
+}
+.project-five .side2 {
+  background-color: #290055;
+}
+
+.project-six .side1 {
+  background-color: #593722;
+}
+.project-six .side2 {
+  background-color: #391702;
+}
