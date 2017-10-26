@@ -1,79 +1,47 @@
 <!DOCTYPE html>
  <html lang="en-us">
- <head>
-   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <meta charset="UTF-8">
-   <title>Organize your worlds | Scribefile</title>
+   <head>
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <meta charset="UTF-8">
+     <title>The Portfolio of Josh Christofferson</title>
 
-   <!-- Google Fonts -->
-
-
-   <!-- Stylesheets -->
-   <link rel="stylesheet" href="css/normalize.css" />
-   <link rel="stylesheet" href="css/style.css" />
-   <link rel="stylesheet" href="css/animate.css" />
+     <!-- Google Fonts -->
 
 
- </head>
- <body>
+     <!-- Stylesheets -->
+     <link rel="stylesheet" href="css/normalize.css" />
+     <link rel="stylesheet" href="css/style.css" />
+     <link rel="stylesheet" href="css/animate.css" />
+   </head>
 
-<div class="grid-container">
+  <body>
 
-<div class="about-me project">
-  <div class="ab visible side1">about me front</div>
-  <div class="ab side2">about me back</div>
-</div>
-<div class="project-one project">
-  <div class="p1 visible side1">project 1 front</div>
-  <div class="p1 side2">project 1 back</div>
-</div>
-<div class="project-two project">
-  <div class="p2 visible side1">project 2 front</div>
-  <div class="p2 side2">project 2 back</div>
-</div>
-<div class="project-three project">
-  <div class="p3 visible side1">project 3 front</div>
-  <div class="p3 side2">project 3 back</div>
-</div>
-<div class="project-four project">
-  <div class="p4 visible side1">project 4 front</div>
-  <div class="p4 side2">project 4 back</div>
-</div>
-<div class="project-five project">
-  <div class="p5 visible side1">project 5 front</div>
-  <div class="p5 side2">project 5 back</div>
-</div>
-<div class="project-six project">
-  <div class="p6 visible side1">project 6 front</div>
-  <div class="p6 side2">project 6 back</div>
-</div>
+   <ul class="card-front">
+     <li>box 1: 1x2</li>
+     <li>box 2: 1x2</li>
+     <li>box 3: 2x1</li>
+     <li>box 4: 2x1</li>
+     <li>box 5: 1x1</li>
+     <li>box 6: 2x1</li>
+     <li>box 7: 1x1</li>
+   </ul>
+   <br>
+   <ul class="card-expanded">
+     <li>box 1: expanded</li>
+     <li>box 2: expanded</li>
+     <li>box 3: expanded</li>
+     <li>box 4: expanded</li>
+     <li>box 5: expanded</li>
+     <li>box 6: expanded</li>
+     <li>box 7: expanded</li>
+   </ul>
 
-</div>
 
-<script src="js/jquery-3.2.1.min.js"></script>
-<script type="text/javascript">
+  <!-- Javascript -->
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/velocity.min.js"></script>
+  <script src="js/grow-shrink.js"></script>
 
-/*
-WHEN A RECTANGULAR REGION (.PROJECT) IS CLICKED ON, CHECK
-TO SEE IF THE FIRST CHILD (FRONT SIDE) IS FLAGGED AS VISIBLE.
-IF VISIBLE, FADE OUT AND REMOVE TAG. IF NOT, FADE IN AND
-ADD TAG.
-*/
-$(document).ready(function(){
-     $( ".project" ).click(function() {
-       if ($(this).children().eq(0).hasClass("visible"))
-       {
-         $(this).children().eq(0).fadeOut(500);
-       }
-       else
-       {
-         $(this).children().eq(0).fadeIn(500);
-       }
-       $(this).children().eq(0).toggleClass("visible", 200);
-     });
-   });
-</script>
-
- </body>
+  </body>
  </html>
