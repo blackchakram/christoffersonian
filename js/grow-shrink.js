@@ -36,15 +36,23 @@ $(window).resize(function() {
 // before the animation moves and sets the card to overlay
 // the front card before expanding.
 $(".card-front li").click(function() {
+  var $opacify = $(this).children('.opacify');
   var $indexNo = $(this).index();
+  var $expanded = $('.card-expanded li').eq($indexNo);
+  var $unopacify = $('.card-expanded .unopacify').eq($indexNo);
 
-  $('.card-expanded li').eq($indexNo).css("width", $(this).width() + "px");
-  $('.card-expanded li').eq($indexNo).css("height", $(this).height() + "px");
-  $('.card-expanded li').eq($indexNo).css("display", "list-item");
-  $('.card-expanded li').eq($indexNo).css("top", $(this).offset().top + "px");
-  $('.card-expanded li').eq($indexNo).css("left", $(this).offset().left + "px");
+  $opacify.velocity({opacity:0}, 500);
 
-  $('.card-expanded li').eq($indexNo).velocity({width: "80vw", height: $gridDimensions.height() + "px", top: $coords.top + "px", left: $coords.left + "px" }, {easing: "ease-in-out"});
+  $expanded.css("width", $(this).width() + "px");
+  $expanded.css("height", $(this).height() + "px");
+  setTimeout(function() { $expanded.css("display", "list-item");  }, 500);
+  $expanded.css("top", $(this).offset().top + "px");
+  $expanded.css("left", $(this).offset().left + "px");
+
+  $expanded.velocity({width: "80vw", height: $gridDimensions.height() + "px", top: $coords.top + "px", left: $coords.left + "px" }, {delay: 500, easing: "ease-in-out"});
+
+  $unopacify.velocity({opacity:1}, {duration:500, delay:1000});
+
 });
 
 
@@ -54,6 +62,12 @@ $(".card-front li").click(function() {
 $(".card-expanded li").click(function() {
   var $indexNo = $(this).index();
   var $targeted = $('.card-front li').eq($indexNo);
+  var $unopacify = $(this).children('.unopacify');
+  var $opacify = $('.card-front .opacify').eq($indexNo);
 
-  $(this).velocity({width: $targeted.width() + "px", height: $targeted.height() + "px", top: $targeted.offset().top + "px", left: $targeted.offset().left + "px" }, {display: "none"});
+  $unopacify.velocity({opacity:0}, 500);
+
+  $(this).velocity({width: $targeted.width() + "px", height: $targeted.height() + "px", top: $targeted.offset().top + "px", left: $targeted.offset().left + "px" }, {delay: 500, display: "none"});
+
+  $opacify.velocity({opacity:1}, {duration:500, delay:1000});
 });

@@ -3,25 +3,36 @@ body{
    overflow-x: hidden;
  }
  body {
-   font-family: Helvetica, Arial, sans-serif;
+   font-family:"Rokkitt", Helvetica, Arial, serif;
+/*   font-size: 2vw;*/
    color:#333333;
    background-color: #FFFFFF;
-   font-size: small;
  }
- h1, h2, h3, h4, h5, h6 {
-   font-family: Helvetica, Arial, sans-serif;
+ h1, h2, h3, h4, h5, h6, .sigprinted {
+   font-family: "Exo 2", Helvetica, Arial, sans-serif;
+   font-size: 6vw;
    margin: 0;
    padding: 0;
  }
 
- h2 {
-   font-size:28px;
-   font-weight: normal;
-   margin-bottom: 5px;
- }
+h1 {
+  font-weight: 200;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-left: 3vw;
+  font-size: 2em;
+}
 
- p {
-   font-size:16px;
+h2 {
+  font-size: 5.75vw;
+}
+
+h3 {font-size: 2.5vw;}
+h4 {font-size: 2.25vw;}
+h5 {font-size: 2vw;}
+h6 {font-size: 2vw;}
+
+p {
    line-height: 19px;
    font-weight: 100;
    margin: 0;
@@ -38,9 +49,7 @@ body{
 div {
   padding: 0;
   margin: 0;
-  display: inline-block;
 }
-
 
 /* ========= FRONT CARD PROPERTIES ============== */
 .card-front {
@@ -57,8 +66,27 @@ div {
 }
 
 .card-front li:nth-child(1) {
-  background-color: #193752;
-  grid-column: span 2; }
+  position: relative;
+  background-color: #F0F0F0;
+  grid-column: span 2;
+}
+
+#sig {
+  position: relative;
+  float: right;
+  width: 60%;
+  top: 4vw;
+  padding-right: 5%;
+}
+
+.sigprinted {
+  position: relative;
+  clear: right;
+  float: right;
+  right: 5%;
+  padding-top: 4vw;
+  font-weight: 200;
+}
 
 .card-front li:nth-child(2) {
   background-color: #496739;
@@ -67,7 +95,6 @@ div {
 .card-front li:nth-child(3) {
   background-color: #926583;
   grid-row: span 2; }
-
 
 .card-front li:nth-child(4) {
   background-color: #482653;
@@ -91,15 +118,57 @@ div {
   z-index: 100;
   width: 0;
   height: 0;
+  overflow-y: scroll;
 }
 
-.card-expanded li:nth-child(1) { background-color: #193752; }
+.card-expanded li::-webkit-scrollbar {
+    display: none;
+}
+
+.unopacify {
+  opacity: 0;
+}
+
+.card-expanded li:nth-child(1) { background-color: #F0F0F0; }
 .card-expanded li:nth-child(2) { background-color: #496739; }
 .card-expanded li:nth-child(3) { background-color: #926583; }
 .card-expanded li:nth-child(4) { background-color: #482653; }
 .card-expanded li:nth-child(5) { background-color: #695735; }
 .card-expanded li:nth-child(6) { background-color: #927593; }
 .card-expanded li:nth-child(7) { background-color: #307283; }
+
+h2, .sigprinted{
+  font-weight: normal;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.card-expanded #sig {
+  width: 165px;
+  padding-bottom: 2.2vw;
+}
+
+.card-expanded .sigprinted {
+  padding-top: 25px;
+  font-size: 1.2em;
+}
+
+.sectitle {
+  padding-top: 160px;
+  padding-bottom: 15px;
+}
+
+.imgpara img {
+   width: 75px;
+   float: left;
+   padding-right: 20px;
+   padding-bottom: 10px;
+ }
+
+.imgpara {
+  clear: both;
+  padding: 20px 3vw 20px;
+}
 
 
 /* =============== RESPONSIVE DESIGN ============== */
@@ -108,11 +177,43 @@ div {
     grid-template-columns: repeat(3, calc(80vw/3));
     grid-auto-rows: calc(80vw/3);
   }
+  h2, .sigprinted{
+    font-size: 3.75vw;
+  }
+  /* ====== ABOUT ME ====== */
+  .sectitle {
+/*    padding-top: 32vw;*/
+  }
 }
+
 
 @media (min-width: 800px) {
   .card-front {
     grid-template-columns: repeat(4, calc(80vw/4));
     grid-auto-rows: calc(80vw/4);
+  }
+  /* ====== ABOUT ME ====== */
+  h2, .sigprinted{
+    font-size: 2.85vw;
+  }
+  .card-expanded .sigprinted {
+/*    padding-top: 6vw;*/
+  }
+  .sectitle {
+/*    padding-top: 15vw;*/
+  }
+}
+
+
+@media (min-width: 1300px) {
+  .card-front {
+    grid-template-columns: repeat(5, calc(80vw/5));
+    grid-auto-rows: calc(80vw/5);
+  }
+  h2, .sigprinted{
+    font-size: 2.2vw;
+  }
+  .sectitle {
+    padding-bottom: 3vw;
   }
 }
