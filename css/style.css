@@ -1,10 +1,7 @@
 /* ========= PRE-FORMATTING STRIPPING ========== */
-body{
-   overflow-x: hidden;
- }
  body {
+   overflow: hidden;
    font-family:"Rokkitt", Helvetica, Arial, serif;
-/*   font-size: 2vw;*/
    color:#333333;
    background-color: #FFFFFF;
  }
@@ -53,15 +50,14 @@ div {
 
 /* ========= FRONT CARD PROPERTIES ============== */
 .card-front {
-  width: 80vw;
+  width: 90vw;
   display: grid;
   grid-auto-flow: dense;
   grid-gap: 0px;
-  grid-template-columns: repeat(2, calc(80vw/2));
-  grid-auto-rows: calc(80vw/2);
+  grid-template-columns: repeat(2, calc(90vw/2));
+  grid-auto-rows: calc(93vh/6);
   margin: auto;
-  margin-top: 10vw;
-  margin-bottom: 10vw;
+  margin-top: 5vh;
   border: 0;
 }
 
@@ -174,8 +170,8 @@ h2, .sigprinted{
 /* =============== RESPONSIVE DESIGN ============== */
 @media (min-width: 500px) {
   .card-front {
-    grid-template-columns: repeat(3, calc(80vw/3));
-    grid-auto-rows: calc(80vw/3);
+    grid-template-columns: repeat(3, calc(90vw/3));
+    grid-auto-rows: calc(93vh/4);
   }
   h2, .sigprinted{
     font-size: 3.75vw;
@@ -189,8 +185,8 @@ h2, .sigprinted{
 
 @media (min-width: 800px) {
   .card-front {
-    grid-template-columns: repeat(4, calc(80vw/4));
-    grid-auto-rows: calc(80vw/4);
+    grid-template-columns: repeat(4, calc(90vw/4));
+    grid-auto-rows: calc(93vh/3);
   }
   /* ====== ABOUT ME ====== */
   h2, .sigprinted{
@@ -207,8 +203,8 @@ h2, .sigprinted{
 
 @media (min-width: 1300px) {
   .card-front {
-    grid-template-columns: repeat(5, calc(80vw/5));
-    grid-auto-rows: calc(80vw/5);
+    grid-template-columns: repeat(5, calc(90vw/5));
+    grid-auto-rows: calc(93vh/3);
   }
   h2, .sigprinted{
     font-size: 2.2vw;
