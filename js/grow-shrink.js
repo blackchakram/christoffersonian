@@ -41,6 +41,8 @@ $(".card-front li").click(function() {
   var $expanded = $('.card-expanded li').eq($indexNo);
   var $unopacify = $('.card-expanded .unopacify').eq($indexNo);
 
+if ($indexNo != 0)
+  {
   $opacify.velocity({opacity:0}, 500);
 
   $expanded.css("width", $(this).width() + "px");
@@ -52,6 +54,7 @@ $(".card-front li").click(function() {
   $expanded.velocity({width: "90vw", height: $gridDimensions.height() + "px", top: $coords.top + "px", left: $coords.left + "px" }, {delay: 500, easing: "ease-in-out"});
 
   $unopacify.velocity({opacity:1}, {duration:500, delay:1000});
+  }
 
 });
 
