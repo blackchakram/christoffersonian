@@ -144,7 +144,7 @@ div {
 }
 
 .card-front li:nth-child(11) {
-  background-color: #FDFDFD;
+  background-color: #F22222;
 }
 
 
@@ -215,6 +215,10 @@ h2, .sigprinted{
   padding-left: 95px;
 }
 
+.case-pageview {
+  width: 98vw;
+}
+
 /* =============== RESPONSIVE DESIGN ============== */
 @media (min-width: 500px) {
   .card-front {
@@ -241,6 +245,10 @@ h2, .sigprinted{
   /* ====== ABOUT ME ====== */
   .centerit{
     padding-top:2.5vh;
+  }
+
+  .case-pageview {
+    width: 90vw;
   }
 
 }

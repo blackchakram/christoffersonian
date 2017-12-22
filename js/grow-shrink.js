@@ -22,7 +22,8 @@ $(window).resize(function() {
   jQuery.each($('.card-expanded li'), function() {
     if( $(this).css('display') != 'none' ) {
       console.log("test2");
-      $(this).css("width", "90vw");
+      if ($(window).width() < 500) {$(this).css("width", "98vw");}
+      if ($(window).width() >= 500) {$(this).css("width", "90vw");}
       $(this).css("height", $gridDimensions.height() + "px");
       $(this).css("top", $coords.top + "px");
       $(this).css("left", $coords.left + "px");
@@ -51,7 +52,8 @@ if ($indexNo != 0)
   $expanded.css("top", $(this).offset().top + "px");
   $expanded.css("left", $(this).offset().left + "px");
 
-  $expanded.velocity({width: "90vw", height: $gridDimensions.height() + "px", top: $coords.top + "px", left: $coords.left + "px" }, {delay: 500, easing: "ease-in-out"});
+  if ($(window).width() < 500) {$expanded.velocity({width: "98vw", height: $gridDimensions.height() + "px", top: $coords.top + "px", left: $coords.left + "px" }, {delay: 500, easing: "ease-in-out"});}
+  if ($(window).width() >= 500) {$expanded.velocity({width: "90vw", height: $gridDimensions.height() + "px", top: $coords.top + "px", left: $coords.left + "px" }, {delay: 500, easing: "ease-in-out"});}
 
   $unopacify.velocity({opacity:1}, {duration:500, delay:1000});
   }
