@@ -75,4 +75,5 @@ $(".card-expanded li").click(function() {
   $(this).velocity({width: $targeted.width() + "px", height: $targeted.height() + "px", top: $targeted.offset().top + "px", left: $targeted.offset().left + "px" }, {delay: 500, display: "none"});
 
   $opacify.velocity({opacity:1}, {duration:500, delay:1000});
+
 });
