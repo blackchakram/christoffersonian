@@ -3,6 +3,7 @@
    font-family:"Rokkitt", Helvetica, Arial, serif;
    color:#333333;
    background-color: #FFFFFF;
+   overflow-x: hidden;
  }
  h1, h2, h3, h4, h5, h6, .sigprinted, .logotitles{
    font-family: "Exo 2", Helvetica, Arial, sans-serif;
@@ -48,22 +49,35 @@ div {
 }
 
 /* ========= FRONT CARD PROPERTIES ============== */
+li {
+  position: relative;
+  display: inline;
+}
+
 .icons{
   clear: both;
-  width: 8vh;
+  width: 28vw;
 }
 
 .centerparent{
-  display: inline;
-  position: relative;
+  height: 100%;
+  width: 100%;
 }
 
 .centerit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   opacity: inherit;
   text-align: center;
   width: 100%;
+  height: 100%;
   font-family: "Exo 2", Helvetica, Arial, sans-serif;
   font-size: 2vh;
+}
+
+.centerit img, .centerit pre {
+  clear: both;
 }
 
 .card-front {
@@ -73,29 +87,29 @@ div {
   grid-template-columns: repeat(4, 24vw);
   grid-auto-rows: 24vw;
   margin: auto;
-  margin-top: 2vh;
   border: 0;
 }
 
   #sig {
     position: relative;
-    float: left;
-    width: 30vh;
-    padding-left: 5%;
+    float: right;
+    width: 60vw;
+    padding-right: 5%;
+    padding-top: 4vw;
   }
 
   .sigprinted {
     position: relative;
-    clear: left;
-    float: left;
-    left: 1%;
-    padding-top: -1vh;
+    float: right;
+    padding-right: 5%;
+    padding-top: -1%;
+    font-size: 80%;
   }
 
   .logotitles {
     clear: both;
-    padding-top: 1vh;
-    font-size: 2.2vh;
+    padding-top: 20px;
+    font-size: 4.2vw;
   }
 
 /* ========= EXPANDED CARD PROPERTIES ======== */
@@ -153,21 +167,20 @@ h2, .sigprinted{
   padding-left: 95px;
 }
 
-.case-pageview {
-  width: 98vw;
-}
-
-
 .ex_about{background-color: #F3F3F3;}
 .ex_hh {background-color: #D4F4CF;}
+.ex_airport {background-color: #CFE6F4;}
+.ex_corn {background-color: #F4E9CF;}
 
 
 .drk1, .drk2, .drk3, .drk4, .drk5, .drk6, .drk7 {
   background-color: #E8E8E8;
+  opacity: 0;
 }
 
 .med1, .med2, .med3, .med4, .med5, .med6 {
   background-color: #F5F5F5;
+  opacity: 0;
 }
 
 .c_sig {
@@ -178,6 +191,7 @@ h2, .sigprinted{
 .c_abt, .c_hlp, .c_crn, .c_apt {
   background-position: center;
   background-size: cover;
+  opacity: 0;
 }
 
 .c_abt {
@@ -214,6 +228,70 @@ h2, .sigprinted{
 .med5 {display: none;}
 .med6 {display: none;}
 
+
+
+/* ========== BACKGROUND SQUARES ========== */
+
+.bg_squares {
+  display: grid;
+  grid-template-columns: repeat(6, calc(96vw/6));
+  grid-template-rows: repeat(23, calc(96vw/6));
+}
+
+.bg_squares li {
+  position: relative;
+  display: inline;
+  width: 100%;
+  height: 100%;
+}
+
+.bg_squares li:nth-of-type(9n+2) {
+  background-color: #C7E6C2;
+  grid-column: span 3;
+  grid-row: span 3;
+}
+
+.bg_squares li:nth-of-type(6n-1) {
+  background-color: #C7E6C2;
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.bg_squares li:nth-of-type(3n) {
+  background-color: #C7E6C2;
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.bg_squares li:nth-of-type(8n-3) {
+  background-color: #DDF6D8;
+  grid-column: span 3;
+  grid-row: span 3;
+}
+
+.bg_squares li:nth-of-type(7n) {
+  background-color: #DDF6D8;
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.bg_squares li:nth-of-type(5n-1) {
+  background-color: #DDF6D8;
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+
+.case-pageview {
+
+  grid-column: 3 / span 4;
+  grid-row: span 7;
+}
+
+.case-pageview img {
+  width: 100%;
+}
+
 /* =============== RESPONSIVE DESIGN ============== */
 @media (min-width: 500px) {
 
@@ -222,12 +300,29 @@ h2, .sigprinted{
   }
 
 #sig {
-  padding-right: 5%;
+  position: relative;
+  float: right;
+  width: 40vw;
+  padding-right: -2%;
+  padding-top: 4vw;
 }
 
+.sigprinted {
+  position: relative;
+  float: right;
+  padding-right: -2%;
+  padding-top: -1%;
+  font-size: 55%;
+}
+
+
   .icons {
-    width: 14vh;
+    width: 20vw;
   }
+
+ .logotitles {
+   font-size: 3vw;
+ }
 
   .card-front {
     width: 90vw;
@@ -238,7 +333,7 @@ h2, .sigprinted{
 
   /* ====== ABOUT ME ====== */
   .centerit{
-    padding-top:2.5vh;
+    padding-top:1vh;
   }
 
   .case-pageview {
@@ -265,20 +360,46 @@ h2, .sigprinted{
   .med4 {grid-area: 7 / 6 / 8 / 7; display: inherit;}
   .med5 {grid-area: 9 / 2 / 10 / 3 display: inherit;}
   .med6 {display: none;}
+
+  .bg_squares {
+    grid-template-columns: repeat(8, calc(90vw/8));
+    grid-template-rows: repeat(18, calc(90vw/8));
+  }
+
 }
 
 
 @media (min-width: 800px) {
 
+  #sig {
+    position: relative;
+    float: right;
+    width: 30vw;
+    padding-right: -10%;
+    padding-top: 4vw;
+  }
+
+  .sigprinted {
+    position: relative;
+    float: right;
+    padding-right: -10%;
+    padding-top: -1vw;
+    font-size: 40%;
+  }
+
   /* ====== ABOUT ME ====== */
   .centerit{
-    padding-top:5vh;
+    padding-top:1vh;
   }
 
   .logotitles {
     clear: both;
-    padding-top: 3vh;
-    font-size: 2.2vh;
+    padding-top: 30px;
+    font-size: 2.2vw;
+  }
+
+  .icons {
+    width: 15vw;
   }
 
 .card-front {
@@ -287,13 +408,13 @@ h2, .sigprinted{
 }
 
 
-.c_abt {grid-area: 3 / 7 / 5 / 9;}
+.c_abt {grid-area: 3 / 1 / 5 / 3;}
 .c_hlp {grid-area: 2 / 5 / 6 / 7;}
 .c_crn {grid-area: 6 / 5 / 10 / 9;}
 .c_apt {grid-area: 6 / 1 / 8 / 5;}
 
 .drk1 {grid-area: 1 / 5 / 2 / 6;}
-.drk2 {grid-area: 3 / 1 / 5 / 3;}
+.drk2 {grid-area: 3 / 7 / 5 / 9;}
 .drk3 {grid-area: 3 / 4 / 4 / 5;}
 .drk4 {grid-area: 5 / 8 / 6 / 9; display: inherit;}
 .drk5 {grid-area: 8 / 2 / 9 / 3; display: inherit;}
@@ -307,11 +428,42 @@ h2, .sigprinted{
 .med5 {grid-area: 5 / 7 / 6 / 8; display: inherit;}
 .med6 {grid-area: 8 / 3 / 10 / 5; display: inherit;}
 
+.bg_squares {
+  display: grid;
+  grid-template-columns: repeat(10, calc(90vw/10));
+  grid-template-rows: repeat(14, calc(90vw/10));
+}
 
 }
 
 
 @media (min-width: 1300px) {
+
+  #sig {
+    position: relative;
+    float: right;
+    width: 25vw;
+    padding-right: -10%;
+    padding-top: 4vw;
+  }
+
+  .sigprinted {
+    position: relative;
+    float: right;
+    padding-right: -10%;
+    padding-top: -5vw;
+    font-size: 35%;
+  }
+
+  .logotitles {
+    clear: both;
+    padding-top: 30px;
+    font-size: 1.6vw;
+  }
+
+  .icons {
+    width: 10vw;
+  }
 
   .sectitle {
     padding-bottom: 3vw;
@@ -342,5 +494,10 @@ h2, .sigprinted{
   .med5 {grid-area: 6 / 5 / 8 / 7;}
   .med6 {display: none;}
 
+  .bg_squares {
+    display: grid;
+    grid-template-columns: repeat(12, calc(90vw/12));
+    grid-template-rows: repeat(9, calc(90vw/12));
+  }
 
 }
