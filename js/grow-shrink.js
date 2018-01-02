@@ -18,12 +18,18 @@ $(window).resize(function() {
   $gridDimensions = $('.card-front');
   $expandedBox = $('.card-expanded li');
   $coords = $('.card-front').offset();
+  $bg_squares = $('.bg_squares');
 
-  jQuery.each($('.card-expanded li'), function() {
+  jQuery.each($('.card-expanded > li'), function() {
     if( $(this).css('display') != 'none' ) {
-      console.log("test2");
-      if ($(window).width() < 500) {$(this).css("width", "96vw");}
-      if ($(window).width() >= 500) {$(this).css("width", "90vw");}
+      if ($(window).width() < 500) {
+        $(this).css("width", "96vw");
+        $bg_squares.css("width", "96vw");
+      }
+      if ($(window).width() >= 500) {
+        $(this).css("width", "90vw");
+        $bg_squares.css("width", "90vw");
+      }
       $(this).css("height", $gridDimensions.height() + "px");
       $(this).css("top", $coords.top + "px");
       $(this).css("left", $coords.left + "px");
