@@ -30,7 +30,6 @@ h5 {font-size: 2vw;}
 h6 {font-size: 2vw;}
 
 p {
-   line-height: 19px;
    font-weight: 100;
    margin: 0;
    padding: 0;
@@ -234,10 +233,11 @@ h2, .sigprinted{
 /* ========== BACKGROUND SQUARES ========== */
 
 .bg_squares {
+  position: relative;
   display: grid;
   width: 96vw;
-  grid-template-columns: repeat(6, calc(96vw/6));
-  grid-template-rows: repeat(23, calc(96vw/6));
+  grid-template-columns: repeat(12, calc(96vw/12));
+  grid-template-rows: repeat(60, calc(96vw/12));
   margin: auto;
   border: 0;
 }
@@ -287,13 +287,124 @@ h2, .sigprinted{
 
 
 .case-pageview {
-  grid-column: 4 / span 3;
-  grid-row: span 6;
+  grid-column: 7 / span 6;
+  grid-row: span 12;
 }
 
 .case-pageview img {
   width: 100%;
 }
+
+.bg_squares li.light-section {
+  background-color: #F3F9EF;
+  border: solid #DDDDDD 0.5px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.bg_squares li.case-title {
+  position: absolute;
+  grid-column: 1 / span 6;
+  grid-row: 1 / span 2;
+  font-family: "Exo 2", Helvetica, Arial, sans-serif;
+  font-weight: lighter;
+  font-size: 5vw;
+  text-align: center;
+  padding-top: 2vw;
+}
+
+.bg_squares li.sec-toc {
+  position: absolute;
+  grid-column: 1 / span 6;
+  grid-row: 3 / span 5;
+}
+
+.bg_squares li.overview-title {
+  position: absolute;
+  grid-column: 1 / span 6;
+  grid-row: 9 / span 1
+}
+
+.bg_squares li h2 {
+  padding-top: 3vw;
+  text-align: left;
+  font-size: 3.7vw;
+}
+
+.bg_squares li.sec-about {
+  position: absolute;
+  grid-column: 1 / span 6;
+  grid-row: 10 / span 5;
+}
+
+.bg_squares li.sec-objectives {
+  position: absolute;
+  grid-column: 7 / span 6;
+  grid-row: 13 / span 6;
+}
+
+.bg_squares li.process-title {
+  position: absolute;
+  grid-column: 1 / span 6;
+  grid-row: 20 / span 1
+}
+
+.bg_squares li.sec-research {
+  position: absolute;
+  grid-column: 1 / span 6;
+  grid-row: 21 / span 6;
+}
+
+.bg_squares li.sec-IA {
+  position: absolute;
+  grid-column: 7 / span 6;
+  grid-row: 24 / span 7;
+}
+
+.bg_squares li.sec-mockups {
+  position: absolute;
+  grid-column: 1 / span 6;
+  grid-row: 31 / span 6;
+}
+
+.bg_squares li.sec-branding {
+  position: absolute;
+  grid-column: 7 / span 6;
+  grid-row: 36 / span 6;
+}
+/*
+.bg_squares li.sec-testing {
+  position: absolute;
+  grid-column: 1 / span 3;
+  grid-row: 19 / span 3;
+}
+
+.bg_squares li.sec-future {
+  position: absolute;
+  grid-column: 1 / span 6;
+  grid-row: 24 / span 2;
+}
+*/
+pre.exp-text, p.exp-text, p.exp-title {
+  font-family: "Exo 2", Helvetica, Arial, sans-serif;
+  font-size: 3vw;
+  padding: 2vw;
+  margin: 0;
+}
+
+p.exp-title {
+  font-size: 3.5vw;
+}
+
+
+
+
+
+
+
+
+
 
 /* =============== RESPONSIVE DESIGN ============== */
 @media (min-width: 500px) {
@@ -339,11 +450,6 @@ h2, .sigprinted{
     padding-top:1vh;
   }
 
-  .case-pageview {
-    grid-column: 5 / span 6;
-    grid-row: span 10;
-  }
-
   .c_abt {grid-area: 3 / 1 / 5 / 3;}
   .c_hlp {grid-area: 3 / 5 / 7 / 7;}
   .c_crn {grid-area: 5 / 1 / 9 / 5;}
@@ -364,10 +470,15 @@ h2, .sigprinted{
   .med5 {grid-area: 9 / 2 / 10 / 3 display: inherit;}
   .med6 {display: none;}
 
+  .case-pageview {
+    grid-column: 6 / span 7;
+    grid-row: span 14;
+  }
+
   .bg_squares {
     width: 90vw;
-    grid-template-columns: repeat(8, calc(90vw/8));
-    grid-template-rows: repeat(18, calc(90vw/8));
+    grid-template-columns: repeat(14, calc(90vw/14));
+    grid-template-rows: repeat(18, calc(90vw/14));
   }
 
 }
@@ -433,14 +544,14 @@ h2, .sigprinted{
 .med6 {grid-area: 8 / 3 / 10 / 5; display: inherit;}
 
 .case-pageview {
-  grid-column: 6 / span 5;
-  grid-row: span 12;
+  grid-column: 7 / span 8;
+  grid-row: span 18;
 }
 
 .bg_squares {
   display: grid;
-  grid-template-columns: repeat(10, calc(90vw/10));
-  grid-template-rows: repeat(14, calc(90vw/10));
+  grid-template-columns: repeat(16, calc(90vw/16));
+  grid-template-rows: repeat(14, calc(90vw/16));
 }
 
 }
@@ -504,14 +615,14 @@ h2, .sigprinted{
   .med6 {display: none;}
 
   .case-pageview {
-    grid-column: 7 / span 6;
-    grid-row: span 12;
+    grid-column: 9 / span 9;
+    grid-row: span 24;
   }
 
   .bg_squares {
     display: grid;
-    grid-template-columns: repeat(12, calc(90vw/12));
-    grid-template-rows: repeat(9, calc(90vw/12));
+    grid-template-columns: repeat(18, calc(90vw/18));
+    grid-template-rows: repeat(9, calc(90vw/18));
   }
 
 }

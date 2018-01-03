@@ -70,7 +70,7 @@ if ($indexNo != 0)
 // Shrink an expanded card back down to fit the dimensions of
 // the original front card, then push it back to having a
 // display of none.
-$(".card-expanded li").click(function() {
+$(".card-expanded > li").click(function() {
   var $indexNo = $(this).index();
   var $targeted = $('.card-front li').eq($indexNo);
   var $unopacify = $(this).children('.unopacify');
