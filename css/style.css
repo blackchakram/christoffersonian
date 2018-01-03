@@ -111,6 +111,10 @@ li {
     font-size: 4.2vw;
   }
 
+.extender {
+  grid-area: 14 / 1 / 14 / 5;
+}
+
 /* ========= EXPANDED CARD PROPERTIES ======== */
 .card-expanded li{
   display: none;

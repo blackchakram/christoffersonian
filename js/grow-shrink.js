@@ -10,6 +10,7 @@ $gridDimensions = $('.card-front');
 $expandedBox = $('.card-expanded li');
 $coords = $('.card-front').offset();
 
+$scrollpos = $(window).scrollTop();
 
 // If the user resizes the browsing window, re-grab the containing
 // grid dimensions and alter the expanded card accordingly if one
@@ -47,14 +48,20 @@ $(".card-front li").click(function() {
   var $indexNo = $(this).index();
   var $expanded = $('.card-expanded li').eq($indexNo);
   var $unopacify = $('.card-expanded .unopacify').eq($indexNo);
+  var $extender = $('.extender');
 
 if ($indexNo != 0)
   {
+  $scrollpos = $(window).scrollTop();
+
+  if ($(window).width() < 500) {$extender.css("grid-area", "14 / 1 / 24 / 5");}
+
   $opacify.velocity({opacity:0}, 500);
 
   $expanded.css("width", $(this).width() + "px");
   $expanded.css("height", $(this).height() + "px");
   setTimeout(function() { $expanded.css("display", "list-item");  }, 500);
+  setTimeout(function() { $(window).scrollTop(0); }, 1000);
   $expanded.css("top", $(this).offset().top + "px");
   $expanded.css("left", $(this).offset().left + "px");
 
@@ -75,11 +82,14 @@ $(".card-expanded > li").click(function() {
   var $targeted = $('.card-front li').eq($indexNo);
   var $unopacify = $(this).children('.unopacify');
   var $opacify = $('.card-front .opacify').eq($indexNo);
+  var $extender = $('.extender');
+
+  if ($(window).width() < 500) {$extender.css("grid-area", "14 / 1 / 14 / 5");}
 
   $unopacify.velocity({opacity:0}, 500);
 
   $(this).velocity({width: $targeted.width() + "px", height: $targeted.height() + "px", top: $targeted.offset().top + "px", left: $targeted.offset().left + "px" }, {delay: 500, display: "none"});
 
   $opacify.velocity({opacity:1}, {duration:500, delay:1000});
-
+  setTimeout(function() { $(window).scrollTop($scrollpos); }, 500);
 });
