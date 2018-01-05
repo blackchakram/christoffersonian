@@ -20,16 +20,25 @@ $(window).resize(function() {
   $expandedBox = $('.card-expanded li');
   $coords = $('.card-front').offset();
   $bg_squares = $('.bg_squares');
+  var $extender = $('.extender');
 
   jQuery.each($('.card-expanded > li'), function() {
     if( $(this).css('display') != 'none' ) {
-      if ($(window).width() < 500) {
+      if ($(window).width() < 485) {
         $(this).css("width", "96vw");
         $bg_squares.css("width", "96vw");
+        $extender.css("grid-area", "14 / 1 / 27 / 5");
       }
-      if ($(window).width() >= 500) {
+      if ($(window).width() >= 485) {
         $(this).css("width", "90vw");
         $bg_squares.css("width", "90vw");
+        $extender.css("grid-area", "10 / 1 / 36 / 5");
+      }
+      if ($(window).width() >= 1035) {
+        $extender.css("grid-area", "10 / 1 /29 / 5");
+      }
+      if ($(window).width() >= 1685) {
+        $extender.css("grid-area", "10 / 1 / 22 / 5");
       }
       $(this).css("height", $gridDimensions.height() + "px");
       $(this).css("top", $coords.top + "px");
@@ -54,8 +63,10 @@ if ($indexNo != 0)
   {
   $scrollpos = $(window).scrollTop();
 
-  if ($(window).width() < 500) {$extender.css("grid-area", "14 / 1 / 24 / 5");}
-
+  if ($(window).width() < 500) {$extender.css("grid-area", "14 / 1 / 27 / 5");}
+  if ($(window).width() >= 500) {$extender.css("grid-area", "10 / 1 / 36 / 5");}
+  if ($(window).width() >= 1035) {$extender.css("grid-area", "10 / 1 / 29 / 5");}
+  if ($(window).width() >= 1685) {$extender.css("grid-area", "10 / 1 / 22 / 5");}
   $opacify.velocity({opacity:0}, 500);
 
   $expanded.css("width", $(this).width() + "px");
@@ -85,6 +96,9 @@ $(".card-expanded > li").click(function() {
   var $extender = $('.extender');
 
   if ($(window).width() < 500) {$extender.css("grid-area", "14 / 1 / 14 / 5");}
+  if ($(window).width() >= 500) {$extender.css("grid-area", "10 / 1 / 10 / 5");}
+  if ($(window).width() >= 1035) {$extender.css("grid-area", "9 / 1 / 9 / 5");}
+  if ($(window).width() >= 1300) {$extender.css("grid-area", "7 / 1 / 7 / 5");}
 
   $unopacify.velocity({opacity:0}, 500);
 
