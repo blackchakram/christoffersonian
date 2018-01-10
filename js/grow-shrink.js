@@ -1,109 +1,151 @@
 /*
-This script causes the title cards to grow when clicked
+This script causes grid cards to grow when clicked
 and to shrink back to their original size when clicked
 again.
 */
 
+var $exp_project = false;   //check which kinds of screen are open
+var $exp_detail = false;
+var $exp_image = false;
+var $is_expanded = null;
+var $gridDimensions = $('.main-grid');    // grabs dimensions of main grid
+var $scrollpos = 0;                       // grab or set vertical scroll position
+var $expanded_thing = null;               // keeps track of open window for resizing
 
-// grab the initial dimensions and position of the containing grid
-$gridDimensions = $('.card-front');
-$expandedBox = $('.card-expanded li');
-$coords = $('.card-front').offset();
+var $about_open = false;       // to check whether each content window is open or not
+var $objective_open = false;
+var $research_open = false;
+var $ia_open = false;
+var $mockups_open = false;
+var $branding_open = false;
+var $testing_open = false;
+var $future_open = false;
 
+// =================== EXPAND OR CONTRACT A CASE STUDY ========================
+
+$('.project').click(function(){
+if ($exp_project == false) // if a window not already expanded, expand one
+{
+  expander($(this));
+  setTimeout(function() {$exp_project = true;}, 5000); // slight delay to prevent double click starting it again
+}
+});
+
+$('.case-study').click(function(){
+if ($exp_project == true) // only close if a window is already open
+{
+  condenser($(this));
+  setTimeout(function() {$exp_project = false;}, 5000); // slight delay to prevent double click starting it again
+}
+});
+
+
+// ================================ FUNCTIONS =================================
+
+function expander ($self) {
+
+var $thing_to_expand =  $self.find(".case-study");
+var $fade_in = $self.find(".case-study > li");
+var $detail_grids = $self.find(".case-study > .detail");
+var $logo_to_fade = $self.find(".centering"); // wrapper for logo and icon
 $scrollpos = $(window).scrollTop();
+$expanded_thing = $self;              // marks this element for resizing window after its open
+
+// set box to expand to current clicked box dimensions and position
+$thing_to_expand.css("width", $self.width() + "px");
+$thing_to_expand.css("height", $self.height() + "px");
+$thing_to_expand.css("top", 0 + "px");
+$thing_to_expand.css("left", 0 + "px");
+
+// hide the logo and title
+$logo_to_fade.velocity({opacity:0}, {duration:500, delay:0});
+
+// undo the hidden attribute for the box to expand
+setTimeout(function() { $thing_to_expand.css("opacity", 1);  }, 500);
+setTimeout(function() { $thing_to_expand.css("display", "grid");  }, 500);
+
+// scroll to the top of the screen so the user sees the case study from the start
+setTimeout(function() { $(window).scrollTop(0); }, 1500);
+
+// actual expansion of the new box
+$thing_to_expand.velocity({width: "100vw", height: $gridDimensions.height() + "px", top: -$self.offset().top + "px", left: -$self.offset().left + "px" }, {delay: 500, easing: "ease-in-out", duration: 500});
+
+// fade in the new content inside the newly expanded case study
+setTimeout(function() { $logo_to_fade.css("opacity", "1"); }, 1500);
+setTimeout(function() { $fade_in.css("display", "inherit"); }, 1500);
+setTimeout(function() { $detail_grids.css("display", "grid"); }, 1500);
+$fade_in.velocity({opacity:1}, {duration:1000, delay:1500});
+
+/* ======== ALTER COLOR BOXES ======== */
+
+var $dark_tiles = $(".edrk");
+var $medium_tiles = $(".emed");
+
+if ($self.hasClass('helping-hands')){$dark_tiles.css("background-color", "#B1D5AA"); $medium_tiles.css("background-color", "#BDE2B6");}
+if ($self.hasClass('cornucopia')){$dark_tiles.css("background-color", "#D5CCAA"); $medium_tiles.css("background-color", "#E5DCBE");}
+if ($self.hasClass('airport-navigator')){$dark_tiles.css("background-color", "#AACED5"); $medium_tiles.css("background-color", "#C8E1F3");}
+if ($self.hasClass('about-me')){$dark_tiles.css("background-color", "#E2E2E2"); $medium_tiles.css("background-color", "#F6F6F6");}
+
+// expand a cell of the original background grid so the case study can be tall enough
+setTimeout(function() { $(".drk4").css("grid-area", "10 / 2 / 60 / 3");}, 1450);
+setTimeout(function() { $thing_to_expand.css("height", $gridDimensions.height() + "px");}, 1500);
+};
+
+// ============================================================================
+
+function condenser ($itself) {
+
+var $thing_to_condense =  $itself;
+var $stuff_to_fade = $itself.children();
+var $target_to_condense_to = $itself.closest(".project", ".detail");
+var $logo_to_fade_in = $itself.siblings(".centering");
+
+// shrink expanded grid back to original size
+$(".drk4").css("grid-area", "10 / 2 / 11 / 3");
+
+// fade out the content for the project or details
+$stuff_to_fade.velocity({opacity:0}, {duration:500, delay:0});
+
+// actual contraction of the background box
+$thing_to_condense.velocity({width: $target_to_condense_to.width() + "px", height: $target_to_condense_to.height() + "px", top: 0, left: 0 }, {delay: 500, easing: "ease-in-out", duration: 500});
+
+$logo_to_fade_in.css("opacity", 0); // make sure logo is off right now so it can fade in soon
+
+// fade out the contracting box itself
+$thing_to_condense.velocity({opacity:0}, {duration:500, delay:500});
+setTimeout(function() { $thing_to_condense.css("display", "none"); }, 1000);
+
+// re-scroll the window back to where it was originally
+setTimeout(function() { $(window).scrollTop($scrollpos); }, 500);
+
+// fade in the new logo again
+$logo_to_fade_in.velocity({opacity:1}, {duration:500, delay:1200});
+
+// mark open details as closed
+$about_open = false;
+$objective_open = false;
+$research_open = false;
+$ia_open = false;
+$mockups_open = false;
+$branding_open = false;
+$testing_open = false;
+$future_open = false;
+
+};
+
+// ============================================================================
 
 // If the user resizes the browsing window, re-grab the containing
 // grid dimensions and alter the expanded card accordingly if one
 // is currently expanded.
 $(window).resize(function() {
-  $gridDimensions = $('.card-front');
-  $expandedBox = $('.card-expanded li');
-  $coords = $('.card-front').offset();
-  $bg_squares = $('.bg_squares');
-  var $extender = $('.extender');
-
-  jQuery.each($('.card-expanded > li'), function() {
-    if( $(this).css('display') != 'none' ) {
-      if ($(window).width() < 485) {
-        $(this).css("width", "96vw");
-        $bg_squares.css("width", "96vw");
-        $extender.css("grid-area", "14 / 1 / 27 / 5");
-      }
-      if ($(window).width() >= 485) {
-        $(this).css("width", "90vw");
-        $bg_squares.css("width", "90vw");
-        $extender.css("grid-area", "10 / 1 / 36 / 5");
-      }
-      if ($(window).width() >= 1035) {
-        $extender.css("grid-area", "10 / 1 /29 / 5");
-      }
-      if ($(window).width() >= 1685) {
-        $extender.css("grid-area", "10 / 1 / 22 / 5");
-      }
-      $(this).css("height", $gridDimensions.height() + "px");
-      $(this).css("top", $coords.top + "px");
-      $(this).css("left", $coords.left + "px");
-    }
-  });
-});
-
-
-// Expand a card to fill the whole grid. Uses velocity.js to
-// linearly interpolate for a smooth animation. CSS setting
-// before the animation moves and sets the card to overlay
-// the front card before expanding.
-$(".card-front li").click(function() {
-  var $opacify = $(this).children('.opacify');
-  var $indexNo = $(this).index();
-  var $expanded = $('.card-expanded li').eq($indexNo);
-  var $unopacify = $('.card-expanded .unopacify').eq($indexNo);
-  var $extender = $('.extender');
-
-if ($indexNo != 0)
+  if ($exp_project == true)
   {
-  $scrollpos = $(window).scrollTop();
-
-  if ($(window).width() < 500) {$extender.css("grid-area", "14 / 1 / 27 / 5");}
-  if ($(window).width() >= 500) {$extender.css("grid-area", "10 / 1 / 36 / 5");}
-  if ($(window).width() >= 1035) {$extender.css("grid-area", "10 / 1 / 29 / 5");}
-  if ($(window).width() >= 1685) {$extender.css("grid-area", "10 / 1 / 22 / 5");}
-  $opacify.velocity({opacity:0}, 500);
-
-  $expanded.css("width", $(this).width() + "px");
-  $expanded.css("height", $(this).height() + "px");
-  setTimeout(function() { $expanded.css("display", "list-item");  }, 500);
-  setTimeout(function() { $(window).scrollTop(0); }, 1000);
-  $expanded.css("top", $(this).offset().top + "px");
-  $expanded.css("left", $(this).offset().left + "px");
-
-  if ($(window).width() < 500) {$expanded.velocity({width: "96vw", height: $gridDimensions.height() + "px", top: $coords.top + "px", left: $coords.left + "px" }, {delay: 500, easing: "ease-in-out"});}
-  if ($(window).width() >= 500) {$expanded.velocity({width: "90vw", height: $gridDimensions.height() + "px", top: $coords.top + "px", left: $coords.left + "px" }, {delay: 500, easing: "ease-in-out"});}
-
-  $unopacify.velocity({opacity:1}, {duration:500, delay:1000});
+  jQuery.each($('.case-study'), function() {
+    $(this).css("width", "100vw");
+    $(this).css("height", $gridDimensions.height() + "px");
+    $(this).css("top", -$expanded_thing.offset().top + "px");
+    $(this).css("left", -$expanded_thing.offset().left  + "px");
+    });
   }
-
-});
-
-
-// Shrink an expanded card back down to fit the dimensions of
-// the original front card, then push it back to having a
-// display of none.
-$(".card-expanded > li").click(function() {
-  var $indexNo = $(this).index();
-  var $targeted = $('.card-front li').eq($indexNo);
-  var $unopacify = $(this).children('.unopacify');
-  var $opacify = $('.card-front .opacify').eq($indexNo);
-  var $extender = $('.extender');
-
-  if ($(window).width() < 500) {$extender.css("grid-area", "14 / 1 / 14 / 5");}
-  if ($(window).width() >= 500) {$extender.css("grid-area", "10 / 1 / 10 / 5");}
-  if ($(window).width() >= 1035) {$extender.css("grid-area", "9 / 1 / 9 / 5");}
-  if ($(window).width() >= 1300) {$extender.css("grid-area", "7 / 1 / 7 / 5");}
-
-  $unopacify.velocity({opacity:0}, 500);
-
-  $(this).velocity({width: $targeted.width() + "px", height: $targeted.height() + "px", top: $targeted.offset().top + "px", left: $targeted.offset().left + "px" }, {delay: 500, display: "none"});
-
-  $opacify.velocity({opacity:1}, {duration:500, delay:1000});
-  setTimeout(function() { $(window).scrollTop($scrollpos); }, 500);
 });
