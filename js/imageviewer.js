@@ -2,15 +2,20 @@
 This script allows users to view images in larger scale.
 Also uses imageviewer.js by Sudhanshu Yadav.
 */
+var $exp_image = null;
+//var $viewer = null;
 
 $('.subimg').click(function(e){
 
+  // show the image viewer
+  $('.image_viewer_wrapper').css("display", "flex");
+
   e.stopPropagation();      // make sure trigger to close case study doesn't fire first
-  $exp_image == true;
+  setTimeout(function() {$exp_image = true;}, 500);
 
   // stretch the viewer to full screen
-//  $('.image_viewer_wrapper').css("width", $(window).innerWidth() + "px");
-//  $('.image_viewer_wrapper').css("height", $(window).innerHeight() + "px");
+  $('.image_viewer_wrapper, .image_container, .image_viewer').css("width", $(window).innerWidth() + "px");
+  $('.image_viewer_wrapper, .image_container, .image_viewer').css("height", $(window).innerHeight() + "px");
 
   // fade in the viewer
   $('.image_viewer_wrapper').velocity({opacity:1}, {duration:1000});
@@ -27,8 +32,24 @@ $('.subimg').click(function(e){
   if($(this).hasClass('hh-ur1')){ $('.image_viewer').attr("src", "images/user_survey_small.png"); $('.image_viewer').attr("data-high-res-src", "images/user_survey.png");};
   if($(this).hasClass('hh-fr1')){ $('.image_viewer').attr("src", "images/future_small.png"); $('.image_viewer').attr("data-high-res-src", "images/future.png");};
 
-
   $('.image_viewer').ImageViewer();
-  var viewer = $('.image_container').data('ImageViewer');
+  $viewer = $('.image_container').data('ImageViewer');
 
+  $('.iv_container').css("width", $(window).innerWidth() + "px");
+  $('.iv_container').css("height", $(window).innerHeight() + "px");
+
+});
+
+
+$('*').click(function(){
+if ($exp_image == true)
+  {
+    $exp_image = false;
+    $('.image_viewer_wrapper').velocity({opacity:0}, {duration:1000});
+    setTimeout(function() {
+      $('.image_viewer_wrapper').css("display", "none");
+      $('.iv-container').remove();
+      $('<img class="image_viewer" />').appendTo(".image_container");
+    }, 1000);
+  }
 });

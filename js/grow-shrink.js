@@ -146,6 +146,9 @@ $(window).resize(function() {
     $(this).css("height", $gridDimensions.height() + "px");
     $(this).css("top", -$expanded_thing.offset().top + "px");
     $(this).css("left", -$expanded_thing.offset().left  + "px");
+
+    $('.image_viewer_wrapper, .image_container, .image_viewer').css("width", $(window).innerWidth() + "px");
+    $('.image_viewer_wrapper, .image_container, .image_viewer').css("height", $(window).innerHeight() + "px");
     });
   }
 });
