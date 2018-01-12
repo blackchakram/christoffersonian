@@ -32,7 +32,7 @@ if ($exp_project == false) // if a window not already expanded, expand one
 });
 
 $('.case-study').click(function(){
-if ($exp_project == true) // only close if a window is already open
+if ($exp_project == true && $exp_image == false) // only close if a window is already open
 {
   condenser($(this));
   setTimeout(function() {$exp_project = false;}, 5000); // slight delay to prevent double click starting it again

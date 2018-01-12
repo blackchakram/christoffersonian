@@ -12,7 +12,8 @@
      <!-- Stylesheets -->
      <link rel="stylesheet" href="css/normalize.css" />
      <link rel="stylesheet" href="css/style.css" />
-     <link rel="stylesheet" href="css/animate.css" />
+     <link rel="stylesheet" href="css/animate.css"
+     <link rel="stylesheet" href="css/imageviewer.css" type="text/css" />
    </head>
 
   <body>
@@ -87,24 +88,24 @@
           <ul class="content">
             <li><p>An initial User Flow was created to detail all the main processes of the site. Particular emphasis was given to the onboarding process to raise the chances of gaining and retaining users.</p></li>
           </ul>
-          <div class="hh-ia1 subimg"><img /></div>
+          <div class="hh-ia1 subimg"><img src="images/flow_thumb.png"/></div>
         </li>
         <li class="detail mockups">
           <div class="centering">
             <div class="icon"><img src="images/icon_mockups.svg" /></div>
-            <div class="subtitle">mockups</div>
+            <div class="subtitle">Mockups</div>
           </div>
           <!-- HELPING HANDS: MOCKUPS AND LAYOUTS -->
           <ul class="content">
             <li><p>Hand-created sketches and Balsamiq were used to explore a large number of layout ideas. Modifications to these continued even into and through design iterations.</p></li>
           </ul>
-          <div class="hh-mo1 subimg"><img /></div>
-          <div class="hh-mo2 subimg"><img /></div>
+          <div class="hh-mo1 subimg"><img src="images/lofi_thumb.png"/></div>
+          <div class="hh-mo2 subimg"><img src="images/lofi_sketch_thumb.png"/></div>
         </li>
         <li class="detail branding">
           <div class="centering">
             <div class="icon"><img src="images/icon_branding.svg" /></div>
-            <div class="subtitle">branding</div>
+            <div class="subtitle">Branding</div>
           </div>
           <!-- HELPING HANDS: BRANDING -->
           <ul class="content">
@@ -112,12 +113,15 @@
             <li><p>Green and white were chosen to evoke hospitals, vitality, and health. A light gray was used for a number of backgrounds to help offset some things from a pure white backing.</p></li>
             <li><p>User testing revealed a preference for a flat style for most branding but a gradient style for buttons.</p></li>
           </ul>
-          <div class="subimg"><img /></div>
+          <div class="hh-br1 subimg"><img src="images/branding_logo_thumb.png" /></div>
+          <div class="hh-br2 subimg"><img src="images/branding_colors_thumb.png" /></div>
+          <div class="hh-br3 subimg"><img src="images/branding_sketch_thumb.png" /></div>
+          <div class="hh-br4 subimg"><img src="images/branding_survey_thumb.png" /></div>
         </li>
         <li class="detail testing">
           <div class="centering">
             <div class="icon"><img src="images/icon_testing.svg" /></div>
-            <div class="subtitle">testing</div>
+            <div class="subtitle">User Testing</div>
           </div>
           <!-- HELPING HANDS: TESTING AND ITERATION -->
           <ul class="content">
@@ -125,7 +129,7 @@
             <li><p>The comments section survey was particularly informative. 17 of the 18 responses indicated that receiving recognition for their donation was unimportant or unwanted, but only 5 of the 18 said they’d never want to add a comment with their donation. This resulted in a heavily modified comments section that exists only to raise awareness and credibility.</p></li>
             <li><p>Observations of users performing tasks confirmed that the final layout is both clean and easy to navigate and provides a positive UX.</p></li>
           </ul>
-          <div class="subimg"><img /></div>
+          <div class="hh-ur1 subimg"><img src="images/user_survey_thumb.png" /></div>
         </li>
         <li class="detail result">
           <div class="centering">
@@ -150,7 +154,7 @@
             <br />* The extreme value  in creating a cohesive style guide along with the branding very early in the design process.
             <br />* The value of insisting on a complete list of user stories and MVP requirements right at the beginning of the project.</p></li>
           </ul>
-          <div class="subimg"><img /></div>
+          <div class="hh-fr1 subimg"><img src="images/future_thumb.png" /></div>
         </li>
         <li class="edrk1 edrk"></li>
         <li class="edrk2 edrk"></li>
@@ -566,6 +570,11 @@
     <li class="med5"></li>
     <li class="med6"></li>
   </ul>
+  <div class="image_viewer_wrapper">
+    <div class="image_container">
+      <img class="image_viewer" />
+    </div>
+  </div>
 </div>
 
 
@@ -716,8 +725,10 @@ airport navigator
   <!-- Javascript -->
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/velocity.min.js"></script>
+  <script src="js/imageviewer.min.js"></script>
   <script src="js/initial-load.js"></script>
   <script src="js/grow-shrink.js"></script>
+  <script src="js/imageviewer.js"></script>
 
   </body>
  </html>
