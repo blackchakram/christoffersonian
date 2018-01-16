@@ -2,13 +2,15 @@
 This script allows users to view images in larger scale.
 Also uses imageviewer.js by Sudhanshu Yadav.
 */
-var $exp_image = null;
+//var $exp_image = null;
 //var $viewer = null;
+
 
 $('.subimg').click(function(e){
 
   // show the image viewer
   $('.image_viewer_wrapper').css("display", "flex");
+  $('.image_viewer_wrapper').css("z-index", 1200);
 
   e.stopPropagation();      // make sure trigger to close case study doesn't fire first
   setTimeout(function() {$exp_image = true;}, 500);
@@ -44,12 +46,12 @@ $('.subimg').click(function(e){
 $('*').click(function(){
 if ($exp_image == true)
   {
-    $exp_image = false;
+    setTimeout(function() {$exp_image = false;}, 500);
     $('.image_viewer_wrapper').velocity({opacity:0}, {duration:1000});
     setTimeout(function() {
       $('.image_viewer_wrapper').css("display", "none");
       $('.iv-container').remove();
       $('<img class="image_viewer" />').appendTo(".image_container");
-    }, 1000);
+      $('.image_viewer_wrapper').css("z-index", -1);}, 1000);
   }
 });

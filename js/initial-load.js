@@ -25,6 +25,22 @@ var $setfour = $('.set4');
 var $setseven = $('.set7');
 var $setnine = $('.set9');
 
+
+var $about_anim = false;
+var $toc_anim = false;
+var $objective_anim = false;
+var $research_anim = false;
+var $ia_anim = false;
+var $mockups_anim = false;
+var $branding_anim = false;
+var $testing_anim = false;
+var $future_anim = false;
+var $result_anim = false;
+
+var $windowtop = 0;
+var $windowbottom = 0;
+var $windowpos = 0;
+
 $drk1.velocity({opacity:1}, {duration:400, delay:0});
 $setone.velocity({opacity:1}, {duration:400, delay:150});
 $med3.velocity({opacity:1}, {duration:400, delay:300});
@@ -47,3 +63,61 @@ $med6.velocity({opacity:1}, {duration:400, delay:2250});
 $c_crn.velocity({opacity:1}, {duration:400, delay:2400});
 $setnine.velocity({opacity:1}, {duration:400, delay:2400});
 $drk4.velocity({opacity:1}, {duration:400, delay:2550});
+
+
+// reload the animated icons when they come into the viewer window for the first time
+$(window).scroll(function() {drawicons();});
+
+
+function drawicons() {
+  console.log($exp_project);
+  $windowpos = $(window).scrollTop() + $(window).height();
+  if ( $objective_anim == false && $windowpos > $('.icon_objectives').offset().top && $('.icon_objectives').offset().top > $(window).scrollTop() )
+  {
+    var d = new Date();
+    $('.icon_objectives img').attr("src", "images/icon_objectives.svg?" + d);
+    $objective_anim = true;
+  }
+  if ( $research_anim == false && $windowpos > $('.icon_research').offset().top && $('.icon_research').offset().top > $(window).scrollTop() )
+  {
+    var d = new Date();
+    $('.icon_research img').attr("src", "images/icon_research.svg?" + d);
+    $research_anim = true;
+  }
+  if ( $ia_anim == false && $windowpos > $('.icon_ia').offset().top && $('.icon_ia').offset().top > $(window).scrollTop() )
+  {
+    var d = new Date();
+    $('.icon_ia img').attr("src", "images/icon_ia.svg?" + d);
+    $ia_anim = true;
+  }
+  if ( $mockups_anim == false && $windowpos > $('.icon_mockups').offset().top && $('.icon_mockups').offset().top > $(window).scrollTop() )
+  {
+    var d = new Date();
+    $('.icon_mockups img').attr("src", "images/icon_mockups.svg?" + d);
+    $mockups_anim = true;
+  }
+  if ( $branding_anim == false && $windowpos > $('.icon_branding').offset().top && $('.icon_branding').offset().top > $(window).scrollTop() )
+  {
+    var d = new Date();
+    $('.icon_branding img').attr("src", "images/icon_branding.svg?" + d);
+    $branding_anim = true;
+  }
+  if ( $testing_anim == false && $windowpos > $('.icon_testing').offset().top && $('.icon_testing').offset().top > $(window).scrollTop() )
+  {
+    var d = new Date();
+    $('.icon_testing img').attr("src", "images/icon_testing.svg?" + d);
+    $testing_anim = true;
+  }
+  if ( $future_anim == false && $windowpos > $('.icon_future').offset().top && $('.icon_future').offset().top > $(window).scrollTop() )
+  {
+    var d = new Date();
+    $('.icon_future img').attr("src", "images/icon_future.svg?" + d);
+    $future_anim = true;
+  }
+  if ( $result_anim == false && $windowpos > $('.icon_result').offset().top && $('.icon_result').offset().top > $(window).scrollTop() )
+  {
+    var d = new Date();
+    $('.icon_result img').attr("src", "images/icon_result.svg?" + d);
+    $result_anim = true;
+  }
+};

@@ -12,22 +12,13 @@ var $gridDimensions = $('.main-grid');    // grabs dimensions of main grid
 var $scrollpos = 0;                       // grab or set vertical scroll position
 var $expanded_thing = null;               // keeps track of open window for resizing
 
-var $about_open = false;       // to check whether each content window is open or not
-var $objective_open = false;
-var $research_open = false;
-var $ia_open = false;
-var $mockups_open = false;
-var $branding_open = false;
-var $testing_open = false;
-var $future_open = false;
-
 // =================== EXPAND OR CONTRACT A CASE STUDY ========================
 
 $('.project').click(function(){
 if ($exp_project == false) // if a window not already expanded, expand one
 {
   expander($(this));
-  setTimeout(function() {$exp_project = true;}, 5000); // slight delay to prevent double click starting it again
+  setTimeout(function() {$exp_project = true;}, 1500); // slight delay to prevent double click starting it again
 }
 });
 
@@ -35,8 +26,26 @@ $('.case-study').click(function(){
 if ($exp_project == true && $exp_image == false) // only close if a window is already open
 {
   condenser($(this));
-  setTimeout(function() {$exp_project = false;}, 5000); // slight delay to prevent double click starting it again
+  setTimeout(function() {$exp_project = false;}, 1500); // slight delay to prevent double click starting it again
 }
+});
+
+
+// when close button in corner is clicked
+$('.close_x').click(function(){
+  if ($exp_project == true && $exp_image == false) {
+    condenser($expanded_thing.find(".case-study"));
+    setTimeout(function() {$exp_project = false;}, 1500); // slight delay to prevent double click starting it again
+  }
+});
+
+
+// when escape key is pressed
+$(document).keyup(function(e) {
+     if (e.keyCode == 27) { // escape key maps to keycode `27`
+       condenser($expanded_thing.find(".case-study"));
+       setTimeout(function() {$exp_project = false;}, 1500); // slight delay to prevent double click starting it again
+    }
 });
 
 
@@ -50,6 +59,9 @@ var $detail_grids = $self.find(".case-study > .detail");
 var $logo_to_fade = $self.find(".centering"); // wrapper for logo and icon
 $scrollpos = $(window).scrollTop();
 $expanded_thing = $self;              // marks this element for resizing window after its open
+
+// show x in corner
+$(".close_x").velocity({opacity:1}, {duration:500, delay:1000});
 
 // set box to expand to current clicked box dimensions and position
 $thing_to_expand.css("width", $self.width() + "px");
@@ -87,8 +99,18 @@ if ($self.hasClass('airport-navigator')){$dark_tiles.css("background-color", "#A
 if ($self.hasClass('about-me')){$dark_tiles.css("background-color", "#E2E2E2"); $medium_tiles.css("background-color", "#F6F6F6");}
 
 // expand a cell of the original background grid so the case study can be tall enough
-setTimeout(function() { $(".drk4").css("grid-area", "10 / 2 / 60 / 3");}, 1450);
+if ($(window).width() < 500) {setTimeout(function() { $(".drk4").css("grid-area", "10 / 2 / 64 / 3");}, 1450);};
+if ($(window).width() >= 500) {setTimeout(function() { $(".drk4").css("grid-area", "10 / 2 / 68 / 3");}, 1450);};
+if ($(window).width() >= 768) {setTimeout(function() { $(".drk4").css("grid-area", "10 / 2 / 47 / 3");}, 1450);};
+if ($(window).width() >= 1024) {setTimeout(function() { $(".drk4").css("grid-area", "10 / 2 / 30 / 3");}, 1450);};
+if ($(window).width() >= 1440) {setTimeout(function() { $(".drk4").css("grid-area", "10 / 2 / 21 / 3");}, 1450);};
+
 setTimeout(function() { $thing_to_expand.css("height", $gridDimensions.height() + "px");}, 1500);
+
+//auto draw icons for the first 2 fields
+var d = new Date();
+$('.icon_about img').attr("src", "images/icon_about.svg?" + d);
+$('.icon_toc img').attr("src", "images/icon_toc.svg?" + d);
 };
 
 // ============================================================================
@@ -100,8 +122,14 @@ var $stuff_to_fade = $itself.children();
 var $target_to_condense_to = $itself.closest(".project", ".detail");
 var $logo_to_fade_in = $itself.siblings(".centering");
 
+// hide x in corner
+$(".close_x").velocity({opacity:0}, {duration:500, delay:1000});
+
 // shrink expanded grid back to original size
 $(".drk4").css("grid-area", "10 / 2 / 11 / 3");
+if ($(window).width() >= 768) { $(".drk4").css("grid-area", "5 / 3 / 6 / 4"); };
+if ($(window).width() >= 1024) { $(".drk4").css("grid-area", "3 / 7 / 4 / 8"); };
+if ($(window).width() >= 1440) { $(".drk4").css("grid-area", "3 / 1 / 5 / 3"); };
 
 // fade out the content for the project or details
 $stuff_to_fade.velocity({opacity:0}, {duration:500, delay:0});
@@ -121,15 +149,17 @@ setTimeout(function() { $(window).scrollTop($scrollpos); }, 500);
 // fade in the new logo again
 $logo_to_fade_in.velocity({opacity:1}, {duration:500, delay:1200});
 
-// mark open details as closed
-$about_open = false;
-$objective_open = false;
-$research_open = false;
-$ia_open = false;
-$mockups_open = false;
-$branding_open = false;
-$testing_open = false;
-$future_open = false;
+// allow reanimation of icons
+$about_anim = false;
+$toc_anim = false;
+$objective_anim = false;
+$research_anim = false;
+$ia_anim = false;
+$mockups_anim = false;
+$branding_anim = false;
+$testing_anim = false;
+$result_anim = false;
+$future_anim = false;
 
 };
 
@@ -141,14 +171,25 @@ $future_open = false;
 $(window).resize(function() {
   if ($exp_project == true)
   {
+    drawicons();
+
   jQuery.each($('.case-study'), function() {
     $(this).css("width", "100vw");
-    $(this).css("height", $gridDimensions.height() + "px");
     $(this).css("top", -$expanded_thing.offset().top + "px");
     $(this).css("left", -$expanded_thing.offset().left  + "px");
+
+    if ($(window).width() < 500) { $(".drk4").css("grid-area", "10 / 2 / 64 / 3");};
+    if ($(window).width() >= 500) { $(".drk4").css("grid-area", "10 / 2 / 68 / 3");};
+    if ($(window).width() >= 768) { $(".drk4").css("grid-area", "10 / 2 / 47 / 3");};
+    if ($(window).width() >= 1024) { $(".drk4").css("grid-area", "10 / 2 / 30 / 3");};
+    if ($(window).width() >= 1440) { $(".drk4").css("grid-area", "10 / 2 / 21 / 3");};
+    $(this).css("height", $gridDimensions.height() + "px");
 
     $('.image_viewer_wrapper, .image_container, .image_viewer').css("width", $(window).innerWidth() + "px");
     $('.image_viewer_wrapper, .image_container, .image_viewer').css("height", $(window).innerHeight() + "px");
     });
   }
 });
+
+
+// ========================== RESPONSIVE DESIGN ===============================
