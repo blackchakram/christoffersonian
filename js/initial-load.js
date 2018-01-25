@@ -18,6 +18,8 @@ var $c_abt = $('.about-me');
 var $c_hlp = $('.helping-hands');
 var $c_crn = $('.cornucopia');
 var $c_apt = $('.airport-navigator');
+var $c_blg = $('.blog');
+var $c_prt = $('.portfolio');
 
 var $setone = $('.set1');
 var $settwo = $('.set2');
@@ -54,9 +56,11 @@ $setfour.velocity({opacity:1}, {duration:400, delay:1050});
 $med1.velocity({opacity:1}, {duration:400, delay:1200});
 $drk7.velocity({opacity:1}, {duration:400, delay:1350});
 $med2.velocity({opacity:1}, {duration:400, delay:1500});
+$c_prt.velocity({opacity:1}, {duration:400, delay:1500});
 $c_hlp.velocity({opacity:1}, {duration:400, delay:1650});
 $setseven.velocity({opacity:1}, {duration:400, delay:1650});
 $drk6.velocity({opacity:1}, {duration:400, delay:1800});
+$c_blg.velocity({opacity:1}, {duration:400, delay:1800});
 $drk5.velocity({opacity:1}, {duration:400, delay:1950});
 $med4.velocity({opacity:1}, {duration:400, delay:2100});
 $med6.velocity({opacity:1}, {duration:400, delay:2250});
@@ -70,8 +74,20 @@ $(window).scroll(function() {drawicons();});
 
 
 function drawicons() {
-  console.log($exp_project);
   $windowpos = $(window).scrollTop() + $(window).height();
+
+  if ( $about_anim == false && $windowpos > $('.icon_about').offset().top && $('.icon_about').offset().top > $(window).scrollTop() )
+  {
+    var d = new Date();
+    $('.icon_about img').attr("src", "images/icon_about.svg?" + d);
+    $about_anim = true;
+  }
+  if ( $toc_anim == false && $windowpos > $('.icon_toc').offset().top && $('.icon_toc').offset().top > $(window).scrollTop() )
+  {
+    var d = new Date();
+    $('.icon_toc img').attr("src", "images/icon_toc.svg?" + d);
+    $toc_anim = true;
+  }
   if ( $objective_anim == false && $windowpos > $('.icon_objectives').offset().top && $('.icon_objectives').offset().top > $(window).scrollTop() )
   {
     var d = new Date();

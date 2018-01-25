@@ -24,6 +24,39 @@
 <div class="all">
 <section><a name="x"></a>
   <ul class="main-grid">
+    <!-- blog -->
+    <li class="blog">
+      <a href="http://blog.christoffersonian.com">
+        <div class="centering">
+          <img src="images/blog.png" class="icons"/>
+          <div class="subtitle_icon">blog</div>
+        </div>
+      </a>
+    </li>
+    <!-- contact info -->
+    <li class="contact-info">
+      <ul class="logos">
+        <li><a href="https://www.facebook.com/profile.php?id=100004768066058" target="_blank"><img src="images/icon_facebook.svg" /></a></li>
+        <li><a href="https://www.linkedin.com/in/joshua-christofferson-86976312b/" target="_blank"><img src="images/icon_linkedin.svg" /></a></li>
+        <li><img src="images/icon_email.svg" class="infoform"/>
+          <div class="formholder">
+            <form action="https://formcarry.com/s/ry_q4L8Sz" method="POST" accept-charset="UTF-8" >
+              <div class="formtitle">contact me</div>
+              <br/><br/>Name:<br/>
+              <input type="text" name="name" />
+              <br/><br/>Organization:<br/>
+              <input type="text" name="organization" />
+              <br/><br/>Email address:<br/>
+              <input type="email" name="email" />
+              <br/><br/>Message:<br/>
+              <textarea rows="16" cols="40" name="message"></textarea><br/>
+              <br/><input value="submit" type="submit" name="submit" class="submit"/>
+            </form>
+          </div>
+        </li>
+      </ul>
+    </li>
+    <!-- signature -->
     <li class="signature">
       <div class="sig-wrapper">
         <img class="sig" src="images/sig_animated.svg"/>
@@ -38,12 +71,12 @@
     <li class="project helping-hands">
       <div class="centering">
         <img src="images/HH_logo.png" class="icons"/>
-        <div class="subtitle">helping hands</div>
+        <div class="subtitle_icon">case study</div>
       </div>
       <!-- HELPING HANDS CASE STUDY CONTENT -->
       <ul class="case-study">
         <li class="study-title">
-          Helping Hands<br/>a case study
+          Helping Hands<div class="study-sub-title">a case study</div>
         </li>
         <li class ="detail toc">
           <div class="centering">
@@ -53,20 +86,20 @@
           <!-- HELPING HANDS: TOC -->
           <ul class="content">
             <nav>
-              <li>The Client</li>
-              <li>Objectives</li>
-              <li>Research</li>
-              <li>IA</li>
-              <li>Mockups</li>
-              <li>Branding</li>
-              <li>User Testing</li>
-              <li>The Result</li>
-              <li>Future Growth</li>
+              <li><a href="#hh-about">The Client</a></li>
+              <li><a href="#hh-objective">Objectives</a></li>
+              <li><a href="#hh-research">Research</a></li>
+              <li><a href="#hh-IA">IA</a></li>
+              <li><a href="#hh-mockups">Mockups</a></li>
+              <li><a href="#hh-branding">Branding</a></li>
+              <li><a href="#hh-testing">User Testing</a></li>
+              <li><a href="#hh-result">The Result</a></li>
+              <li><a href="#hh-future">Future Growth</a></li>
             </nav>
           </ul>
         </li>
         <li class="detail about">
-          <div class="centering">
+          <div class="centering"><a name="hh-about"></a>
             <div class="icon icon_about"><img src="images/icon_about.svg" /></div>
             <div class="subtitle">The Client</div>
           </div>
@@ -76,7 +109,7 @@
           </ul>
         </li>
         <li class="detail objective">
-          <div class="centering">
+          <div class="centering"><a name="hh-objective"></a>
             <div class="icon icon_objectives"><img src="images/icon_objectives.svg" /></div>
             <div class="subtitle">Objectives</div>
           </div>
@@ -89,7 +122,7 @@
           </ul>
         </li>
         <li class="detail research">
-          <div class="centering">
+          <div class="centering"><a name="hh-research"></a>
             <div class="icon icon_research"><img src="images/icon_research.svg" /></div>
             <div class="subtitle">Research</div>
           </div>
@@ -100,11 +133,11 @@
             <li><p>User Personas and User Stories were crafted to give focus towards meeting the goals mentioned above.</p></li>
             <li><p>These revealed the need for the site to be simple and straightforward.</p></li>
           </ul>
-          <div class="hh-re1 subimg"><img src="images/personas_thumb.png"/><div class="expand"></div></div>
-          <div class="hh-re2 subimg"><img src="images/competitor_thumb.png"/><div class="expand"></div></div>
+          <div class="hh-re1 subimg"><img src="images/hh_personas_thumb.png"/><div class="expand"></div></div>
+          <div class="hh-re2 subimg"><img src="images/hh_competitor_thumb.png"/><div class="expand"></div></div>
         </li>
         <li class="detail IA">
-          <div class="centering">
+          <div class="centering"><a name="hh-IA"></a>
             <div class="icon icon_ia"><img src="images/icon_ia.svg" /></div>
             <div class="subtitle">Information<br/>Architecture</div>
           </div>
@@ -112,10 +145,10 @@
           <ul class="content">
             <li><p>An initial User Flow was created to detail all the main processes of the site. Particular emphasis was given to the onboarding process to raise the chances of gaining and retaining users.</p></li>
           </ul>
-          <div class="hh-ia1 subimg"><img src="images/flow_thumb.png"/><div class="expand"></div></div>
+          <div class="hh-ia1 subimg"><img src="images/hh_flow_thumb.png"/><div class="expand"></div></div>
         </li>
         <li class="detail mockups">
-          <div class="centering">
+          <div class="centering"><a name="hh-mockups"></a>
             <div class="icon icon_mockups"><img src="images/icon_mockups.svg" /></div>
             <div class="subtitle">Mockups</div>
           </div>
@@ -123,11 +156,11 @@
           <ul class="content">
             <li><p>Hand-created sketches and Balsamiq were used to explore a large number of layout ideas. Modifications to these continued even into and through design iterations.</p></li>
           </ul>
-          <div class="hh-mo1 subimg"><img src="images/lofi_thumb.png"/><div class="expand"></div></div>
-          <div class="hh-mo2 subimg"><img src="images/lofi_sketch_thumb.png"/><div class="expand"></div></div>
+          <div class="hh-mo1 subimg"><img src="images/hh_lofi_thumb.png"/><div class="expand"></div></div>
+          <div class="hh-mo2 subimg"><img src="images/hh_lofi_sketch_thumb.png"/><div class="expand"></div></div>
         </li>
         <li class="detail branding">
-          <div class="centering">
+          <div class="centering"><a name="hh-branding"></a>
             <div class="icon icon_branding"><img src="images/icon_branding.svg" /></div>
             <div class="subtitle">Branding</div>
           </div>
@@ -136,14 +169,14 @@
             <li><p>The logo was key in creating the brand for Helping Hands. The final design was chosen to resemble two hands reaching for each other, the whitespace between forming the distinctive “H”.</p></li>
             <li><p>Green and white were chosen to evoke hospitals, vitality, and health. A light gray was used for a number of backgrounds to help offset some things from a pure white backing.</p></li>
             <li><p>User testing revealed a preference for a flat style for most branding but a gradient style for buttons.</p></li>
+            <p><img class="thelogo" src="images/hh_branding_logo.png" /></p>
           </ul>
-          <div class="hh-br1 subimg"><img src="images/branding_logo_thumb.png" /><div class="expand"></div></div>
-          <div class="hh-br2 subimg"><img src="images/branding_colors_thumb.png" /><div class="expand"></div></div>
-          <div class="hh-br3 subimg"><img src="images/branding_sketch_thumb.png" /><div class="expand"></div></div>
-          <div class="hh-br4 subimg"><img src="images/branding_survey_thumb.png" /><div class="expand"></div></div>
+          <div class="hh-br2 subimg"><img src="images/hh_branding_colors_thumb.png" /><div class="expand"></div></div>
+          <div class="hh-br3 subimg"><img src="images/hh_branding_sketch_thumb.png" /><div class="expand"></div></div>
+          <div class="hh-br4 subimg"><img src="images/hh_branding_survey_thumb.png" /><div class="expand"></div></div>
         </li>
         <li class="detail testing">
-          <div class="centering">
+          <div class="centering"><a name="hh-testing"></a>
             <div class="icon icon_testing"><img src="images/icon_testing.svg" /></div>
             <div class="subtitle">User Testing</div>
           </div>
@@ -153,18 +186,18 @@
             <li><p>The comments section survey was particularly informative. 17 of the 18 responses indicated that receiving recognition for their donation was unimportant or unwanted, but only 5 of the 18 said they’d never want to add a comment with their donation. This resulted in a heavily modified comments section that exists only to raise awareness and credibility.</p></li>
             <li><p>Observations of users performing tasks confirmed that the final layout is both clean and easy to navigate and provides a positive UX.</p></li>
           </ul>
-          <div class="hh-ur1 subimg"><img src="images/user_survey_thumb.png" /><div class="expand"></div></div>
+          <div class="hh-ur1 subimg"><img src="images/hh_user_survey_thumb.png" /><div class="expand"></div></div>
         </li>
         <li class="detail result">
-          <div class="centering">
+          <div class="centering"><a name="hh-result"></a>
             <div class="icon icon_result"><img src="images/icon_result.svg" /></div>
             <div class="subtitle">The Result</div>
           </div>
           <!-- HELPING HANDS: RESULT -->
-          <div class="resultimg"><img src="images/hh_page.png"/></div>
+          <div class="resultimg"><a href="https://invis.io/AUF165E7Z" target="_blank">Link to InVision mockup<img src="images/hh_page.png"/></a></div>
         </li>
         <li class="detail future">
-          <div class="centering">
+          <div class="centering"><a name="hh-future"></a>
             <div class="icon icon_future"><img src="images/icon_future.svg" /></div>
             <div class="subtitle">Future Growth</div>
           </div>
@@ -178,7 +211,7 @@
             <li><div>The extreme value  in creating a cohesive style guide along with the branding very early in the design process.</div></li>
             <li><div>The value of insisting on a complete list of user stories and MVP requirements right at the beginning of the project.</div></li>
           </ul>
-          <div class="hh-fr1 subimg"><img src="images/future_thumb.png" /><div class="expand"></div></div>
+          <div class="hh-fr1 subimg"><img src="images/hh_future_thumb.png" /><div class="expand"></div></div>
         </li>
         <li class="edrk1 edrk"></li>
         <li class="edrk2 edrk"></li>
@@ -211,112 +244,114 @@
     <li class="project cornucopia">
       <div class="centering">
         <img src="images/cornucopia.png" class="icons"/>
-        <div class="subtitle">cornucopia</div>
+        <div class="subtitle_icon">case study</div>
       </div>
-      <!-- CORNUCOPIA CASE STUDY CONTENT -->
+      <!-- HELPING HANDS CASE STUDY CONTENT -->
       <ul class="case-study">
+        <li class="study-title">
+          Cornucopia<div class="study-sub-title">a case study</div>
+        </li>
         <li class ="detail toc">
           <div class="centering">
-            <div class="icon"><img src="images/icon_toc.svg" /></div>
+            <div class="icon icon_toc"><img src="images/icon_toc.svg" /></div>
             <div class="subtitle">Contents</div>
           </div>
           <!-- CORNUCOPIA: TOC -->
           <ul class="content">
             <nav>
-              <li>The Client</li>
-              <li>Objectives</li>
-              <li>Research</li>
-              <li>IA</li>
-              <li>Mockups</li>
-              <li>Branding</li>
-              <li>User Testing</li>
-              <li>The Result</li>
-              <li>Future Growth</li>
+              <li><a href="#crn-about">The Client</a></li>
+              <li><a href="#crn-objective">Objectives</a></li>
+              <li><a href="#crn-research">Research</a></li>
+              <li><a href="#crn-IA">IA</a></li>
+              <li><a href="#crn-mockups">Mockups</a></li>
+              <li><a href="#crn-branding">Branding</a></li>
+              <li><a href="#crn-testing">User Testing</a></li>
+              <li><a href="#crn-result">The Result</a></li>
+              <li><a href="#crn-future">Future Growth</a></li>
             </nav>
           </ul>
         </li>
         <li class="detail about">
-          <div class="centering">
-            <div class="icon"><img src="images/icon_about.svg" /></div>
-            <div class="subtitle">about</div>
+          <div class="centering"><a name="crn-about"></a>
+            <div class="icon icon_about"><img src="images/icon_about.svg" /></div>
+            <div class="subtitle">The Client</div>
           </div>
           <!-- CORNUCOPIA: ABOUT THE CLIENT -->
           <ul class="content">
             <li><p></p></li>
-            <li><p></p></li>
-            <li><p></p></li>
           </ul>
-          <div class="subimg"><img /></div>
         </li>
         <li class="detail objective">
-          <div class="centering">
-            <div class="icon"><img src="images/icon_objectives.svg" /></div>
-            <div class="subtitle">objectives</div>
+          <div class="centering"><a name="crn-objective"></a>
+            <div class="icon icon_objectives"><img src="images/icon_objectives.svg" /></div>
+            <div class="subtitle">Objectives</div>
           </div>
           <!-- CORNUCOPIA: OBJECTIVES -->
           <ul class="content">
             <li><p></p></li>
             <li><p></p></li>
             <li><p></p></li>
+            <li><p></p></li>
           </ul>
-          <div class="subimg"><img /></div>
         </li>
         <li class="detail research">
-          <div class="centering">
-            <div class="icon"><img src="images/icon_research.svg" /></div>
-            <div class="subtitle">research</div>
+          <div class="centering"><a name="crn-research"></a>
+            <div class="icon icon_research"><img src="images/icon_research.svg" /></div>
+            <div class="subtitle">Research</div>
           </div>
           <!-- CORNUCOPIA: RESEARCH -->
           <ul class="content">
             <li><p></p></li>
             <li><p></p></li>
             <li><p></p></li>
+            <li><p></p></li>
           </ul>
-          <div class="subimg"><img /></div>
+          <div class="crn-re1 subimg"><img src=""/><div class="expand"></div></div>
+          <div class="crn-re2 subimg"><img src=""/><div class="expand"></div></div>
         </li>
         <li class="detail IA">
-          <div class="centering">
-            <div class="icon"><img src="images/icon_ia.svg" /></div>
-            <div class="subtitle">information<br/>architecture</div>
+          <div class="centering"><a name="crn-IA"></a>
+            <div class="icon icon_ia"><img src="images/icon_ia.svg" /></div>
+            <div class="subtitle">Information<br/>Architecture</div>
           </div>
           <!-- CORNUCOPIA: INFORMATION ARCHITECTURE -->
           <ul class="content">
             <li><p></p></li>
-            <li><p></p></li>
-            <li><p></p></li>
           </ul>
-          <div class="subimg"><img /></div>
+          <div class="crn-ia1 subimg"><img src=""/><div class="expand"></div></div>
         </li>
         <li class="detail mockups">
-          <div class="centering">
-            <div class="icon"><img src="images/icon_mockups.svg" /></div>
-            <div class="subtitle">mockups</div>
+          <div class="centering"><a name="crn-mockups"></a>
+            <div class="icon icon_mockups"><img src="images/icon_mockups.svg" /></div>
+            <div class="subtitle">Mockups</div>
           </div>
           <!-- CORNUCOPIA: MOCKUPS AND LAYOUTS -->
           <ul class="content">
             <li><p></p></li>
-            <li><p></p></li>
-            <li><p></p></li>
           </ul>
-          <div class="subimg"><img /></div>
+          <div class="crn-mo1 subimg"><img src=""/><div class="expand"></div></div>
+          <div class="crn-mo2 subimg"><img src=""/><div class="expand"></div></div>
         </li>
         <li class="detail branding">
-          <div class="centering">
-            <div class="icon"><img src="images/icon_branding.svg" /></div>
-            <div class="subtitle">branding</div>
+          <div class="centering"><a name="crn-branding"></a>
+            <div class="icon icon_branding"><img src="images/icon_branding.svg" /></div>
+            <div class="subtitle">Branding</div>
           </div>
           <!-- CORNUCOPIA: BRANDING -->
           <ul class="content">
             <li><p></p></li>
             <li><p></p></li>
             <li><p></p></li>
+            <p><img class="thelogo" src="" /></p>
           </ul>
-          <div class="subimg"><img /></div>
+          <div class="crn-br2 subimg"><img src="" /><div class="expand"></div></div>
+          <div class="crn-br3 subimg"><img src="" /><div class="expand"></div></div>
+          <div class="crn-br4 subimg"><img src="" /><div class="expand"></div></div>
         </li>
         <li class="detail testing">
-          <div class="centering">
-            <div class="icon"><img src="images/icon_testing.svg" /></div>
-            <div class="subtitle">testing</div>
+          <div class="centering"><a name="crn-testing"></a>
+            <div class="icon icon_testing"><img src="images/icon_testing.svg" /></div>
+            <div class="subtitle">User Testing</div>
           </div>
           <!-- CORNUCOPIA: TESTING AND ITERATION -->
           <ul class="content">
@@ -324,20 +359,32 @@
             <li><p></p></li>
             <li><p></p></li>
           </ul>
-          <div class="subimg"><img /></div>
+          <div class="crn-ur1 subimg"><img src="" /><div class="expand"></div></div>
+        </li>
+        <li class="detail result">
+          <div class="centering"><a name="crn-result"></a>
+            <div class="icon icon_result"><img src="images/icon_result.svg" /></div>
+            <div class="subtitle">The Result</div>
+          </div>
+          <!-- CORNUCOPIA: RESULT -->
+          <div class="resultimg"><a href="">Link to InVision mockup<img src=""/></a></div>
         </li>
         <li class="detail future">
-          <div class="centering">
-            <div class="icon"><img src="images/icon_future.svg" /></div>
-            <div class="subtitle">future growth</div>
+          <div class="centering"><a name="crn-future"></a>
+            <div class="icon icon_future"><img src="images/icon_future.svg" /></div>
+            <div class="subtitle">Future Growth</div>
           </div>
           <!-- CORNUCOPIA: FUTURE GROWTH -->
           <ul class="content">
             <li><p></p></li>
             <li><p></p></li>
+            <li><div></div></li>
+            <li><div></div></li>
             <li><p></p></li>
+            <li><div></div></li>
+            <li><div></div></li>
           </ul>
-          <div class="subimg"><img /></div>
+          <div class="crn-fr1 subimg"><img src="" /><div class="expand"></div></div>
         </li>
         <li class="edrk1 edrk"></li>
         <li class="edrk2 edrk"></li>
@@ -368,114 +415,116 @@
     <!-- AIRPORT NAVIGATOR PROJECT -->
     <!-- ===================== -->
     <li class="project airport-navigator">
-        <div class="centering">
-          <img src="images/plane.png" class="icons"/>
-          <div class="subtitle">airport navigator</div>
-        </div>
+      <div class="centering">
+        <img src="images/plane.png" class="icons"/>
+        <div class="subtitle_icon">case study</div>
+      </div>
       <!-- AIRPORT NAVIGATOR CASE STUDY CONTENT -->
       <ul class="case-study">
+        <li class="study-title">
+          Airport Navigator<div class="study-sub-title">a case study</div>
+        </li>
         <li class ="detail toc">
           <div class="centering">
-            <div class="icon"><img src="images/icon_toc.svg" /></div>
+            <div class="icon icon_toc"><img src="images/icon_toc.svg" /></div>
             <div class="subtitle">Contents</div>
           </div>
           <!-- AIRPORT NAVIGATOR: TOC -->
           <ul class="content">
             <nav>
-              <li>The Client</li>
-              <li>Objectives</li>
-              <li>Research</li>
-              <li>IA</li>
-              <li>Mockups</li>
-              <li>Branding</li>
-              <li>User Testing</li>
-              <li>The Result</li>
-              <li>Future Growth</li>
+              <li><a href="#an-about">The Client</a></li>
+              <li><a href="#an-objective">Objectives</a></li>
+              <li><a href="#an-research">Research</a></li>
+              <li><a href="#an-IA">IA</a></li>
+              <li><a href="#an-mockups">Mockups</a></li>
+              <li><a href="#an-branding">Branding</a></li>
+              <li><a href="#an-testing">User Testing</a></li>
+              <li><a href="#an-result">The Result</a></li>
+              <li><a href="#an-future">Future Growth</a></li>
             </nav>
           </ul>
         </li>
         <li class="detail about">
-          <div class="centering">
-            <div class="icon"><img src="images/icon_about.svg" /></div>
-            <div class="subtitle">about</div>
+          <div class="centering"><a name="an-about"></a>
+            <div class="icon icon_about"><img src="images/icon_about.svg" /></div>
+            <div class="subtitle">The Client</div>
           </div>
           <!-- AIRPORT NAVIGATOR: ABOUT THE CLIENT -->
           <ul class="content">
             <li><p></p></li>
-            <li><p></p></li>
-            <li><p></p></li>
           </ul>
-          <div class="subimg"><img /></div>
         </li>
         <li class="detail objective">
-          <div class="centering">
-            <div class="icon"><img src="images/icon_objectives.svg" /></div>
-            <div class="subtitle">objectives</div>
+          <div class="centering"><a name="an-objective"></a>
+            <div class="icon icon_objectives"><img src="images/icon_objectives.svg" /></div>
+            <div class="subtitle">Objectives</div>
           </div>
           <!-- AIRPORT NAVIGATOR: OBJECTIVES -->
           <ul class="content">
             <li><p></p></li>
             <li><p></p></li>
             <li><p></p></li>
+            <li><p></p></li>
           </ul>
-          <div class="subimg"><img /></div>
         </li>
         <li class="detail research">
-          <div class="centering">
-            <div class="icon"><img src="images/icon_research.svg" /></div>
-            <div class="subtitle">research</div>
+          <div class="centering"><a name="an-research"></a>
+            <div class="icon icon_research"><img src="images/icon_research.svg" /></div>
+            <div class="subtitle">Research</div>
           </div>
           <!-- AIRPORT NAVIGATOR: RESEARCH -->
           <ul class="content">
             <li><p></p></li>
             <li><p></p></li>
             <li><p></p></li>
+            <li><p></p></li>
           </ul>
-          <div class="subimg"><img /></div>
+          <div class="an-re1 subimg"><img src=""/><div class="expand"></div></div>
+          <div class="an-re2 subimg"><img src=""/><div class="expand"></div></div>
         </li>
         <li class="detail IA">
-          <div class="centering">
-            <div class="icon"><img src="images/icon_ia.svg" /></div>
-            <div class="subtitle">information<br/>architecture</div>
+          <div class="centering"><a name="an-IA"></a>
+            <div class="icon icon_ia"><img src="images/icon_ia.svg" /></div>
+            <div class="subtitle">Information<br/>Architecture</div>
           </div>
           <!-- AIRPORT NAVIGATOR: INFORMATION ARCHITECTURE -->
           <ul class="content">
             <li><p></p></li>
-            <li><p></p></li>
-            <li><p></p></li>
           </ul>
-          <div class="subimg"><img /></div>l>
+          <div class="an-ia1 subimg"><img src=""/><div class="expand"></div></div>
         </li>
         <li class="detail mockups">
-          <div class="centering">
-            <div class="icon"><img src="images/icon_mockups.svg" /></div>
-            <div class="subtitle">mockups</div>
+          <div class="centering"><a name="an-mockups"></a>
+            <div class="icon icon_mockups"><img src="images/icon_mockups.svg" /></div>
+            <div class="subtitle">Mockups</div>
           </div>
           <!-- AIRPORT NAVIGATOR: MOCKUPS AND LAYOUTS -->
           <ul class="content">
             <li><p></p></li>
-            <li><p></p></li>
-            <li><p></p></li>
           </ul>
-          <div class="subimg"><img /></div>
+          <div class="an-mo1 subimg"><img src=""/><div class="expand"></div></div>
+          <div class="an-mo2 subimg"><img src=""/><div class="expand"></div></div>
         </li>
         <li class="detail branding">
-          <div class="centering">
-            <div class="icon"><img src="images/icon_branding.svg" /></div>
-            <div class="subtitle">branding</div>
+          <div class="centering"><a name="an-branding"></a>
+            <div class="icon icon_branding"><img src="images/icon_branding.svg" /></div>
+            <div class="subtitle">Branding</div>
           </div>
           <!-- AIRPORT NAVIGATOR: BRANDING -->
           <ul class="content">
             <li><p></p></li>
             <li><p></p></li>
             <li><p></p></li>
+            <p><img class="thelogo" src="" /></p>
           </ul>
-          <div class="subimg"><img /></div>
+          <div class="an-br2 subimg"><img src="" /><div class="expand"></div></div>
+          <div class="an-br3 subimg"><img src="" /><div class="expand"></div></div>
+          <div class="an-br4 subimg"><img src="" /><div class="expand"></div></div>
         </li>
         <li class="detail testing">
-          <div class="centering">
-            <div class="icon"><img src="images/icon_testing.svg" /></div>
-            <div class="subtitle">testing</div>
+          <div class="centering"><a name="an-testing"></a>
+            <div class="icon icon_testing"><img src="images/icon_testing.svg" /></div>
+            <div class="subtitle">User Testing</div>
           </div>
           <!-- AIRPORT NAVIGATOR: TESTING AND ITERATION -->
           <ul class="content">
@@ -483,20 +532,205 @@
             <li><p></p></li>
             <li><p></p></li>
           </ul>
-          <div class="subimg"><img /></div>
+          <div class="an-ur1 subimg"><img src="" /><div class="expand"></div></div>
+        </li>
+        <li class="detail result">
+          <div class="centering"><a name="an-result"></a>
+            <div class="icon icon_result"><img src="images/icon_result.svg" /></div>
+            <div class="subtitle">The Result</div>
+          </div>
+          <!-- AIRPORT NAVIGATOR: RESULT -->
+          <div class="resultimg"><a href="">Link to InVision mockup<img src=""/></a></div>
         </li>
         <li class="detail future">
-          <div class="centering">
-            <div class="icon"><img src="images/icon_future.svg" /></div>
-            <div class="subtitle">future growth</div>
+          <div class="centering"><a name="an-future"></a>
+            <div class="icon icon_future"><img src="images/icon_future.svg" /></div>
+            <div class="subtitle">Future Growth</div>
           </div>
           <!-- AIRPORT NAVIGATOR: FUTURE GROWTH -->
           <ul class="content">
             <li><p></p></li>
             <li><p></p></li>
+            <li><div></div></li>
+            <li><div></div></li>
+            <li><p></p></li>
+            <li><div></div></li>
+            <li><div></div></li>
+          </ul>
+          <div class="an-fr1 subimg"><img src="" /><div class="expand"></div></div>
+        </li>
+        <li class="edrk1 edrk"></li>
+        <li class="edrk2 edrk"></li>
+        <li class="edrk3 edrk"></li>
+        <li class="edrk4 edrk"></li>
+        <li class="edrk5 edrk"></li>
+        <li class="edrk6 edrk"></li>
+        <li class="edrk7 edrk"></li>
+        <li class="edrk8 edrk"></li>
+        <li class="edrk9 edrk"></li>
+        <li class="edrk10 edrk"></li>
+        <li class="edrk11 edrk"></li>
+        <li class="edrk12 edrk"></li>
+        <li class="emed1 emed"></li>
+        <li class="emed2 emed"></li>
+        <li class="emed3 emed"></li>
+        <li class="emed4 emed"></li>
+        <li class="emed5 emed"></li>
+        <li class="emed6 emed"></li>
+        <li class="emed7 emed"></li>
+        <li class="emed8 emed"></li>
+        <li class="emed9 emed"></li>
+        <li class="emed10 emed"></li>
+        <li class="emed11 emed"></li>
+        <li class="emed12 emed"></li>
+      </ul>
+    </li>
+    <!-- PORTFOLIO PROJECT -->
+    <!-- ===================== -->
+    <li class="project portfolio">
+      <div class="centering">
+        <img src="images/sig.png" class="icons"/>
+        <div class="subtitle_icon">case study</div>
+      </div>
+      <!-- PORTFOLIO CASE STUDY CONTENT -->
+      <ul class="case-study">
+        <li class="study-title">
+          The Portfolio<div class="study-sub-title">a case study</div>
+        </li>
+        <li class ="detail toc">
+          <div class="centering">
+            <div class="icon icon_toc"><img src="images/icon_toc.svg" /></div>
+            <div class="subtitle">Contents</div>
+          </div>
+          <!-- PORTFOLIO: TOC -->
+          <ul class="content">
+            <nav>
+              <li><a href="#pt-about">The Client</a></li>
+              <li><a href="#pt-objective">Objectives</a></li>
+              <li><a href="#pt-research">Research</a></li>
+              <li><a href="#pt-IA">IA</a></li>
+              <li><a href="#pt-mockups">Mockups</a></li>
+              <li><a href="#pt-branding">Branding</a></li>
+              <li><a href="#pt-testing">User Testing</a></li>
+              <li><a href="#pt-result">The Result</a></li>
+              <li><a href="#pt-future">Future Growth</a></li>
+            </nav>
+          </ul>
+        </li>
+        <li class="detail about">
+          <div class="centering"><a name="pt-about"></a>
+            <div class="icon icon_about"><img src="images/icon_about.svg" /></div>
+            <div class="subtitle">The Client</div>
+          </div>
+          <!-- PORTFOLIO: ABOUT THE CLIENT -->
+          <ul class="content">
             <li><p></p></li>
           </ul>
-          <div class="subimg"><img /></div>
+        </li>
+        <li class="detail objective">
+          <div class="centering"><a name="pt-objective"></a>
+            <div class="icon icon_objectives"><img src="images/icon_objectives.svg" /></div>
+            <div class="subtitle">Objectives</div>
+          </div>
+          <!-- PORTFOLIO: OBJECTIVES -->
+          <ul class="content">
+            <li><p></p></li>
+            <li><p></p></li>
+            <li><p></p></li>
+            <li><p></p></li>
+          </ul>
+        </li>
+        <li class="detail research">
+          <div class="centering"><a name="pt-research"></a>
+            <div class="icon icon_research"><img src="images/icon_research.svg" /></div>
+            <div class="subtitle">Research</div>
+          </div>
+          <!-- PORTFOLIO: RESEARCH -->
+          <ul class="content">
+            <li><p></p></li>
+            <li><p></p></li>
+            <li><p></p></li>
+            <li><p></p></li>
+          </ul>
+          <div class="pt-re1 subimg"><img src=""/><div class="expand"></div></div>
+          <div class="pt-re2 subimg"><img src=""/><div class="expand"></div></div>
+        </li>
+        <li class="detail IA">
+          <div class="centering"><a name="pt-IA"></a>
+            <div class="icon icon_ia"><img src="images/icon_ia.svg" /></div>
+            <div class="subtitle">Information<br/>Architecture</div>
+          </div>
+          <!-- PORTFOLIO: INFORMATION ARCHITECTURE -->
+          <ul class="content">
+            <li><p></p></li>
+          </ul>
+          <div class="pt-ia1 subimg"><img src=""/><div class="expand"></div></div>
+        </li>
+        <li class="detail mockups">
+          <div class="centering"><a name="pt-mockups"></a>
+            <div class="icon icon_mockups"><img src="images/icon_mockups.svg" /></div>
+            <div class="subtitle">Mockups</div>
+          </div>
+          <!-- PORTFOLIO: MOCKUPS AND LAYOUTS -->
+          <ul class="content">
+            <li><p></p></li>
+          </ul>
+          <div class="pt-mo1 subimg"><img src=""/><div class="expand"></div></div>
+          <div class="pt-mo2 subimg"><img src=""/><div class="expand"></div></div>
+        </li>
+        <li class="detail branding">
+          <div class="centering"><a name="pt-branding"></a>
+            <div class="icon icon_branding"><img src="images/icon_branding.svg" /></div>
+            <div class="subtitle">Branding</div>
+          </div>
+          <!-- PORTFOLIO: BRANDING -->
+          <ul class="content">
+            <li><p></p></li>
+            <li><p></p></li>
+            <li><p></p></li>
+            <p><img class="thelogo" src="" /></p>
+          </ul>
+          <div class="pt-br2 subimg"><img src="" /><div class="expand"></div></div>
+          <div class="pt-br3 subimg"><img src="" /><div class="expand"></div></div>
+          <div class="pt-br4 subimg"><img src="" /><div class="expand"></div></div>
+        </li>
+        <li class="detail testing">
+          <div class="centering"><a name="pt-testing"></a>
+            <div class="icon icon_testing"><img src="images/icon_testing.svg" /></div>
+            <div class="subtitle">User Testing</div>
+          </div>
+          <!-- PORTFOLIO: TESTING AND ITERATION -->
+          <ul class="content">
+            <li><p></p></li>
+            <li><p></p></li>
+            <li><p></p></li>
+          </ul>
+          <div class="pt-ur1 subimg"><img src="" /><div class="expand"></div></div>
+        </li>
+        <li class="detail result">
+          <div class="centering"><a name="pt-result"></a>
+            <div class="icon icon_result"><img src="images/icon_result.svg" /></div>
+            <div class="subtitle">The Result</div>
+          </div>
+          <!-- PORTFOLIO: RESULT -->
+          <div class="resultimg"><a href="">Link to InVision mockup<img src=""/></a></div>
+        </li>
+        <li class="detail future">
+          <div class="centering"><a name="pt-future"></a>
+            <div class="icon icon_future"><img src="images/icon_future.svg" /></div>
+            <div class="subtitle">Future Growth</div>
+          </div>
+          <!-- PORTFOLIO: FUTURE GROWTH -->
+          <ul class="content">
+            <li><p></p></li>
+            <li><p></p></li>
+            <li><div></div></li>
+            <li><div></div></li>
+            <li><p></p></li>
+            <li><div></div></li>
+            <li><div></div></li>
+          </ul>
+          <div class="pt-fr1 subimg"><img src="" /><div class="expand"></div></div>
         </li>
         <li class="edrk1 edrk"></li>
         <li class="edrk2 edrk"></li>
@@ -529,159 +763,125 @@
     <li class="project about-me">
       <div class="centering">
         <img src="images/about_me.png" class="icons"/>
-        <div class="subtitle">about me</div>
+        <div class="subtitle_icon">about me</div>
       </div>
-      <!-- ABOUT ME CASE STUDY CONTENT -->
-      <ul class="case-study">
-        <li class ="detail toc">
-          <div class="centering">
-            <div class="icon"><img src="images/icon_toc.svg" /></div>
-            <div class="subtitle">Contents</div>
-          </div>
-          <!-- ABOUT ME: TOC -->
-          <ul class="content">
-            <nav>
-              <li>The Client</li>
-              <li>Objectives</li>
-              <li>Research</li>
-              <li>IA</li>
-              <li>Mockups</li>
-              <li>Branding</li>
-              <li>User Testing</li>
-              <li>The Result</li>
-              <li>Future Growth</li>
-            </nav>
-          </ul>
-        </li>
-        <li class="detail about">
-          <div class="centering">
-            <div class="icon"></div>
-            <div class="subtitle"></div>
-          </div>
-          <!-- ABOUT ME: ABOUT THE CLIENT -->
-          <ul class="content">
-            <li><p></p></li>
-            <li><p></p></li>
-            <li><p></p></li>
-          </ul>
-          <div class="subimg"><img /></div>
-        </li>
-        <li class="detail objective">
-          <div class="centering">
-            <div class="icon"></div>
-            <div class="subtitle"></div>
-          </div>
-          <!-- ABOUT ME: OBJECTIVES -->
-          <ul class="content">
-            <li><p></p></li>
-            <li><p></p></li>
-            <li><p></p></li>
-          </ul>
-          <div class="subimg"><img /></div>
-        </li>
-        <li class="detail research">
-          <div class="centering">
-            <div class="icon"></div>
-            <div class="subtitle"></div>
-          </div>
-          <!-- ABOUT ME: RESEARCH -->
-          <ul class="content">
-            <li><p></p></li>
-            <li><p></p></li>
-            <li><p></p></li>
-          </ul>
-          <div class="subimg"><img /></div>
-        </li>
-        <li class="detail IA">
-          <div class="centering">
-            <div class="icon"></div>
-            <div class="subtitle"></div>
-          </div>
-          <!-- ABOUT ME: INFORMATION ARCHITECTURE -->
-          <ul class="content">
-            <li><p></p></li>
-            <li><p></p></li>
-            <li><p></p></li>
-          </ul>
-          <div class="subimg"><img /></div>
-        </li>
-        <li class="detail mockups">
-          <div class="centering">
-            <div class="icon"></div>
-            <div class="subtitle"></div>
-          </div>
-          <!-- ABOUT ME: MOCKUPS AND LAYOUTS -->
-          <ul class="content">
-            <li><p></p></li>
-            <li><p></p></li>
-            <li><p></p></li>
-          </ul>
-          <div class="subimg"><img /></div>
-        </li>
-        <li class="detail branding">
-          <div class="centering">
-            <div class="icon"></div>
-            <div class="subtitle"></div>
-          </div>
-          <!-- ABOUT ME: BRANDING -->
-          <ul class="content">
-            <li><p></p></li>
-            <li><p></p></li>
-            <li><p></p></li>
-          </ul>
-          <div class="subimg"><img /></div>
-        </li>
-        <li class="detail testing">
-          <div class="centering">
-            <div class="icon"></div>
-            <div class="subtitle"></div>
-          </div>
-          <!-- ABOUT ME: TESTING AND ITERATION -->
-          <ul class="content">
-            <li><p></p></li>
-            <li><p></p></li>
-            <li><p></p></li>
-          </ul>
-          <div class="subimg"><img /></div>
-        </li>
-        <li class="detail future">
-          <div class="centering">
-            <div class="icon"></div>
-            <div class="subtitle"></div>
-          </div>
-          <!-- ABOUT ME: FUTURE GROWTH -->
-          <ul class="content">
-            <li><p></p></li>
-            <li><p></p></li>
-            <li><p></p></li>
-          </ul>
-          <div class="subimg"><img /></div>
-        </li>
-        <li class="edrk1 edrk"></li>
-        <li class="edrk2 edrk"></li>
-        <li class="edrk3 edrk"></li>
-        <li class="edrk4 edrk"></li>
-        <li class="edrk5 edrk"></li>
-        <li class="edrk6 edrk"></li>
-        <li class="edrk7 edrk"></li>
-        <li class="edrk8 edrk"></li>
-        <li class="edrk9 edrk"></li>
-        <li class="edrk10 edrk"></li>
-        <li class="edrk11 edrk"></li>
-        <li class="edrk12 edrk"></li>
-        <li class="emed1 emed"></li>
-        <li class="emed2 emed"></li>
-        <li class="emed3 emed"></li>
-        <li class="emed4 emed"></li>
-        <li class="emed5 emed"></li>
-        <li class="emed6 emed"></li>
-        <li class="emed7 emed"></li>
-        <li class="emed8 emed"></li>
-        <li class="emed9 emed"></li>
-        <li class="emed10 emed"></li>
-        <li class="emed11 emed"></li>
-        <li class="emed12 emed"></li>
-      </ul>
+        <!-- ABOUT ME CONTENT -->
+      <div class="case-study">
+        <ul>
+          <li class="am-title">
+            About Me</li>
+          <li class="am-picture">
+            <img />
+          </li>
+          <li class="am-contact contact-info">
+            <ul class="content">
+              <li>Facebook</li>
+              <li>LinkedIn</li>
+              <li>Email</li>
+            </ul>
+          </li>
+          <li class="am-work">
+            <div class="subgroup">
+              <div class="subgroup-titlebar">
+                <div class="subgroup-title"></div>
+                <div class="subgroup-icon"></div>
+              </div>
+              <div class="subgroup-content">
+
+              </div>
+            </div>
+            <div class="subgroup">
+              <div class="subgroup-titlebar">
+                <div class="subgroup-title"></div>
+                <div class="subgroup-icon"></div>
+              </div>
+              <div class="subgroup-content">
+
+              </div>
+            </div>
+            <div class="subgroup">
+              <div class="subgroup-titlebar">
+                <div class="subgroup-title"></div>
+                <div class="subgroup-icon"></div>
+              </div>
+              <div class="subgroup-content">
+
+              </div>
+            </div>
+            <div class="subgroup">
+              <div class="subgroup-titlebar">
+                <div class="subgroup-title"></div>
+                <div class="subgroup-icon"></div>
+              </div>
+              <div class="subgroup-content">
+
+              </div>
+            </div>
+          </li>
+          <li class="am-play">
+            <div class="subgroup">
+              <div class="subgroup-titlebar">
+                <div class="subgroup-title"></div>
+                <div class="subgroup-icon"></div>
+              </div>
+              <div class="subgroup-content">
+
+              </div>
+            </div>
+            <div class="subgroup">
+              <div class="subgroup-titlebar">
+                <div class="subgroup-title"></div>
+                <div class="subgroup-icon"></div>
+              </div>
+              <div class="subgroup-content">
+
+              </div>
+            </div>
+            <div class="subgroup">
+              <div class="subgroup-titlebar">
+                <div class="subgroup-title"></div>
+                <div class="subgroup-icon"></div>
+              </div>
+              <div class="subgroup-content">
+
+              </div>
+            </div>
+            <div class="subgroup">
+              <div class="subgroup-titlebar">
+                <div class="subgroup-title"></div>
+                <div class="subgroup-icon"></div>
+              </div>
+              <div class="subgroup-content">
+
+              </div>
+            </div>
+          </li>
+          <li class="edrk1 edrk"></li>
+          <li class="edrk2 edrk"></li>
+          <li class="edrk3 edrk"></li>
+          <li class="edrk4 edrk"></li>
+          <li class="edrk5 edrk"></li>
+          <li class="edrk6 edrk"></li>
+          <li class="edrk7 edrk"></li>
+          <li class="edrk8 edrk"></li>
+          <li class="edrk9 edrk"></li>
+          <li class="edrk10 edrk"></li>
+          <li class="edrk11 edrk"></li>
+          <li class="edrk12 edrk"></li>
+          <li class="emed1 emed"></li>
+          <li class="emed2 emed"></li>
+          <li class="emed3 emed"></li>
+          <li class="emed4 emed"></li>
+          <li class="emed5 emed"></li>
+          <li class="emed6 emed"></li>
+          <li class="emed7 emed"></li>
+          <li class="emed8 emed"></li>
+          <li class="emed9 emed"></li>
+          <li class="emed10 emed"></li>
+          <li class="emed11 emed"></li>
+          <li class="emed12 emed"></li>
+        </ul>
+      </div>
     </li>
     <!-- COLOR SQUARES -->
     <li class="drk1"></li>
@@ -705,7 +905,7 @@
     </div>
   </div>
   <div class="close_x">
-    <div>X</div>
+    <div></div>
   </div>
 </div>
 
