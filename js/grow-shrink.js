@@ -33,6 +33,7 @@ $('.close_x').click(function(){
     $inprogress = true;
     $exp_project = false;
     condenser($expanded_thing.find(".case-study"));
+    history.pushState(null, '', '#test');
     setTimeout(function() {$inprogress = false;}, 1500); // slight delay to prevent double click starting it again
   }
 
@@ -53,6 +54,14 @@ $('.close_x').click(function(){
 
 });
 
+// when close button for form is clicked
+$('.close_form_x').click(function(){
+  $contactopen = false;
+  setTimeout(function() { $('.formholder').css("display", "none");}, 600);
+  $('.formholder').velocity({opacity:0}, {duration:500, delay:0});
+  $('body').css("overflow-y", "auto");
+});
+
 
 // when escape key is pressed
 $(document).keyup(function(e) {
@@ -64,10 +73,11 @@ $(document).keyup(function(e) {
      setTimeout(function() {$inprogress = false;}, 1500); // slight delay to prevent double click starting it again
    }
 
+   // when form is up
    if (e.keyCode == 27 && $contactopen == true)  // escape key maps to keycode `27`
    {
      $contactopen = false;
-     setTimeout(function() { $('.formholder').css("display", "none");}, 600);
+        setTimeout(function() { $('.formholder').css("display", "none");}, 600);
      $('.formholder').velocity({opacity:0}, {duration:500, delay:0});
      $('body').css("overflow-y", "auto");
    }
@@ -83,10 +93,22 @@ $('.infoform').click(function(){
   $('body').css("overflow-y", "hidden");
 });
 
+// when form submit is clicked
 $('.submit').click(function(){
+
   $contactopen = false;
-     setTimeout(function() { $('.formholder').css("display", "none");}, 600);
-  $('.formholder').velocity({opacity:0}, {duration:500, delay:0});
+  $('.confirmation').css("display", "flex");
+  $('form').velocity({opacity:0}, {duration:500, delay:0});
+  setTimeout(function() { $('.confirmation').css("z-index", "6000");}, 100);
+  $('.confirmation').velocity({opacity:1}, {duration:500, delay:0});
+
+  $('.formholder').velocity({opacity:0}, {duration:500, delay:1500});
+  setTimeout(function() { $('.formholder').css("display", "none");}, 2500);
+
+  setTimeout(function() { $('form').css("opacity", "1");}, 2500);
+  setTimeout(function() { $('.confirmation').css("opacity", "0");}, 2500);
+  setTimeout(function() { $('.confirmation').css("display", "none");}, 2500);
+
   $('body').css("overflow-y", "auto");
 });
 
