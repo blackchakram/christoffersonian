@@ -33,7 +33,7 @@ $('.close_x').click(function(){
     $inprogress = true;
     $exp_project = false;
     condenser($expanded_thing.find(".case-study"));
-    history.pushState(null, '', '#test');
+    history.pushState(null, '', '');
     setTimeout(function() {$inprogress = false;}, 1500); // slight delay to prevent double click starting it again
   }
 
