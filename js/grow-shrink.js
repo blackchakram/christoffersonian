@@ -111,7 +111,7 @@ $(document).keyup(function(e) {
 
 
 // intercept a back button press and redirect to main site again
-window.onpopstate = function (e) {
+window.onhashchange = function {
       console.log("re");
   if ($exp_project == true && $exp_image == false && $inprogress == false && $contactopen == false) {
     $inprogress = true;
