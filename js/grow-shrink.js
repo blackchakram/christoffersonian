@@ -113,6 +113,7 @@ $(document).keyup(function(e) {
 // intercept a back button press and redirect to main site again
 window.onbeforeunload = function (e) {
   if ($exp_project == true && $exp_image == false && $inprogress == false && $contactopen == false) {
+    console.log("re");
     $inprogress = true;
     $exp_project = false;
     condenser($expanded_thing.find(".case-study"));
@@ -127,7 +128,7 @@ window.onbeforeunload = function (e) {
 
     setTimeout(function() {$inprogress = false;}, 1500); // slight delay to prevent double click starting it again
   }else{
-    
+
   }
 }
 
