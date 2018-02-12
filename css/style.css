@@ -33,6 +33,10 @@ div {
   font-family: "fontawesome";
 }
 
+.all {
+  position: absolute;
+  left: -8px;
+}
 /* ============ FORM STYLING =========== */
 
 .close_x, .close_form_x {
@@ -78,7 +82,7 @@ div {
 
 /* ============= MAIN PAGE STYLING ============= */
 
-.main-grid, .case-study {
+.main-grid, .case-study, .am-map {
   width: 100vw;
   display: grid;
   grid-gap: 0px;
@@ -86,6 +90,7 @@ div {
   grid-auto-rows: 25vw;
   margin: auto;
   border: 0;
+  left: 0;
 }
 
 .drk1, .drk2, .drk3, .drk4, .drk5, .drk6, .drk7 {
@@ -147,11 +152,11 @@ div {
 }
 .cornucopia {
   grid-area: 11 / 1 / 13 / 5;
-  background-image: url("../images/bg_corn.jpg");
+/*  background-image: url("../images/bg_corn.jpg"); =============================== */ background-color: #F5F5F5;
 }
 .airport-navigator {
   grid-area: 5 / 1 / 7 / 5;
-  background-image: url("../images/bg_an.jpg");
+/*  background-image: url("../images/bg_an.jpg"); ================================== */ background-color: #E8E8E8;
 }
 .portfolio {
   grid-area: 13 / 1 / 15 / 3;
@@ -169,9 +174,10 @@ div {
 }
 
 .contact-info img {
-  width: 12vw;
-  padding-left: 7px;
-  padding-right: 7px;
+  width: 9vw;
+  padding-left: 14px;
+  padding-right: 14px;
+  padding-top: calc(25vw*1.5);
 }
 
 /* layout for non-functional grid boxes */
@@ -509,7 +515,7 @@ padding-left: 10vw;
   display: none;
   position: fixed;
   width: 100vw;
-  top: 20vh;
+  top: 5vh;
   left: 0;
   box-shadow: 0 3px 6px rgba(0,0,0,0.6);
   z-index: 3000;
@@ -525,6 +531,11 @@ textarea, input {
   width: 60vw;
 }
 
+input {
+  border: none;
+  outline: 1px solid #F1F1F1;
+}
+
 textarea {
   height: 40vw;
   resize: none;
@@ -538,9 +549,194 @@ textarea {
 
 .infoform {cursor: pointer;}
 
+.formgap { height: 6px; }
+.submithold {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.submit {
+  width: 130px;
+  border: solid black 1px;
+  height: 36px;
+  background-color: white;
+  cursor: pointer;
+
+}
 
 
 
+/* ============== ABOUT ME ============== */
+
+.am-opacity {opacity: 0;}
+
+.path {
+  width: 100vw;
+  top: 0;
+  left: 0;
+  z-index: 3000;
+  position: absolute;
+}
+
+.about-me > div > ul {
+  width: 100vw;
+  height: 25vw;
+}
+
+.am-title {
+  font-size: 9.5vw;
+  font-weight: lighter;
+  padding-top: 20px;
+  padding-left: 20px;
+  width: 80vw;
+  height: 22vw;
+}
+
+
+.am-map {
+  background-image: url("../images/map_4x.png");
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 100%;
+  margin-top: 23vw;
+}
+
+.pixel-me {
+  position: absolute;
+  right: 0;
+  width: 36vw;
+}
+
+.am-picture {
+  position: absolute;
+  right: 0;
+  top: 19.5vw;
+  width: 100vw;
+  z-index: -1;
+}
+
+.map-box {
+  background-color: #F2DFF9;
+  padding: 5px;
+  border: 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+  opacity: 0;
+  position: relative;
+  z-index: 4000;
+}
+
+.am-map div :not(.map-title, .arrow){
+  font-size: 4.2vw;
+  background-color: #F2DFF9;
+}
+
+.map-title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 4.3vw;
+  background-color: #E4D4ED;
+  height: 6vw;
+  font-weight: lighter;
+  vertical-align: middle;
+  padding-left: 5px;
+}
+
+.map-lupton .map-title {
+  height: 12vw;
+}
+
+.quest {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 3.7vw;
+  background-color: #DCB6DE;
+  height: 10vw;
+  vertical-align: middle;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.map-child .quest, .map-lupton .quest, .map-marry .quest, .map-kid1 .quest, .map-wyzant .quest, .map-kid2 .quest, .map-hss .quest, .map-future .quest {
+  height: 6vw;
+}
+
+.skills {
+  font-size: 3.7vw;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+}
+
+.skills ul li{
+  list-style-type: disc;
+  display: list-item;
+  margin-left: 20px;
+}
+
+.map-child {grid-area: 1 / 1 / 3 / 3;}
+.map-college {grid-area: 4 / 3 / 6 / 5;}
+.map-lasp {grid-area: 7 / 1 / 9 / 3;}
+.map-lupton {grid-area: 10 / 1 / 12 / 3;}
+.map-marry {grid-area: 13 / 4 / 14 / 5;}
+.map-book {grid-area: 13 / 1 / 15 / 3;}
+.map-belleview {grid-area: 16 / 3 / 18 / 5;}
+.map-kid1 {grid-area: 17 / 1 / 18 / 2;}
+.map-wyzant {grid-area: 19 / 1 / 21 / 3;}
+.map-kid2 {grid-area: 21 / 4 / 22 / 5;}
+.map-terraxml {grid-area: 23 / 3 / 25 / 5;}
+.map-hss {grid-area: 26 / 1 / 28 / 3;}
+.map-future {grid-area: 29 / 1 / 31 / 5;}
+
+/* ========= TRIANGLES ========= */
+
+.tri-top1, .tri-top2, .tri-right1, .tri-right2, .tri-left1, .tri-left2, .tri-bottom1, .tri-bottom2 {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  z-index: -1;
+}
+
+.tri-top1, .tri-top2 {
+  border-width: 0 5vw 8vw 5vw;
+  border-color: transparent transparent #f2dff9 transparent;
+}
+
+.tri-right1, .tri-right2 {
+  border-width: 5vw 0 5vw 8vw;
+  border-color: transparent transparent transparent #f2dff9;
+}
+
+.tri-bottom1, .tri-bottom2 {
+  border-width: 8vw 5vw 0 5vw;
+  border-color: #f2dff9 transparent transparent transparent;
+}
+
+.tri-left1, .tri-left2 {
+  border-width: 5vw 8vw 5vw 0;
+  border-color: transparent #f2dff9 transparent transparent;
+}
+
+
+.tri-top1 {left:8vw; top:-7vw;}
+.tri-top2 {left:32.5vw; top:-7vw;}
+
+.tri-right1 {right:-7vw; top:8vw;}
+.tri-right2 {right:-7vw; top:32.5vw;}
+
+.tri-bottom1 {left:8vw; bottom:-7vw;}
+.tri-bottom2 {left:32.5vw; bottom:-7vw;}
+
+.tri-left1 {left:-7vw; top:8vw;}
+.tri-left2 {left:-7vw; top:32.5vw;}
+
+.map-box a {
+  color: #8B449A;
+  font-weight: bolder;
+}
 
 
 
@@ -603,9 +799,8 @@ textarea {
   .contact-info { grid-area: 10 / 5 / 11 / 7; }
 
   .contact-info img {
-    width: 8vw;
-    padding-left: 7px;
-    padding-right: 7px;
+    width: 6vw;
+    padding-top: calc(100vw/6*1.5);
   }
 
   .drk1 {grid-area: 2 / 5 / 3 / 6;}
@@ -734,13 +929,84 @@ textarea, input { width: calc(100vw/6*3);}
   .emed10 {display: none;}
   .emed11 {display: none;}
   .emed12 {display: none;}
+
+
+
+.map-child {grid-area: 1 / 1 / 3 / 3;}
+.map-college {grid-area: 2 / 5 / 4 / 7;}
+.map-lasp {grid-area: 4 / 3 / 6 / 5;}
+.map-lupton {grid-area: 7 / 1 / 9 / 3;}
+.map-marry {grid-area: 6 / 5 / 7 / 6;}
+.map-book {grid-area: 8 / 5 / 10 / 7;}
+.map-belleview {grid-area: 10 / 1 / 12 / 3;}
+.map-kid1 {grid-area: 10 / 4 / 11 / 5;}
+.map-wyzant {grid-area: 13 / 2 / 15 / 4;}
+.map-kid2 {grid-area: 13 / 6 / 14 / 7;}
+.map-terraxml {grid-area: 17 / 5 / 19 / 7;}
+.map-hss {grid-area: 18 / 1 / 20 / 3;}
+.map-future {grid-area: 21 / 1 / 23 / 7;}
+
+
+
+.about-me > div > ul { height: 25vw; }
+.am-title { font-size: 5.5vw; }
+
+.am-picture {
+  top: 8.5vw;
 }
 
+.pixel-me { width: 29vw;}
+
+.am-map {
+  background-image: url("../images/map_6x.png");
+  background-size: 100%;
+  margin-top: 7.5vw;
+  grid-template-columns: repeat(6, calc(100vw/6));
+  grid-auto-rows: calc(100vw/6);
+}
+
+.am-map div :not(.map-title, .arrow){ font-size: 4.2vw; }
+
+.map-title {
+  font-size: 2.9vw;
+  height: 4vw;
+}
+
+.map-lupton .map-title { height: 8vw; }
+
+.quest {
+  font-size: 2.5vw;
+  height: 7vw;
+}
+
+.map-child .quest, .map-lupton .quest, .map-marry .quest, .map-kid1 .quest, .map-wyzant .quest, .map-kid2 .quest, .map-hss .quest, .map-future .quest {
+  height: 4vw;
+}
+
+.skills { font-size: 2.4vw; }
 
 
 
 
+.tri-top1, .tri-top2 { border-width: 0 5vw 8vw 5vw; }
+.tri-right1, .tri-right2 { border-width: 5vw 0 5vw 8vw; }
+.tri-bottom1, .tri-bottom2 { border-width: 8vw 5vw 0 5vw; }
+.tri-left1, .tri-left2 { border-width: 5vw 8vw 5vw 0; }
 
+
+.tri-top1 {left:8vw; top:-7vw;}
+.tri-top2 {left:20vw; top:-4vw;}
+
+.tri-right1 {right:-4vw; top:3.5vw;}
+.tri-right2 {right:-3.5vw; top:20vw;}
+
+.tri-bottom1 {left:3.5vw; bottom:-4vw;}
+.tri-bottom2 {left:20vw; bottom:-3.5vw;}
+
+.tri-left1 {left:-4vw; top:3.5vw;}
+.tri-left2 {left:-7vw; top:32.5vw;}
+
+}
 
 
 /* =============== 768 px ============== */
@@ -789,7 +1055,10 @@ textarea, input { width: calc(100vw/6*3);}
   .portfolio { grid-area: 7 / 5 / 9 / 7;}
   .contact-info { grid-area: 9 / 7 / 10 / 9; }
 
-  .contact-info img { width: 6vw; }
+  .contact-info img {
+    width: 5vw;
+    padding-top: calc(100vw/8*1.5);
+  }
 
   .drk1 {grid-area: 6 / 6 / 7 / 7;}
   .drk2 {grid-area: 3 / 7 / 5 / 9;}
@@ -945,6 +1214,77 @@ textarea, input { width: calc(100vw/6*3);}
   .emed11 {grid-area: 31 / 8 / 32 / 9; display: inherit;}
   .emed12 {grid-area: 24 / 8 / 25 / 9; display: inherit;}
 
+
+  .map-child {grid-area: 1 / 1 / 3 / 3;}
+  .map-college {grid-area: 3 / 3 / 5 / 5;}
+  .map-lasp {grid-area: 1 / 6 / 3 / 8;}
+  .map-lupton {grid-area: 4 / 7 / 6 / 9;}
+  .map-marry {grid-area: 6 / 4 / 7 / 5;}
+  .map-book {grid-area: 6 / 1 / 8 / 3;}
+  .map-belleview {grid-area: 8 / 4 / 10 / 6;}
+  .map-kid1 {grid-area: 6 / 6 / 7 / 7;}
+  .map-wyzant {grid-area: 8 / 7 / 10 / 9;}
+  .map-kid2 {grid-area: 11 / 7 / 12 / 8;}
+  .map-terraxml {grid-area: 12 / 4 / 14 / 6;}
+  .map-hss {grid-area: 9 / 1 / 11 / 3;}
+  .map-future {grid-area: 12 / 1 / 14 / 3;}
+
+
+  .about-me > div > ul { height: calc(100vw/8); }
+  .am-title { font-size: 4.5vw; }
+
+  .pixel-me {
+    width: 27.5vw;
+    top: -7vw;
+  }
+
+  .am-map {
+    background-image: url("../images/map_8x.png");
+    background-size: 100%;
+    margin-top: 0;
+    grid-template-columns: repeat(8, calc(100vw/8));
+    grid-auto-rows: calc(100vw/8);
+  }
+
+  .am-map div :not(.map-title, .arrow){ font-size: 4.2vw; }
+
+  .map-title {
+    font-size: 2.2vw;
+    height: 3vw;
+  }
+
+  .map-lupton .map-title { height: 5vw; }
+
+  .quest {
+    font-size: 1.9vw;
+    height: 5vw;
+  }
+
+  .map-child .quest, .map-lupton .quest, .map-marry .quest, .map-kid1 .quest, .map-wyzant .quest, .map-kid2 .quest, .map-hss .quest, .map-future .quest {
+    height: 3vw;
+  }
+
+  .skills { font-size: 1.9vw; }
+
+
+  .tri-top1, .tri-top2 { border-width: 0 5vw 8vw 5vw; }
+  .tri-right1, .tri-right2 { border-width: 5vw 0 5vw 8vw; }
+  .tri-bottom1, .tri-bottom2 { border-width: 8vw 5vw 0 5vw; }
+  .tri-left1, .tri-left2 { border-width: 5vw 8vw 5vw 0; }
+
+
+  .tri-top1 {left:1.5vw; top:-3vw;}
+  .tri-top2 {left:14vw; top:-3vw;}
+
+  .tri-right1 {right:-3vw; top:1.5vw;}
+  .tri-right2 {right:-3vw; top:14vw;}
+
+  .tri-bottom1 {left:1.5vw; bottom:-3vw;}
+  .tri-bottom2 {left:14vw; bottom:-3vw;}
+
+  .tri-left1 {left:-3vw; top:1.5vw;}
+  .tri-left2 {left:-3vw; top:14vw;}
+
 }
 
 
@@ -985,7 +1325,10 @@ textarea, input { width: calc(100vw/6*3);}
   .portfolio { grid-area: 4 / 7 / 6 / 9;}
   .contact-info { grid-area: 7 /9 / 8 / 11; }
 
-  .contact-info img { width: 5vw; }
+  .contact-info img {
+    width: 3.5vw;
+    padding-top: calc(100vw/10*1.5);
+  }
 
   .drk1 {grid-area: 7 / 4 / 8 / 5;}
   .drk2 {grid-area: 6 / 7 / 8 / 9;}
@@ -1181,6 +1524,77 @@ textarea, input { width: calc(100vw/6*3);}
   .emed11 {grid-area: 2 / 5 / 4 / 7; display: inherit;}
   .emed12 {grid-area: 12 / 1 / 14 / 3; display: inherit;}
 
+
+  .map-child {grid-area: 1 / 1 / 3 / 3;}
+  .map-college {grid-area: 1 / 4 / 3 / 6;}
+  .map-lasp {grid-area: 4 / 1 / 6 / 3;}
+  .map-lupton {grid-area: 4 / 4 / 6 / 6;}
+  .map-marry {grid-area: 4 / 7 / 5 / 8;}
+  .map-book {grid-area: 1 / 7 / 3 / 9;}
+  .map-belleview {grid-area: 3 / 9 / 5 / 11;}
+  .map-kid1 {grid-area: 6 / 7 / 7 / 8;}
+  .map-wyzant {grid-area: 7 / 8 / 9 / 10;}
+  .map-kid2 {grid-area: 9 / 6 / 10 / 7;}
+  .map-terraxml {grid-area: 7 / 4 / 9 / 6;}
+  .map-hss {grid-area: 7 / 1 / 9 / 3;}
+  .map-future {grid-area: 10 / 1 / 12 / 5;}
+
+
+  .about-me > div > ul { height: 25vw; }
+  .am-title { font-size: 3.5vw; }
+
+
+  .pixel-me { width:21.5vw;}
+
+
+  .am-map {
+    background-image: url("../images/map_10x.png");
+    background-size: 100%;
+    margin-top: -4vw;
+    grid-template-columns: repeat(10, calc(100vw/10));
+    grid-auto-rows: calc(100vw/10);
+  }
+
+  .am-map div :not(.map-title, .arrow){ font-size: 4.2vw; }
+
+  .map-title {
+    font-size: 1.75vw;
+    height: 2vw;
+  }
+
+  .map-lupton .map-title { height: 4.5vw; }
+
+  .quest {
+    font-size: 1.5vw;
+    height: 4vw;
+  }
+
+  .map-child .quest, .map-lupton .quest, .map-marry .quest, .map-kid1 .quest, .map-wyzant .quest, .map-kid2 .quest, .map-hss .quest, .map-future .quest {
+    height: 2.5vw;
+  }
+
+  .skills { font-size: 1.5vw; }
+
+
+
+    .tri-top1, .tri-top2 { border-width: 0 2.5vw 4vw 2.5vw; }
+    .tri-right1, .tri-right2 { border-width: 2.5vw 0 2.5vw 4vw; }
+    .tri-bottom1, .tri-bottom2 { border-width: 4vw 2.5vw 0 2.5vw; }
+    .tri-left1, .tri-left2 { border-width: 2.5vw 4vw 2.5vw 0; }
+
+
+    .tri-top1 {left:2.5vw; top:-2.5vw;}
+    .tri-top2 {left:12.5vw; top:-2.5vw;}
+
+    .tri-right1 {right:-2.5vw; top:2.5vw;}
+    .tri-right2 {right:-3vw; top:14vw;}
+
+    .tri-bottom1 {left:1.5vw; bottom:-3vw;}
+    .tri-bottom2 {left:12.5vw; bottom:-2.5vw;}
+
+    .tri-left1 {left:-2.5vw; top:3vw;}
+    .tri-left2 {left:-2.5vw; top:12.5vw;}
+
 }
 
 
@@ -1236,7 +1650,10 @@ textarea, input { width: calc(100vw/6*3);}
   .portfolio { grid-area: 3 / 1 / 5 / 3;}
   .contact-info { grid-area: 6 / 13 / 7 / 15; }
 
-  .contact-info img { width: 3.5vw; }
+  .contact-info img {
+    width: 2.7vw;
+    padding-top: calc(100vw/14*1.5);
+  }
 
   .drk1 {grid-area: 1 / 5 / 2 / 6;}
   .drk2 {grid-area: 2 / 13 / 3 / 14;}
@@ -1431,5 +1848,68 @@ textarea, input { width: calc(100vw/6*3);}
   .emed10 {grid-area: 1 / 10 / 3 / 12; display: inherit;}
   .emed11 {grid-area: 2 / 5 / 4 / 7; display: inherit;}
   .emed12 {grid-area: 14 / 5 / 16 / 7; display: inherit;}
+
+
+  .map-child {grid-area: 1 / 1 / 3 / 3;}
+  .map-college {grid-area: 2 / 4 / 4 / 6;}
+  .map-lasp {grid-area: 1 / 7 / 3 / 9;}
+  .map-lupton {grid-area: 4 / 8 / 6 / 10;}
+  .map-marry {grid-area: 5 / 6 / 6 / 7;}
+  .map-book {grid-area: 4 / 1 / 6 / 3;}
+  .map-belleview {grid-area: 6 / 3 / 8 / 5;}
+  .map-kid1 {grid-area: 6 / 7 / 7 / 8;}
+  .map-wyzant {grid-area: 6 / 11 / 8 / 13;}
+  .map-kid2 {grid-area: 4 / 11 / 5 / 12;}
+  .map-terraxml {grid-area: 4 / 13 / 6 / 15;}
+  .map-hss {grid-area: 1 / 10 / 3 / 12;}
+  .map-future {grid-area: 1 / 13 / 3 / 15;}
+
+
+  .about-me > div > ul { height: 25vw; }
+  .am-title { font-size: 2.5vw; }
+
+
+  .pixel-me { width: 14.5vw;}
+
+
+  .am-map {
+    background-image: url("../images/map_14x.png");
+    background-size: 100%;
+    margin-top: -9.4vw;
+    grid-template-columns: repeat(14, calc(100vw/14));
+    grid-auto-rows: calc(100vw/14);
+  }
+
+  .am-map div :not(.map-title, .arrow){ font-size: 4.2vw; }
+
+  .map-title {
+    font-size: 1.2vw;
+    height: 1.7vw;
+  }
+
+  .map-lupton .map-title { height: 3vw; }
+
+  .quest {
+    font-size: 1.1vw;
+    height: 3vw;
+  }
+
+  .map-child .quest, .map-lupton .quest, .map-marry .quest, .map-kid1 .quest, .map-wyzant .quest, .map-kid2 .quest, .map-hss .quest, .map-future .quest {
+    height: 1.7vw;
+  }
+
+  .skills { font-size: 1vw; }
+
+  .tri-top1 {left:1.2vw; top:-1.7vw;}
+  .tri-top2 {left:8.2vw; top:-1.7vw;}
+
+  .tri-right1 {right:-1.7vw; top:1.2vw;}
+  .tri-right2 {right:-1.7vw; top:8.2vw;}
+
+  .tri-bottom1 {left:1.2vw; bottom:-1.7vw;}
+  .tri-bottom2 {left:8.2vw; bottom:-1.7vw;}
+
+  .tri-left1 {left:-1.7vw; top:1.2vw;}
+  .tri-left2 {left:-2.5vw; top:12.5vw;}
 
 }

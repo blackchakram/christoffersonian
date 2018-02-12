@@ -68,7 +68,6 @@ $c_crn.velocity({opacity:1}, {duration:400, delay:2400});
 $setnine.velocity({opacity:1}, {duration:400, delay:2400});
 $drk4.velocity({opacity:1}, {duration:400, delay:2550});
 
-
 // reload the animated icons when they come into the viewer window for the first time
 $(window).scroll(function() {drawicons();});
 

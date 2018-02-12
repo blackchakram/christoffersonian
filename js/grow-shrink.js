@@ -14,12 +14,21 @@ var $expanded_thing = null;               // keeps track of open window for resi
 var $inprogress = false;
 var $image_inprogress = false;
 var $contactopen = false;
+var s = new Date();
+var sizecategory = 0;     // helps with resizing when the "about me" is open.
 
 // =================== EXPAND OR CONTRACT A CASE STUDY ========================
 
 $('.project').click(function(){
 if ($exp_project == false && $inprogress == false && $contactopen == false) // if a window not already expanded, expand one
 {
+  if ($(this).hasClass('about-me'))
+  {
+    s = new Date();
+    growaboutme();
+
+  }
+
   $inprogress = true;
   $exp_project = true;
   expander($(this));
@@ -33,7 +42,15 @@ $('.close_x').click(function(){
     $inprogress = true;
     $exp_project = false;
     condenser($expanded_thing.find(".case-study"));
-    history.pushState(null, '', '/');
+
+    history.pushState(null, '', '/');   // update things for google analytics
+    document.title = "The Portfolio of Josh Christofferson";
+    gtag('config', 'UA-113084862-1', {
+      'page_title':'The Portfolio of Josh Christofferson',
+      'page_location':'christoffersonian.com',
+      'page_path':''
+    });
+
     setTimeout(function() {$inprogress = false;}, 1500); // slight delay to prevent double click starting it again
   }
 
@@ -71,6 +88,14 @@ $(document).keyup(function(e) {
      $exp_project = false;
      condenser($expanded_thing.find(".case-study"));
      setTimeout(function() {$inprogress = false;}, 1500); // slight delay to prevent double click starting it again
+
+     history.pushState(null, '', '/');   // update things for google analytics
+     document.title = "The Portfolio of Josh Christofferson";
+     gtag('config', 'UA-113084862-1', {
+       'page_title':'The Portfolio of Josh Christofferson',
+       'page_location':'christoffersonian.com',
+       'page_path':''
+     });
    }
 
    // when form is up
@@ -83,6 +108,28 @@ $(document).keyup(function(e) {
    }
 
 });
+
+
+// intercept a back button press and redirect to main site again
+window.onbeforeunload = function (e) {
+  if ($exp_project == true && $exp_image == false && $inprogress == false && $contactopen == false) {
+    $inprogress = true;
+    $exp_project = false;
+    condenser($expanded_thing.find(".case-study"));
+
+    history.pushState(null, '', '/');   // update things for google analytics
+    document.title = "The Portfolio of Josh Christofferson";
+    gtag('config', 'UA-113084862-1', {
+      'page_title':'The Portfolio of Josh Christofferson',
+      'page_location':'christoffersonian.com',
+      'page_path':''
+    });
+
+    setTimeout(function() {$inprogress = false;}, 1500); // slight delay to prevent double click starting it again
+  }else{
+    
+  }
+}
 
 
 // when form icon is clicked
@@ -124,6 +171,8 @@ var $logo_to_fade = $self.find(".centering"); // wrapper for logo and icon
 $scrollpos = $(window).scrollTop();
 $expanded_thing = $self;              // marks this element for resizing window after its open
 
+
+
 // show x in corner
 $(".close_x").velocity({opacity:1}, {duration:500, delay:1000});
 
@@ -131,7 +180,7 @@ $(".close_x").velocity({opacity:1}, {duration:500, delay:1000});
 $thing_to_expand.css("width", $self.width() + "px");
 $thing_to_expand.css("height", $self.height() + "px");
 $thing_to_expand.css("top", 0 + "px");
-$thing_to_expand.css("left", 0 + "px");
+$thing_to_expand.css("left", -8 + "px");
 
 // hide the logo and title
 $logo_to_fade.velocity({opacity:0}, {duration:500, delay:0});
@@ -144,11 +193,34 @@ setTimeout(function() { $thing_to_expand.css("display", "grid");  }, 500);
 setTimeout(function() { $(window).scrollTop(0); }, 1500);
 
 // expand a cell of the original background grid so the case study can be tall enough
-if ($(window).width() < 500) {setTimeout(function() {$(".drk4").css("grid-area", "10 / 2 / 64 / 3");}, 1000);};
-if ($(window).width() >= 500) {setTimeout(function() {$(".drk4").css("grid-area", "10 / 2 / 68 / 3");}, 1000);};
-if ($(window).width() >= 768) {setTimeout(function() {$(".drk4").css("grid-area", "10 / 2 / 47 / 3");}, 1000);};
-if ($(window).width() >= 1024) {setTimeout(function() {$(".drk4").css("grid-area", "10 / 2 / 30 / 3");}, 1000);};
-if ($(window).width() >= 1440) {setTimeout(function() {$(".drk4").css("grid-area", "10 / 2 / 21 / 3");}, 1000);};
+if ($(window).width() < 500) {
+  if ($self.hasClass('about-me')) {setTimeout(function() {$(".drk4").css("grid-area", "10 / 2 / 33 / 3");}, 1000);}
+  else {setTimeout(function() {$(".drk4").css("grid-area", "10 / 2 / 64 / 3");}, 1000);};
+  sizecategory = 1;
+};
+if ($(window).width() >= 500 && $(window).width() < 768) {
+  if ($self.hasClass('about-me')) {setTimeout(function() {$(".drk4").css("grid-area", "10 / 2 / 25 / 3");}, 1000);}
+  else {setTimeout(function() {$(".drk4").css("grid-area", "10 / 2 / 68 / 3");}, 1000);};
+  sizecategory = 2;
+};
+if ($(window).width() >= 768 && $(window).width() < 1024) {
+  if ($self.hasClass('about-me')) {setTimeout(function() {$(".drk4").css("grid-area", "10 / 2 / 16 / 3");}, 1000);}
+  else {setTimeout(function() {$(".drk4").css("grid-area", "10 / 2 / 47 / 3");}, 1000);};
+  sizecategory = 3;
+};
+if ($(window).width() >= 1024 && $(window).width() < 1440) {
+  if ($self.hasClass('about-me')) {setTimeout(function() {$(".drk4").css("grid-area", "10 / 2 / 14 / 3");}, 1000);}
+  else {setTimeout(function() {$(".drk4").css("grid-area", "10 / 2 / 30 / 3");}, 1000);};
+  sizecategory = 4;
+};
+if ($(window).width() >= 1440) {
+  if ($self.hasClass('about-me')) {setTimeout(function() {$(".drk4").css("grid-area", "10 / 2 / 9 / 3");}, 1000);}
+  else {setTimeout(function() {$(".drk4").css("grid-area", "10 / 2 / 21 / 3");}, 1000);};
+  sizecategory = 5;
+};
+
+
+
 
 // check to see if grid is taller than visible screen so expansion fills whole screen
 var $height = 0;
@@ -156,8 +228,8 @@ if ($gridDimensions.height() < $(window).scrollTop() + $(window).height())
 {$height = $(window).scrollTop() + $(window).height();}
 else {$height = $gridDimensions.height();}
 
-$thing_to_expand.velocity({width: "100vw", height: $height + "px", top: -$self.offset().top + "px", left: -$self.offset().left + "px" }, {delay: 500, easing: "ease-in-out", duration: 500});
-setTimeout(function() { $thing_to_expand.css("height", $gridDimensions.height() + "px"); }, 1110);
+$thing_to_expand.velocity({width: "100vw", height: $height + "px", top: -$self.offset().top + "px", left: -$self.offset().left-8 + "px" }, {delay: 500, easing: "ease-in-out", duration: 500});
+setTimeout(function() { $thing_to_expand.css("height", $gridDimensions.height() + "px"); }, 2110);
 
 // fade in the new content inside the newly expanded case study
 setTimeout(function() { $logo_to_fade.css("opacity", "1"); }, 1500);
@@ -166,12 +238,20 @@ setTimeout(function() { $detail_grids.css("display", "grid"); }, 1500);
 $fade_in.velocity({opacity:1}, {duration:1000, delay:1500});
 setTimeout(function() { $keep_style.css("display", "flex"); }, 1510);
 
-/* ======== ALTER COLOR BOXES ======== */
+//if about me, fade in all content
+if ($self.hasClass('about-me')) {$(".am-opacity").velocity({opacity:1}, {duration:1000, delay:1500});}
+
+/* ======== ALTER COLOR BOXES AND GOOGLE ANALYTICS REFERENCE ======== */
 
 var $dark_tiles = $(".edrk");
 var $medium_tiles = $(".emed");
 var $detail_subtitle = $('.detail .subtitle');
 var $detail_icon = $('.detail .icon');
+
+var $am_title = $('.am-title-words');
+var $am_title_img = $('.am-title-image');
+var $am_subtitle = $('.subgroup-titlebar');
+var $sub_content = $('.subgroup-content');
 
 if ($self.hasClass('helping-hands'))
 {
@@ -179,6 +259,13 @@ if ($self.hasClass('helping-hands'))
   $medium_tiles.css("background-color", "#BDE2B6");
   $detail_subtitle.css("background-color", "#D8EDD4");
   $detail_icon.css("background-color", "#E3F9DF");
+
+  document.title = "Christoffersonian - Helping Hands Case Study";
+  gtag('config', 'UA-113084862-1', {
+    'page_title':'Christoffersonian - Helping Hands Case Study',
+    'page_location':'christoffersonian.com/#helping-hands',
+    'page_path':'/#helping-hands'
+  });
 }
 
 if ($self.hasClass('cornucopia'))
@@ -187,6 +274,13 @@ if ($self.hasClass('cornucopia'))
   $medium_tiles.css("background-color", "#E5DCBE");
   $detail_subtitle.css("background-color", "#EDEBD4");
   $detail_icon.css("background-color", "#F9F7DF");
+
+  document.title = "Christoffersonian - Cornucopia Case Study";
+  gtag('config', 'UA-113084862-1', {
+    'page_title':'Christoffersonian - Cornucopia Case Study',
+    'page_location':'christoffersonian.com/#cornucopia',
+    'page_path':'/#cornucopia'
+  });
 }
 
 if ($self.hasClass('airport-navigator'))
@@ -195,14 +289,31 @@ if ($self.hasClass('airport-navigator'))
   $medium_tiles.css("background-color", "#C8E1F3");
   $detail_subtitle.css("background-color", "#D4E9ED");
   $detail_icon.css("background-color", "#DFF8F9");
+
+  document.title = "Christoffersonian - Airport Navigator Case Study";
+  gtag('config', 'UA-113084862-1', {
+    'page_title':'Christoffersonian - Airport Navigator Case Study',
+    'page_location':'christoffersonian.com/#airport-navigator',
+    'page_path':'/#airport-navigator'
+  });
 }
 
 if ($self.hasClass('about-me'))
 {
   $dark_tiles.css("background-color", "#DCB6DE");
   $medium_tiles.css("background-color", "#EAC8F3");
-  $detail_subtitle.css("background-color", "#E4D4ED");
-  $detail_icon.css("background-color", "#F2DFF9");
+
+  $am_title.css("background-color", "#E4D4ED");
+  $am_title_img.css("background-color", "#F2DFF9");
+  $am_subtitle.css("background-color", "#F1E2F0");
+  $sub_content.css("background-color", "#FFFFFF");
+
+  document.title = "Christoffersonian - About Me";
+  gtag('config', 'UA-113084862-1', {
+    'page_title':'Christoffersonian - About Me',
+    'page_location':'christoffersonian.com/#about-me',
+    'page_path':'/#about-me'
+  });
 }
 
 if ($self.hasClass('portfolio'))
@@ -211,6 +322,13 @@ if ($self.hasClass('portfolio'))
   $medium_tiles.css("background-color", "#F3C8C8");
   $detail_subtitle.css("background-color", "#EDD4D4");
   $detail_icon.css("background-color", "#F9DFDF");
+
+  document.title = "Christoffersonian - Portfolio Case Study";
+  gtag('config', 'UA-113084862-1', {
+    'page_title':'Christoffersonian - Portfolio Case Study',
+    'page_location':'christoffersonian.com/#portfolio',
+    'page_path':'/#portfolio'
+  });
 }
 
 };
@@ -236,6 +354,31 @@ if ($(window).width() >= 1440) { $(".drk4").css("grid-area", "5 / 11 / 7 / 13");
 
 // fade out the content for the project or details
 $stuff_to_fade.velocity({opacity:0}, {duration:500, delay:0});
+
+//if about me, fade out all content
+if ($expanded_thing.hasClass('about-me')) {
+  $(".am-opacity").velocity({opacity:0}, {duration:500, delay:0});
+  setTimeout(function() { $(".map-box").css("opacity", "0"); }, 700);
+  /*setTimeout(function() { $(".arrow").css("opacity", "0"); }, 700);*/
+
+  //halt all timeout functions that make boxes appear
+  clearTimeout(map1);
+  clearTimeout(map2);
+  clearTimeout(map3);
+  clearTimeout(map4);
+  clearTimeout(map5);
+  clearTimeout(map6);
+  clearTimeout(map7);
+  clearTimeout(map8);
+  clearTimeout(map9);
+  clearTimeout(map10);
+  clearTimeout(map11);
+  clearTimeout(map12);
+  clearTimeout(map13);
+
+  $('.arrow').removeClass('tri-top1 tri-top2 tri-right1 tri-right2 tri-left1 tri-left2 tri-bottom1 tri-bottom2');
+
+}
 
 // actual contraction of the background box
 $thing_to_condense.velocity({width: $target_to_condense_to.width() + "px", height: $target_to_condense_to.height() + "px", top: 0, left: 0 }, {delay: 500, easing: "ease-in-out", duration: 500});
@@ -282,14 +425,64 @@ $(window).resize(function() {
   jQuery.each($('.case-study'), function() {
     $(this).css("width", "100vw");
     $(this).css("top", -$expanded_thing.offset().top + "px");
-    $(this).css("left", -$expanded_thing.offset().left  + "px");
+    $(this).css("left", -$expanded_thing.offset().left-8  + "px");
 
-    if ($(window).width() < 500) { $(".drk4").css("grid-area", "10 / 2 / 64 / 3");};
-    if ($(window).width() >= 500) { $(".drk4").css("grid-area", "10 / 2 / 68 / 3");};
-    if ($(window).width() >= 768) { $(".drk4").css("grid-area", "10 / 2 / 47 / 3");};
-    if ($(window).width() >= 1024) { $(".drk4").css("grid-area", "10 / 2 / 30 / 3");};
-    if ($(window).width() >= 1440) { $(".drk4").css("grid-area", "10 / 2 / 21 / 3");};
+    var oldsize = sizecategory;     // grabs current size category to see if its about to cross a threshhold
+
+    if ($(window).width() < 500) {
+      if ($expanded_thing.hasClass('about-me')) {$(".drk4").css("grid-area", "10 / 2 / 33 / 3");}
+      else {$(".drk4").css("grid-area", "10 / 2 / 64 / 3");};
+      sizecategory = 1;
+    };
+    if ($(window).width() >= 500 && $(window).width() < 768) {
+      if ($expanded_thing.hasClass('about-me')) {$(".drk4").css("grid-area", "10 / 2 / 25 / 3");}
+      else {$(".drk4").css("grid-area", "10 / 2 / 68 / 3");};
+      sizecategory = 2;
+    };
+    if ($(window).width() >= 768 && $(window).width() < 1024) {
+      if ($expanded_thing.hasClass('about-me')) {$(".drk4").css("grid-area", "10 / 2 / 16 / 3");}
+      else {$(".drk4").css("grid-area", "10 / 2 / 47 / 3");};
+      sizecategory = 3;
+    };
+    if ($(window).width() >= 1024 && $(window).width() < 1440) {
+      if ($expanded_thing.hasClass('about-me')) {$(".drk4").css("grid-area", "10 / 2 / 14 / 3");}
+      else {$(".drk4").css("grid-area", "10 / 2 / 30 / 3");};
+      sizecategory = 4;
+    };
+    if ($(window).width() >= 1440) {
+      if ($expanded_thing.hasClass('about-me')) {$(".drk4").css("grid-area", "10 / 2 / 9 / 3");}
+      else {$(".drk4").css("grid-area", "10 / 2 / 21 / 3");};
+      sizecategory = 5;
+    };
+
     $(this).css("height", $gridDimensions.height() + "px");
+//      setTimeout(function() {$(this).css("height", $gridDimensions.height() + "px");}, 500);
+
+      // if size category has changed, erase and restart the about me stuff
+      if (oldsize != sizecategory)
+      {
+        $(".map-box").css("opacity", "0");
+
+        //halt all timeout functions that make boxes appear
+        clearTimeout(map1);
+        clearTimeout(map2);
+        clearTimeout(map3);
+        clearTimeout(map4);
+        clearTimeout(map5);
+        clearTimeout(map6);
+        clearTimeout(map7);
+        clearTimeout(map8);
+        clearTimeout(map9);
+        clearTimeout(map10);
+        clearTimeout(map11);
+        clearTimeout(map12);
+        clearTimeout(map13);
+
+        $('.arrow').removeClass('tri-top1 tri-top2 tri-right1 tri-right2 tri-left1 tri-left2 tri-bottom1 tri-bottom2');
+
+        s = new Date();
+        growaboutme();
+      }
 
     });
   }
