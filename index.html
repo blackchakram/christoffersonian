@@ -47,9 +47,10 @@
     <!-- contact info -->
     <li class="contact-info">
       <ul class="logos">
-        <li><a href="https://www.facebook.com/profile.php?id=100004768066058" target="_blank"><img src="images/icon_facebook.svg" /></a></li>
-        <li><a href="https://www.linkedin.com/in/joshchristofferson" target="_blank"><img src="images/icon_linkedin.svg" /></a></li>
+        <li><a href="https://www.facebook.com/profile.php?id=100004768066058" target="_blank"><img src="images/icon_facebook.svg" class="fbicon"/></a></li>
+        <li><a href="https://www.linkedin.com/in/joshchristofferson" target="_blank"><img src="images/icon_linkedin.svg" class="linkedinicon"/></a></li>
         <li><img src="images/icon_email.svg" class="infoform"/>
+          <div class="formbg"></div>
           <div class="formholder">
             <div class="close_form_x">
               <div></div>
@@ -106,15 +107,15 @@
           <!-- HELPING HANDS: TOC -->
           <ul class="content">
             <nav>
-              <li><a href="#hh-about">The Client</a></li>
-              <li><a href="#hh-objective">Objectives</a></li>
-              <li><a href="#hh-research">Research</a></li>
-              <li><a href="#hh-IA">IA</a></li>
-              <li><a href="#hh-mockups">Mockups</a></li>
-              <li><a href="#hh-branding">Branding</a></li>
-              <li><a href="#hh-testing">User Testing</a></li>
-              <li><a href="#hh-result">The Result</a></li>
-              <li><a href="#hh-future">Future Growth</a></li>
+              <li class="go-about">The Client</li>
+              <li class="go-objective">Objectives</li>
+              <li class="go-research">Research</li>
+              <li class="go-ia">IA</li>
+              <li class="go-mockups">Mockups</li>
+              <li class="go-branding">Branding</li>
+              <li class="go-testing">User Testing</li>
+              <li class="go-result">The Result</li>
+              <li class="go-future">Future Growth</li>
             </nav>
           </ul>
         </li>
@@ -153,8 +154,8 @@
             <li><p>User Personas and User Stories were crafted to give focus towards meeting the goals mentioned above.</p></li>
             <li><p>These revealed the need for the site to be simple and straightforward.</p></li>
           </ul>
-          <div class="hh-re1 subimg"><img src="images/hh_personas_thumb.png"/><div class="expand"></div></div>
-          <div class="hh-re2 subimg"><img src="images/hh_competitor_thumb.png"/><div class="expand"></div></div>
+          <div class="hh-re1 subimg re1"><img src="images/hh_personas_thumb.png"/><div class="expand"></div></div>
+          <div class="hh-re2 subimg re2"><img src="images/hh_competitor_thumb.png"/><div class="expand"></div></div>
         </li>
         <li class="detail IA">
           <div class="centering"><a name="hh-IA"></a>
@@ -165,7 +166,7 @@
           <ul class="content">
             <li><p>An initial User Flow was created to detail all the main processes of the site. Particular emphasis was given to the onboarding process to raise the chances of gaining and retaining users.</p></li>
           </ul>
-          <div class="hh-ia1 subimg"><img src="images/hh_flow_thumb.png"/><div class="expand"></div></div>
+          <div class="hh-ia1 subimg ia1"><img src="images/hh_flow_thumb.png"/><div class="expand"></div></div>
         </li>
         <li class="detail mockups">
           <div class="centering"><a name="hh-mockups"></a>
@@ -176,8 +177,8 @@
           <ul class="content">
             <li><p>Hand-created sketches and Balsamiq were used to explore a large number of layout ideas. Modifications to these continued even into and through design iterations.</p></li>
           </ul>
-          <div class="hh-mo1 subimg"><img src="images/hh_lofi_thumb.png"/><div class="expand"></div></div>
-          <div class="hh-mo2 subimg"><img src="images/hh_lofi_sketch_thumb.png"/><div class="expand"></div></div>
+          <div class="hh-mo1 subimg mo1"><img src="images/hh_lofi_thumb.png"/><div class="expand"></div></div>
+          <div class="hh-mo2 subimg mo2"><img src="images/hh_lofi_sketch_thumb.png"/><div class="expand"></div></div>
         </li>
         <li class="detail branding">
           <div class="centering"><a name="hh-branding"></a>
@@ -191,9 +192,9 @@
             <li><p>User testing revealed a preference for a flat style for most branding but a gradient style for buttons.</p></li>
             <p><img class="thelogo" src="images/hh_branding_logo.png" /></p>
           </ul>
-          <div class="hh-br2 subimg"><img src="images/hh_branding_colors_thumb.png" /><div class="expand"></div></div>
-          <div class="hh-br3 subimg"><img src="images/hh_branding_sketch_thumb.png" /><div class="expand"></div></div>
-          <div class="hh-br4 subimg"><img src="images/hh_branding_survey_thumb.png" /><div class="expand"></div></div>
+          <div class="hh-br2 subimg br2"><img src="images/hh_branding_colors_thumb.png" /><div class="expand"></div></div>
+          <div class="hh-br3 subimg br3"><img src="images/hh_branding_sketch_thumb.png" /><div class="expand"></div></div>
+          <div class="hh-br4 subimg br4"><img src="images/hh_branding_survey_thumb.png" /><div class="expand"></div></div>
         </li>
         <li class="detail testing">
           <div class="centering"><a name="hh-testing"></a>
@@ -206,7 +207,7 @@
             <li><p>The comments section survey was particularly informative. 17 of the 18 responses indicated that receiving recognition for their donation was unimportant or unwanted, but only 5 of the 18 said they’d never want to add a comment with their donation. This resulted in a heavily modified comments section that exists only to raise awareness and credibility.</p></li>
             <li><p>Observations of users performing tasks confirmed that the final layout is both clean and easy to navigate and provides a positive UX.</p></li>
           </ul>
-          <div class="hh-ur1 subimg"><img src="images/hh_user_survey_thumb.png" /><div class="expand"></div></div>
+          <div class="hh-ur1 subimg ur1"><img src="images/hh_user_survey_thumb.png" /><div class="expand"></div></div>
         </li>
         <li class="detail result">
           <div class="centering"><a name="hh-result"></a>
@@ -217,7 +218,7 @@
           <div class="resultimg"><a href="https://invis.io/AUF165E7Z" target="_blank">Link to InVision mockup<img src="images/hh_page.png"/></a></div>
         </li>
         <li class="detail future">
-          <div class="centering"><a name="hh-future"></a>
+          <div class="centering">
             <div class="icon icon_future"><img src="images/icon_future.svg" /></div>
             <div class="subtitle">Future Growth</div>
           </div>
@@ -231,7 +232,7 @@
             <li><div>The extreme value  in creating a cohesive style guide along with the branding very early in the design process.</div></li>
             <li><div>The value of insisting on a complete list of user stories and MVP requirements right at the beginning of the project.</div></li>
           </ul>
-          <div class="hh-fr1 subimg"><img src="images/hh_future_thumb.png" /><div class="expand"></div></div>
+          <div class="hh-fr1 subimg fr1"><img src="images/hh_future_thumb.png" /><div class="expand"></div></div>
         </li>
         <li class="edrk1 edrk"></li>
         <li class="edrk2 edrk"></li>
@@ -327,8 +328,8 @@
             <li><p></p></li>
             <li><p></p></li>
           </ul>
-          <div class="crn-re1 subimg"><img src=""/><div class="expand"></div></div>
-          <div class="crn-re2 subimg"><img src=""/><div class="expand"></div></div>
+          <div class="crn-re1 subimg re1"><img src=""/><div class="expand"></div></div>
+          <div class="crn-re2 subimg re2"><img src=""/><div class="expand"></div></div>
         </li>
         <li class="detail IA">
           <div class="centering"><a name="crn-IA"></a>
@@ -339,7 +340,7 @@
           <ul class="content">
             <li><p></p></li>
           </ul>
-          <div class="crn-ia1 subimg"><img src=""/><div class="expand"></div></div>
+          <div class="crn-ia1 subimg ia1"><img src=""/><div class="expand"></div></div>
         </li>
         <li class="detail mockups">
           <div class="centering"><a name="crn-mockups"></a>
@@ -350,8 +351,8 @@
           <ul class="content">
             <li><p></p></li>
           </ul>
-          <div class="crn-mo1 subimg"><img src=""/><div class="expand"></div></div>
-          <div class="crn-mo2 subimg"><img src=""/><div class="expand"></div></div>
+          <div class="crn-mo1 subimg mo1"><img src=""/><div class="expand"></div></div>
+          <div class="crn-mo2 subimg mo2"><img src=""/><div class="expand"></div></div>
         </li>
         <li class="detail branding">
           <div class="centering"><a name="crn-branding"></a>
@@ -365,9 +366,9 @@
             <li><p></p></li>
             <p><img class="thelogo" src="" /></p>
           </ul>
-          <div class="crn-br2 subimg"><img src="" /><div class="expand"></div></div>
-          <div class="crn-br3 subimg"><img src="" /><div class="expand"></div></div>
-          <div class="crn-br4 subimg"><img src="" /><div class="expand"></div></div>
+          <div class="crn-br2 subimg br2"><img src="" /><div class="expand"></div></div>
+          <div class="crn-br3 subimg br3"><img src="" /><div class="expand"></div></div>
+          <div class="crn-br4 subimg br4"><img src="" /><div class="expand"></div></div>
         </li>
         <li class="detail testing">
           <div class="centering"><a name="crn-testing"></a>
@@ -380,7 +381,7 @@
             <li><p></p></li>
             <li><p></p></li>
           </ul>
-          <div class="crn-ur1 subimg"><img src="" /><div class="expand"></div></div>
+          <div class="crn-ur1 subimg ur1"><img src="" /><div class="expand"></div></div>
         </li>
         <li class="detail result">
           <div class="centering"><a name="crn-result"></a>
@@ -405,7 +406,7 @@
             <li><div></div></li>
             <li><div></div></li>
           </ul>
-          <div class="crn-fr1 subimg"><img src="" /><div class="expand"></div></div>
+          <div class="crn-fr1 subimg fr1"><img src="" /><div class="expand"></div></div>
         </li>
         <li class="edrk1 edrk"></li>
         <li class="edrk2 edrk"></li>
@@ -439,7 +440,7 @@
     <li class="project airport-navigator">
         <a href="#airport-navigator"><div class="centering">
 <!--          <img src="images/plane.png" class="icons"/>
-          <div class="subtitle_icon">case study</div>           ================================================ -->
+           <div class="subtitle_icon">case study</div>           ================================================ -->
         </div></a>
       <!-- AIRPORT NAVIGATOR CASE STUDY CONTENT -->
       <ul class="case-study">
@@ -501,8 +502,8 @@
             <li><p></p></li>
             <li><p></p></li>
           </ul>
-          <div class="an-re1 subimg"><img src=""/><div class="expand"></div></div>
-          <div class="an-re2 subimg"><img src=""/><div class="expand"></div></div>
+          <div class="an-re1 subimg re1"><img src=""/><div class="expand"></div></div>
+          <div class="an-re2 subimg re2"><img src=""/><div class="expand"></div></div>
         </li>
         <li class="detail IA">
           <div class="centering"><a name="an-IA"></a>
@@ -513,7 +514,7 @@
           <ul class="content">
             <li><p></p></li>
           </ul>
-          <div class="an-ia1 subimg"><img src=""/><div class="expand"></div></div>
+          <div class="an-ia1 subimg ia1"><img src=""/><div class="expand"></div></div>
         </li>
         <li class="detail mockups">
           <div class="centering"><a name="an-mockups"></a>
@@ -524,8 +525,8 @@
           <ul class="content">
             <li><p></p></li>
           </ul>
-          <div class="an-mo1 subimg"><img src=""/><div class="expand"></div></div>
-          <div class="an-mo2 subimg"><img src=""/><div class="expand"></div></div>
+          <div class="an-mo1 subimg mo1"><img src=""/><div class="expand"></div></div>
+          <div class="an-mo2 subimg mo2"><img src=""/><div class="expand"></div></div>
         </li>
         <li class="detail branding">
           <div class="centering"><a name="an-branding"></a>
@@ -539,9 +540,9 @@
             <li><p></p></li>
             <p><img class="thelogo" src="" /></p>
           </ul>
-          <div class="an-br2 subimg"><img src="" /><div class="expand"></div></div>
-          <div class="an-br3 subimg"><img src="" /><div class="expand"></div></div>
-          <div class="an-br4 subimg"><img src="" /><div class="expand"></div></div>
+          <div class="an-br2 subimg br2"><img src="" /><div class="expand"></div></div>
+          <div class="an-br3 subimg br3"><img src="" /><div class="expand"></div></div>
+          <div class="an-br4 subimg br4"><img src="" /><div class="expand"></div></div>
         </li>
         <li class="detail testing">
           <div class="centering"><a name="an-testing"></a>
@@ -554,7 +555,7 @@
             <li><p></p></li>
             <li><p></p></li>
           </ul>
-          <div class="an-ur1 subimg"><img src="" /><div class="expand"></div></div>
+          <div class="an-ur1 subimg ur1"><img src="" /><div class="expand"></div></div>
         </li>
         <li class="detail result">
           <div class="centering"><a name="an-result"></a>
@@ -579,7 +580,7 @@
             <li><div></div></li>
             <li><div></div></li>
           </ul>
-          <div class="an-fr1 subimg"><img src="" /><div class="expand"></div></div>
+          <div class="an-fr1 subimg fr1"><img src="" /><div class="expand"></div></div>
         </li>
         <li class="edrk1 edrk"></li>
         <li class="edrk2 edrk"></li>
@@ -628,15 +629,15 @@
           <!-- PORTFOLIO: TOC -->
           <ul class="content">
             <nav>
-              <li><a href="#pt-about">The Client</a></li>
-              <li><a href="#pt-objective">Objectives</a></li>
-              <li><a href="#pt-research">Research</a></li>
-              <li><a href="#pt-IA">IA</a></li>
-              <li><a href="#pt-mockups">Mockups</a></li>
-              <li><a href="#pt-branding">Branding</a></li>
-              <li><a href="#pt-testing">User Testing</a></li>
-              <li><a href="#pt-result">The Result</a></li>
-              <li><a href="#pt-future">Future Growth</a></li>
+              <li class="go-about">The Client</li>
+              <li class="go-objective">Objectives</li>
+              <li class="go-research">Research</li>
+              <li class="go-ia">IA</li>
+              <li class="go-mockups">Mockups</li>
+              <li class="go-branding">Branding</li>
+              <li class="go-testing">User Testing</li>
+              <li class="go-result">The Result</li>
+              <li class="go-future">Future Growth</li>
             </nav>
           </ul>
         </li>
@@ -672,11 +673,10 @@
           <ul class="content">
             <li><p>I went through a large number of designer portfolios before I started. I wanted to get a feel for what things were required and what things could be bent to creative individuality.</p></li>
             <li><p>I saw a wide variety of design in portfolios and decided to go with something that would show off CSS Grid as well as being unique.</p></li>
-            <li><p>What content to put on the portfolio site was mostly laid out by Bloc. I added a blog at the recommendation of my mentor and wanted to include this case study on the portfolio itself to show how much thought went into making this portfolio.</p></li>
-            <li><p>In making this, I had to strike a fine balance between traditional elements and unique individuality.</p></li>
+            <li><p>What content to put on the portfolio site was mostly laid out by Bloc. I added a blog at the recommendation of my mentor and wanted to include this case study on the portfolio itself to show my thoughts on how I made this.</p></li>
           </ul>
-          <div class="pt-re1 subimg"><img src=""/><div class="expand"></div></div>
-          <div class="pt-re2 subimg"><img src=""/><div class="expand"></div></div>
+          <div class="pt-re1 subimg re1"><img src="images/pt_research1_thumb.png"/><div class="expand"></div></div>
+          <div class="pt-re2 subimg re2"><img src="images/pt_research2_thumb.png"/><div class="expand"></div></div>
         </li>
         <li class="detail IA">
           <div class="centering"><a name="pt-IA"></a>
@@ -685,10 +685,11 @@
           </div>
           <!-- PORTFOLIO: INFORMATION ARCHITECTURE -->
           <ul class="content">
-            <li><p>The very first principle I set down was that no content should be more than 2 clicks deep. One to open the project, one to expand images.</p></li>
-            <li><p>Major time and effort went into the HTML architecture. I did a refactoring partway through to line up all the site content in a clean directory that would help those with accessibility needs.</p></li>
+            <li><p>The very first principle I set down was that nothing should be more than 2 clicks deep. One to open a project, one to expand images.</p></li>
+            <li><p>Major effort went into the HTML architecture. I did a refactoring partway through to lay out content to better aid accessibility.</p></li>
+            <li><p>Below is an early idea I had on how to limit needed clicks to get to content.</p></li>
           </ul>
-          <div class="pt-ia1 subimg"><img src=""/><div class="expand"></div></div>
+          <div class="pt-ia1 subimg ia1"><img src="images/pt_ia_thumb.jpg"/><div class="expand"></div></div>
         </li>
         <li class="detail mockups">
           <div class="centering"><a name="pt-mockups"></a>
@@ -697,11 +698,10 @@
           </div>
           <!-- PORTFOLIO: MOCKUPS AND LAYOUTS -->
           <ul class="content">
-            <li><p>Testing focused around making sure that it was intuitive what could be clicked on and how to navigate.</p></li>
-            <li><p>I also wanted to make sure the visual heirarchy was clear and that scaling text was always legible and fit the surroundings well.</p></li>
+            <li><p>Testing focused around intuitive interface. Particularly on what elements could be clicked and what would happen upon clicking. I also wanted to make sure the visual heirarchy is clear and that scaled text is always legible and fit the surroundings well.</p></li>
           </ul>
-          <div class="pt-mo1 subimg"><img src=""/><div class="expand"></div></div>
-          <div class="pt-mo2 subimg"><img src=""/><div class="expand"></div></div>
+          <div class="pt-mo1 subimg mo1"><img src="images/pt_mockup1_thumb.png"/><div class="expand"></div></div>
+          <div class="pt-mo2 subimg mo2"><img src="images/pt_mockup2_thumb.png"/><div class="expand"></div></div>
         </li>
         <li class="detail branding">
           <div class="centering"><a name="pt-branding"></a>
@@ -713,11 +713,11 @@
             <li><p>The logo was explicitly designed to be both professional and personal, showing that I'm not a company, I'm an individual.</p></li>
             <li><p>Given my background teaching science, I wanted to show my analytical side as well as my creative side. The clean, square motif was how I did this.</p></li>
             <li><p>Everything else fell into place based on these. The font (Exo 2) mimics the signature with thin clean lines. Colors were designed to give the different sections of the site prominence. The animated icons were designed to mimic the signature. (And show off the coolness of Vivus.)</p></li>
-            <p><img class="thelogo" src="" /></p>
+            <p><img class="thelogo" src="images/sig.png" /></p>
           </ul>
-          <div class="pt-br2 subimg"><img src="" /><div class="expand"></div></div>
-          <div class="pt-br3 subimg"><img src="" /><div class="expand"></div></div>
-          <div class="pt-br4 subimg"><img src="" /><div class="expand"></div></div>
+          <div class="pt-br2 subimg br2"><img src="images/pt_branding1_thumb.jpg" /><div class="expand"></div></div>
+          <div class="pt-br3 subimg br3"><img src="images/pt_branding2_thumb.png" /><div class="expand"></div></div>
+          <div class="pt-br4 subimg br4"><img src="images/pt_branding3_thumb.png" /><div class="expand"></div></div>
         </li>
         <li class="detail testing">
           <div class="centering"><a name="pt-testing"></a>
@@ -731,7 +731,7 @@
             <li><p>Feedback was also key in designing the "about me" section. User suggestions led to the inclusion of the skip feature.</p></li>
             <li><p>Lastly, mentor and Bloc feedback were also key in the design process. Their input led to better development of the "x" button, the ability to hit "escape" and proper functionality for the back button.</p></li>
           </ul>
-          <div class="pt-ur1 subimg"><img src="" /><div class="expand"></div></div>
+          <div class="pt-ur1 subimg ur1"><img src="images/pt_testing1_thumb.png" /><div class="expand"></div></div>
         </li>
         <li class="detail result">
           <div class="centering"><a name="pt-result"></a>
@@ -739,7 +739,8 @@
             <div class="subtitle">The Result</div>
           </div>
           <!-- PORTFOLIO: RESULT -->
-          <div class="resultimg"><a href="">Link to InVision mockup<img src=""/></a></div>
+          <div class="resultimg">Not just a nice looking website, but one with a lot of work and effort put into the code behding it all.<br/><br/>
+          <img src="images/pt_codesnippet.png"/></div>
         </li>
         <li class="detail future">
           <div class="centering"><a name="pt-future"></a>
@@ -752,8 +753,9 @@
             <li><div>Refine and rework the case studies. I feel like better emphasis could be given to the end result. The current format was done to build up to it, but I feel it falls a little flat in delivery.</div></li>
             <li><div>Add more subtle animated touches to many of the elements. Text fade-ins in particular.</div></li>
             <li><div>Refinement and styling to the blog. At the moment it uses a simple wordpress template with little personality. This can certainly be made better.</div></li>
+            <li><div>Add a few more projects to better show my array of skills.</div></li>
           </ul>
-          <div class="pt-fr1 subimg"><img src="" /><div class="expand"></div></div>
+          <div class="pt-fr1 subimg fr1"><img src="images/pt_future1_thumb.png" /><div class="expand"></div></div>
         </li>
         <li class="edrk1 edrk"></li>
         <li class="edrk2 edrk"></li>
@@ -792,10 +794,14 @@
         <!-- ABOUT ME CONTENT -->
       <div class="case-study">
         <ul class="am-opacity">
-          <div class="am-title">Life is a journey. <br />Here's a bit of mine.</div>
+          <div class="am-title">
+            Life is a journey. <br />Here's a bit of mine.
+          </div>
           <li class="am-picture">
             <img class="pixel-me" src="images/pixel-me.png"/>
           </li>
+          <div class="tradres"><a href="Christofferson Resume UXUI.pdf" target="_blank">(traditional resume)</a></div>
+          <div class="skipanim">(skip animation)</div>
           <li class="am-map">
             <img class="path"></img>
             <div class="map-child map-box">

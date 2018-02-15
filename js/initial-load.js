@@ -68,6 +68,14 @@ $c_crn.velocity({opacity:1}, {duration:400, delay:2400});
 $setnine.velocity({opacity:1}, {duration:400, delay:2400});
 $drk4.velocity({opacity:1}, {duration:400, delay:2550});
 
+// animate a few elements on hover
+$('.linkedinicon').hover(function(){$(this).attr("src", "images/icon_linkedin_hover.svg");}, function(){$(this).attr("src", "images/icon_linkedin.svg");});
+$('.infoform').hover(function(){$(this).attr("src", "images/icon_email_hover.svg");}, function(){$(this).attr("src", "images/icon_email.svg");});
+$('.close_x, .close_form_x').hover(function(){$(this).css("color", "#777777");}, function(){$(this).css("color", "#000000");});
+$('.submit').hover(function(){$(this).css("background-color", "#CCCCCC");}, function(){$(this).css("background-color", "#FFFFFF");});
+
+
+
 // reload the animated icons when they come into the viewer window for the first time
 $(window).scroll(function() {drawicons();});
 

@@ -17,6 +17,21 @@ var $contactopen = false;
 var s = new Date();
 var sizecategory = 0;     // helps with resizing when the "about me" is open.
 
+// =================== NAVIGATE TO EACH SECTION ON CONTENTS CLICK =============
+
+
+
+$('.go-about').click(function(){ $(window).scrollTop($(this).parents().eq(3).find('.about').offset().top); });
+$('.go-objective').click(function(){ $(window).scrollTop($(this).parents().eq(3).find('.objective').offset().top); });
+$('.go-research').click(function(){ $(window).scrollTop($(this).parents().eq(3).find('.research').offset().top); });
+$('.go-ia').click(function(){ $(window).scrollTop($(this).parents().eq(3).find('.IA').offset().top); });
+$('.go-mockups').click(function(){ $(window).scrollTop($(this).parents().eq(3).find('.mockups').offset().top); });
+$('.go-branding').click(function(){ $(window).scrollTop($(this).parents().eq(3).find('.branding').offset().top); });
+$('.go-testing').click(function(){ $(window).scrollTop($(this).parents().eq(3).find('.testing').offset().top); });
+$('.go-result').click(function(){ $(window).scrollTop($(this).parents().eq(3).find('.result').offset().top); });
+$('.go-future').click(function(){ $(window).scrollTop($(this).parents().eq(3).find('.future').offset().top); });
+
+
 // =================== EXPAND OR CONTRACT A CASE STUDY ========================
 
 $('.project').click(function(){
@@ -74,8 +89,8 @@ $('.close_x').click(function(){
 // when close button for form is clicked
 $('.close_form_x').click(function(){
   $contactopen = false;
-  setTimeout(function() { $('.formholder').css("display", "none");}, 600);
-  $('.formholder').velocity({opacity:0}, {duration:500, delay:0});
+  setTimeout(function() { $('.formholder, .formbg').css("display", "none");}, 600);
+  $('.formholder, .formbg').velocity({opacity:0}, {duration:500, delay:0});
   $('body').css("overflow-y", "auto");
 });
 
@@ -102,8 +117,8 @@ $(document).keyup(function(e) {
    if (e.keyCode == 27 && $contactopen == true)  // escape key maps to keycode `27`
    {
      $contactopen = false;
-        setTimeout(function() { $('.formholder').css("display", "none");}, 600);
-     $('.formholder').velocity({opacity:0}, {duration:500, delay:0});
+        setTimeout(function() { $('.formholder, .formbg').css("display", "none");}, 600);
+     $('.formholder, .formbg').velocity({opacity:0}, {duration:500, delay:0});
      $('body').css("overflow-y", "auto");
    }
 
@@ -111,8 +126,8 @@ $(document).keyup(function(e) {
 
 
 // intercept a back button press and redirect to main site again
-window.onhashchange = function {
-      console.log("re");
+window.onhashchange = function() {
+
   if ($exp_project == true && $exp_image == false && $inprogress == false && $contactopen == false) {
     $inprogress = true;
     $exp_project = false;
@@ -136,8 +151,8 @@ window.onhashchange = function {
 // when form icon is clicked
 $('.infoform').click(function(){
   $contactopen = true;
-  $('.formholder').css("display", "inherit");
-  $('.formholder').velocity({opacity:1}, {duration:500, delay:0});
+  $('.formholder, .formbg').css("display", "inherit");
+  $('.formholder, .formbg').velocity({opacity:1}, {duration:500, delay:0});
   $('body').css("overflow-y", "hidden");
 });
 
@@ -150,8 +165,8 @@ $('.submit').click(function(){
   setTimeout(function() { $('.confirmation').css("z-index", "6000");}, 100);
   $('.confirmation').velocity({opacity:1}, {duration:500, delay:0});
 
-  $('.formholder').velocity({opacity:0}, {duration:500, delay:1500});
-  setTimeout(function() { $('.formholder').css("display", "none");}, 2500);
+  $('.formholder, .formbg').velocity({opacity:0}, {duration:500, delay:1500});
+  setTimeout(function() { $('.formholder, .formbg').css("display", "none");}, 2500);
 
   setTimeout(function() { $('form').css("opacity", "1");}, 2500);
   setTimeout(function() { $('.confirmation').css("opacity", "0");}, 2500);
@@ -261,6 +276,10 @@ if ($self.hasClass('helping-hands'))
   $detail_subtitle.css("background-color", "#D8EDD4");
   $detail_icon.css("background-color", "#E3F9DF");
 
+  $('.re1, .ia1, .br2, .br4').css("background-color", "#EFFFED");
+  $('.re2, .mo1, .br3, .ur1, .fr1').css("background-color", "#D8EDD4");
+  $('.br1, .mo2').css("background-color", "#E3F9DF");
+
   document.title = "Christoffersonian - Helping Hands Case Study";
   gtag('config', 'UA-113084862-1', {
     'page_title':'Christoffersonian - Helping Hands Case Study',
@@ -276,6 +295,10 @@ if ($self.hasClass('cornucopia'))
   $detail_subtitle.css("background-color", "#EDEBD4");
   $detail_icon.css("background-color", "#F9F7DF");
 
+  $('.re1, .ia1, .br2, .br4').css("background-color", "#FFFFED");
+  $('.re2, .mo1, .br3, .ur1, .fr1').css("background-color", "#EDEBD4");
+  $('.br1, .mo2').css("background-color", "#F9F7DF");
+
   document.title = "Christoffersonian - Cornucopia Case Study";
   gtag('config', 'UA-113084862-1', {
     'page_title':'Christoffersonian - Cornucopia Case Study',
@@ -290,6 +313,10 @@ if ($self.hasClass('airport-navigator'))
   $medium_tiles.css("background-color", "#C8E1F3");
   $detail_subtitle.css("background-color", "#D4E9ED");
   $detail_icon.css("background-color", "#DFF8F9");
+
+  $('.re1, .ia1, .br2, .br4').css("background-color", "#EDFAFF");
+  $('.re2, .mo1, .br3, .ur1, .fr1').css("background-color", "#D4E9ED");
+  $('.br1, .mo2').css("background-color", "#DFF8F9");
 
   document.title = "Christoffersonian - Airport Navigator Case Study";
   gtag('config', 'UA-113084862-1', {
@@ -323,6 +350,10 @@ if ($self.hasClass('portfolio'))
   $medium_tiles.css("background-color", "#F3C8C8");
   $detail_subtitle.css("background-color", "#EDD4D4");
   $detail_icon.css("background-color", "#F9DFDF");
+
+  $('.re1, .ia1, .br2, .br4').css("background-color", "#FFEDED");
+  $('.re2, .mo1, .br3, .ur1, .fr1').css("background-color", "#EDD4D4");
+  $('.br1, .mo2').css("background-color", "#F9DFDF");
 
   document.title = "Christoffersonian - Portfolio Case Study";
   gtag('config', 'UA-113084862-1', {
@@ -480,6 +511,9 @@ $(window).resize(function() {
         clearTimeout(map13);
 
         $('.arrow').removeClass('tri-top1 tri-top2 tri-right1 tri-right2 tri-left1 tri-left2 tri-bottom1 tri-bottom2');
+
+        $('.skipanim').css("display", "inherit");
+        $('.skipanim').css("opacity", "1");
 
         s = new Date();
         growaboutme();

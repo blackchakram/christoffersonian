@@ -11,14 +11,43 @@ var map10;
 var map11;
 var map12;
 var map13;
-/*
-$('.about-me').click(function(){
-  if ($exp_project == false && $inprogress == false && $contactopen == false)
-  {
-    s = new Date();
-    growaboutme();
-  }
-});*/
+
+
+$('.skipanim').click(function(){
+
+  quickaboutme();
+  $(this).css("display", "none");
+});
+
+
+function quickaboutme () {
+
+    maptimer(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+
+    if ($(window).width() < 500) {
+      $('.path').attr("src", "images/path_4x_quick.svg?" + s);
+    }
+
+
+    if ($(window).width() >= 500 && $(window).width() < 768) {
+      $('.path').attr("src", "images/path_6x_quick.svg?" + s);
+    }
+
+
+    if ($(window).width() >= 768 && $(window).width() < 1024) {
+      $('.path').attr("src", "images/path_8x_quick.svg?" + s);
+    }
+
+
+    if ($(window).width() >= 1024 && $(window).width() < 1440) {
+      $('.path').attr("src", "images/path_10x_quick.svg?" + s);
+    }
+
+
+    if ($(window).width() >= 1440) {
+      $('.path').attr("src", "images/path_14x_quick.svg?" + s);
+    }
+};
 
 function growaboutme () {
 
@@ -77,6 +106,9 @@ function growaboutme () {
   maptimer(0, 1500, 3700, 7500, 8800, 11300, 14000, 15000, 21000, 23000, 24500, 27000, 30000);
   maparrows ('tri-right1','tri-top1','tri-left1','tri-left1','tri-top1','tri-right1','tri-right1','tri-left1','tri-left1','tri-top2','tri-bottom1','tri-left1','tri-right2');
   }
+
+setTimeout(function() {$('.skipanim').velocity({opacity:0}, {duration:500});}, 30000);
+setTimeout(function() {$('.skipanim').css("display", "none");}, 30000);
 
 };
 
