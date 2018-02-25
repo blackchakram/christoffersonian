@@ -57,7 +57,7 @@ if ($image_inprogress == false && $exp_image == false)
   $('.image_viewer').ImageViewer();
   $viewer = $('.image_container').data('ImageViewer');
 
-  $('.iv-large-image').css("height", "80vw");
+/*  $('.iv-large-image').css("height", "80vw");*/
 
   $('.iv_container').css("width", $(window).innerWidth() + "px");
   $('.iv_container').css("height", $(window).innerHeight() + "px");

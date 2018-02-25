@@ -38,7 +38,7 @@ div {
   left: -8px;
 }
 
-::-webkit-scrollbar { display: none; }
+/*::-webkit-scrollbar { display: none; }*/
 
 .contact-info {top:18vw;}
 
@@ -90,6 +90,14 @@ input {
 
 
 /* ============= MAIN PAGE STYLING ============= */
+
+video {
+  width:358%;
+  left: -76.5vw;
+  position: relative;
+  top: -34vw;
+  clip-path: inset(34vw 0 18vw calc(100vw/5*2));
+}
 
 .main-grid, .case-study, .am-map {
   width: 100vw;
@@ -269,6 +277,7 @@ input {
   font-size: 3.5vw;
   text-align: center;
   margin: 20px auto 10px;
+  opacity: 1;
 }
 
 .subtitle {
@@ -452,6 +461,7 @@ input {
   width: 60%;
 }
 
+
 /* =============== IMAGE VIEWER ============== */
 
 .image_viewer_wrapper {
@@ -483,7 +493,7 @@ padding-left: 6vw;
   display: none;
   position: fixed;
   width: 100vw;
-  top: 5vh;
+  top: 3vh;
   left: 0;
   z-index: 3000;
   background-color: white;
@@ -517,7 +527,7 @@ input, textarea {
 }
 
 textarea {
-  height: 40vw;
+  height: 30vw;
   resize: none;
 }
 
@@ -730,7 +740,7 @@ textarea {
   font-weight: bolder;
 }
 
-
+.future {z-index: 190;}
 
 
 
@@ -745,7 +755,15 @@ textarea {
 /* ================================================ */
 
 /* =============== 500 px ============== */
-@media (min-width: 500px) {
+@media (min-width: 517px) {
+
+  video {
+    width:360%;
+    left: -76.5vw;
+    position: relative;
+    top: -40vw;
+    clip-path: inset(41vw 0 20vw calc(100vw/5*2));
+  }
 
   /* main page */
   .close_x, .close_form_x {
@@ -812,7 +830,7 @@ textarea {
   .med6 {display: none;}
 
 .formholder {
-  top:12vw;
+  top:3vw;
   width: calc(100vw/6*4);
   left: calc(100vw/6);
 }
@@ -820,6 +838,8 @@ textarea {
 form { padding: 5vw calc(100vw/12) 5vw;}
 
 textarea, input { width: calc(100vw/6*3);}
+
+textarea {height: 20vw;}
 
 .formtitle {font-size: 7vw;}
 
@@ -1007,7 +1027,7 @@ padding-left: 8vw;
 
 
 /* =============== 768 px ============== */
-@media (min-width: 768px) {
+@media (min-width: 785px) {
 
   /* main page */
   .close_x, .close_form_x {
@@ -1074,7 +1094,7 @@ padding-left: 8vw;
   .med6 {grid-area: 4 / 3 / 5 / 4; display: inherit;}
 
   .formholder {
-    top:10vw;
+    top:5vw;
     width: calc(100vw/8*4);
     left: calc(100vw/8*2);
   }
@@ -1083,7 +1103,7 @@ padding-left: 8vw;
 
   textarea, input { width: calc(100vw/8*3);}
 
-  textarea {height: calc(100vw/8*2);}
+  textarea {height: calc(100vw/8);}
 
   .formtitle {font-size: 4.5vw;}
 
@@ -1291,7 +1311,15 @@ padding-left: 8vw;
 
 
 /* =============== 1024 px ============== */
-@media (min-width: 1024px) {
+@media (min-width: 1041px) {
+
+  video {
+    width:358%;
+    left: -38vw;
+    position: relative;
+    top: -15vw;
+    clip-path: inset(16vw 0 9vw calc(100vw/5*2));
+  }
 
   .close_x, .close_form_x {
     width: calc(100vw/20);
@@ -1344,7 +1372,7 @@ padding-left: 8vw;
   .med6 {grid-area: 3 / 3 / 5 / 5; display: inherit;}
 
   .formholder {
-    top:5vw;
+    top:2.5vw;
     width: calc(100vw/10*4);
     left: calc(100vw/10*3);
   }
@@ -1353,7 +1381,7 @@ padding-left: 8vw;
 
   textarea, input { width: calc(100vw/10*3);}
 
-  textarea {height: calc(100vw/10*1.5);}
+  textarea {height: calc(100vw/10);}
 
   .formtitle {font-size: 3.5vw;}
 
@@ -1598,7 +1626,15 @@ padding-left: 8vw;
 
 
 /* =============== 1440 px ============== */
-@media (min-width: 1440px) {
+@media (min-width: 1457px) {
+
+  video {
+    width:370%;
+    left: -30vw;
+    position: relative;
+    top: -15vw;
+    clip-path: inset(16vw 0 8vw calc(100vw/5*1.6));
+  }
 
   .close_x, .close_form_x {
     width: calc(100vw/28);

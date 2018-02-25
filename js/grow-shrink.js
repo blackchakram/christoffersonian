@@ -362,6 +362,7 @@ if ($self.hasClass('portfolio'))
     'page_path':'/#portfolio'
   });
 }
+$('.future').css("z-index", "111");   // hack to make sure future section shows over result masking
 
 };
 

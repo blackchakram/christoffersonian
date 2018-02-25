@@ -71,8 +71,10 @@ $drk4.velocity({opacity:1}, {duration:400, delay:2550});
 // animate a few elements on hover
 $('.linkedinicon').hover(function(){$(this).attr("src", "images/icon_linkedin_hover.svg");}, function(){$(this).attr("src", "images/icon_linkedin.svg");});
 $('.infoform').hover(function(){$(this).attr("src", "images/icon_email_hover.svg");}, function(){$(this).attr("src", "images/icon_email.svg");});
+$('.ghicon').hover(function(){$(this).attr("src", "images/icon_github_hover.svg");}, function(){$(this).attr("src", "images/icon_github.svg");});
 $('.close_x, .close_form_x').hover(function(){$(this).css("color", "#777777");}, function(){$(this).css("color", "#000000");});
 $('.submit').hover(function(){$(this).css("background-color", "#CCCCCC");}, function(){$(this).css("background-color", "#FFFFFF");});
+/*$('.centering').hover(function(){$(this).find('.subtitle_icon').velocity({opacity:1}, {duration:500, delay:0});}, function(){$(this).find('.subtitle_icon').velocity({opacity:0}, {duration:500, delay:0});});*/
 
 
 
