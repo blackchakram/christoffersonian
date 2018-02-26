@@ -92,11 +92,8 @@ input {
 /* ============= MAIN PAGE STYLING ============= */
 
 video {
-  width:358%;
-  left: -76.5vw;
-  position: relative;
-  top: -34vw;
-  clip-path: inset(34vw 0 18vw calc(100vw/5*2));
+  width:100%;
+  clip-path: inset(1vw 2vw 0 2vw);
 }
 
 .main-grid, .case-study, .am-map {
@@ -757,14 +754,6 @@ textarea {
 /* =============== 500 px ============== */
 @media (min-width: 517px) {
 
-  video {
-    width:360%;
-    left: -76.5vw;
-    position: relative;
-    top: -40vw;
-    clip-path: inset(41vw 0 20vw calc(100vw/5*2));
-  }
-
   /* main page */
   .close_x, .close_form_x {
     width: calc(100vw/12);
@@ -1313,14 +1302,6 @@ padding-left: 8vw;
 /* =============== 1024 px ============== */
 @media (min-width: 1041px) {
 
-  video {
-    width:358%;
-    left: -38vw;
-    position: relative;
-    top: -15vw;
-    clip-path: inset(16vw 0 9vw calc(100vw/5*2));
-  }
-
   .close_x, .close_form_x {
     width: calc(100vw/20);
     height: calc(100vw/20);
@@ -1627,14 +1608,6 @@ padding-left: 8vw;
 
 /* =============== 1440 px ============== */
 @media (min-width: 1457px) {
-
-  video {
-    width:370%;
-    left: -30vw;
-    position: relative;
-    top: -15vw;
-    clip-path: inset(16vw 0 8vw calc(100vw/5*1.6));
-  }
 
   .close_x, .close_form_x {
     width: calc(100vw/28);
