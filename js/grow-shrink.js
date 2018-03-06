@@ -203,35 +203,42 @@ $logo_to_fade.velocity({opacity:0}, {duration:500, delay:0});
 
 // undo the hidden attribute for the box to expand
 setTimeout(function() { $thing_to_expand.css("opacity", 1);  }, 500);
-setTimeout(function() { $thing_to_expand.css("display", "grid");  }, 500);
+setTimeout(function() { $thing_to_expand.css("display", "block");  }, 500);
 
 // scroll to the top of the screen so the user sees the case study from the start
 setTimeout(function() { $(window).scrollTop(0); }, 1500);
 
+// replace the title overlay image for case studies when large enough
+if ($(window).width() >= 768) {
+  $('.titleoverlay').attr("src", "images/hh_title_overlay_large.svg");
+}else{
+  $('.titleoverlay').attr("src", "images/hh_title_overlay.svg");
+}
+
 // expand a cell of the original background grid so the case study can be tall enough
 if ($(window).width() < 500) {
   if ($self.hasClass('about-me')) {setTimeout(function() {$(".drk4").css("grid-area", "10 / 2 / 33 / 3");}, 1000);}
-  else {setTimeout(function() {$(".drk4").css("grid-area", "10 / 2 / 64 / 3");}, 1000);};
+  else {setTimeout(function() {$(".drk4").css("grid-area", "10 / 2 / 81 / 3");}, 1000);};
   sizecategory = 1;
 };
 if ($(window).width() >= 500 && $(window).width() < 768) {
   if ($self.hasClass('about-me')) {setTimeout(function() {$(".drk4").css("grid-area", "10 / 2 / 25 / 3");}, 1000);}
-  else {setTimeout(function() {$(".drk4").css("grid-area", "10 / 2 / 68 / 3");}, 1000);};
+  else {setTimeout(function() {$(".drk4").css("grid-area", "10 / 2 / 121 / 3");}, 1000);};
   sizecategory = 2;
 };
 if ($(window).width() >= 768 && $(window).width() < 1024) {
   if ($self.hasClass('about-me')) {setTimeout(function() {$(".drk4").css("grid-area", "10 / 2 / 16 / 3");}, 1000);}
-  else {setTimeout(function() {$(".drk4").css("grid-area", "10 / 2 / 47 / 3");}, 1000);};
+  else {setTimeout(function() {$(".drk4").css("grid-area", "10 / 2 / 85 / 3");}, 1000);};
   sizecategory = 3;
 };
 if ($(window).width() >= 1024 && $(window).width() < 1440) {
   if ($self.hasClass('about-me')) {setTimeout(function() {$(".drk4").css("grid-area", "10 / 2 / 14 / 3");}, 1000);}
-  else {setTimeout(function() {$(".drk4").css("grid-area", "10 / 2 / 30 / 3");}, 1000);};
+  else {setTimeout(function() {$(".drk4").css("grid-area", "10 / 2 / 104 / 3");}, 1000);};
   sizecategory = 4;
 };
 if ($(window).width() >= 1440) {
   if ($self.hasClass('about-me')) {setTimeout(function() {$(".drk4").css("grid-area", "10 / 2 / 9 / 3");}, 1000);}
-  else {setTimeout(function() {$(".drk4").css("grid-area", "10 / 2 / 21 / 3");}, 1000);};
+  else {setTimeout(function() {$(".drk4").css("grid-area", "10 / 2 / 103 / 3");}, 1000);};
   sizecategory = 5;
 };
 
@@ -244,15 +251,16 @@ if ($gridDimensions.height() < $(window).scrollTop() + $(window).height())
 {$height = $(window).scrollTop() + $(window).height();}
 else {$height = $gridDimensions.height();}
 
+
 $thing_to_expand.velocity({width: "100vw", height: $height + "px", top: -$self.offset().top + "px", left: -$self.offset().left-8 + "px" }, {delay: 500, easing: "ease-in-out", duration: 500});
 setTimeout(function() { $thing_to_expand.css("height", $gridDimensions.height() + "px"); }, 2110);
 
 // fade in the new content inside the newly expanded case study
 setTimeout(function() { $logo_to_fade.css("opacity", "1"); }, 1500);
 setTimeout(function() { $fade_in.css("display", "inherit"); }, 1500);
-setTimeout(function() { $detail_grids.css("display", "grid"); }, 1500);
+setTimeout(function() { $detail_grids.css("display", "block"); }, 1500);
 $fade_in.velocity({opacity:1}, {duration:1000, delay:1500});
-setTimeout(function() { $keep_style.css("display", "flex"); }, 1510);
+setTimeout(function() { $keep_style.css("display", "block"); }, 1510);
 
 //if about me, fade in all content
 if ($self.hasClass('about-me')) {$(".am-opacity").velocity({opacity:1}, {duration:1000, delay:1500});}
@@ -271,15 +279,6 @@ var $sub_content = $('.subgroup-content');
 
 if ($self.hasClass('helping-hands'))
 {
-  $dark_tiles.css("background-color", "#BCDEB6");
-  $medium_tiles.css("background-color", "#BDE2B6");
-  $detail_subtitle.css("background-color", "#D8EDD4");
-  $detail_icon.css("background-color", "#E3F9DF");
-
-  $('.re1, .ia1, .br2, .br4').css("background-color", "#EFFFED");
-  $('.re2, .mo1, .br3, .ur1, .fr1').css("background-color", "#D8EDD4");
-  $('.br1, .mo2').css("background-color", "#E3F9DF");
-
   document.title = "Christoffersonian - Helping Hands Case Study";
   gtag('config', 'UA-113084862-1', {
     'page_title':'Christoffersonian - Helping Hands Case Study',
@@ -290,14 +289,14 @@ if ($self.hasClass('helping-hands'))
 
 if ($self.hasClass('cornucopia'))
 {
-  $dark_tiles.css("background-color", "#DED5B6");
+  $dark_tiles.css("background-color", "#E9E3C3");
   $medium_tiles.css("background-color", "#E5DCBE");
-  $detail_subtitle.css("background-color", "#EDEBD4");
-  $detail_icon.css("background-color", "#F9F7DF");
+  $detail_subtitle.css("background-color", "#EBE7C3");
+  $detail_icon.css("background-color", "#F1EDC8");
 
-  $('.re1, .ia1, .br2, .br4').css("background-color", "#FFFFED");
-  $('.re2, .mo1, .br3, .ur1, .fr1').css("background-color", "#EDEBD4");
-  $('.br1, .mo2').css("background-color", "#F9F7DF");
+  $('.re1, .ia1, .br2, .br4').css("background-color", "#F4F1CE");
+  $('.re2, .mo1, .br3, .ur1, .fr1').css("background-color", "#EBE7C3");
+  $('.br1, .mo2').css("background-color", "#F1EDC8");
 
   document.title = "Christoffersonian - Cornucopia Case Study";
   gtag('config', 'UA-113084862-1', {
@@ -309,14 +308,14 @@ if ($self.hasClass('cornucopia'))
 
 if ($self.hasClass('airport-navigator'))
 {
-  $dark_tiles.css("background-color", "#B6D5DE");
+  $dark_tiles.css("background-color", "#C4DCE9");
   $medium_tiles.css("background-color", "#C8E1F3");
-  $detail_subtitle.css("background-color", "#D4E9ED");
-  $detail_icon.css("background-color", "#DFF8F9");
+  $detail_subtitle.css("background-color", "#C4DDEB");
+  $detail_icon.css("background-color", "#C9E4F1");
 
-  $('.re1, .ia1, .br2, .br4').css("background-color", "#EDFAFF");
-  $('.re2, .mo1, .br3, .ur1, .fr1').css("background-color", "#D4E9ED");
-  $('.br1, .mo2').css("background-color", "#DFF8F9");
+  $('.re1, .ia1, .br2, .br4').css("background-color", "#CFE5F4");
+  $('.re2, .mo1, .br3, .ur1, .fr1').css("background-color", "#C4DDEB");
+  $('.br1, .mo2').css("background-color", "#C9E4F1");
 
   document.title = "Christoffersonian - Airport Navigator Case Study";
   gtag('config', 'UA-113084862-1', {
@@ -328,11 +327,11 @@ if ($self.hasClass('airport-navigator'))
 
 if ($self.hasClass('about-me'))
 {
-  $dark_tiles.css("background-color", "#DCB6DE");
+  $dark_tiles.css("background-color", "#E4C3E9");
   $medium_tiles.css("background-color", "#EAC8F3");
 
-  $am_title.css("background-color", "#E4D4ED");
-  $am_title_img.css("background-color", "#F2DFF9");
+  $am_title.css("background-color", "#E2C3EB");
+  $am_title_img.css("background-color", "#E9C8F1");
   $am_subtitle.css("background-color", "#F1E2F0");
   $sub_content.css("background-color", "#FFFFFF");
 
@@ -346,13 +345,13 @@ if ($self.hasClass('about-me'))
 
 if ($self.hasClass('portfolio'))
 {
-  $dark_tiles.css("background-color", "#DEB6B6");
-  $medium_tiles.css("background-color", "#F3C8C8");
-  $detail_subtitle.css("background-color", "#EDD4D4");
+  $dark_tiles.css("background-color", "#E9C4C4");
+  $medium_tiles.css("background-color", "#F1C9C9");
+  $detail_subtitle.css("background-color", "#EBC4C4");
   $detail_icon.css("background-color", "#F9DFDF");
 
-  $('.re1, .ia1, .br2, .br4').css("background-color", "#FFEDED");
-  $('.re2, .mo1, .br3, .ur1, .fr1').css("background-color", "#EDD4D4");
+  $('.re1, .ia1, .br2, .br4').css("background-color", "#F4CFCF");
+  $('.re2, .mo1, .br3, .ur1, .fr1').css("background-color", "#EBC4C4");
   $('.br1, .mo2').css("background-color", "#F9DFDF");
 
   document.title = "Christoffersonian - Portfolio Case Study";
@@ -462,29 +461,35 @@ $(window).resize(function() {
 
     var oldsize = sizecategory;     // grabs current size category to see if its about to cross a threshhold
 
+    if ($(window).width() >= 768) {
+      $('.titleoverlay').attr("src", "images/hh_title_overlay_large.svg");
+    }else{
+      $('.titleoverlay').attr("src", "images/hh_title_overlay.svg");
+    }
+
     if ($(window).width() < 500) {
       if ($expanded_thing.hasClass('about-me')) {$(".drk4").css("grid-area", "10 / 2 / 33 / 3");}
-      else {$(".drk4").css("grid-area", "10 / 2 / 64 / 3");};
+      else {$(".drk4").css("grid-area", "10 / 2 / 81 / 3");};
       sizecategory = 1;
     };
     if ($(window).width() >= 500 && $(window).width() < 768) {
       if ($expanded_thing.hasClass('about-me')) {$(".drk4").css("grid-area", "10 / 2 / 25 / 3");}
-      else {$(".drk4").css("grid-area", "10 / 2 / 68 / 3");};
+      else {$(".drk4").css("grid-area", "10 / 2 / 121 / 3");};
       sizecategory = 2;
     };
     if ($(window).width() >= 768 && $(window).width() < 1024) {
       if ($expanded_thing.hasClass('about-me')) {$(".drk4").css("grid-area", "10 / 2 / 16 / 3");}
-      else {$(".drk4").css("grid-area", "10 / 2 / 47 / 3");};
+      else {$(".drk4").css("grid-area", "10 / 2 / 85 / 3");};
       sizecategory = 3;
     };
     if ($(window).width() >= 1024 && $(window).width() < 1440) {
       if ($expanded_thing.hasClass('about-me')) {$(".drk4").css("grid-area", "10 / 2 / 14 / 3");}
-      else {$(".drk4").css("grid-area", "10 / 2 / 30 / 3");};
+      else {$(".drk4").css("grid-area", "10 / 2 / 104 / 3");};
       sizecategory = 4;
     };
     if ($(window).width() >= 1440) {
       if ($expanded_thing.hasClass('about-me')) {$(".drk4").css("grid-area", "10 / 2 / 9 / 3");}
-      else {$(".drk4").css("grid-area", "10 / 2 / 21 / 3");};
+      else {$(".drk4").css("grid-area", "10 / 2 / 103 / 3");};
       sizecategory = 5;
     };
 
