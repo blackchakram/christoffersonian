@@ -209,11 +209,21 @@ setTimeout(function() { $thing_to_expand.css("display", "block");  }, 500);
 setTimeout(function() { $(window).scrollTop(0); }, 1500);
 
 // replace the title overlay image for case studies when large enough
-if ($(window).width() >= 768) {
-  $('.titleoverlay').attr("src", "images/hh_title_overlay_large.svg");
-}else{
-  $('.titleoverlay').attr("src", "images/hh_title_overlay.svg");
-}
+if ($expanded_thing.hasClass('helping-hands')) {
+    if ($(window).width() >= 768) {
+      $('.titleoverlay').attr("src", "images/hh_title_overlay_large.svg");
+    }else{
+      $('.titleoverlay').attr("src", "images/hh_title_overlay.svg");
+    }
+  }
+
+  if ($expanded_thing.hasClass('portfolio')) {
+      if ($(window).width() >= 768) {
+        $('.titleoverlay').attr("src", "images/pt_title_overlay_large.svg");
+      }else{
+        $('.titleoverlay').attr("src", "images/pt_title_overlay.svg");
+      }
+    }
 
 // expand a cell of the original background grid so the case study can be tall enough
 if ($(window).width() < 500) {
@@ -233,12 +243,20 @@ if ($(window).width() >= 768 && $(window).width() < 1024) {
 };
 if ($(window).width() >= 1024 && $(window).width() < 1440) {
   if ($self.hasClass('about-me')) {setTimeout(function() {$(".drk4").css("grid-area", "10 / 2 / 14 / 3");}, 1000);}
-  else {setTimeout(function() {$(".drk4").css("grid-area", "10 / 2 / 104 / 3");}, 1000);};
+  else {
+    setTimeout(function() {
+      var $gridheight = Math.floor(10800/($(window).width()/10));
+      $(".drk4").css("grid-area", "10 / 2 / " + $gridheight + " / 3");}, 1000);
+    };
   sizecategory = 4;
 };
 if ($(window).width() >= 1440) {
   if ($self.hasClass('about-me')) {setTimeout(function() {$(".drk4").css("grid-area", "10 / 2 / 9 / 3");}, 1000);}
-  else {setTimeout(function() {$(".drk4").css("grid-area", "10 / 2 / 103 / 3");}, 1000);};
+  else {
+    setTimeout(function() {
+      var $gridheight = Math.floor(10800/($(window).width()/14));
+      $(".drk4").css("grid-area", "10 / 2 / " + $gridheight + " / 3");}, 1000);
+    };
   sizecategory = 5;
 };
 
@@ -251,9 +269,19 @@ if ($gridDimensions.height() < $(window).scrollTop() + $(window).height())
 {$height = $(window).scrollTop() + $(window).height();}
 else {$height = $gridDimensions.height();}
 
+// if the window is wide enough, slide bottom of scroll by constant amount instead of by grid size
+if ($(window).width() >= 1024) {
+  $height = 10370 + $(window).width()/2;
+}
 
 $thing_to_expand.velocity({width: "100vw", height: $height + "px", top: -$self.offset().top + "px", left: -$self.offset().left-8 + "px" }, {delay: 500, easing: "ease-in-out", duration: 500});
+
+// if the window is wide enough, slide bottom of scroll by constant amount instead of by grid size
+if ($(window).width() >= 1024) {
+setTimeout(function() { $thing_to_expand.css("height", $height + "px"); }, 2110);
+}else{
 setTimeout(function() { $thing_to_expand.css("height", $gridDimensions.height() + "px"); }, 2110);
+}
 
 // fade in the new content inside the newly expanded case study
 setTimeout(function() { $logo_to_fade.css("opacity", "1"); }, 1500);
@@ -289,15 +317,6 @@ if ($self.hasClass('helping-hands'))
 
 if ($self.hasClass('cornucopia'))
 {
-  $dark_tiles.css("background-color", "#E9E3C3");
-  $medium_tiles.css("background-color", "#E5DCBE");
-  $detail_subtitle.css("background-color", "#EBE7C3");
-  $detail_icon.css("background-color", "#F1EDC8");
-
-  $('.re1, .ia1, .br2, .br4').css("background-color", "#F4F1CE");
-  $('.re2, .mo1, .br3, .ur1, .fr1').css("background-color", "#EBE7C3");
-  $('.br1, .mo2').css("background-color", "#F1EDC8");
-
   document.title = "Christoffersonian - Cornucopia Case Study";
   gtag('config', 'UA-113084862-1', {
     'page_title':'Christoffersonian - Cornucopia Case Study',
@@ -308,15 +327,6 @@ if ($self.hasClass('cornucopia'))
 
 if ($self.hasClass('airport-navigator'))
 {
-  $dark_tiles.css("background-color", "#C4DCE9");
-  $medium_tiles.css("background-color", "#C8E1F3");
-  $detail_subtitle.css("background-color", "#C4DDEB");
-  $detail_icon.css("background-color", "#C9E4F1");
-
-  $('.re1, .ia1, .br2, .br4').css("background-color", "#CFE5F4");
-  $('.re2, .mo1, .br3, .ur1, .fr1').css("background-color", "#C4DDEB");
-  $('.br1, .mo2').css("background-color", "#C9E4F1");
-
   document.title = "Christoffersonian - Airport Navigator Case Study";
   gtag('config', 'UA-113084862-1', {
     'page_title':'Christoffersonian - Airport Navigator Case Study',
@@ -345,15 +355,6 @@ if ($self.hasClass('about-me'))
 
 if ($self.hasClass('portfolio'))
 {
-  $dark_tiles.css("background-color", "#E9C4C4");
-  $medium_tiles.css("background-color", "#F1C9C9");
-  $detail_subtitle.css("background-color", "#EBC4C4");
-  $detail_icon.css("background-color", "#F9DFDF");
-
-  $('.re1, .ia1, .br2, .br4').css("background-color", "#F4CFCF");
-  $('.re2, .mo1, .br3, .ur1, .fr1').css("background-color", "#EBC4C4");
-  $('.br1, .mo2').css("background-color", "#F9DFDF");
-
   document.title = "Christoffersonian - Portfolio Case Study";
   gtag('config', 'UA-113084862-1', {
     'page_title':'Christoffersonian - Portfolio Case Study',
@@ -461,11 +462,23 @@ $(window).resize(function() {
 
     var oldsize = sizecategory;     // grabs current size category to see if its about to cross a threshhold
 
+if ($expanded_thing.hasClass('helping-hands')) {
     if ($(window).width() >= 768) {
       $('.titleoverlay').attr("src", "images/hh_title_overlay_large.svg");
     }else{
       $('.titleoverlay').attr("src", "images/hh_title_overlay.svg");
     }
+  }
+
+  if ($expanded_thing.hasClass('portfolio')) {
+      if ($(window).width() >= 768) {
+        $('.titleoverlay').attr("src", "images/pt_title_overlay_large.svg");
+      }else{
+        $('.titleoverlay').attr("src", "images/pt_title_overlay.svg");
+      }
+    }
+
+
 
     if ($(window).width() < 500) {
       if ($expanded_thing.hasClass('about-me')) {$(".drk4").css("grid-area", "10 / 2 / 33 / 3");}
@@ -484,17 +497,28 @@ $(window).resize(function() {
     };
     if ($(window).width() >= 1024 && $(window).width() < 1440) {
       if ($expanded_thing.hasClass('about-me')) {$(".drk4").css("grid-area", "10 / 2 / 14 / 3");}
-      else {$(".drk4").css("grid-area", "10 / 2 / 104 / 3");};
+      else {
+        var $gridheight = Math.floor(10800/($(window).width()/10));
+        $(".drk4").css("grid-area", "10 / 2 / " + $gridheight + " / 3");
+      };
       sizecategory = 4;
     };
     if ($(window).width() >= 1440) {
       if ($expanded_thing.hasClass('about-me')) {$(".drk4").css("grid-area", "10 / 2 / 9 / 3");}
-      else {$(".drk4").css("grid-area", "10 / 2 / 103 / 3");};
+      else {
+        var $gridheight = Math.floor(10800/($(window).width()/14));
+        $(".drk4").css("grid-area", "10 / 2 / " + $gridheight + " / 3");
+      };
       sizecategory = 5;
     };
 
-    $(this).css("height", $gridDimensions.height() + "px");
-//      setTimeout(function() {$(this).css("height", $gridDimensions.height() + "px");}, 500);
+    if ($(window).width() >= 1024) {
+      $(this).css("height", 10370 + $(window).width()/2 + "px");
+    } else {
+      $(this).css("height", $gridDimensions.height() + "px");
+
+    }
+
 
       // if size category has changed, erase and restart the about me stuff
       if (oldsize != sizecategory)

@@ -96,7 +96,7 @@ video {
   clip-path: inset(1vw 2vw 0 2vw);
 }
 
-.main-grid, /*.case-study,*/.am-map {
+.main-grid, .am-map {
   width: 100vw;
   display: grid;
   grid-gap: 0px;
@@ -279,7 +279,7 @@ video {
 .cornucopia > .case-study { background-color: #EEE5C0; }
 .airport-navigator > .case-study { background-color: #C2DCEE; }
 .about-me > .case-study { background-color: #E4BAE3; }
-.portfolio > .case-study { background-color: #ECBFBF; }
+.portfolio > .case-study { background-color: #EDC7C9; }
 
 /* ================================
 styling for case study parts
@@ -413,6 +413,15 @@ styling for case study parts
 .helping-hands .branding { background-image: url("../images/hh_branding_narrow.svg"); }
 .helping-hands .testing { background-image: url("../images/hh_testing_narrow.svg"); }
 .helping-hands .future { background-image: url("../images/hh_future_narrow.svg"); }
+
+.portfolio .overview { background-image: url("../images/pt_overview_narrow.svg"); }
+.portfolio .tools { background-image: url("../images/pt_toolsdeliverable_narrow.svg"); }
+.portfolio .research { background-image: url("../images/pt_research_narrow.svg"); }
+.portfolio .IA { background-image: url("../images/pt_ia_narrow.svg"); }
+.portfolio .mockups { background-image: url("../images/pt_mockups_narrow.svg"); }
+.portfolio .branding { background-image: url("../images/pt_branding_narrow.svg"); }
+.portfolio .testing { background-image: url("../images/pt_testing_narrow.svg"); }
+.portfolio .future { background-image: url("../images/pt_future_narrow.svg"); }
 
 /* =============== IMAGE VIEWER ============== */
 
@@ -983,6 +992,15 @@ padding-left: 8vw;
   .helping-hands .branding { background-image: url("../images/hh_branding_wide.svg"); }
   .helping-hands .testing { background-image: url("../images/hh_testing_wide.svg"); }
   .helping-hands .future { background-image: url("../images/hh_future_wide.svg"); }
+
+  .portfolio .overview { background-image: url("../images/pt_overview_wide.svg"); }
+  .portfolio .tools { background-image: url("../images/pt_toolsdeliverable_wide.svg"); }
+  .portfolio .research { background-image: url("../images/pt_research_wide.svg"); }
+  .portfolio .IA { background-image: url("../images/pt_ia_wide.svg"); }
+  .portfolio .mockups { background-image: url("../images/pt_mockups_wide.svg"); }
+  .portfolio .branding { background-image: url("../images/pt_branding_wide.svg"); }
+  .portfolio .testing { background-image: url("../images/pt_testing_wide.svg"); }
+  .portfolio .future { background-image: url("../images/pt_future_wide.svg"); }
 
   .future ul li div {
     left: 3vw;
@@ -1591,159 +1609,6 @@ padding-left: 8vw;
   .helping-hands > ul:first-child {
     background-color: #C2EDC4;
   }
-
-  /* case studies */
-/*  .study-title {
-    grid-area: 1 / 1 / 3 / 5;
-    font-size: 3vw;
-    line-height: 3.9vw;
-  }
-
-  .study-sub-title {font-size: 2.2vw;}
-
-  .case-study > .detail {
-    grid-template-columns: repeat(4, calc(100vw/14));
-    grid-auto-rows: calc(100vw/14);
-    font-size: 1.0vw;
-  }
-
-  .future ul li div {
-    top: -1vw;
-  }
-
-  .detail > .centering {
-    grid-area: 1 / 1 / 2 / 3;
-    grid-template-columns: repeat(3, calc(100vw/14));
-    grid-auto-rows: calc(100vw/14);
-  }
-
-  .detail .subtitle {
-    grid-area: 1 / 1 / 2 / 2;
-    font-size: 2vw;
-  }
-
-  .detail .icon {
-    grid-area: 1 / 2 / 2 / 3;
-  }
-
-  .result > .centering {
-    grid-area: 1 / 1 / 2 / 11;
-    grid-template-columns: repeat(8, calc(100vw/14));
-    grid-auto-rows: calc(100vw/14);
-  }
-
-  .result .subtitle { grid-area: 1 / 1 / 2 / 8; }
-
-  .result .icon { grid-area: 1 / 8 / 2 / 9; }
-
-  .detail > .centering {
-    grid-area: 1 / 1 / 2 / 4;
-    grid-template-columns: repeat(3, calc(100vw/14));
-    grid-auto-rows: calc(100vw/14);
-  }
-
-  .detail .subtitle { grid-area: 1 / 1 / 2 / 3; }
-  .detail .icon { grid-area: 1 / 3 / 2 / 4; }
-
-  .detail.toc { grid-area: 1 / 6 / 3 / 9; }
-    .toc > .centering { grid-template-columns: repeat(3, calc(100vw/14));}
-    .toc > .centering { grid-area: 1 / 1 / 2 / 4; }
-    .toc .subtitle { grid-area: 1 / 1 / 2 / 3; }
-    .toc .icon { grid-area: 1 / 3 / 2 / 4; }
-
-  .detail.about { grid-area: 4 / 6 / 7 / 9; }
-    .about > .content { grid-area: 2 / 1 / 4 / 4; }
-
-  .detail.objective { grid-area: 1 / 10 / 5 / 14; }
-    .objective > .content { grid-area: 2 / 1 / 5 / 5; }
-    .objective > .centering { grid-template-columns: repeat(4, calc(100vw/14));}
-    .objective > .centering { grid-area: 1 / 1 / 2 / 5; }
-    .objective .subtitle { grid-area: 1 / 1 / 2 / 4; }
-    .objective .icon { grid-area: 1 / 4 / 2 / 5; }
-
-  .detail.research { grid-area: 4 / 1 / 9 / 5; }
-    .research > .centering { grid-template-columns: repeat(4, calc(100vw/14));}
-    .research > .centering { grid-area: 1 / 1 / 2 / 5; }
-    .research .subtitle { grid-area: 1 / 1 / 2 / 4; }
-    .research .icon { grid-area: 1 / 4 / 2 / 5; }
-    .research > .content { grid-area: 2 / 1 / 6 / 5; }
-    .re1 {grid-area: 5 / 1 / 6 / 2;}
-    .re2 {grid-area: 5 / 2 / 6 / 3;}
-
-  .detail.IA { grid-area: 8 / 6 / 12 / 9; }
-    .IA > .content { grid-area: 2 / 1 / 4 / 4; }
-    .ia1 {grid-area: 4 / 1 / 5 / 2;}
-
-  .detail.mockups { grid-area: 6 / 10 / 9 / 14; }
-    .mockups > .centering { grid-area: 1 / 1 / 2 / 5; }
-    .mockups .subtitle { grid-area: 1 / 1 / 2 / 4; }
-    .mockups .icon { grid-area: 1 / 4 / 2 / 5; }
-    .mockups > .content { grid-area: 2 / 1 / 3 / 5; }
-    .mockups > .centering { grid-template-columns: repeat(4, calc(100vw/14));}
-    .mo1 {grid-area: 3 / 1 / 4 / 2;}
-    .mo2 {grid-area: 3 / 2 / 4 / 3;}
-
-  .detail.branding { grid-area: 10 / 1 / 15 / 5; }
-    .branding > .centering { grid-area: 1 / 1 / 2 / 5; }
-    .branding .subtitle { grid-area: 1 / 1 / 2 / 4; }
-    .branding .icon { grid-area: 1 / 4 / 2 / 5; }
-    .branding > .content { grid-area: 2 / 1 / 6 / 5; }
-    .branding > .centering { grid-template-columns: repeat(4, calc(100vw/14));}
-    .br2 {grid-area: 5 / 1 / 6 / 2;}
-    .br3 {grid-area: 5 / 2 / 6 / 3;}
-    .br4 {grid-area: 5 / 3 / 6 / 4;}
-
-  .detail.testing { grid-area: 13 / 6 / 19 / 9; }
-    .testing > .content { grid-area: 2 / 1 / 6 / 4; }
-    .ur1 {grid-area: 6 / 1 / 7 / 2;}
-
-  .detail.result { grid-area: 10 / 10 / 21 / 15; }
-    .result > .centering { grid-area: 1 / 1 / 2 / 6; }
-    .result .subtitle { grid-area: 1 / 1 / 2 / 5; }
-    .result .icon { grid-area: 1 / 5 / 2 / 6; }
-    .resultimg {grid-area: 2 / 1 / 12 / 6; }
-    .result > .centering { grid-template-columns: repeat(5, calc(100vw/14));}
-
-  .detail.future { grid-area: 16 / 1 / 21 / 5; }
-    .future > .centering { grid-area: 1 / 1 / 2 / 5; }
-    .future .subtitle { grid-area: 1 / 1 / 2 / 4; }
-    .future .icon { grid-area: 1 / 4 / 2 / 5; }
-    .future > .content { grid-area: 2 / 1 / 5 / 5; }
-    .future > .centering { grid-template-columns: repeat(4, calc(100vw/14));}
-    .fr1 {grid-area: 5 / 1 / 6 / 2;}
-
-
-  .expand {
-    right: 9%;
-  }
-
-
-  .edrk1 {grid-area: 3 / 1 / 5 / 3;}
-  .edrk2 {grid-area: 4 / 4 / 6 / 6;}
-  .edrk3 {grid-area: 9 / 7 / 11 / 10;}
-  .edrk4 {grid-area: 14 / 1 / 16 / 4;}
-  .edrk5 {grid-area: 16 / 4 / 18 / 6;}
-  .edrk6 {grid-area: 5 / 13 / 7 / 15;}
-  .edrk7 {grid-area: 4 / 10 / 6 / 12;}
-  .edrk8 {grid-area: 11 / 4 / 13 / 6; display: inherit;}
-  .edrk9 {grid-area: 6 / 9 / 8 / 11; display: inherit;}
-  .edrk10 {grid-area: 18 / 8 / 20 / 10; display: inherit;}
-  .edrk11 {grid-area: 12 / 9 / 14 / 11; display: inherit;}
-  .edrk12 {grid-area: 9 / 2 / 11 / 4; display: inherit;}
-
-  .emed1 {grid-area: 7 / 14 / 9 / 15;}
-  .emed2 {grid-area: 6 / 5 / 8 / 7;}
-  .emed3 {grid-area: 8 / 10 / 10 / 12;}
-  .emed4 {grid-area: 19 / 4 / 21 / 6;}
-  .emed5 {grid-area: 16 / 9 / 18 / 11;}
-  .emed6 {grid-area: 11 / 7 / 13 / 9;}
-  .emed7 {grid-area: 9 / 4 / 11 / 6; display: inherit;}
-  .emed8 {grid-area: 3 / 8 / 4 / 10; display: inherit;}
-  .emed9 {grid-area: 20 / 7 / 20 / 9; display: inherit;}
-  .emed10 {grid-area: 1 / 10 / 3 / 12; display: inherit;}
-  .emed11 {grid-area: 2 / 5 / 4 / 7; display: inherit;}
-  .emed12 {grid-area: 14 / 5 / 16 / 7; display: inherit;}
-*/
 
   .map-child {grid-area: 1 / 1 / 3 / 3;}
   .map-college {grid-area: 2 / 4 / 4 / 6;}
