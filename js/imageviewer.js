@@ -4,7 +4,7 @@ Also uses imageviewer.js by Sudhanshu Yadav.
 */
 
 
-$('.subimg').click(function(e){
+$('.subimg > img').click(function(e){
 
 if ($image_inprogress == false && $exp_image == false)
   {
@@ -32,19 +32,19 @@ if ($image_inprogress == false && $exp_image == false)
   // fade in the viewer
   $('.image_viewer_wrapper').velocity({opacity:1}, {duration:1000});
 
-  if($(this).hasClass('hh-re1')){ $('.image_viewer').attr("src", "images/hh_research.png"); $('.image_viewer').attr("data-high-res-src", "images/hh_research.png");};
-  if($(this).hasClass('hh-ia1')){ $('.image_viewer').attr("src", "images/hh_ia.png"); $('.image_viewer').attr("data-high-res-src", "images/hh_ia.png");};
-  if($(this).hasClass('hh-mo1')){ $('.image_viewer').attr("src", "images/hh_mockups.jpg"); $('.image_viewer').attr("data-high-res-src", "images/hh_mockups.jpg");};
-  if($(this).hasClass('hh-br1')){ $('.image_viewer').attr("src", "images/hh_branding_preview.jpg"); $('.image_viewer').attr("data-high-res-src", "images/hh_branding_preview.jpg");};
-  if($(this).hasClass('hh-ur1')){ $('.image_viewer').attr("src", "images/hh_testing.png"); $('.image_viewer').attr("data-high-res-src", "images/hh_testing.png");};
-  if($(this).hasClass('hh-fr1')){ $('.image_viewer').attr("src", "images/hh_future.png"); $('.image_viewer').attr("data-high-res-src", "images/hh_future.png");};
+  if($(this).parent().hasClass('hh-re1')){ $('.image_viewer').attr("src", "images/hh_research.png"); $('.image_viewer').attr("data-high-res-src", "images/hh_research.png");};
+  if($(this).parent().hasClass('hh-ia1')){ $('.image_viewer').attr("src", "images/hh_ia.png"); $('.image_viewer').attr("data-high-res-src", "images/hh_ia.png");};
+  if($(this).parent().hasClass('hh-mo1')){ $('.image_viewer').attr("src", "images/hh_mockups.jpg"); $('.image_viewer').attr("data-high-res-src", "images/hh_mockups.jpg");};
+  if($(this).parent().hasClass('hh-br1')){ $('.image_viewer').attr("src", "images/hh_branding_preview.jpg"); $('.image_viewer').attr("data-high-res-src", "images/hh_branding_preview.jpg");};
+  if($(this).parent().hasClass('hh-ur1')){ $('.image_viewer').attr("src", "images/hh_testing.png"); $('.image_viewer').attr("data-high-res-src", "images/hh_testing.png");};
+  if($(this).parent().hasClass('hh-fr1')){ $('.image_viewer').attr("src", "images/hh_future.png"); $('.image_viewer').attr("data-high-res-src", "images/hh_future.png");};
 
-  if($(this).hasClass('pt-re1')){ $('.image_viewer').attr("src", "images/pt_research1_small.png"); $('.image_viewer').attr("data-high-res-src", "images/pt_research1.png");};
-  if($(this).hasClass('pt-ia1')){ $('.image_viewer').attr("src", "images/pt_ia_small.jpg"); $('.image_viewer').attr("data-high-res-src", "images/pt_ia.jpg");};
-  if($(this).hasClass('pt-mo1')){ $('.image_viewer').attr("src", "images/pt_mockup1_small.png"); $('.image_viewer').attr("data-high-res-src", "images/pt_mockup1.png");};
-  if($(this).hasClass('pt-br1')){ $('.image_viewer').attr("src", "images/pt_branding1_small.jpg"); $('.image_viewer').attr("data-high-res-src", "images/pt_branding1.jpg");};
-  if($(this).hasClass('pt-ur1')){ $('.image_viewer').attr("src", "images/pt_testing1_small.png"); $('.image_viewer').attr("data-high-res-src", "images/pt_testing1.png");};
-  if($(this).hasClass('pt-fr1')){ $('.image_viewer').attr("src", "images/pt_future1_small.png"); $('.image_viewer').attr("data-high-res-src", "images/pt_future1.png");};
+  if($(this).parent().hasClass('pt-re1')){ $('.image_viewer').attr("src", "images/pt_research.png"); $('.image_viewer').attr("data-high-res-src", "images/pt_research.png");};
+  if($(this).parent().hasClass('pt-ia1')){ $('.image_viewer').attr("src", "images/pt_ia.jpg"); $('.image_viewer').attr("data-high-res-src", "images/pt_ia.jpg");};
+  if($(this).parent().hasClass('pt-mo1')){ $('.image_viewer').attr("src", "images/pt_mockup.png"); $('.image_viewer').attr("data-high-res-src", "images/pt_mockup.png");};
+  if($(this).parent().hasClass('pt-br1')){ $('.image_viewer').attr("src", "images/pt_branding.jpg"); $('.image_viewer').attr("data-high-res-src", "images/pt_branding.jpg");};
+  if($(this).parent().hasClass('pt-ur1')){ $('.image_viewer').attr("src", "images/pt_testing.png"); $('.image_viewer').attr("data-high-res-src", "images/pt_testing.png");};
+  if($(this).parent().hasClass('pt-fr1')){ $('.image_viewer').attr("src", "images/pt_future.png"); $('.image_viewer').attr("data-high-res-src", "images/pt_future.png");};
 
   $('.image_viewer').ImageViewer();
   $viewer = $('.image_container').data('ImageViewer');

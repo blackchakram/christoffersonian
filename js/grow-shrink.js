@@ -233,19 +233,19 @@ if ($(window).width() < 500) {
 };
 if ($(window).width() >= 500 && $(window).width() < 768) {
   if ($self.hasClass('about-me')) {setTimeout(function() {$(".drk4").css("grid-area", "10 / 2 / 25 / 3");}, 1000);}
-  else {setTimeout(function() {$(".drk4").css("grid-area", "10 / 2 / 121 / 3");}, 1000);};
+  else {setTimeout(function() {$(".drk4").css("grid-area", "10 / 2 / 98 / 3");}, 1000);};
   sizecategory = 2;
 };
 if ($(window).width() >= 768 && $(window).width() < 1024) {
   if ($self.hasClass('about-me')) {setTimeout(function() {$(".drk4").css("grid-area", "10 / 2 / 16 / 3");}, 1000);}
-  else {setTimeout(function() {$(".drk4").css("grid-area", "10 / 2 / 85 / 3");}, 1000);};
+  else {setTimeout(function() {$(".drk4").css("grid-area", "10 / 2 / 87 / 3");}, 1000);};
   sizecategory = 3;
 };
 if ($(window).width() >= 1024 && $(window).width() < 1440) {
   if ($self.hasClass('about-me')) {setTimeout(function() {$(".drk4").css("grid-area", "10 / 2 / 14 / 3");}, 1000);}
   else {
     setTimeout(function() {
-      var $gridheight = Math.floor(10800/($(window).width()/10));
+      var $gridheight = Math.floor(11000/($(window).width()/10));
       $(".drk4").css("grid-area", "10 / 2 / " + $gridheight + " / 3");}, 1000);
     };
   sizecategory = 4;
@@ -254,7 +254,7 @@ if ($(window).width() >= 1440) {
   if ($self.hasClass('about-me')) {setTimeout(function() {$(".drk4").css("grid-area", "10 / 2 / 9 / 3");}, 1000);}
   else {
     setTimeout(function() {
-      var $gridheight = Math.floor(10800/($(window).width()/14));
+      var $gridheight = Math.floor(11000/($(window).width()/14));
       $(".drk4").css("grid-area", "10 / 2 / " + $gridheight + " / 3");}, 1000);
     };
   sizecategory = 5;
@@ -271,7 +271,7 @@ else {$height = $gridDimensions.height();}
 
 // if the window is wide enough, slide bottom of scroll by constant amount instead of by grid size
 if ($(window).width() >= 1024) {
-  $height = 10370 + $(window).width()/2;
+  $height = 10570 + $(window).width()/2;
 }
 
 $thing_to_expand.velocity({width: "100vw", height: $height + "px", top: -$self.offset().top + "px", left: -$self.offset().left-8 + "px" }, {delay: 500, easing: "ease-in-out", duration: 500});
@@ -379,7 +379,7 @@ var $logo_to_fade_in = $itself.siblings(".centering");
 $(".close_x").velocity({opacity:0}, {duration:500, delay:1000});
 
 // shrink expanded grid back to original size
-if ($(window).width() < 500) { $(".drk4").css("grid-area", "13 / 4 / 14 / 5"); };
+if ($(window).width() < 500) { $(".drk4").css("grid-area", "12 / 4 / 13 / 5"); };
 if ($(window).width() >= 500) { $(".drk4").css("grid-area", "1 / 6 / 2 / 7"); };
 if ($(window).width() >= 768) { $(".drk4").css("grid-area", "7 / 4 / 8 / 5"); };
 if ($(window).width() >= 1024) { $(".drk4").css("grid-area", "3 / 7 / 4 / 8"); };
@@ -487,18 +487,18 @@ if ($expanded_thing.hasClass('helping-hands')) {
     };
     if ($(window).width() >= 500 && $(window).width() < 768) {
       if ($expanded_thing.hasClass('about-me')) {$(".drk4").css("grid-area", "10 / 2 / 25 / 3");}
-      else {$(".drk4").css("grid-area", "10 / 2 / 121 / 3");};
+      else {$(".drk4").css("grid-area", "10 / 2 / 98 / 3");};
       sizecategory = 2;
     };
     if ($(window).width() >= 768 && $(window).width() < 1024) {
       if ($expanded_thing.hasClass('about-me')) {$(".drk4").css("grid-area", "10 / 2 / 16 / 3");}
-      else {$(".drk4").css("grid-area", "10 / 2 / 85 / 3");};
+      else {$(".drk4").css("grid-area", "10 / 2 / 87 / 3");};
       sizecategory = 3;
     };
     if ($(window).width() >= 1024 && $(window).width() < 1440) {
       if ($expanded_thing.hasClass('about-me')) {$(".drk4").css("grid-area", "10 / 2 / 14 / 3");}
       else {
-        var $gridheight = Math.floor(10800/($(window).width()/10));
+        var $gridheight = Math.floor(11000/($(window).width()/10));
         $(".drk4").css("grid-area", "10 / 2 / " + $gridheight + " / 3");
       };
       sizecategory = 4;
@@ -506,14 +506,14 @@ if ($expanded_thing.hasClass('helping-hands')) {
     if ($(window).width() >= 1440) {
       if ($expanded_thing.hasClass('about-me')) {$(".drk4").css("grid-area", "10 / 2 / 9 / 3");}
       else {
-        var $gridheight = Math.floor(10800/($(window).width()/14));
+        var $gridheight = Math.floor(11000/($(window).width()/14));
         $(".drk4").css("grid-area", "10 / 2 / " + $gridheight + " / 3");
       };
       sizecategory = 5;
     };
 
     if ($(window).width() >= 1024) {
-      $(this).css("height", 10370 + $(window).width()/2 + "px");
+      $(this).css("height", 10570 + $(window).width()/2 + "px");
     } else {
       $(this).css("height", $gridDimensions.height() + "px");
 
@@ -554,7 +554,7 @@ if ($expanded_thing.hasClass('helping-hands')) {
 
   if ($exp_project == false)
   {
-    if ($(window).width() < 500) { $(".drk4").css("grid-area", "13 / 4 / 14 / 5"); };
+    if ($(window).width() < 500) { $(".drk4").css("grid-area", "12 / 4 / 13 / 5"); };
     if ($(window).width() >= 500) { $(".drk4").css("grid-area", "1 / 6 / 2 / 7"); };
     if ($(window).width() >= 768) { $(".drk4").css("grid-area", "7 / 4 / 8 / 5"); };
     if ($(window).width() >= 1024) { $(".drk4").css("grid-area", "3 / 7 / 4 / 8"); };
