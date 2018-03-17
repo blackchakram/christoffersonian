@@ -74,9 +74,12 @@ $('.infoform').hover(function(){$(this).attr("src", "images/icon_email_hover.svg
 $('.ghicon').hover(function(){$(this).attr("src", "images/icon_github_hover.svg");}, function(){$(this).attr("src", "images/icon_github.svg");});
 $('.close_x, .close_form_x').hover(function(){$(this).css("color", "#777777");}, function(){$(this).css("color", "#000000");});
 $('.submit').hover(function(){$(this).css("background-color", "#CCCCCC");}, function(){$(this).css("background-color", "#FFFFFF");});
-/*$('.centering').hover(function(){$(this).find('.subtitle_icon').velocity({opacity:1}, {duration:500, delay:0});}, function(){$(this).find('.subtitle_icon').velocity({opacity:0}, {duration:500, delay:0});});*/
 
-
+// redraw the signature when clicked on
+$('.sig').click(function(){
+  var d = new Date();
+  $('.sig').attr("src", "images/sig_animated.svg?" + d);
+});
 
 // reload the animated icons when they come into the viewer window for the first time
 $(window).scroll(function() {drawicons();});

@@ -143,13 +143,6 @@ video {
   margin: 0;
 }
 
-.location {
-  bottom: 9vw;
-  font-size: 3vw;
-  position: absolute;
-  right: 6vw;
-}
-
 /* background images for grid cells */
 .project {
   background-position: center;
@@ -201,6 +194,7 @@ video {
   justify-content: center;
   align-items: center;
   height: 100%;
+  padding-top: 1.5vw;
 }
 
 .contact-info img {
@@ -234,23 +228,33 @@ video {
   opacity: inherit;
   width: 100%;
   height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .icons, .icon {
   display: flex;
   clear: both;
-  margin: 10% auto 0;
   width: 35vw;
 }
 
-.subpara {
-  font-size: 7vw;
+.subpara, .location {
+  font-size: 7.4vw;
   line-height: 5.7vw;
-  margin: 0 0 0 8px;
-  position: absolute;
   mix-blend-mode: overlay;
-  bottom: 6%;
-  font-weight: bold;
+  font-family: "Titillium Web";
+  text-align: center;
+  padding-top: 20px;
+}
+
+.location {
+  text-align: left;
+  left: 5vw;
+  bottom: 3vw;
+  position: absolute;
+  color: black;
 }
 
 .expand {
@@ -293,7 +297,12 @@ video {
   font-size: 4.2vw;
 }
 
-.othertitle {font-size: 7.0vw;}
+.othertitle {
+  font-size: 8.0vw;
+  font-weight: lighter;
+  letter-spacing: 1vw;
+  font-family: "Exo 2";
+}
 
 .helping-hands > .case-study { background-color: #CFEDC6; }
 .cornucopia > .case-study { background-color: #EEE5C0; }
@@ -339,13 +348,19 @@ styling for case study parts
 
 
 .thetitle {
-  left: 20px;
-  top: 20px;
+  left: 5vw;
+  top: 2vw;
   position: absolute;
   color: white;
 }
 
-.study-sub-title {font-size: 4.5vw;}
+.study-sub-title {
+  font-size: 3vw;
+  font-variant: small-caps;
+  letter-spacing: 1.4vw;
+  font-weight: lighter;
+  padding-left: 1vw;
+}
 
 .case-study > li {
   display: none;
@@ -377,6 +392,7 @@ styling for case study parts
   display: block;
   opacity: 1;
   padding: 0 30px 30px 30px;
+  line-height: 1.4em;
 }
 
 .detail .subtitle {
@@ -387,7 +403,10 @@ styling for case study parts
   vertical-align: middle;
   text-align: left;
   padding-left: 30px;
-  font-size: 7.0vw;
+  font-size: 8.0vw;
+  font-weight: lighter;
+  letter-spacing: 1vw;
+  font-family: "Exo 2";
 }
 
 .subimg {
@@ -401,8 +420,8 @@ styling for case study parts
 
 .subimg img {
   cursor: pointer;
-  height: 85vw;
-  width: 85%;
+  height: 80vw;
+  width: 80%;
 }
 
 .thelogo {
@@ -418,12 +437,17 @@ styling for case study parts
   background-repeat: no-repeat;
   background-size: 100vw;
 }
+
 .future ul li div {
   list-style: disc;
   display: list-item;
   left: 30px;
   position: relative;
   top: -3.5vw;
+}
+
+.content p {
+  padding-bottom: 1.5vw;
 }
 
 
@@ -766,19 +790,17 @@ textarea {
     right: 4vw;
   }
 
-.subpara {
-  font-size: 4.7vw;
+  .subpara, .location {
+  font-size: 4.9vw;
   line-height: 3.7vw;
 }
 
   .location {
-    bottom: 7vw;
-    font-size: 2.2vw;
-    right: 4vw;
-  }
+  bottom: 2vw;
+  left: 3vw;
+}
 
   .icons {
-    margin: 10% auto 0;
     width: 20vw;
   }
 
@@ -865,7 +887,7 @@ textarea {height: 20vw;}
 
 .detail .subtitle, .othertitle { font-size: 4.5vw;}
 
-.detail .subtitle, .overview .subtitle { padding-left: 55px; }
+.detail .subtitle, .overview .subtitle { padding-left: 58px; }
 
 .overview .subtitle { padding-top: 16vw; }
 
@@ -983,19 +1005,17 @@ padding-left: 8vw;
     right: 3.6vw;
   }
 
-  .subpara {
-    font-size: 3.6vw;
-    line-height: 2.7vw;
+  .subpara, .location {
+    font-size: 3.7vw;
+    line-height: 2.9vw;
   }
 
   .location {
-    font-size: 1.7vw;
-    right: 3.6vw;
-    bottom: 5vw;
+    left: 3vw;
+    bottom: 2vw;
   }
 
   .icons {
-    margin: 10% auto 0;
     width: 15vw;
   }
 
@@ -1125,7 +1145,16 @@ padding-left: 8vw;
     padding: 0 14vw 7vw 14vw;
   }
 
-  .study-sub-title {font-size: 3.5vw;}
+  .thetitle {
+    font-size: 7vw;
+    left: 3vw;
+  }
+
+  .study-sub-title {
+    font-size: 2.2vw;
+    letter-spacing: 1vw;
+    padding-top: 2vw;
+  }
 
   .tools pre {
     font-family: "Exo 2", Helvetica, Arial, serif;
@@ -1146,7 +1175,7 @@ padding-left: 8vw;
   }
 
   .case-study > .detail {
-    font-size: 2.1vw;
+    font-size: 1.7vw;
   }
 
   .expand {
@@ -1259,15 +1288,14 @@ padding-left: 8vw;
     right: 2.5vw;
   }
 
-  .subpara {
-    font-size: 2.8vw;
+  .subpara, .location {
+    font-size: 3vw;
     line-height: 2.2vw;
   }
 
   .location {
-    font-size: 1.15vw;
-    right: 2.5vw;
-    bottom: 4vw;
+    left: 2vw;
+    bottom: 1.5vw;
   }
 
   .main-grid, .case-study {
@@ -1343,9 +1371,9 @@ padding-left: 8vw;
     padding-left: 138px;
     padding-bottom: 2vw;
   }
-
+/*
   .study-sub-title {font-size: 3.5vw;}
-
+*/
   .overview {height: 585px;}
   .tools {height: 585px;}
   .research {height: 1610px;}
@@ -1369,7 +1397,7 @@ padding-left: 8vw;
 
   .detail .subtitle {
     padding-top: 190px;
-    padding-left: 138px;
+    padding-left: 130px;
     padding-bottom: 30px;
     font-size: 38px;
   }
@@ -1388,7 +1416,7 @@ padding-left: 8vw;
   }
 
   .content {
-    font-size: 22px;
+    font-size: 18px;
     padding: 0 142px 30px 142px;
   }
 
@@ -1521,19 +1549,18 @@ padding-left: 8vw;
     right: 2.0vw;
   }
 
-  .subpara {
-    font-size: 2.0vw;
+  .subpara, .location {
+    font-size: 2.1vw;
     line-height: 1.6vw;
+    padding-top: 0;
   }
 
   .location {
-    font-size: 0.9vw;
-    right: 2.0vw;
-    bottom: 3vw;
+    left: 1.3vw;
+    bottom: 1vw;
   }
 
   .icons {
-    margin: 10% auto 0;
     width: 10vw;
   }
 
