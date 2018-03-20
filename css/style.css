@@ -244,9 +244,10 @@ video {
   font-size: 7.4vw;
   line-height: 5.7vw;
   mix-blend-mode: overlay;
-  font-family: "Titillium Web";
-  text-align: center;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 900;
   padding-top: 20px;
+  padding-left: 2vw;
 }
 
 .location {
@@ -272,12 +273,11 @@ video {
 }
 
 .subtitle {
-  margin: 0 auto 30px;
-  padding-top: 32vw;
+  padding-top: 55vw;
 }
 
 .overview .subtitle {
-  padding-top: 25vw;
+  padding-top: calc(10vw + 100vw/16);
   padding-left: 30px;
 }
 
@@ -295,6 +295,7 @@ video {
 .tools pre {
   font-family: "Exo 2", Helvetica, Arial, serif;
   font-size: 4.2vw;
+  padding-top: 10vw;
 }
 
 .othertitle {
@@ -346,6 +347,19 @@ styling for case study parts
   background-image: url("../images/pt_phone.png");
 }
 
+.sub-blurb {
+  opacity: 0;
+  font-family: "Titillium Web";
+  font-weight: 900;
+  font-size: 6.75vw;
+  float: right;
+  text-align: right;
+  position: relative;
+  right: calc(100vw/16);
+  width: 100%;
+  padding-bottom: calc(100vw/24);
+  mix-blend-mode: difference;
+}
 
 .thetitle {
   left: 5vw;
@@ -360,6 +374,13 @@ styling for case study parts
   letter-spacing: 1.4vw;
   font-weight: lighter;
   padding-left: 1vw;
+}
+
+.section-subheader{
+  font-size: 6vw;
+  font-weight: 300;
+  letter-spacing: 0.7vw;
+  padding-top: calc(100vw/16);
 }
 
 .case-study > li {
@@ -403,10 +424,11 @@ styling for case study parts
   vertical-align: middle;
   text-align: left;
   padding-left: 30px;
-  font-size: 8.0vw;
-  font-weight: lighter;
-  letter-spacing: 1vw;
+  font-size: 9vw;
+  font-weight: 300;
+  letter-spacing: 0.7vw;
   font-family: "Exo 2";
+  opacity: 0;
 }
 
 .subimg {
@@ -415,7 +437,6 @@ styling for case study parts
   justify-content: center;
   align-items: center;
   position: relative;
-  padding-bottom: 40px;
 }
 
 .subimg img {
@@ -438,36 +459,105 @@ styling for case study parts
   background-size: 100vw;
 }
 
-.future ul li div {
-  list-style: disc;
+
+.alist {
   display: list-item;
-  left: 30px;
+  left: 40px;
   position: relative;
   top: -3.5vw;
+  padding: 0 30px 0 0;
+}
+
+.listtitle {
+  font-weight: 700;
+  font-style: italic;
+  padding-bottom: 0;
+}
+
+th p{
+  transform: rotate(-60deg);
+  padding-bottom: 20px;
+  position: relative;
+  width: 14vw;
+  font-weight: lighter;
+  font-size: 3vw;
+}
+
+table {padding-bottom: calc(100vw/12);}
+
+td {
+  font-size: 3vw;
+  padding-left: 10px;
+}
+
+tr:nth-child(n+2) {
+  background-color: rgba(0,0,0,0.07);
+}
+
+tr:nth-child(2n) {
+  background-color: rgba(0,0,0,0.15);
+}
+
+td:not(.tdfront) {
+  font-size: 7vw;
+  text-align: center;
+  padding-left: 0;
+  padding-bottom: 5px;
+}
+
+.swotbox {
+  background-color: rgba(0,0,0,0.10);
+  margin-bottom: calc(100vw/12);
+}
+
+.swotbody {
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px
+}
+
+.swottitle {
+  padding-left: 10px;
+  background-color: rgba(0,0,0,0.06);
+}
+
+
+.helping-hands .alist {
+  list-style-image: url("../images/bulletbox_hh.png");
 }
 
 .content p {
   padding-bottom: 1.5vw;
 }
 
+.blurb {
+  font-family: "Titillium Web";
+  font-weight: 700;
+  font-size: 5.5vw;
+  color: #555555;
+  opacity: 0.5;
+  padding: 0;
+  margin-top: -1.5vw;
+  margin-bottom: -1.5vw;
+}
 
-.overview {height: 112.5vw;}
-.tools {height: 150vw;}
-.research {height:275vw;}
-.IA {height: 250vw;}
-.mockups {height: 250vw;}
-.branding {height:275vw;}
-.testing {height: 325vw;}
+.overview {height: 90vw;}
+.tools {height: 120vw;}
+.research {height:700vw;}
+.IA {height: 350vw;}
+.mockups {height: 325vw;}
+.branding {height:325vw;}
+.mvp {height: 325vw;}
 .future {height: 325vw;}
 
 
 .helping-hands .overview { background-image: url("../images/hh_overview_narrow.svg"); }
-.helping-hands .tools { background-image: url("../images/hh_toolsdeliverable_narrow.svg"); }
+.helping-hands .tools { background-image: url("../images/hh_tools_narrow.svg"); }
 .helping-hands .research { background-image: url("../images/hh_research_narrow.svg"); }
 .helping-hands .IA { background-image: url("../images/hh_ia_narrow.svg"); }
 .helping-hands .mockups { background-image: url("../images/hh_mockups_narrow.svg"); }
 .helping-hands .branding { background-image: url("../images/hh_branding_narrow.svg"); }
-.helping-hands .testing { background-image: url("../images/hh_testing_narrow.svg"); }
+.helping-hands .mvp { background-image: url("../images/hh_mvp_narrow.svg"); }
 .helping-hands .future { background-image: url("../images/hh_future_narrow.svg"); }
 
 .portfolio .overview { background-image: url("../images/pt_overview_narrow.svg"); }
@@ -476,7 +566,7 @@ styling for case study parts
 .portfolio .IA { background-image: url("../images/pt_ia_narrow.svg"); }
 .portfolio .mockups { background-image: url("../images/pt_mockups_narrow.svg"); }
 .portfolio .branding { background-image: url("../images/pt_branding_narrow.svg"); }
-.portfolio .testing { background-image: url("../images/pt_testing_narrow.svg"); }
+.portfolio .mvp { background-image: url("../images/pt_mvp_narrow.svg"); }
 .portfolio .future { background-image: url("../images/pt_future_narrow.svg"); }
 
 /* =============== IMAGE VIEWER ============== */

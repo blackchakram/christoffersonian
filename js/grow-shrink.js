@@ -228,7 +228,7 @@ if ($expanded_thing.hasClass('helping-hands')) {
 // expand a cell of the original background grid so the case study can be tall enough
 if ($(window).width() < 500) {
   if ($self.hasClass('about-me')) {setTimeout(function() {$(".drk4").css("grid-area", "10 / 2 / 33 / 3");}, 1000);}
-  else {setTimeout(function() {$(".drk4").css("grid-area", "10 / 2 / 81 / 3");}, 1000);};
+  else {setTimeout(function() {$(".drk4").css("grid-area", "10 / 2 / 109 / 3");}, 1000);};
   sizecategory = 1;
 };
 if ($(window).width() >= 500 && $(window).width() < 768) {
@@ -290,8 +290,12 @@ setTimeout(function() { $detail_grids.css("display", "block"); }, 1500);
 $fade_in.velocity({opacity:1}, {duration:1000, delay:1500});
 setTimeout(function() { $keep_style.css("display", "block"); }, 1510);
 
+// have title and subtitles that are visible initially animate in
+setTimeout(function() { drawicons(); }, 1600);
+
 //if about me, fade in all content
 if ($self.hasClass('about-me')) {$(".am-opacity").velocity({opacity:1}, {duration:1000, delay:1500});}
+
 
 /* ======== ALTER COLOR BOXES AND GOOGLE ANALYTICS REFERENCE ======== */
 
@@ -433,16 +437,17 @@ $('.image_viewer_wrapper').css("z-index", -1);
 
 // allow reanimation of icons
 $about_anim = false;
-$toc_anim = false;
-$objective_anim = false;
+$tools_anim = false;
 $research_anim = false;
+$mvp_anim = false;
+$branding_anim = false;
 $ia_anim = false;
 $mockups_anim = false;
-$branding_anim = false;
-$testing_anim = false;
-$result_anim = false;
 $future_anim = false;
-
+$('.detail .subtitle').removeClass("animated fadeInLeft");
+$('.detail .sub-blurb').removeClass("animated fadeInRight");
+$('.detail .subtitle').css("opacity", "0");
+$('.detail .sub-blurb').css("opacity", "0");
 };
 
 // ============================================================================
@@ -482,7 +487,7 @@ if ($expanded_thing.hasClass('helping-hands')) {
 
     if ($(window).width() < 500) {
       if ($expanded_thing.hasClass('about-me')) {$(".drk4").css("grid-area", "10 / 2 / 33 / 3");}
-      else {$(".drk4").css("grid-area", "10 / 2 / 81 / 3");};
+      else {$(".drk4").css("grid-area", "10 / 2 / 109 / 3");};
       sizecategory = 1;
     };
     if ($(window).width() >= 500 && $(window).width() < 768) {

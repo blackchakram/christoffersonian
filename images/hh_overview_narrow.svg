@@ -1,22 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="400px" height="450px" viewBox="0 0 400 450" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
-    <title>mdpi/Group 4</title>
+<svg width="400px" height="1000px" viewBox="0 0 400 1000" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>mdpi/hh_overview_narrow</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="CASE-STUDY" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Artboard-5" transform="translate(0.000000, -300.000000)">
-            <g id="Group-4" transform="translate(0.000000, 300.000000)">
-                <rect id="Rectangle-8" fill="#DEF4D6" x="0" y="0" width="400" height="400"></rect>
-                <rect id="Rectangle-8" fill="#CFEDC6" x="0" y="375" width="25" height="25"></rect>
-                <rect id="Rectangle-8" fill="#CFEDC6" x="175" y="375" width="25" height="25"></rect>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-12">
+            <g id="hh_overview_narrow">
+                <rect id="Rectangle-8" fill="#DEF4D6" x="0" y="0" width="400" height="1000"></rect>
                 <rect id="Rectangle-8" fill="#CFEDC6" x="50" y="0" width="25" height="25"></rect>
                 <rect id="Rectangle-8" fill="#CFEDC6" x="250" y="0" width="25" height="25"></rect>
-                <rect id="Rectangle-8" fill="#C0E4B6" x="350" y="400" width="50" height="50"></rect>
                 <rect id="Rectangle-8" fill="#CFEDC6" x="350" y="0" width="50" height="50"></rect>
-                <rect id="Rectangle-8" fill="#CFEDC6" x="300" y="350" width="50" height="50"></rect>
-                <rect id="Rectangle-8" fill="#C0E4B6" x="51" y="400" width="25" height="25"></rect>
-                <rect id="Rectangle-8" fill="#C0E4B6" x="250" y="425" width="25" height="25"></rect>
             </g>
         </g>
     </g>

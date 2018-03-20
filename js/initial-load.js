@@ -29,15 +29,14 @@ var $setnine = $('.set9');
 
 
 var $about_anim = false;
-var $toc_anim = false;
-var $objective_anim = false;
+var $tools_anim = false;
 var $research_anim = false;
+var $mvp_anim = false;
+var $branding_anim = false;
 var $ia_anim = false;
 var $mockups_anim = false;
-var $branding_anim = false;
-var $testing_anim = false;
 var $future_anim = false;
-var $result_anim = false;
+
 
 var $windowtop = 0;
 var $windowbottom = 0;
@@ -88,64 +87,52 @@ $(window).scroll(function() {drawicons();});
 function drawicons() {
   $windowpos = $(window).scrollTop() + $(window).height();
 
-  if ( $about_anim == false && $windowpos > $('.icon_about').offset().top && $('.icon_about').offset().top > $(window).scrollTop() )
+  if ( $about_anim == false && $windowpos > $('.overview').offset().top && $('.overview').offset().top > $(window).scrollTop() )
   {
-    var d = new Date();
-    $('.icon_about img').attr("src", "images/icon_about.svg?" + d);
+    $('.overview .subtitle').addClass("animated fadeInLeft");
+    $('.overview .sub-blurb').addClass("animated fadeInRight");
     $about_anim = true;
   }
-  if ( $toc_anim == false && $windowpos > $('.icon_toc').offset().top && $('.icon_toc').offset().top > $(window).scrollTop() )
+  if ( $tools_anim == false && $windowpos > $('.tools .content').offset().top && $('.tools .content').offset().top > $(window).scrollTop() )
   {
-    var d = new Date();
-    $('.icon_toc img').attr("src", "images/icon_toc.svg?" + d);
-    $toc_anim = true;
+    $('.tools .subtitle').addClass("animated fadeInLeft");
+    $('.tools .sub-blurb').addClass("animated fadeInRight");
+    $tools_anim = true;
   }
-  if ( $objective_anim == false && $windowpos > $('.icon_objectives').offset().top && $('.icon_objectives').offset().top > $(window).scrollTop() )
+  if ( $research_anim == false && $windowpos > $('.research .content').offset().top && $('.research .content').offset().top > $(window).scrollTop() )
   {
-    var d = new Date();
-    $('.icon_objectives img').attr("src", "images/icon_objectives.svg?" + d);
-    $objective_anim = true;
-  }
-  if ( $research_anim == false && $windowpos > $('.icon_research').offset().top && $('.icon_research').offset().top > $(window).scrollTop() )
-  {
-    var d = new Date();
-    $('.icon_research img').attr("src", "images/icon_research.svg?" + d);
+    $('.research .subtitle').addClass("animated fadeInLeft");
+    $('.research .sub-blurb').addClass("animated fadeInRight");
     $research_anim = true;
   }
-  if ( $ia_anim == false && $windowpos > $('.icon_ia').offset().top && $('.icon_ia').offset().top > $(window).scrollTop() )
+  if ( $mvp_anim == false && $windowpos > $('.mvp .content').offset().top && $('.mvp .content').offset().top > $(window).scrollTop() )
   {
-    var d = new Date();
-    $('.icon_ia img').attr("src", "images/icon_ia.svg?" + d);
-    $ia_anim = true;
+    $('.mvp .subtitle').addClass("animated fadeInLeft");
+    $('.mvp .sub-blurb').addClass("animated fadeInRight");
+    $mvp_anim = true;
   }
-  if ( $mockups_anim == false && $windowpos > $('.icon_mockups').offset().top && $('.icon_mockups').offset().top > $(window).scrollTop() )
+  if ( $branding_anim == false && $windowpos > $('.branding .content').offset().top && $('.branding .content').offset().top > $(window).scrollTop() )
   {
-    var d = new Date();
-    $('.icon_mockups img').attr("src", "images/icon_mockups.svg?" + d);
-    $mockups_anim = true;
-  }
-  if ( $branding_anim == false && $windowpos > $('.icon_branding').offset().top && $('.icon_branding').offset().top > $(window).scrollTop() )
-  {
-    var d = new Date();
-    $('.icon_branding img').attr("src", "images/icon_branding.svg?" + d);
+    $('.branding .subtitle').addClass("animated fadeInLeft");
+    $('.branding .sub-blurb').addClass("animated fadeInRight");
     $branding_anim = true;
   }
-  if ( $testing_anim == false && $windowpos > $('.icon_testing').offset().top && $('.icon_testing').offset().top > $(window).scrollTop() )
+  if ( $ia_anim == false && $windowpos > $('.IA .content').offset().top && $('.IA .content').offset().top > $(window).scrollTop() )
   {
-    var d = new Date();
-    $('.icon_testing img').attr("src", "images/icon_testing.svg?" + d);
-    $testing_anim = true;
+    $('.IA .subtitle').addClass("animated fadeInLeft");
+    $('.IA .sub-blurb').addClass("animated fadeInRight");
+    $ia_anim = true;
   }
-  if ( $future_anim == false && $windowpos > $('.icon_future').offset().top && $('.icon_future').offset().top > $(window).scrollTop() )
+  if ( $mockups_anim == false && $windowpos > $('.mockups .content').offset().top && $('.mockups .content').offset().top > $(window).scrollTop() )
   {
-    var d = new Date();
-    $('.icon_future img').attr("src", "images/icon_future.svg?" + d);
+    $('.mockups .subtitle').addClass("animated fadeInLeft");
+    $('.mockups .sub-blurb').addClass("animated fadeInRight");
+    $mockups_anim = true;
+  }
+  if ( $future_anim == false && $windowpos > $('.future .content').offset().top && $('.future .content').offset().top > $(window).scrollTop() )
+  {
+    $('.future .subtitle').addClass("animated fadeInLeft");
+    $('.future .sub-blurb').addClass("animated fadeInRight");
     $future_anim = true;
-  }
-  if ( $result_anim == false && $windowpos > $('.icon_result').offset().top && $('.icon_result').offset().top > $(window).scrollTop() )
-  {
-    var d = new Date();
-    $('.icon_result img').attr("src", "images/icon_result.svg?" + d);
-    $result_anim = true;
   }
 };
