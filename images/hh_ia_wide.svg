@@ -1,59 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="701px" height="1000px" viewBox="0 0 701 1000" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
-    <title>mdpi/Group 10</title>
+<svg width="700px" height="2830px" viewBox="0 0 700 2830" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>mdpi/Group 3</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="CASE-STUDY" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Artboard-7" transform="translate(-49.000000, -2350.000000)">
-            <g id="Group-10" transform="translate(49.000000, 2350.000000)">
-                <rect id="Rectangle-8" fill="#C0E4B6" x="26" y="551" width="25" height="25"></rect>
-                <rect id="Rectangle-8" fill="#C0E4B6" x="26" y="676" width="25" height="25"></rect>
-                <rect id="Rectangle-8" fill="#DEF4D6" x="1" y="625" width="25" height="25"></rect>
-                <rect id="Rectangle-8" fill="#DEF4D6" x="1" y="876" width="25" height="25"></rect>
-                <rect id="Rectangle-8" fill="#DEF4D6" x="1" y="950" width="25" height="25"></rect>
-                <rect id="Rectangle-8" fill="#DEF4D6" x="676" y="775" width="25" height="25"></rect>
-                <rect id="Rectangle-8" fill="#C0E4B6" x="651" y="600" width="50" height="50"></rect>
-                <rect id="Rectangle-8" fill="#DEF4D6" x="651" y="500" width="50" height="50"></rect>
-                <rect id="Rectangle-8" fill="#DEF4D6" x="676" y="425" width="25" height="25"></rect>
-                <rect id="Rectangle-8" fill="#DEF4D6" x="651" y="300" width="50" height="50"></rect>
-                <rect id="Rectangle-8" fill="#DEF4D6" x="676" y="125" width="25" height="25"></rect>
-                <rect id="Rectangle-8" fill="#C0E4B6" x="651" y="200" width="50" height="50"></rect>
-                <rect id="Rectangle-8" fill="#C0E4B6" x="651" y="375" width="25" height="25"></rect>
-                <rect id="Rectangle-8" fill="#DEF4D6" x="576" y="950" width="50" height="50"></rect>
-                <rect id="Rectangle-8" fill="#DEF4D6" x="51" y="50" width="600" height="900"></rect>
-                <rect id="Rectangle-8" fill="#C0E4B6" x="0" y="750" width="50" height="50"></rect>
-                <rect id="Rectangle-8" fill="#C0E4B6" x="676" y="925" width="25" height="25"></rect>
-                <rect id="Rectangle-8" fill="#DEF4D6" x="651" y="850" width="25" height="25"></rect>
-                <rect id="Rectangle-8" fill="#DEF4D6" x="651" y="950" width="25" height="25"></rect>
-                <rect id="Rectangle-8" fill="#DEF4D6" x="176" y="975" width="25" height="25"></rect>
-                <rect id="Rectangle-8" fill="#DEF4D6" x="1" y="300" width="50" height="50"></rect>
-                <rect id="Rectangle-8" fill="#DEF4D6" x="1" y="500" width="50" height="50"></rect>
-                <rect id="Rectangle-8" fill="#DEF4D6" x="651" y="700" width="50" height="50"></rect>
-                <rect id="Rectangle-8" fill="#DEF4D6" x="26" y="125" width="25" height="25"></rect>
-                <rect id="Rectangle-8" fill="#DEF4D6" x="26" y="425" width="25" height="25"></rect>
-                <rect id="Rectangle-8" fill="#C0E4B6" x="1" y="200" width="50" height="50"></rect>
-                <rect id="Rectangle-8" fill="#C0E4B6" x="651" y="50" width="25" height="25"></rect>
-                <rect id="Rectangle-8" fill="#DEF4D6" x="26" y="25" width="25" height="25"></rect>
-                <rect id="Rectangle-8" fill="#CFEDC6" x="504" y="50" width="50" height="50"></rect>
-                <rect id="Rectangle-8" fill="#CFEDC6" x="251" y="50" width="50" height="50"></rect>
-                <rect id="Rectangle-8" fill="#CFEDC6" x="51" y="50" width="50" height="50"></rect>
-                <rect id="Rectangle-8" fill="#CFEDC6" x="401" y="900" width="50" height="50"></rect>
-                <rect id="Rectangle-8" fill="#CFEDC6" x="201" y="900" width="50" height="50"></rect>
-                <rect id="Rectangle-8" fill="#C0E4B6" x="501" y="975" width="25" height="25"></rect>
-                <rect id="Rectangle-8" fill="#C0E4B6" x="551" y="0" width="25" height="25"></rect>
-                <rect id="Rectangle-8" fill="#CFEDC6" x="426" y="75" width="25" height="25"></rect>
-                <rect id="Rectangle-8" fill="#CFEDC6" x="176" y="75" width="25" height="25"></rect>
-                <rect id="Rectangle-8" fill="#CFEDC6" x="501" y="925" width="25" height="25"></rect>
-                <rect id="Rectangle-8" fill="#CFEDC6" x="126" y="900" width="25" height="25"></rect>
-                <rect id="Rectangle-8" fill="#CFEDC6" x="551" y="900" width="25" height="25"></rect>
-                <rect id="Rectangle-8" fill="#C0E4B6" x="226" y="950" width="25" height="25"></rect>
-                <rect id="Rectangle-8" fill="#C0E4B6" x="351" y="0" width="50" height="50"></rect>
-                <rect id="Rectangle-8" fill="#C0E4B6" x="301" y="950" width="50" height="50"></rect>
-                <rect id="Rectangle-8" fill="#C0E4B6" x="51" y="950" width="50" height="50"></rect>
-                <rect id="Rectangle-8" fill="#DEF4D6" x="201" y="25" width="25" height="25"></rect>
-                <rect id="Rectangle-8" fill="#DEF4D6" x="451" y="25" width="25" height="25"></rect>
-                <rect id="Rectangle-8" fill="#DEF4D6" x="426" y="975" width="25" height="25"></rect>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-13" transform="translate(-2251.000000, 0.000000)">
+            <g id="Group-3" transform="translate(2251.000000, 0.000000)">
+                <rect id="Rectangle-8" fill="#C0E4B6" x="25" y="2031" width="25" height="25"></rect>
+                <rect id="Rectangle-8" fill="#C0E4B6" x="25" y="2156" width="25" height="25"></rect>
+                <rect id="Rectangle-8" fill="#DEF4D6" x="0" y="2105" width="25" height="25"></rect>
+                <rect id="Rectangle-8" fill="#DEF4D6" x="675" y="2255" width="25" height="25"></rect>
+                <rect id="Rectangle-8" fill="#C0E4B6" x="650" y="800" width="50" height="50"></rect>
+                <rect id="Rectangle-8" fill="#DEF4D6" x="650" y="700" width="50" height="50"></rect>
+                <rect id="Rectangle-8" fill="#DEF4D6" x="675" y="625" width="25" height="25"></rect>
+                <rect id="Rectangle-8" fill="#DEF4D6" x="650" y="500" width="50" height="50"></rect>
+                <rect id="Rectangle-8" fill="#DEF4D6" x="675" y="325" width="25" height="25"></rect>
+                <rect id="Rectangle-8" fill="#C0E4B6" x="650" y="400" width="50" height="50"></rect>
+                <rect id="Rectangle-8" fill="#C0E4B6" x="650" y="575" width="25" height="25"></rect>
+                <rect id="Rectangle-8" fill="#DEF4D6" x="50" y="250" width="600" height="2580"></rect>
+                <rect id="Rectangle-8" fill="#DEF4D6" x="49" y="0" width="600" height="100"></rect>
+                <rect id="Rectangle-8" fill="#C0E4B6" x="0" y="2230" width="50" height="50"></rect>
+                <rect id="Rectangle-8" fill="#DEF4D6" x="650" y="2330" width="25" height="25"></rect>
+                <rect id="Rectangle-8" fill="#DEF4D6" x="0" y="500" width="50" height="50"></rect>
+                <rect id="Rectangle-8" fill="#DEF4D6" x="0" y="700" width="50" height="50"></rect>
+                <rect id="Rectangle-8" fill="#DEF4D6" x="650" y="2180" width="50" height="50"></rect>
+                <rect id="Rectangle-8" fill="#DEF4D6" x="25" y="325" width="25" height="25"></rect>
+                <rect id="Rectangle-8" fill="#DEF4D6" x="25" y="625" width="25" height="25"></rect>
+                <rect id="Rectangle-8" fill="#C0E4B6" x="0" y="400" width="50" height="50"></rect>
+                <rect id="Rectangle-8" fill="#C0E4B6" x="650" y="250" width="25" height="25"></rect>
+                <rect id="Rectangle-8" fill="#DEF4D6" x="25" y="225" width="25" height="25"></rect>
+                <rect id="Rectangle-8" fill="#CFEDC6" x="503" y="250" width="50" height="50"></rect>
+                <rect id="Rectangle-8" fill="#CFEDC6" x="250" y="250" width="50" height="50"></rect>
+                <rect id="Rectangle-8" fill="#CFEDC6" x="50" y="250" width="50" height="50"></rect>
+                <rect id="Rectangle-8" fill="#C0E4B6" x="550" y="200" width="25" height="25"></rect>
+                <rect id="Rectangle-8" fill="#CFEDC6" x="425" y="275" width="25" height="25"></rect>
+                <rect id="Rectangle-8" fill="#CFEDC6" x="175" y="275" width="25" height="25"></rect>
+                <rect id="Rectangle-8" fill="#C0E4B6" x="350" y="200" width="50" height="50"></rect>
+                <rect id="Rectangle-8" fill="#DEF4D6" x="200" y="225" width="25" height="25"></rect>
+                <rect id="Rectangle-8" fill="#DEF4D6" x="450" y="225" width="25" height="25"></rect>
+                <rect id="Rectangle-8" fill="#C0E4B6" x="650" y="2105" width="50" height="50"></rect>
+                <rect id="Rectangle-8" fill="#DEF4D6" x="650" y="2005" width="50" height="50"></rect>
+                <rect id="Rectangle-8" fill="#DEF4D6" x="675" y="1855" width="25" height="25"></rect>
+                <rect id="Rectangle-8" fill="#C0E4B6" x="650" y="1905" width="50" height="50"></rect>
+                <rect id="Rectangle-8" fill="#DEF4D6" x="675" y="1755" width="25" height="25"></rect>
+                <rect id="Rectangle-8" fill="#DEF4D6" transform="translate(662.500000, 1537.500000) scale(-1, 1) translate(-662.500000, -1537.500000) " x="650" y="1525" width="25" height="25"></rect>
+                <rect id="Rectangle-8" fill="#C0E4B6" transform="translate(675.000000, 1475.000000) scale(-1, 1) translate(-675.000000, -1475.000000) " x="650" y="1450" width="50" height="50"></rect>
+                <rect id="Rectangle-8" fill="#DEF4D6" transform="translate(675.000000, 1375.000000) scale(-1, 1) translate(-675.000000, -1375.000000) " x="650" y="1350" width="50" height="50"></rect>
+                <rect id="Rectangle-8" fill="#DEF4D6" transform="translate(662.500000, 1287.500000) scale(-1, 1) translate(-662.500000, -1287.500000) " x="650" y="1275" width="25" height="25"></rect>
+                <rect id="Rectangle-8" fill="#DEF4D6" transform="translate(675.000000, 1175.000000) scale(-1, 1) translate(-675.000000, -1175.000000) " x="650" y="1150" width="50" height="50"></rect>
+                <rect id="Rectangle-8" fill="#DEF4D6" transform="translate(662.500000, 987.500000) scale(-1, 1) translate(-662.500000, -987.500000) " x="650" y="975" width="25" height="25"></rect>
+                <rect id="Rectangle-8" fill="#C0E4B6" transform="translate(675.000000, 1075.000000) scale(-1, 1) translate(-675.000000, -1075.000000) " x="650" y="1050" width="50" height="50"></rect>
+                <rect id="Rectangle-8" fill="#C0E4B6" transform="translate(687.500000, 1237.500000) scale(-1, 1) translate(-687.500000, -1237.500000) " x="675" y="1225" width="25" height="25"></rect>
+                <rect id="Rectangle-8" fill="#C0E4B6" transform="translate(662.500000, 1687.500000) scale(-1, 1) translate(-662.500000, -1687.500000) " x="650" y="1675" width="25" height="25"></rect>
+                <rect id="Rectangle-8" fill="#DEF4D6" transform="translate(687.500000, 1612.500000) scale(-1, 1) translate(-687.500000, -1612.500000) " x="675" y="1600" width="25" height="25"></rect>
+                <rect id="Rectangle-8" fill="#DEF4D6" transform="translate(687.500000, 1712.500000) scale(-1, 1) translate(-687.500000, -1712.500000) " x="675" y="1700" width="25" height="25"></rect>
+                <rect id="Rectangle-8" fill="#C0E4B6" transform="translate(687.500000, 912.500000) scale(-1, 1) translate(-687.500000, -912.500000) " x="675" y="900" width="25" height="25"></rect>
+                <rect id="Rectangle-8" fill="#C0E4B6" x="25" y="1780" width="25" height="25"></rect>
+                <rect id="Rectangle-8" fill="#DEF4D6" x="0" y="1555" width="25" height="25"></rect>
+                <rect id="Rectangle-8" fill="#C0E4B6" x="0" y="1680" width="50" height="50"></rect>
+                <rect id="Rectangle-8" fill="#DEF4D6" x="0" y="2030" width="50" height="50"></rect>
+                <rect id="Rectangle-8" fill="#DEF4D6" x="0" y="1830" width="50" height="50"></rect>
+                <rect id="Rectangle-8" fill="#DEF4D6" x="25" y="2205" width="25" height="25"></rect>
+                <rect id="Rectangle-8" fill="#DEF4D6" x="25" y="1905" width="25" height="25"></rect>
+                <rect id="Rectangle-8" fill="#DEF4D6" x="25" y="2305" width="25" height="25"></rect>
+                <rect id="Rectangle-8" fill="#DEF4D6" x="25" y="925" width="25" height="25"></rect>
+                <rect id="Rectangle-8" fill="#C0E4B6" x="0" y="1000" width="50" height="50"></rect>
+                <rect id="Rectangle-8" fill="#DEF4D6" x="0" y="1100" width="50" height="50"></rect>
+                <rect id="Rectangle-8" fill="#DEF4D6" x="25" y="1175" width="25" height="25"></rect>
+                <rect id="Rectangle-8" fill="#DEF4D6" x="0" y="1300" width="50" height="50"></rect>
+                <rect id="Rectangle-8" fill="#DEF4D6" x="25" y="1475" width="25" height="25"></rect>
+                <rect id="Rectangle-8" fill="#C0E4B6" x="0" y="1400" width="50" height="50"></rect>
+                <rect id="Rectangle-8" fill="#C0E4B6" x="0" y="1225" width="25" height="25"></rect>
+                <rect id="Rectangle-8" fill="#C0E4B6" x="25" y="775" width="25" height="25"></rect>
+                <rect id="Rectangle-8" fill="#DEF4D6" x="0" y="850" width="25" height="25"></rect>
+                <rect id="Rectangle-8" fill="#DEF4D6" x="124" y="100" width="50" height="50"></rect>
+                <rect id="Rectangle-8" fill="#C0E4B6" x="24" y="75" width="25" height="25"></rect>
+                <rect id="Rectangle-8" fill="#DEF4D6" x="674" y="50" width="25" height="25"></rect>
+                <rect id="Rectangle-8" fill="#CFEDC6" x="274" y="50" width="50" height="50"></rect>
+                <rect id="Rectangle-8" fill="#CFEDC6" x="574" y="50" width="50" height="50"></rect>
+                <rect id="Rectangle-8" fill="#C0E4B6" x="49" y="126" width="25" height="25"></rect>
+                <rect id="Rectangle-8" fill="#C0E4B6" x="524" y="126" width="25" height="25"></rect>
+                <rect id="Rectangle-8" fill="#CFEDC6" x="524" y="75" width="25" height="25"></rect>
+                <rect id="Rectangle-8" fill="#CFEDC6" x="149" y="50" width="25" height="25"></rect>
+                <rect id="Rectangle-8" fill="#C0E4B6" x="249" y="100" width="25" height="25"></rect>
+                <rect id="Rectangle-8" fill="#C0E4B6" x="324" y="100" width="50" height="50"></rect>
+                <rect id="Rectangle-8" fill="#C0E4B6" x="649" y="100" width="50" height="50"></rect>
+                <rect id="Rectangle-8" fill="#DEF4D6" x="474" y="100" width="25" height="25"></rect>
+                <rect id="Rectangle-8" fill="#C0E4B6" x="650" y="2679" width="50" height="50"></rect>
+                <rect id="Rectangle-8" fill="#DEF4D6" x="650" y="2579" width="50" height="50"></rect>
+                <rect id="Rectangle-8" fill="#DEF4D6" x="675" y="2504" width="25" height="25"></rect>
+                <rect id="Rectangle-8" fill="#DEF4D6" x="650" y="2379" width="50" height="50"></rect>
+                <rect id="Rectangle-8" fill="#C0E4B6" x="650" y="2454" width="25" height="25"></rect>
+                <rect id="Rectangle-8" fill="#DEF4D6" x="0" y="2379" width="50" height="50"></rect>
+                <rect id="Rectangle-8" fill="#DEF4D6" x="0" y="2579" width="50" height="50"></rect>
+                <rect id="Rectangle-8" fill="#DEF4D6" x="25" y="2504" width="25" height="25"></rect>
+                <rect id="Rectangle-8" fill="#C0E4B6" transform="translate(687.500000, 2791.500000) scale(-1, 1) translate(-687.500000, -2791.500000) " x="675" y="2779" width="25" height="25"></rect>
+                <rect id="Rectangle-8" fill="#DEF4D6" x="25" y="2804" width="25" height="25"></rect>
+                <rect id="Rectangle-8" fill="#C0E4B6" x="25" y="2654" width="25" height="25"></rect>
+                <rect id="Rectangle-8" fill="#DEF4D6" x="0" y="2729" width="25" height="25"></rect>
             </g>
         </g>
     </g>

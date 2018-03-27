@@ -1,20 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="400px" height="550px" viewBox="0 0 400 550" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="400px" height="3150px" viewBox="0 0 400 3150" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
-    <title>mdpi/Group 5</title>
+    <title>mdpi/hh_deliverable_narrow</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Artboard-5" transform="translate(0.000000, -650.000000)">
-            <g id="Group-5" transform="translate(0.000000, 650.000000)">
-                <rect id="Rectangle-8" fill="#DEF4D6" x="0" y="50" width="400" height="450"></rect>
-                <rect id="Rectangle-8" fill="#CFEDC6" x="250" y="450" width="50" height="50"></rect>
-                <rect id="Rectangle-8" fill="#CFEDC6" x="75" y="475" width="25" height="25"></rect>
-                <rect id="Rectangle-8" fill="#CFEDC6" x="375" y="450" width="25" height="25"></rect>
-                <rect id="Rectangle-8" fill="#C0E4B6" x="300" y="500" width="25" height="25"></rect>
-                <rect id="Rectangle-8" fill="#C0E4B6" x="0" y="500" width="25" height="25"></rect>
-                <rect id="Rectangle-8" fill="#C0E4B6" x="150" y="500" width="50" height="50"></rect>
-                <g id="Group-3">
+        <g id="Artboard-12" transform="translate(-2940.000000, 0.000000)">
+            <g id="hh_deliverable_narrow" transform="translate(2940.000000, 0.000000)">
+                <rect id="Rectangle-8" fill="#DEF4D6" x="0" y="150" width="400" height="3000"></rect>
+                <rect id="Rectangle-8" fill="#DEF4D6" x="0" y="0" width="400" height="50"></rect>
+                <g id="Group-3" transform="translate(0.000000, 100.000000)">
                     <rect id="Rectangle-8" fill="#CFEDC6" x="225" y="50" width="50" height="50"></rect>
                     <rect id="Rectangle-8" fill="#CFEDC6" x="375" y="50" width="25" height="25"></rect>
                     <rect id="Rectangle-8" fill="#CFEDC6" x="125" y="75" width="25" height="25"></rect>
@@ -26,6 +21,12 @@
                     <rect id="Rectangle-8" fill="#C0E4B6" x="175" y="0" width="50" height="50"></rect>
                     <rect id="Rectangle-8" fill="#DEF4D6" x="50" y="25" width="25" height="25"></rect>
                 </g>
+                <rect id="Rectangle-8" fill="#CFEDC6" x="0" y="25" width="25" height="25"></rect>
+                <rect id="Rectangle-8" fill="#CFEDC6" x="175" y="25" width="25" height="25"></rect>
+                <rect id="Rectangle-8" fill="#C0E4B6" x="350" y="50" width="50" height="50"></rect>
+                <rect id="Rectangle-8" fill="#CFEDC6" x="300" y="0" width="50" height="50"></rect>
+                <rect id="Rectangle-8" fill="#C0E4B6" x="51" y="50" width="25" height="25"></rect>
+                <rect id="Rectangle-8" fill="#C0E4B6" x="250" y="75" width="25" height="25"></rect>
             </g>
         </g>
     </g>

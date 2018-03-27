@@ -35,6 +35,7 @@ var $mvp_anim = false;
 var $branding_anim = false;
 var $ia_anim = false;
 var $mockups_anim = false;
+var $deliverable_anim = false;
 var $future_anim = false;
 
 
@@ -81,58 +82,68 @@ $('.sig').click(function(){
 });
 
 // reload the animated icons when they come into the viewer window for the first time
-$(window).scroll(function() {drawicons();});
+$(window).scroll(function() {
+  if ($exp_project == true) {
+    drawicons();
+  }
+});
 
 
 function drawicons() {
   $windowpos = $(window).scrollTop() + $(window).height();
 
-  if ( $about_anim == false && $windowpos > $('.overview').offset().top && $('.overview').offset().top > $(window).scrollTop() )
+  if ( $about_anim == false && $windowpos > $expanded_thing.find('.overview').offset().top && $expanded_thing.find('.overview').offset().top > $(window).scrollTop() )
   {
-    $('.overview .subtitle').addClass("animated fadeInLeft");
-    $('.overview .sub-blurb').addClass("animated fadeInRight");
+    $expanded_thing.find('.overview .subtitle').addClass("animated fadeInLeft");
+    $expanded_thing.find('.overview .sub-blurb').addClass("animated fadeInRight");
     $about_anim = true;
   }
-  if ( $tools_anim == false && $windowpos > $('.tools .content').offset().top && $('.tools .content').offset().top > $(window).scrollTop() )
+  if ( $tools_anim == false && $windowpos > $expanded_thing.find('.tools .content').offset().top && $expanded_thing.find('.tools .content').offset().top > $(window).scrollTop() )
   {
-    $('.tools .subtitle').addClass("animated fadeInLeft");
-    $('.tools .sub-blurb').addClass("animated fadeInRight");
+    $expanded_thing.find('.tools .subtitle').addClass("animated fadeInLeft");
+    $expanded_thing.find('.tools .sub-blurb').addClass("animated fadeInRight");
     $tools_anim = true;
   }
-  if ( $research_anim == false && $windowpos > $('.research .content').offset().top && $('.research .content').offset().top > $(window).scrollTop() )
+  if ( $research_anim == false && $windowpos > $expanded_thing.find('.research .content').offset().top && $expanded_thing.find('.research .content').offset().top > $(window).scrollTop() )
   {
-    $('.research .subtitle').addClass("animated fadeInLeft");
-    $('.research .sub-blurb').addClass("animated fadeInRight");
+    $expanded_thing.find('.research .subtitle').addClass("animated fadeInLeft");
+    $expanded_thing.find('.research .sub-blurb').addClass("animated fadeInRight");
     $research_anim = true;
   }
-  if ( $mvp_anim == false && $windowpos > $('.mvp .content').offset().top && $('.mvp .content').offset().top > $(window).scrollTop() )
+  if ( $mvp_anim == false && $windowpos > $expanded_thing.find('.mvp .content').offset().top && $expanded_thing.find('.mvp .content').offset().top > $(window).scrollTop() )
   {
-    $('.mvp .subtitle').addClass("animated fadeInLeft");
-    $('.mvp .sub-blurb').addClass("animated fadeInRight");
+    $expanded_thing.find('.mvp .subtitle').addClass("animated fadeInLeft");
+    $expanded_thing.find('.mvp .sub-blurb').addClass("animated fadeInRight");
     $mvp_anim = true;
   }
-  if ( $branding_anim == false && $windowpos > $('.branding .content').offset().top && $('.branding .content').offset().top > $(window).scrollTop() )
+  if ( $branding_anim == false && $windowpos > $expanded_thing.find('.branding .content').offset().top && $expanded_thing.find('.branding .content').offset().top > $(window).scrollTop() )
   {
-    $('.branding .subtitle').addClass("animated fadeInLeft");
-    $('.branding .sub-blurb').addClass("animated fadeInRight");
+    $expanded_thing.find('.branding .subtitle').addClass("animated fadeInLeft");
+    $expanded_thing.find('.branding .sub-blurb').addClass("animated fadeInRight");
     $branding_anim = true;
   }
-  if ( $ia_anim == false && $windowpos > $('.IA .content').offset().top && $('.IA .content').offset().top > $(window).scrollTop() )
+  if ( $ia_anim == false && $windowpos > $expanded_thing.find('.IA .content').offset().top && $expanded_thing.find('.IA .content').offset().top > $(window).scrollTop() )
   {
-    $('.IA .subtitle').addClass("animated fadeInLeft");
-    $('.IA .sub-blurb').addClass("animated fadeInRight");
+    $expanded_thing.find('.IA .subtitle').addClass("animated fadeInLeft");
+    $expanded_thing.find('.IA .sub-blurb').addClass("animated fadeInRight");
     $ia_anim = true;
   }
-  if ( $mockups_anim == false && $windowpos > $('.mockups .content').offset().top && $('.mockups .content').offset().top > $(window).scrollTop() )
+  if ( $mockups_anim == false && $windowpos > $expanded_thing.find('.mockups .content').offset().top && $expanded_thing.find('.mockups .content').offset().top > $(window).scrollTop() )
   {
-    $('.mockups .subtitle').addClass("animated fadeInLeft");
-    $('.mockups .sub-blurb').addClass("animated fadeInRight");
+    $expanded_thing.find('.mockups .subtitle').addClass("animated fadeInLeft");
+    $expanded_thing.find('.mockups .sub-blurb').addClass("animated fadeInRight");
     $mockups_anim = true;
   }
-  if ( $future_anim == false && $windowpos > $('.future .content').offset().top && $('.future .content').offset().top > $(window).scrollTop() )
+  if ( $deliverable_anim == false && $windowpos > $expanded_thing.find('.deliverable .content').offset().top && $expanded_thing.find('.deliverable .content').offset().top > $(window).scrollTop() )
   {
-    $('.future .subtitle').addClass("animated fadeInLeft");
-    $('.future .sub-blurb').addClass("animated fadeInRight");
+    $expanded_thing.find('.deliverable .subtitle').addClass("animated fadeInLeft");
+    $expanded_thing.find('.deliverable .sub-blurb').addClass("animated fadeInRight");
+    $mockups_anim = true;
+  }
+  if ( $future_anim == false && $windowpos > $expanded_thing.find('.future .content').offset().top && $expanded_thing.find('.future .content').offset().top > $(window).scrollTop() )
+  {
+    $expanded_thing.find('.future .subtitle').addClass("animated fadeInLeft");
+    $expanded_thing.find('.future .sub-blurb').addClass("animated fadeInRight");
     $future_anim = true;
   }
 };

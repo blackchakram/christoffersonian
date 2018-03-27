@@ -241,18 +241,18 @@ video {
 }
 
 .subpara, .location {
-  font-size: 7.4vw;
+  font-size: 7.0vw;
   line-height: 5.7vw;
   mix-blend-mode: overlay;
   font-family: "Titillium Web", sans-serif;
   font-weight: 900;
   padding-top: 20px;
-  padding-left: 2vw;
+  padding-left: 3vw;
+  padding-right: 3vw;
 }
 
 .location {
   text-align: left;
-  left: 5vw;
   bottom: 3vw;
   position: absolute;
   color: black;
@@ -317,13 +317,43 @@ video {
 styling for case study parts
 =================================== */
 
-/
+.button {
+  margin-top: calc(100vw/16);
+  margin-bottom: calc(100vw/16);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.button div {
+  padding:calc(100vw/64) calc(100vw/32);
+  width: auto;
+  font-weight: lighter;
+  cursor: pointer;
+}
+
+.helping-hands .button div {
+    background-color: #AFD6A5;
+    box-shadow: 0 1.5vw #97C38C;
+}
+
+.portfolio .button div {
+    background-color: #E3B8BA;
+    box-shadow: 0 1.5vw #C9999A;
+}
+
+
 .case_study > li {
   opacity: 0;
 }
 
 .screencap img {
   width: 100%;
+}
+
+.names {
+  font-size: 4.7vw;
+  font-weight: lighter;
 }
 
 .study-title {
@@ -379,7 +409,6 @@ styling for case study parts
 .section-subheader{
   font-size: 6vw;
   font-weight: 300;
-  letter-spacing: 0.7vw;
   padding-top: calc(100vw/16);
 }
 
@@ -407,7 +436,7 @@ styling for case study parts
   opacity: 1;
 }
 
-.result > .subimg > img { width: 100%; }
+.result > .subimg > img, .result > .subi > img { width: 100%; }
 
 .content {
   display: block;
@@ -419,30 +448,28 @@ styling for case study parts
 .detail .subtitle {
   display: flex;
   align-items: center;
-  opacity: 1;
-  width: 100%;
   vertical-align: middle;
   text-align: left;
   padding-left: 30px;
+  padding-right: 30px;
   font-size: 9vw;
   font-weight: 300;
-  letter-spacing: 0.7vw;
   font-family: "Exo 2";
   opacity: 0;
 }
 
-.subimg {
+.subimg, .subi {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  padding-top: calc(100vw/24);
+  padding-bottom: calc(100vw/24);
 }
 
 .subimg img {
   cursor: pointer;
-  height: 80vw;
-  width: 80%;
 }
 
 .thelogo {
@@ -465,7 +492,7 @@ styling for case study parts
   left: 40px;
   position: relative;
   top: -3.5vw;
-  padding: 0 30px 0 0;
+  padding: 0 32px 0 0;
 }
 
 .listtitle {
@@ -483,10 +510,13 @@ th p{
   font-size: 3vw;
 }
 
-table {padding-bottom: calc(100vw/12);}
+table {
+  padding-bottom: calc(100vw/12);
+  width: 100%;
+}
 
 td {
-  font-size: 3vw;
+  font-size: 2.7vw;
   padding-left: 10px;
 }
 
@@ -498,6 +528,18 @@ tr:nth-child(2n) {
   background-color: rgba(0,0,0,0.15);
 }
 
+.chart {display: flex;}
+
+.chart_l {
+  font-size: 2.8vw;
+  line-height: 4vw;
+}
+
+.chart_l .alist {padding-bottom: 1vw;}
+
+.chart_r img { width: 35vw;}
+
+
 td:not(.tdfront) {
   font-size: 7vw;
   text-align: center;
@@ -505,26 +547,42 @@ td:not(.tdfront) {
   padding-bottom: 5px;
 }
 
+.chart_l div:nth-child(1), .chart_l div:nth-child(10) { color: blue; }
+.chart_l div:nth-child(2), .chart_l div:nth-child(11) { color: red; }
+.chart_l div:nth-child(3), .chart_l div:nth-child(12) { color: orange; }
+.chart_l div:nth-child(4), .chart_l div:nth-child(13) { color: green; }
+.chart_l div:nth-child(5) { color: purple; }
+.chart_l div:nth-child(6) { color: lightblue; }
+
+
 .swotbox {
   background-color: rgba(0,0,0,0.10);
   margin-bottom: calc(100vw/12);
+  margin-top: calc(100vw/24);
 }
 
 .swotbody {
-  padding-top: 20px;
-  padding-right: 20px;
-  padding-bottom: 20px
+  padding-top: 5vw;
+  padding-right: 5vw;
+  padding-bottom: 0;
 }
 
 .swottitle {
+  padding: 1vw;
   padding-left: 10px;
   background-color: rgba(0,0,0,0.06);
+  font-size: 4.5vw;
 }
 
 
 .helping-hands .alist {
   list-style-image: url("../images/bulletbox_hh.png");
 }
+
+.portfolio .alist {
+  list-style-image: url("../images/bulletbox_pt.png");
+}
+
 
 .content p {
   padding-bottom: 1.5vw;
@@ -541,14 +599,15 @@ td:not(.tdfront) {
   margin-bottom: -1.5vw;
 }
 
-.overview {height: 90vw;}
+.overview {height: 110vw;}
 .tools {height: 120vw;}
-.research {height:700vw;}
-.IA {height: 350vw;}
-.mockups {height: 325vw;}
-.branding {height:325vw;}
-.mvp {height: 325vw;}
-.future {height: 325vw;}
+.research {height:770vw;}
+.IA {height: 725vw;}
+.mockups {height: 785vw;}
+.branding {height:650vw;}
+.mvp {height: 200vw;}
+.deliverable {height: 225vw;}
+.future {height: 350vw;}
 
 
 .helping-hands .overview { background-image: url("../images/hh_overview_narrow.svg"); }
@@ -558,6 +617,7 @@ td:not(.tdfront) {
 .helping-hands .mockups { background-image: url("../images/hh_mockups_narrow.svg"); }
 .helping-hands .branding { background-image: url("../images/hh_branding_narrow.svg"); }
 .helping-hands .mvp { background-image: url("../images/hh_mvp_narrow.svg"); }
+.helping-hands .deliverable { background-image: url("../images/hh_deliverable_narrow.svg"); }
 .helping-hands .future { background-image: url("../images/hh_future_narrow.svg"); }
 
 .portfolio .overview { background-image: url("../images/pt_overview_narrow.svg"); }
@@ -567,6 +627,7 @@ td:not(.tdfront) {
 .portfolio .mockups { background-image: url("../images/pt_mockups_narrow.svg"); }
 .portfolio .branding { background-image: url("../images/pt_branding_narrow.svg"); }
 .portfolio .mvp { background-image: url("../images/pt_mvp_narrow.svg"); }
+.portfolio .deliverable { background-image: url("../images/pt_deliverable_narrow.svg"); }
 .portfolio .future { background-image: url("../images/pt_future_narrow.svg"); }
 
 /* =============== IMAGE VIEWER ============== */
@@ -881,13 +942,12 @@ textarea {
   }
 
   .subpara, .location {
-  font-size: 4.9vw;
+  font-size: 4.6vw;
   line-height: 3.7vw;
 }
 
   .location {
   bottom: 2vw;
-  left: 3vw;
 }
 
   .icons {
@@ -943,39 +1003,39 @@ textarea {height: 20vw;}
 .formtitle {font-size: 7vw;}
 
   /* case studies */
-.overview {height: 87.5vw;}
-.tools {height: 112.5vw;}
-.research {height:225vw;}
-.IA {height: 200vw;}
-.mockups {height: 200vw;}
-.branding {height:225vw;}
-.testing {height: 250vw;}
-.future {height: 237.5vw;}
 
-.helping-hands .overview { background-image: url("../images/hh_overview_ex_narrow.svg"); }
-.helping-hands .tools { background-image: url("../images/hh_toolsdeliverable_ex_narrow.svg"); }
-.helping-hands .research { background-image: url("../images/hh_research_ex_narrow.svg"); }
-.helping-hands .IA { background-image: url("../images/hh_ia_ex_narrow.svg"); }
-.helping-hands .mockups { background-image: url("../images/hh_mockups_ex_narrow.svg"); }
-.helping-hands .branding { background-image: url("../images/hh_branding_ex_narrow.svg"); }
-.helping-hands .testing { background-image: url("../images/hh_testing_ex_narrow.svg"); }
-.helping-hands .future { background-image: url("../images/hh_future_ex_narrow.svg"); }
 
-.portfolio .overview { background-image: url("../images/pt_overview_ex_narrow.svg"); }
-.portfolio .tools { background-image: url("../images/pt_toolsdeliverable_ex_narrow.svg"); }
-.portfolio .research { background-image: url("../images/pt_research_ex_narrow.svg"); }
-.portfolio .IA { background-image: url("../images/pt_ia_ex_narrow.svg"); }
-.portfolio .mockups { background-image: url("../images/pt_mockups_ex_narrow.svg"); }
-.portfolio .branding { background-image: url("../images/pt_branding_ex_narrow.svg"); }
-.portfolio .testing { background-image: url("../images/pt_testing_ex_narrow.svg"); }
-.portfolio .future { background-image: url("../images/pt_future_ex_narrow.svg"); }
+  .overview {height: 90vw;}
+  .tools {height: 100vw;}
+  .research {height:595vw;}
+  .IA {height: 585vw;}
+  .mockups {height: 665vw;}
+  .branding {height:500vw;}
+  .mvp {height: 175vw;}
+  .deliverable {height: 210vw;}
+  .future {height: 350vw;}
+
+th p {width: 11vw;}
+
+td {font-size: 3.1vw;}
+
+.section-subheader {font-size: 4.5vw;}
+
+.names {font-size: 3.5vw;}
+
+.chart_l {line-height: 3.5vw;}
 
 .case-study > .detail { font-size: 3.25vw; }
 .tools pre {
   font-size: 3.25vw;
 }
 
-.detail .subtitle, .othertitle { font-size: 4.5vw;}
+.swottitle {
+  padding:1vw;
+  padding-left: 10px;
+  font-size: 3.5vw;
+}
+
 
 .detail .subtitle, .overview .subtitle { padding-left: 58px; }
 
@@ -1101,7 +1161,6 @@ padding-left: 8vw;
   }
 
   .location {
-    left: 3vw;
     bottom: 2vw;
   }
 
@@ -1167,41 +1226,71 @@ padding-left: 8vw;
 
   /* case studies */
 
-  .overview {height: 57.3vw;}
-  .tools {height: 57.1vw;}
-  .research {height:157.2vw;}
-  .IA {height: 142.8vw;}
-  .mockups {height: 142.8vw;}
-  .branding {height:157.1vw;}
-  .testing {height: 157.1vw;}
-  .future {height: 157.1vw;}
+.overview {height: 72vw;}
+.tools {height: 85vw;}
+.research {height:375vw;}
+.IA {height: 390vw;}
+.mockups {height: 475vw;}
+.branding {height:358vw;}
+.mvp {height: 125vw;}
+.deliverable {height: 168vw;}
+.future {height: 215vw;}
 
-  .helping-hands .overview { background-image: url("../images/hh_overview_wide.svg"); }
-  .helping-hands .tools { background-image: url("../images/hh_toolsdeliverable_wide.svg"); }
-  .helping-hands .research { background-image: url("../images/hh_research_wide.svg"); }
-  .helping-hands .IA { background-image: url("../images/hh_ia_wide.svg"); }
-  .helping-hands .mockups { background-image: url("../images/hh_mockups_wide.svg"); }
-  .helping-hands .branding { background-image: url("../images/hh_branding_wide.svg"); }
-  .helping-hands .testing { background-image: url("../images/hh_testing_wide.svg"); }
-  .helping-hands .future { background-image: url("../images/hh_future_wide.svg"); }
+.helping-hands .overview { background-image: url("../images/hh_overview_wide.svg"); }
+.helping-hands .tools { background-image: url("../images/hh_tools_wide.svg"); }
+.helping-hands .research { background-image: url("../images/hh_research_wide.svg"); }
+.helping-hands .IA { background-image: url("../images/hh_ia_wide.svg"); }
+.helping-hands .mockups { background-image: url("../images/hh_mockups_wide.svg"); }
+.helping-hands .branding { background-image: url("../images/hh_branding_wide.svg"); }
+.helping-hands .mvp { background-image: url("../images/hh_mvp_wide.svg"); }
+.helping-hands .deliverable { background-image: url("../images/hh_deliverable_wide.svg"); }
+.helping-hands .future { background-image: url("../images/hh_future_wide.svg"); }
 
-  .portfolio .overview { background-image: url("../images/pt_overview_wide.svg"); }
-  .portfolio .tools { background-image: url("../images/pt_toolsdeliverable_wide.svg"); }
-  .portfolio .research { background-image: url("../images/pt_research_wide.svg"); }
-  .portfolio .IA { background-image: url("../images/pt_ia_wide.svg"); }
-  .portfolio .mockups { background-image: url("../images/pt_mockups_wide.svg"); }
-  .portfolio .branding { background-image: url("../images/pt_branding_wide.svg"); }
-  .portfolio .testing { background-image: url("../images/pt_testing_wide.svg"); }
-  .portfolio .future { background-image: url("../images/pt_future_wide.svg"); }
+.portfolio .overview { background-image: url("../images/pt_overview_wide.svg"); }
+.portfolio .tools { background-image: url("../images/pt_toolsdeliverable_wide.svg"); }
+.portfolio .research { background-image: url("../images/pt_research_wide.svg"); }
+.portfolio .IA { background-image: url("../images/pt_ia_wide.svg"); }
+.portfolio .mockups { background-image: url("../images/pt_mockups_wide.svg"); }
+.portfolio .branding { background-image: url("../images/pt_branding_wide.svg"); }
+.portfolio .mvp { background-image: url("../images/pt_mvp_wide.svg"); }
+.portfolio .deliverable { background-image: url("../images/pt_deliverable_wide.svg"); }
+.portfolio .future { background-image: url("../images/pt_future_wide.svg"); }
 
-  .future ul li div {
-    left: 3vw;
-    top: -2vw;
-  }
+td {font-size: 2vw;}
 
-  .subimg img {
+td:not(.tdfront) {
+  font-size: 4vw;
+}
+
+th p {
+  width: 10vw;
+  font-size: 2.2vw;
+  transform: rotate(-25deg);
+}
+
+table {
+  padding-top: calc(100vw/24);
+  padding-bottom: calc(100vw/24);
+}
+
+.swottitle {font-size: 2.6vw;}
+
+.swotbox {margin-bottom: 0;}
+
+.names {font-size: 2.5vw;}
+
+.chart_l {
+  padding-top: 3vw;
+  line-height: 2.5vw;
+  font-size: 2.0vw;
+}
+
+.chart_r img { width:23vw; }
+
+.chart {padding-bottom: 3vw;}
+
+  .subimg img, .subi img {
     width: 72vw;
-    height: 72vw;
   }
 
   .study-title {
@@ -1210,14 +1299,12 @@ padding-left: 8vw;
     height: 50vw;
   }
 
-.helping-hands .study-title {
-  background-image: url("../images/hh_tablet_large.png");
-}
-
-.portfolio .study-title {
-  background-image: url("../images/pt_phone_large.png");
-}
-
+  .detail .subtitle {
+    font-size: 5.5vw;
+    padding-top: 50vw;
+    padding-left: 14vw;
+    padding-bottom: 0;
+  }
 
   .overview .subtitle {
     padding-top: 160px;
@@ -1225,10 +1312,19 @@ padding-left: 8vw;
     padding-bottom: 2vw;
   }
 
-  .detail .subtitle {
-    font-size: 3.7vw;
-    padding-top: 20vw;
-    padding-left: 14vw;
+.section-subheader {font-size: 3.3vw;}
+
+  .helping-hands .study-title {
+    background-image: url("../images/hh_tablet_large.png");
+  }
+
+  .portfolio .study-title {
+    background-image: url("../images/pt_phone_large.png");
+  }
+
+  .sub-blurb {
+    font-size: 5vw;
+    right: 14vw;
   }
 
   .detail .content {
@@ -1265,8 +1361,10 @@ padding-left: 8vw;
   }
 
   .case-study > .detail {
-    font-size: 1.7vw;
+    font-size: 2.0vw;
   }
+
+  .helping-hands .button, .portfolio .button {margin-top: calc(100vw/32);}
 
   .expand {
     right: 9%;
@@ -1384,7 +1482,6 @@ padding-left: 8vw;
   }
 
   .location {
-    left: 2vw;
     bottom: 1.5vw;
   }
 
@@ -1464,32 +1561,127 @@ padding-left: 8vw;
 /*
   .study-sub-title {font-size: 3.5vw;}
 */
-  .overview {height: 585px;}
-  .tools {height: 585px;}
-  .research {height: 1610px;}
-  .IA {height: 1462px;}
-  .mockups {height: 1462px;}
-  .branding {height:1610px;}
-  .testing {height: 1610px;}
-  .future {height: 1610px;}
+  .overview {height: 548px;}
+  .tools {height: 810px;}
+  .research {height: 3325px;}
+  .IA {height: 3409px;}
+  .mockups {height: 4347px;}
+  .branding {height:3185px;}
+  .mvp {height: 1097px;}
+  .deliverable {height: 1610px;}
+  .future {height: 2050px;}
+
+  .sub-blurb {
+    font-size: 45px;
+    right: 130px;
+    padding-bottom: 30px;
+  }
+
+  .detail .content {padding: 0 150px 0 150px;}
+
+  .tools pre {padding-top: 90px;}
+
+  .subimg {padding-top:20px;}
+  .subimg img, .subi img {width: 740px;}
+  .subimg, .subi {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .names {font-size: 20px;}
+
+  td:not(.tdfront) { font-size: 35px;}
+
+  .chart_l{
+    padding-top: 30px;
+    line-height: 22px;
+    font-size: 18px;
+    padding-right: 35px;
+  }
+
+  .chart_l .alist {
+    padding-bottom:2px;
+    top: -40px;
+  }
+
+  .chart_r img {width: 220px;}
+
+  .chart {padding-bottom: 30px;}
+
+  .content th p {
+    font-size: 18px;
+    transform: rotate(0);
+    padding-bottom: 3px;
+    padding-top: 3px;
+    margin: 0;
+    margin-left: 8px;
+  }
+
+  td {font-size: 18px;}
+
+  .section-subheader {
+    font-size: 35px;
+    padding-bottom: 10px;
+  }
+
+  table {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 
   .subimg img {
     width: 740px;
-    height: 740px;
   }
+
+  .swottitle {font-size: 25px;}
+
+  .helping-hands .button, .portfolio .button {
+    margin-top: 20px;
+    margin-bottom: 45px;
+  }
+
+  .helping-hands .button div {
+    padding: 10px 20px;
+    box-shadow: 0 8px #97C38C;
+  }
+
+  .portfolio .button div {
+    padding: 10px 20px;
+    box-shadow: 0 8px #C9999A;
+  }
+
+  th p {
+    width: 85px;
+  }
+
+  .swotbody {
+    padding-top: 30px;
+    padding-right: 30px;
+  }
+
+  .swotbox {
+    margin-top: 30px;
+    margin-bottom: 35px;
+  }
+
+  .alist {top: -15px;}
+
+  .content p {padding-bottom: 0;}
+
+  .detail .subtitle {
+    padding-top: 460px;
+    padding-left: 130px;
+    padding-bottom: 0;
+    font-size: 55px;
+  }
+
+  .section-subheader {padding-top: 35px;}
 
     .overview .subtitle {
     padding-top: 164px;
     padding-left: 138px;
     padding-bottom: 20px;
-    font-size: 38px;
-  }
-
-  .detail .subtitle {
-    padding-top: 190px;
-    padding-left: 130px;
-    padding-bottom: 30px;
-    font-size: 38px;
+    font-size: 55px;
   }
 
   .othertitle {
@@ -1512,11 +1704,6 @@ padding-left: 8vw;
 
   .tools pre {
     font-size: 22px;
-  }
-
-  .future ul li div {
-    left: 3vw;
-    top: -1.5vw;
   }
 
   .case-study > .detail {
@@ -1640,13 +1827,13 @@ padding-left: 8vw;
   }
 
   .subpara, .location {
-    font-size: 2.1vw;
+    font-size: 2vw;
     line-height: 1.6vw;
     padding-top: 0;
+    padding-left: 1vw;
   }
 
   .location {
-    left: 1.3vw;
     bottom: 1vw;
   }
 
