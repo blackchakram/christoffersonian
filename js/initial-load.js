@@ -84,7 +84,7 @@ $('.sig').click(function(){
 // reload the animated icons when they come into the viewer window for the first time
 $(window).scroll(function() {
   if ($exp_project == true) {
-    drawicons();
+    if (!$expanded_thing.hasClass('about-me')) {drawicons();}
   }
 });
 

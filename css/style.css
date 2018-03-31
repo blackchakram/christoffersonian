@@ -38,6 +38,8 @@ div {
   left: -8px;
 }
 
+img {width: 100%;}
+
 /*::-webkit-scrollbar { display: none; }*/
 
 .contact-info {top:18vw;}
@@ -431,9 +433,10 @@ styling for case study parts
   height: auto;
 }
 
-.case-study img {
+.case-study img:not(.pixel-me), .case-study img:not(.toolscols img) {
   display: block;
   opacity: 1;
+  width: 100%;
 }
 
 .result > .subimg > img, .result > .subi > img { width: 100%; }
@@ -528,23 +531,46 @@ tr:nth-child(2n) {
   background-color: rgba(0,0,0,0.15);
 }
 
-.chart {display: flex;}
+.chart {
+  display: flex;
+  flex-wrap: wrap;
+}
 
 .chart_l {
-  font-size: 2.8vw;
+  font-size: 3.3vw;
   line-height: 4vw;
+}
+
+.chart_r {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 13vw;
+  padding-top: -3vw;
+}
+
+.chartclear {
+  width: 100%;
+  display: block;
+  clear: both;
 }
 
 .chart_l .alist {padding-bottom: 1vw;}
 
 .chart_r img { width: 35vw;}
 
+.tdfront strong {
+  font-size: 4.5vw;
+}
+
+.tdfront {
+  font-size: 4vw;
+}
 
 td:not(.tdfront) {
-  font-size: 7vw;
+  font-family: "FontAwesome";
+  font-size: 3vw;
   text-align: center;
   padding-left: 0;
-  padding-bottom: 5px;
 }
 
 .chart_l div:nth-child(1), .chart_l div:nth-child(10) { color: blue; }
@@ -574,6 +600,25 @@ td:not(.tdfront) {
   font-size: 4.5vw;
 }
 
+.toolscols {
+  display: flex;
+  flex-wrap: wrap;
+  width: 120vw;
+}
+
+.toolscols div {
+  display: table-cell;
+  width: 55vw;
+  margin: 2vw;
+  margin-left: 0;
+}
+
+.toolscols div img {
+  width: 6vw;
+  padding-right: 3vw;
+  vertical-align: middle;
+}
+
 
 .helping-hands .alist {
   list-style-image: url("../images/bulletbox_hh.png");
@@ -599,15 +644,25 @@ td:not(.tdfront) {
   margin-bottom: -1.5vw;
 }
 
-.overview {height: 110vw;}
-.tools {height: 120vw;}
-.research {height:770vw;}
-.IA {height: 725vw;}
-.mockups {height: 785vw;}
-.branding {height:650vw;}
-.mvp {height: 200vw;}
-.deliverable {height: 225vw;}
-.future {height: 350vw;}
+.helping-hands .overview {height: 110vw;}
+.helping-hands .tools {height: 120vw;}
+.helping-hands .research {height:785vw;}
+.helping-hands .IA {height: 725vw;}
+.helping-hands .mockups {height: 785vw;}
+.helping-hands .branding {height:650vw;}
+.helping-hands .mvp {height: 225vw;}
+.helping-hands .deliverable {height: 225vw;}
+.helping-hands .future {height: 350vw;}
+
+.portfolio .overview {height: 110vw;}
+.portfolio .tools {height: 120vw;}
+.portfolio .research {height:650vw;}
+.portfolio .IA {height: 250vw;}
+.portfolio .mockups {height: 400vw;}
+.portfolio .branding {height:1100vw;}
+.portfolio .mvp {height: 160vw;}
+.portfolio .deliverable {height: 150vw;}
+.portfolio .future {height: 200vw;}
 
 
 .helping-hands .overview { background-image: url("../images/hh_overview_narrow.svg"); }
@@ -1005,19 +1060,21 @@ textarea {height: 20vw;}
   /* case studies */
 
 
-  .overview {height: 90vw;}
-  .tools {height: 100vw;}
-  .research {height:595vw;}
-  .IA {height: 585vw;}
-  .mockups {height: 665vw;}
-  .branding {height:500vw;}
-  .mvp {height: 175vw;}
-  .deliverable {height: 210vw;}
-  .future {height: 350vw;}
+.helping-hands .overview {height: 90vw;}
+.helping-hands .tools {height: 120vw;}
+.helping-hands .research {height:595vw;}
+.helping-hands .IA {height: 585vw;}
+.helping-hands .mockups {height: 665vw;}
+.helping-hands .branding {height:500vw;}
+.helping-hands .mvp {height: 175vw;}
+.helping-hands .deliverable {height: 210vw;}
+.helping-hands .future {height: 350vw;}
 
 th p {width: 11vw;}
 
-td {font-size: 3.1vw;}
+.tdfront strong {font-size: 3.5vw;}
+
+td, .tdfront {font-size: 3.1vw;}
 
 .section-subheader {font-size: 4.5vw;}
 
@@ -1043,9 +1100,7 @@ td {font-size: 3.1vw;}
 
 .detail .content { padding: 0 55px 30px 60px;}
 
-  .expand {
-    right: 10%;
-  }
+  .expand { right: 10%; }
 
 .map-child {grid-area: 1 / 1 / 3 / 3;}
 .map-college {grid-area: 2 / 5 / 4 / 7;}
@@ -1226,15 +1281,15 @@ padding-left: 8vw;
 
   /* case studies */
 
-.overview {height: 72vw;}
-.tools {height: 85vw;}
-.research {height:375vw;}
-.IA {height: 390vw;}
-.mockups {height: 475vw;}
-.branding {height:358vw;}
-.mvp {height: 125vw;}
-.deliverable {height: 168vw;}
-.future {height: 215vw;}
+.helping-hands .overview {height: 72vw;}
+.helping-hands .tools {height: 97vw;}
+.helping-hands .research {height:375vw;}
+.helping-hands .IA {height: 390vw;}
+.helping-hands .mockups {height: 475vw;}
+.helping-hands .branding {height:358vw;}
+.helping-hands .mvp {height: 125vw;}
+.helping-hands .deliverable {height: 168vw;}
+.helping-hands .future {height: 215vw;}
 
 .helping-hands .overview { background-image: url("../images/hh_overview_wide.svg"); }
 .helping-hands .tools { background-image: url("../images/hh_tools_wide.svg"); }
@@ -1256,10 +1311,12 @@ padding-left: 8vw;
 .portfolio .deliverable { background-image: url("../images/pt_deliverable_wide.svg"); }
 .portfolio .future { background-image: url("../images/pt_future_wide.svg"); }
 
-td {font-size: 2vw;}
+td, .tdfront {font-size: 2vw;}
+
+.tdfront strong {font-size: 2.5vw;}
 
 td:not(.tdfront) {
-  font-size: 4vw;
+  font-size: 2vw;
 }
 
 th p {
@@ -1366,6 +1423,19 @@ table {
 
   .helping-hands .button, .portfolio .button {margin-top: calc(100vw/32);}
 
+  .toolscols {
+    width: 98vw;
+  }
+
+  .toolscols div {
+    width: 25.5vw;
+  }
+
+  .toolscols div img {
+    width: 5vw;
+    padding-right: 1vw;
+  }
+
   .expand {
     right: 9%;
   }
@@ -1465,6 +1535,7 @@ table {
     height: calc(100vw/20);
   }
 
+
   .sig {
     padding-top: 1.5vw;
     padding-left: 15vw;
@@ -1561,15 +1632,15 @@ table {
 /*
   .study-sub-title {font-size: 3.5vw;}
 */
-  .overview {height: 548px;}
-  .tools {height: 810px;}
-  .research {height: 3325px;}
-  .IA {height: 3409px;}
-  .mockups {height: 4347px;}
-  .branding {height:3185px;}
-  .mvp {height: 1097px;}
-  .deliverable {height: 1610px;}
-  .future {height: 2050px;}
+.helping-hands .overview {height: 548px;}
+.helping-hands .tools {height: 810px;}
+.helping-hands .research {height: 3325px;}
+.helping-hands .IA {height: 3409px;}
+.helping-hands .mockups {height: 4347px;}
+.helping-hands .branding {height:3185px;}
+.helping-hands .mvp {height: 1097px;}
+.helping-hands .deliverable {height: 1610px;}
+.helping-hands .future {height: 2050px;}
 
   .sub-blurb {
     font-size: 45px;
@@ -1577,7 +1648,7 @@ table {
     padding-bottom: 30px;
   }
 
-  .detail .content {padding: 0 150px 0 150px;}
+  .detail .content {padding: 20px 150px 0 130px;}
 
   .tools pre {padding-top: 90px;}
 
@@ -1590,7 +1661,7 @@ table {
 
   .names {font-size: 20px;}
 
-  td:not(.tdfront) { font-size: 35px;}
+  td:not(.tdfront) { font-size: 18px;}
 
   .chart_l{
     padding-top: 30px;
@@ -1617,7 +1688,9 @@ table {
     margin-left: 8px;
   }
 
-  td {font-size: 18px;}
+  .tdfront strong {font-size: 20px;}
+
+  td, .tdfront {font-size: 18px;}
 
   .section-subheader {
     font-size: 35px;
@@ -1689,9 +1762,9 @@ table {
     font-size: 38px;
     top: -295px;
   }
-
+/*
   .detail .content {padding: 0 12vw 7vw 12vw;}
-
+*/
   .othercontent {
     left: 353px;
     top: -265.4px;
@@ -1716,6 +1789,22 @@ table {
   .expand {
     right: 10%;
   }
+
+  .toolscols {
+    width: 835px;
+  }
+
+  .toolscols div {
+    width: 185px;
+    margin: 20px;
+    margin-left: 0;
+  }
+
+  .toolscols div img {
+    width: 50px;
+    padding-right: 15px;
+  }
+
 
   .map-child {grid-area: 1 / 1 / 3 / 3;}
   .map-college {grid-area: 1 / 4 / 3 / 6;}

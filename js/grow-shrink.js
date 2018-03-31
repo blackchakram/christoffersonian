@@ -16,6 +16,7 @@ var $image_inprogress = false;
 var $contactopen = false;
 var s = new Date();
 var sizecategory = 0;     // helps with resizing when the "about me" is open.
+var $heightsize;                          // stretches the height of the viewed case study depending on which is being viewed
 
 // =================== NAVIGATE TO EACH SECTION ON CONTENTS CLICK =============
 
@@ -228,7 +229,11 @@ if ($expanded_thing.hasClass('helping-hands')) {
 // expand a cell of the original background grid so the case study can be tall enough
 if ($(window).width() < 500) {
   if ($self.hasClass('about-me')) {setTimeout(function() {$(".drk4").css("grid-area", "10 / 2 / 33 / 3");}, 1000);}
-  else {setTimeout(function() {$(".drk4").css("grid-area", "10 / 2 / 161 / 3");}, 1000);};
+  else {
+    if ($self.hasClass('helping-hands')) { $heightsize = 161;};
+    if ($self.hasClass('portfolio')) { $heightsize = 161;};
+    setTimeout(function() {$(".drk4").css("grid-area", "10 / 2 / " + $heightsize + " / 3");}, 1000);
+  };
   sizecategory = 1;
 };
 if ($(window).width() >= 500 && $(window).width() < 768) {
@@ -237,10 +242,10 @@ if ($(window).width() >= 500 && $(window).width() < 768) {
     $(".hh-mo1 img").attr("src", "images/hh_mockups_preview.jpg");
     $(".hh-mo2 img").attr("src", "images/hh_style_guide_preview.png");
     $(".hh-ia1 img").attr("src", "images/hh_ia_preview.png");
-    $(".chart_r img").attr("src", "images/hh_pie.png");
-    setTimeout(function() {
-      $(".drk4").css("grid-area", "10 / 2 / 198 / 3");}, 1000);
-    };
+    if ($self.hasClass('helping-hands')) { $heightsize = 199;};
+    if ($self.hasClass('portfolio')) { $heightsize = 199;};
+    setTimeout(function() {$(".drk4").css("grid-area", "10 / 2 / " + $heightsize + " / 3");}, 1000);
+  };
   sizecategory = 2;
 };
 if ($(window).width() >= 768 && $(window).width() < 1024) {
@@ -249,10 +254,10 @@ if ($(window).width() >= 768 && $(window).width() < 1024) {
     $(".hh-mo1 img").attr("src", "images/hh_mockups_preview_wide.jpg");
     $(".hh-mo2 img").attr("src", "images/hh_style_guide_preview_wide.png");
     $(".hh-ia1 img").attr("src", "images/hh_ia_preview_wide.png");
-    $(".chart_r img").attr("src", "images/hh_pie.png");
-    setTimeout(function() {
-      $(".drk4").css("grid-area", "10 / 2 / 185 / 3");}, 1000);
-    };
+    if ($self.hasClass('helping-hands')) { $heightsize = 187;};
+    if ($self.hasClass('portfolio')) { $heightsize = 187;};
+    setTimeout(function() {$(".drk4").css("grid-area", "10 / 2 / " + $heightsize + " / 3");}, 1000);
+  };
   sizecategory = 3;
 };
 if ($(window).width() >= 1024 && $(window).width() < 1440) {
@@ -261,10 +266,11 @@ if ($(window).width() >= 1024 && $(window).width() < 1440) {
     $(".hh-mo1 img").attr("src", "images/hh_mockups_preview_wide.jpg");
     $(".hh-mo2 img").attr("src", "images/hh_style_guide_preview_wide.png");
     $(".hh-ia1 img").attr("src", "images/hh_ia_preview_wide.png");
-    $(".chart_r img").attr("src", "images/hh_pie_wide.png");
     setTimeout(function() {
-      var $gridheight = Math.floor(19700/($(window).width()/10));
-      $(".drk4").css("grid-area", "10 / 2 / " + $gridheight + " / 3");}, 1000);
+      if ($self.hasClass('helping-hands')) { $heightsize = 19700;};
+      if ($self.hasClass('portfolio')) { $heightsize = 19700;};
+      var $gridheight = Math.floor($heightsize/($(window).width()/10));
+      (".drk4").css("grid-area", "10 / 2 / " + $gridheight + " / 3");}, 1000);
     };
   sizecategory = 4;
 };
@@ -274,9 +280,10 @@ if ($(window).width() >= 1440) {
     $(".hh-mo1 img").attr("src", "images/hh_mockups_preview_wide.jpg");
     $(".hh-mo2 img").attr("src", "images/hh_style_guide_preview_wide.png");
     $(".hh-ia1 img").attr("src", "images/hh_ia_preview_wide.png");
-    $(".chart_r img").attr("sroc", "images/hh_pie_wide.png");
     setTimeout(function() {
-      var $gridheight = Math.floor(19700/($(window).width()/14));
+      if ($self.hasClass('helping-hands')) { $heightsize = 19700;};
+      if ($self.hasClass('portfolio')) { $heightsize = 19700;};
+      var $gridheight = Math.floor($heightsize/($(window).width()/14));
       $(".drk4").css("grid-area", "10 / 2 / " + $gridheight + " / 3");}, 1000);
     };
   sizecategory = 5;
@@ -292,14 +299,14 @@ if ($gridDimensions.height() < $(window).scrollTop() + $(window).height())
 else {$height = $gridDimensions.height();}
 
 // if the window is wide enough, slide bottom of scroll by constant amount instead of by grid size
-if ($(window).width() >= 1024) {
+if ($(window).width() >= 1024 && !$self.hasClass('about-me')) {
   $height = 20270 + $(window).width()/2;
 }
 
 $thing_to_expand.velocity({width: "100vw", height: $height + "px", top: -$self.offset().top + "px", left: -$self.offset().left-8 + "px" }, {delay: 500, easing: "ease-in-out", duration: 500});
 
 // if the window is wide enough, slide bottom of scroll by constant amount instead of by grid size
-if ($(window).width() >= 1024) {
+if ($(window).width() >= 1024 && !$self.hasClass('about-me')) {
 setTimeout(function() { $thing_to_expand.css("height", $height + "px"); }, 2110);
 }else{
 setTimeout(function() { $thing_to_expand.css("height", $gridDimensions.height() + "px"); }, 2110);
@@ -313,7 +320,7 @@ $fade_in.velocity({opacity:1}, {duration:1000, delay:1500});
 setTimeout(function() { $keep_style.css("display", "block"); }, 1510);
 
 // have title and subtitles that are visible initially animate in
-setTimeout(function() { drawicons(); }, 1600);
+setTimeout(function() { if (!$expanded_thing.hasClass('about-me')) {drawicons();} }, 1600);
 
 //if about me, fade in all content
 if ($self.hasClass('about-me')) {$(".am-opacity").velocity({opacity:1}, {duration:1000, delay:1500});}
@@ -481,7 +488,7 @@ $('.detail .sub-blurb').css("opacity", "0");
 $(window).resize(function() {
   if ($exp_project == true)
   {
-    drawicons();
+    if (!$expanded_thing.hasClass('about-me')) {drawicons();}
 
   jQuery.each($('.case-study'), function() {
     $(this).css("width", "100vw");
@@ -510,7 +517,11 @@ if ($expanded_thing.hasClass('helping-hands')) {
 
     if ($(window).width() < 500) {
       if ($expanded_thing.hasClass('about-me')) {$(".drk4").css("grid-area", "10 / 2 / 33 / 3");}
-      else {$(".drk4").css("grid-area", "10 / 2 / 161 / 3");};
+      else {
+        if ($expanded_thing.hasClass('helping-hands')) { $heightsize = 161;};
+        if ($expanded_thing.hasClass('portfolio')) { $heightsize = 161;};
+        $(".drk4").css("grid-area", "10 / 2 / " + $heightsize + " / 3");
+      };
       sizecategory = 1;
     };
     if ($(window).width() >= 500 && $(window).width() < 768) {
@@ -519,8 +530,9 @@ if ($expanded_thing.hasClass('helping-hands')) {
         $(".hh-mo1 img").attr("src", "images/hh_mockups_preview.jpg");
         $(".hh-mo2 img").attr("src", "images/hh_style_guide_preview.png");
         $(".hh-ia1 img").attr("src", "images/hh_ia_preview.png");
-        $(".chart_r img").attr("src", "images/hh_pie.png");
-        $(".drk4").css("grid-area", "10 / 2 / 198 / 3");
+        if ($expanded_thing.hasClass('helping-hands')) { $heightsize = 199;};
+        if ($expanded_thing.hasClass('portfolio')) { $heightsize = 199;};
+        $(".drk4").css("grid-area", "10 / 2 / " + $heightsize + " / 3");
       };
       sizecategory = 2;
     };
@@ -530,8 +542,9 @@ if ($expanded_thing.hasClass('helping-hands')) {
         $(".hh-mo1 img").attr("src", "images/hh_mockups_preview_wide.jpg");
         $(".hh-mo2 img").attr("src", "images/hh_style_guide_preview_wide.png");
         $(".hh-ia1 img").attr("src", "images/hh_ia_preview_wide.png");
-        $(".chart_r img").attr("src", "images/hh_pie.png");
-        $(".drk4").css("grid-area", "10 / 2 / 185 / 3");
+        if ($expanded_thing.hasClass('helping-hands')) { $heightsize = 187;};
+        if ($expanded_thing.hasClass('portfolio')) { $heightsize = 187;};
+        $(".drk4").css("grid-area", "10 / 2 / " + $heightsize + " / 3");
       };
       sizecategory = 3;
     };
@@ -541,8 +554,9 @@ if ($expanded_thing.hasClass('helping-hands')) {
         $(".hh-mo1 img").attr("src", "images/hh_mockups_preview_wide.jpg");
         $(".hh-mo2 img").attr("src", "images/hh_style_guide_preview_wide.png");
         $(".hh-ia1 img").attr("src", "images/hh_ia_preview_wide.png");
-        $(".chart_r img").attr("src", "images/hh_pie_wide.png");
-        var $gridheight = Math.floor(19700/($(window).width()/10));
+        if ($expanded_thing.hasClass('helping-hands')) { $heightsize = 19700;};
+        if ($expanded_thing.hasClass('portfolio')) { $heightsize = 19700;};
+        var $gridheight = Math.floor($heightsize/($(window).width()/10));
         $(".drk4").css("grid-area", "10 / 2 / " + $gridheight + " / 3");
       };
       sizecategory = 4;
@@ -553,14 +567,15 @@ if ($expanded_thing.hasClass('helping-hands')) {
         $(".hh-mo1 img").attr("src", "images/hh_mockups_preview_wide.jpg");
         $(".hh-mo2 img").attr("src", "images/hh_style_guide_preview_wide.png");
         $(".hh-ia1 img").attr("src", "images/hh_ia_preview_wide.png");
-        $(".chart_r img").attr("sroc", "images/hh_pie_wide.png");
-        var $gridheight = Math.floor(19700/($(window).width()/14));
+        if ($expanded_thing.hasClass('helping-hands')) { $heightsize = 19700;};
+        if ($expanded_thing.hasClass('portfolio')) { $heightsize = 19700;};
+        var $gridheight = Math.floor($heightsize/($(window).width()/14));
         $(".drk4").css("grid-area", "10 / 2 / " + $gridheight + " / 3");
       };
       sizecategory = 5;
     };
 
-    if ($(window).width() >= 1024) {
+    if ($(window).width() >= 1024 && !$expanded_thing.hasClass('about-me')) {
       $(this).css("height", 20270 + $(window).width()/2 + "px");
     } else {
       $(this).css("height", $gridDimensions.height() + "px");
