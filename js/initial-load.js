@@ -75,6 +75,12 @@ $('.ghicon').hover(function(){$(this).attr("src", "images/icon_github_hover.svg"
 $('.close_x, .close_form_x').hover(function(){$(this).css("color", "#777777");}, function(){$(this).css("color", "#000000");});
 $('.submit').hover(function(){$(this).css("background-color", "#CCCCCC");}, function(){$(this).css("background-color", "#FFFFFF");});
 
+$('.project, .blog').on({
+  mouseenter: function() { $(this).find('.centering .subtitle_icon .subpara').addClass('animated pulse'); },
+  mouseleave: function() { $(this).find('.centering .subtitle_icon .subpara').removeClass('animated pulse'); }
+})
+
+
 // redraw the signature when clicked on
 $('.sig').click(function(){
   var d = new Date();
