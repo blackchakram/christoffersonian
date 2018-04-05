@@ -433,10 +433,10 @@ $(".close_x").velocity({opacity:0}, {duration:500, delay:1000});
 
 // shrink expanded grid back to original size
 if ($(window).width() < 500) { $(".drk4").css("grid-area", "12 / 4 / 13 / 5"); };
-if ($(window).width() >= 500) { $(".drk4").css("grid-area", "8 / 6 / 9 / 7"); };
-if ($(window).width() >= 768) { $(".drk4").css("grid-area", "7 / 4 / 8 / 5"); };
-if ($(window).width() >= 1024) { $(".drk4").css("grid-area", "3 / 7 / 4 / 8"); };
-if ($(window).width() >= 1440) { $(".drk4").css("grid-area", "5 / 11 / 7 / 13"); };
+if ($(window).width() >= 500) { $(".drk4").css("grid-area", "13 / 1 / 14 / 2"); };
+if ($(window).width() >= 768) { $(".drk4").css("grid-area", "13 / 4 / 14 / 5"); };
+if ($(window).width() >= 1024) { $(".drk4").css("grid-area", "18 / 5 / 19 / 6"); };
+if ($(window).width() >= 1440) { $(".drk4").css("grid-area", "8 / 7 / 9 / 8"); };
 
 // fade out the content for the project or details
 $stuff_to_fade.velocity({opacity:0}, {duration:500, delay:0});
@@ -655,10 +655,10 @@ if ($expanded_thing.hasClass('helping-hands')) {
   if ($exp_project == false)
   {
     if ($(window).width() < 500) { $(".drk4").css("grid-area", "12 / 4 / 13 / 5"); };
-    if ($(window).width() >= 500) { $(".drk4").css("grid-area", "8 / 6 / 9 / 7"); };
-    if ($(window).width() >= 768) { $(".drk4").css("grid-area", "7 / 4 / 8 / 5"); };
-    if ($(window).width() >= 1024) { $(".drk4").css("grid-area", "3 / 7 / 4 / 8"); };
-    if ($(window).width() >= 1440) { $(".drk4").css("grid-area", "5 / 11 / 7 / 13"); };
+    if ($(window).width() >= 500) { $(".drk4").css("grid-area", "13 / 1 / 14 / 2"); };
+    if ($(window).width() >= 768) { $(".drk4").css("grid-area", "13 / 4 / 14 / 5"); };
+    if ($(window).width() >= 1024) { $(".drk4").css("grid-area", "18 / 5 / 19 / 6"); };
+    if ($(window).width() >= 1440) { $(".drk4").css("grid-area", "8 / 7 / 9 / 8"); };
   }
 
   if ($exp_image == true)

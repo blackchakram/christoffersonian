@@ -114,13 +114,13 @@ video {
   left: 0;
 }
 
-.drk1, .drk2, .drk3, .drk4, .drk5, .drk6, .drk7 {
-  background-color: #E8E8E8;
+.drk1, .drk2, .drk3, .drk4, .drk5, .drk6, .drk7, .drk8, .drk9, .drk10, .drk11, .drk12, .drk13 {
+  background-color: #F3F3F3;
   opacity: 0;
 }
 
-.med1, .med2, .med3, .med4, .med5, .med6 {
-  background-color: #F5F5F5;
+.med1, .med2, .med3, .med4, .med5, .med6, .med7, .med8, .med9, .med10, .med11, .med12, .med13 {
+  background-color: #F9F9F9;
   opacity: 0;
 }
 
@@ -139,7 +139,7 @@ video {
   display: block;
   font-family:"Exo 2", Helvetica, Arial, serif;
   font-size: 5vw;
-  right: 6vw;
+  right: 2vw;
   color:#333333;
   font-weight: lighter;
   margin: 0;
@@ -157,20 +157,20 @@ video {
   grid-area: 1 / 1 / 5 / 5;
   background-color: #FCFCFC;
   background-image: url("../images/bg_sig.jpg");
-  background-position: center;
+  background-position: bottom;
   background-size: cover;
 }
 
 .blog {
-  grid-area: 12 / 1 / 14 / 3;
+  grid-area: 17 / 1 / 19 / 3;
   background-image: url("../images/bg_bl.jpg");
 }
 .about-me {
-  grid-area: 10 / 3 / 12 / 5;
+  grid-area: 14 / 3 / 16 / 5;
   background-image: url("../images/bg_port.jpg");
 }
 .helping-hands {
-  grid-area: 5 / 3 / 9 / 5;
+  grid-area: 6 / 2 / 9 / 5;
   background-image: url("../images/bg_hh.jpg");
 }
 .cornucopia {
@@ -184,11 +184,11 @@ video {
   display: none;
 }
 .portfolio {
-  grid-area: 6 / 1 / 10 / 3;
+  grid-area: 10 / 1 / 13 / 4;
   background-image: url("../images/bg_pt.jpg");
 }
 .contact-info {
-  grid-area: 14 / 3 / 15 / 5;
+  grid-area: 18 / 3 / 19 / 5;
 }
 
 .logos {
@@ -208,18 +208,31 @@ video {
 /* layout for non-functional grid boxes */
 .drk1 {grid-area: 9 / 3 / 10 / 4;}
 .drk2 {grid-area: 5 / 2 / 6 / 3;}
-.drk3 {grid-area: 10 / 1 / 11 / 2;}
+.drk3 {grid-area: 9 / 1 / 10 / 2;}
 .drk4 {grid-area: 12 / 4 / 13 / 5;}
-.drk5 {grid-area: 11 / 2 / 12 / 3;}
-.drk6 {display: none;}
-.drk7 {display: none;}
+.drk5 {grid-area: 10 / 4 / 11 / 5;}
+.drk6 {grid-area: 13 / 1 / 15 / 3;}
+.drk7 {grid-area: 17 / 3 / 19 / 5;}
+.drk8 {grid-area: 7 / 1 / 8 / 2;}
+.drk9 {display: none;}
+.drk10 {display: none;}
+.drk11 {display: none;}
+.drk12 {display: none;}
+.drk13 {display: none;}
 
-.med1 {grid-area: 14 / 4 / 15 / 5;}
+.med1 {grid-area: 15 / 1 / 17 / 3;}
 .med2 {grid-area: 13 / 3 / 14 / 4;}
 .med3 {grid-area: 5 / 1 / 6 / 2;}
-.med4 {grid-area: 10 / 2 / 11 / 3;}
-.med5 {grid-area: 14 / 2 / 15 / 3;}
-.med6 {display: none;}
+.med4 {grid-area: 8 / 1 / 9 / 2;}
+.med5 {grid-area: 16 / 4 / 17 / 5;}
+.med6 {grid-area: 5 / 4 / 6 / 5;}
+.med7 {grid-area: 9 / 4 / 10 / 5;}
+.med8 {display: none;}
+.med9 {display: none;}
+.med10 {display: none;}
+.med11 {display: none;}
+.med12 {display: none;}
+.med13 {display: none;}
 
 /* layout for non-functional expanded grid boxes */
 .screencap > img {opacity: 0;}
@@ -1016,18 +1029,18 @@ textarea {
 
   .sig {
     padding-top: 3.5vw;
-    padding-left: 22vw;
-    width: 40vw;
+    padding-left: 46vw;
+    width: 50vw;
   }
 
   .sigprinted {
-    font-size: 3.5vw;
+    font-size: 4.2vw;
     right: 4vw;
   }
 
   .subpara, .location {
-  font-size: 4.6vw;
-  line-height: 3.7vw;
+  font-size: 5.7vw;
+  line-height: 4.9vw;
 }
 
   .location {
@@ -1043,34 +1056,48 @@ textarea {
     grid-auto-rows: calc(100vw/6);
   }
 
-  .blog {grid-area: 7 / 1 / 9 / 3;}
-  .about-me {grid-area: 9 / 3 / 11 / 7;}
-  .helping-hands {grid-area: 3 / 5 / 7 / 7;}
+  .signature {grid-area: 1 / 1 / 5 / 7;}
+  .blog {grid-area: 17 / 4 / 19 / 7;}
+  .about-me {grid-area: 14 / 1 / 16 / 4;}
+  .helping-hands {grid-area: 6 / 1 / 9 / 5;}
   .cornucopia {grid-area: 9 / 3 / 11 / 5;}
-  .airport-navigator {grid-area: 7 / 3 / 9 / 7;}
-  .portfolio { grid-area: 5 / 1 / 7 / 5;}
-  .contact-info { grid-area: 10 / 5 / 11 / 7; }
+  .airport-navigator {grid-area: 8 / 4 / 11 / 7;}
+  .portfolio { grid-area: 10 / 3 / 13 / 7;}
+  .contact-info { grid-area: 19 / 4 / 20 / 7; }
 
   .contact-info img {
     width: 6vw;
   }
 
-  .contact-info {top:12vw;}
+  .contact-info {top:-3vw;}
 
-  .drk1 {grid-area: 2 / 5 / 3 / 6;}
-  .drk2 {grid-area: 9 / 1 / 10 / 2;}
-  .drk3 {grid-area: 7 / 6 / 8 / 7;}
-  .drk4 {grid-area: 8 / 6 / 9 / 7;}
-  .drk5 {grid-area: 8 / 4 / 9 / 5;}
-  .drk6 {display: none;}
-  .drk7 {display: none;}
+  .drk1 {grid-area: 7 / 5 / 8 / 6;}
+  .drk2 {grid-area: 9 / 3 / 10 / 4;}
+  .drk3 {grid-area: 13 / 5 / 15 / 7;}
+  .drk4 {grid-area: 13 / 1 / 14 / 2;}
+  .drk5 {grid-area: 16 / 6 / 17 / 7;}
+  .drk6 {grid-area: 5 / 1 / 6 / 2;}
+  .drk7 {grid-area: 11 / 2 / 12 / 3;}
+  .drk8 {grid-area: 5 / 4 / 6 / 5;}
+  .drk9 {grid-area: 16 / 1 / 17 / 2; display: inherit;}
+  .drk10 {grid-area: 16 / 3 / 17 / 4; display: inherit;}
+  .drk11 {grid-area: 18 / 3 / 19 / 4; display: inherit;}
+  .drk12 {display: none;}
+  .drk13 {display: none;}
 
-  .med1 {grid-area: 10 / 1 / 11 / 2;}
-  .med2 {grid-area: 2 / 6 / 3 / 7;}
-  .med3 {grid-area: 7 / 3 / 8 / 4; display: inherit;}
-  .med4 {grid-area: 7 / 5 / 8 / 6; display: inherit;}
-  .med5 {grid-area: 9 / 2 / 10 / 3; display: inherit;}
-  .med6 {display: none;}
+  .med1 {grid-area: 17 / 1 / 19 / 3;}
+  .med2 {grid-area: 13 / 2 / 14 / 3;}
+  .med3 {grid-area: 9 / 1 / 11 / 3;}
+  .med4 {grid-area: 15 / 4 / 17 / 6;}
+  .med5 {grid-area: 5 / 3 / 6 / 4;}
+  .med6 {grid-area: 8 / 5 / 10 / 7;}
+  .med7 {grid-area: 12 / 1 / 13 / 2;}
+  .med8 {grid-area: 13 / 4 / 14 / 5; display: inherit;}
+  .med9 {grid-area: 5 / 5 / 7 / 7; display: inherit;}
+  .med10 {display: none;}
+  .med11 {display: none;}
+  .med12 {display: none;}
+  .med13 {display: none;}
 
 .formholder {
   top:3vw;
@@ -1253,18 +1280,18 @@ padding-left: 8vw;
 
   .sig {
     padding-top: 2.0vw;
-    padding-left: 15vw;
-    width: 30vw;
+    padding-left: 56vw;
+    width: 40vw;
   }
 
   .sigprinted {
-    font-size: 2.8vw;
+    font-size: 3.4vw;
     right: 3.6vw;
   }
 
   .subpara, .location {
-    font-size: 3.7vw;
-    line-height: 2.9vw;
+    font-size: 4.4vw;
+    line-height: 3.9vw;
   }
 
   .location {
@@ -1288,13 +1315,14 @@ padding-left: 8vw;
     grid-auto-rows: calc(100vw/8);
   }
 
-  .blog{grid-area: 7 / 5 / 9 / 7;}
-  .about-me {grid-area: 5 / 7 / 7 / 9;}
-  .helping-hands {grid-area: 1 / 5 / 5 / 7;}
+  .signature {grid-area: 1 / 1 / 5 / 9;}
+  .blog{grid-area: 14 / 6 / 16 / 9;}
+  .about-me {grid-area: 14 / 1 / 16 / 4;}
+  .helping-hands {grid-area: 6 / 1 / 9 / 6;}
   .cornucopia {grid-area: 5 / 7 / 9 / 9;}
   .airport-navigator {grid-area: 5 / 1 / 7 / 5;}
-  .portfolio { grid-area: 5 / 1 / 7 / 5;}
-  .contact-info { grid-area: 8 / 7 / 9 / 9; }
+  .portfolio { grid-area: 10 / 4 / 13 / 9;}
+  .contact-info { grid-area: 15 / 7 / 16 / 9; }
 
   .contact-info img {
     width: 5vw;
@@ -1302,20 +1330,33 @@ padding-left: 8vw;
 
   .contact-info {top:9vw;}
 
-  .drk1 {grid-area: 6 / 6 / 7 / 7;}
-  .drk2 {grid-area: 3 / 7 / 5 / 9;}
-  .drk3 {grid-area: 1 / 8 / 2 / 9;}
-  .drk4 {grid-area: 7 / 4 / 8 / 5; display: inherit;}
-  .drk5 {display: none;}
-  .drk6 {display: none;}
-  .drk7 {display: none;}
+  .drk1 {grid-area: 8 / 7 / 10 / 9;}
+  .drk2 {grid-area: 5 / 6 / 7 / 8;}
+  .drk3 {grid-area: 9 / 2 / 11 / 4;}
+  .drk4 {grid-area: 13 / 4 / 14 / 5;}
+  .drk5 {grid-area: 5 / 2 / 6 / 3;}
+  .drk6 {grid-area: 5 / 4 / 6 / 5;}
+  .drk7 {grid-area: 12 / 1 / 14 / 3;}
+  .drk8 {grid-area: 9 / 5 / 10 / 6;}
+  .drk9 {grid-area: 13 / 6 / 14 / 7; display: inherit;}
+  .drk10 {grid-area: 13 / 8 / 14 / 9; display: inherit;}
+  .drk11 {display: none;}
+  .drk12 {display: none;}
+  .drk13 {display: none;}
 
-  .med1 {grid-area: 6 / 5 / 7 / 6;}
-  .med2 {grid-area: 2 / 7 / 3 / 8;}
-  .med3 {grid-area: 7 / 1 / 9 / 3; display: inherit;}
-  .med4 {grid-area: 8 / 7 / 9 / 8; display: inherit;}
-  .med5 {grid-area: 5 / 6 / 6 / 7; display: inherit;}
-  .med6 {grid-area: 7 / 8 / 8 / 9; display: inherit;}
+  .med1 {grid-area: 14 / 4 / 16 / 6;}
+  .med2 {grid-area: 11 / 3 / 12 / 4;}
+  .med3 {grid-area: 6 / 8 / 7 / 9;}
+  .med4 {grid-area: 7 / 7 / 8 / 8;}
+  .med5 {grid-area: 11 / 1 / 12 / 2;}
+  .med6 {grid-area: 5 / 5 / 6 / 6;}
+  .med7 {grid-area: 8 / 6 / 9 / 7;}
+  .med8 {grid-area: 13 / 3 / 14 / 4; display: inherit;}
+  .med9 {grid-area: 13 / 7 / 14 / 8; display: inherit;}
+  .med10 {grid-area: 9 / 1 / 10 / 2; display: inherit;}
+  .med11 {display: none;}
+  .med12 {display: none;}
+  .med13 {display: none;}
 
   .formholder {
     top:5vw;
@@ -1610,18 +1651,18 @@ table {
 
   .sig {
     padding-top: 1.5vw;
-    padding-left: 15vw;
-    width: 22vw;
+    padding-left: 47vw;
+    width: 40vw;
   }
 
   .sigprinted {
-    font-size: 1.85vw;
-    right: 2.5vw;
+    font-size: 3.5vw;
+    right: 3vw;
   }
 
   .subpara, .location {
-    font-size: 3vw;
-    line-height: 2.2vw;
+    font-size: 4.5vw;
+    line-height: 3.8vw;
   }
 
   .location {
@@ -1633,13 +1674,14 @@ table {
     grid-auto-rows: calc(100vw/10);
   }
 
-  .blog{grid-area: 4 / 7 / 6 / 9;}
-  .about-me {grid-area: 3 / 9 / 7 / 11;}
-  .helping-hands {grid-area: 1 / 5 / 5 / 7;}
+  .signature {grid-area: 1 / 1 / 6 / 11;}
+  .blog{grid-area: 17 / 7 / 19 / 11;}
+  .about-me {grid-area: 17 / 1 / 19 / 5;}
+  .helping-hands {grid-area: 7 / 1 / 11 / 8;}
   .cornucopia {grid-area: 3 / 9 / 7 / 11;}
   .airport-navigator {grid-area: 5 / 3 / 7 / 7;}
-  .portfolio { grid-area: 6 / 1 / 8 / 5;}
-  .contact-info { grid-area: 7 /9 / 8 / 11; }
+  .portfolio { grid-area: 12 / 4 / 16 / 11;}
+  .contact-info { grid-area: 18 / 8 / 19 / 11; }
 
   .contact-info img {
     width: 3.5vw;
@@ -1647,20 +1689,33 @@ table {
 
   .contact-info {top:7vw;}
 
-  .drk1 {grid-area: 5 / 4 / 6 / 5;}
-  .drk2 {grid-area: 6 / 7 / 8 / 9;}
-  .drk3 {grid-area: 7 / 10 / 8 / 11;}
-  .drk4 {grid-area: 3 / 7 / 4 / 8; display: inherit;}
-  .drk5 {grid-area: 2 / 9 / 3 / 10; display: inherit;}
-  .drk6 {display: none;}
-  .drk7 {display: none;}
+  .drk1 {grid-area: 14 / 2 / 16 / 4;}
+  .drk2 {grid-area: 6 / 10 / 7 / 11;}
+  .drk3 {grid-area: 6 / 5 / 7 / 6;}
+  .drk4 {grid-area: 18 / 5 / 19 / 6; display: inherit;}
+  .drk5 {grid-area: 9 / 8 / 12 / 11; display: inherit;}
+  .drk6 {grid-area: 6 / 1 / 7 / 2; display: inherit;}
+  .drk7 {grid-area: 16 / 7 / 17 / 8; display: inherit;}
+  .drk8 {grid-area: 15 / 1 / 16 / 2; display: inherit;}
+  .drk9 {grid-area: 13 / 1 / 16 / 4; display: inherit;}
+  .drk10 {grid-area: 7 / 8 / 8 / 9; display: inherit;}
+  .drk11 {grid-area: 16 / 4 / 17 / 5; display: inherit;}
+  .drk12 {grid-area: 11 / 3 / 12 / 4; display: inherit;}
+  .drk13 {grid-area: 6 / 8 / 7 / 9; display: inherit;}
 
-  .med1 {grid-area: 5 / 3 / 6 / 4;}
-  .med2 {grid-area: 1 / 10 / 2 / 11;}
-  .med3 {grid-area: 1 / 7 / 3 / 9; display: inherit;}
-  .med4 {grid-area: 5 / 1 / 6 / 2; display: inherit;}
-  .med5 {grid-area: 7 / 5 / 8 / 6; display: inherit;}
-  .med6 {grid-area: 5 / 5 / 7 / 7; display: inherit;}
+  .med1 {grid-area: 6 / 2 / 7 / 3;}
+  .med2 {grid-area: 6 / 4 / 7 / 5;}
+  .med3 {grid-area: 16 / 3 / 17 / 4; display: inherit;}
+  .med4 {grid-area: 6 / 6 / 7 / 7; display: inherit;}
+  .med5 {grid-area: 16 / 9 / 17 / 10; display: inherit;}
+  .med6 {grid-area: 17 / 6 / 18 / 7; display: inherit;}
+  .med7 {grid-area: 7 / 9 / 9 / 11; display: inherit;}
+  .med8 {grid-area: 11 / 1 / 13 / 3; display: inherit;}
+  .med9 {grid-area: 11 / 5 / 12 / 6; display: inherit;}
+  .med10 {grid-area: 16 / 5 / 17 / 6; display: inherit;}
+  .med11 {grid-area: 11 / 7 / 12 / 8; display: inherit;}
+  .med12 {grid-area: 16 / 1 / 17 / 2; display: inherit;}
+  .med13 {grid-area: 6 / 8 / 7 / 9; display: inherit;}
 
   .formholder {
     top:2.5vw;
@@ -2003,18 +2058,18 @@ table {
 
   .sig {
     padding-top: 1.0vw;
-    padding-left: 9vw;
-    width: 17vw;
+    padding-left: 58vw;
+    width: 40vw;
   }
 
   .sigprinted {
-    font-size: 1.45vw;
+    font-size: 3.3vw;
     right: 2.0vw;
   }
 
   .subpara, .location {
-    font-size: 2vw;
-    line-height: 1.6vw;
+    font-size: 3.7vw;
+    line-height: 3.5vw;
     padding-top: 0;
     padding-left: 1vw;
   }
@@ -2038,13 +2093,14 @@ table {
     grid-auto-rows: calc(100vw/14);
   }
 
-  .blog{grid-area: 5 / 8 / 7 / 10;}
-  .about-me {grid-area: 2 / 9 / 4 / 13;}
-  .helping-hands {grid-area: 2 / 6 / 6 / 8;}
+  .signature {grid-area: 1 / 1 / 7 / 15;}
+  .blog {grid-area: 13 / 9 / 16 / 14;}
+  .about-me {grid-area: 13 / 2 / 16 / 7;}
+  .helping-hands {grid-area: 8 / 1 / 12 / 7;}
   .cornucopia {grid-area: 3 / 11 / 5 / 15;}
   .airport-navigator {grid-area: 5 / 2 / 7 / 6;}
-  .portfolio { grid-area: 5 / 1 / 7 / 5;}
-  .contact-info { grid-area: 6 / 13 / 7 / 15; }
+  .portfolio { grid-area: 8 / 9 / 12 / 15;}
+  .contact-info { grid-area: 15 / 13 / 16 / 15; }
 
   .contact-info img {
     width: 2.7vw;
@@ -2052,20 +2108,33 @@ table {
 
 .contact-info {top:5vw;}
 
-  .drk1 {grid-area: 1 / 5 / 2 / 6;}
-  .drk2 {grid-area: 3 / 13 / 4 / 14;}
-  .drk3 {grid-area: 3 / 8 / 4 / 9;}
-  .drk4 {grid-area: 5 / 11 / 7 / 13;}
-  .drk5 {grid-area: 4 / 5 / 5 / 6;}
-  .drk6 {grid-area: 6 / 6 / 7 / 7; display: inherit;}
-  .drk7 {grid-area: 1 / 8 / 2 / 9; display: inherit;}
+  .drk1 {grid-area: 7 / 1 / 8 / 2;}
+  .drk2 {grid-area: 7 / 13 / 8 / 14;}
+  .drk3 {grid-area: 7 / 5 / 8 / 6;}
+  .drk4 {grid-area: 8 / 7 / 9 / 8;}
+  .drk5 {grid-area: 15 / 1 / 16 / 2;}
+  .drk6 {grid-area: 7 / 10 / 8 / 11; display: inherit;}
+  .drk7 {grid-area: 7 / 8 / 8 / 9; display: inherit;}
+  .drk8 {grid-area: 12 / 13 / 13 / 14; display: inherit;}
+  .drk9 {grid-area: 12 / 6 / 13 / 7; display: inherit;}
+  .drk10 {grid-area: 12 / 2 / 13 / 3; display: inherit;}
+  .drk11 {grid-area: 14 / 7 / 16 / 9; display: inherit;}
+  .drk12 {grid-area: 13 / 14 / 14 / 15; display: inherit;}
+  .drk13 {grid-area: 10 / 7 / 12 / 9; display: inherit;}
 
-  .med1 {grid-area: 4 / 10 / 5 / 11;}
-  .med2 {grid-area: 6 / 10 / 7 / 11;}
-  .med3 {grid-area: 5 / 5 / 6 / 6;}
-  .med4 {grid-area: 4 / 12 / 5 / 13;}
-  .med5 {grid-area: 5 / 13 / 6 / 14;}
-  .med6 {grid-area: 1 / 9 / 2 / 10; display: inherit;}
+  .med1 {grid-area: 12 / 8 / 13 / 9;}
+  .med2 {grid-area: 7 / 11 / 8 / 12;}
+  .med3 {grid-area: 7 / 6 / 8 / 7;}
+  .med4 {grid-area: 15 / 14 / 16 / 15;}
+  .med5 {grid-area: 12 / 10 / 13 / 11;}
+  .med6 {grid-area: 13 / 1 / 14 / 2; display: inherit;}
+  .med7 {grid-area: 7 / 4 / 8 / 5; display: inherit;}
+  .med8 {grid-area: 12 / 4 / 13 / 5; display: inherit;}
+  .med9 {grid-area: 7 / 2 / 8 / 3; display: inherit;}
+  .med10 {grid-area: 13 / 7 / 14 / 8; display: inherit;}
+  .med11 {grid-area: 12 / 12 / 13 / 13; display: inherit;}
+  .med12 {grid-area: 7 / 9 / 8 / 10; display: inherit;}
+  .med13 {grid-area: 9 / 8 / 10 / 9; display: inherit;}
 
   .formholder {
     top:5vw;
