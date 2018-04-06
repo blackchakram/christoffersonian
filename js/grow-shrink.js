@@ -4,7 +4,7 @@ and to shrink back to their original size when clicked
 again.
 */
 
-var $exp_project = false;   //check which kinds of screen are open
+/*var $exp_project = false;   //check which kinds of screen are open*/
 var $exp_detail = false;
 var $exp_image = false;
 var $is_expanded = null;
@@ -17,6 +17,8 @@ var $contactopen = false;
 var s = new Date();
 var sizecategory = 0;     // helps with resizing when the "about me" is open.
 var $heightsize;                          // stretches the height of the viewed case study depending on which is being viewed
+
+var $mapbase = 0;
 
 // =================== NAVIGATE TO EACH SECTION ON CONTENTS CLICK =============
 
@@ -225,6 +227,7 @@ if ($expanded_thing.hasClass('helping-hands')) {
       }
     }
 
+
 // expand a cell of the original background grid so the case study can be tall enough
 if ($(window).width() < 500) {
   if ($self.hasClass('about-me')) {setTimeout(function() {$(".drk4").css("grid-area", "10 / 2 / 33 / 3");}, 1000);}
@@ -345,6 +348,12 @@ $('.hh_fade_right').velocity({opacity:1}, {duration:1000, delay:2600});
 //if about me, fade in all content
 if ($self.hasClass('about-me')) {$(".am-opacity").velocity({opacity:1}, {duration:1000, delay:1500});}
 
+// if about me was opened, get scroll position for bottom of map
+setTimeout(function() {
+  if ($expanded_thing.hasClass('about-me')) {
+  $mapbase = $(".am-map").height() + $(".am-map").offset().top;
+  }
+}, 2500);
 
 /* ======== ALTER COLOR BOXES AND GOOGLE ANALYTICS REFERENCE ======== */
 
@@ -533,7 +542,14 @@ if ($expanded_thing.hasClass('helping-hands')) {
       }
     }
 
+    if ($expanded_thing.hasClass('about-me')) {
+    $mapbase = $(".am-map").height() + $(".am-map").offset().top;
 
+    if ($(window).scrollTop() > $mapbase - $(window).height() && $(window).width() >= 768)
+    {
+      $(document).scrollTop($mapbase - $(window).height());
+    }
+    }
 
     if ($(window).width() < 500) {
       if ($expanded_thing.hasClass('about-me')) {$(".drk4").css("grid-area", "10 / 2 / 33 / 3");}

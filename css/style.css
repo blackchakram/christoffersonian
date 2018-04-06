@@ -157,7 +157,7 @@ video {
   grid-area: 1 / 1 / 5 / 5;
   background-color: #FCFCFC;
   background-image: url("../images/bg_sig.jpg");
-  background-position: bottom;
+  background-position: left bottom;
   background-size: cover;
 }
 
@@ -256,7 +256,7 @@ video {
 }
 
 .subpara, .location {
-  font-size: 6.8vw;
+  font-size: 5.8vw;
   line-height: 5.7vw;
   mix-blend-mode: overlay;
   font-family: "Titillium Web", sans-serif;
@@ -405,7 +405,7 @@ styling for case study parts
 }
 
 .sub-blurb {
-  /*  opacity: 0;*/   /* change this to 1 later */
+  opacity: 0;
   font-family: "Titillium Web";
   font-weight: 700;
   font-size: 6.75vw;
@@ -483,7 +483,7 @@ styling for case study parts
   font-size: 9vw;
   font-weight: 300;
   font-family: "Exo 2";
-/*  opacity: 0;*/   /* change this to 1 later */
+  opacity: 0;
 }
 
 .subimg, .subi {
@@ -590,7 +590,9 @@ tr:nth-child(2n) {
   clear: both;
 }
 
-.chart_l .alist {padding-bottom: 1vw;}
+.chart_l .alist {
+  padding-bottom: 1vw;
+}
 
 .chart_r img { width: 35vw;}
 
@@ -611,12 +613,12 @@ td:not(.tdfront) {
   padding-left: 0;
 }
 
-.chart_l div:nth-child(1), .chart_l div:nth-child(10) { color: blue; }
-.chart_l div:nth-child(2), .chart_l div:nth-child(11) { color: red; }
-.chart_l div:nth-child(3), .chart_l div:nth-child(12) { color: orange; }
-.chart_l div:nth-child(4), .chart_l div:nth-child(13) { color: green; }
-.chart_l div:nth-child(5) { color: purple; }
-.chart_l div:nth-child(6) { color: lightblue; }
+.chart_l .alist:nth-child(1)::before, .chart_l .alist:nth-child(10)::before { color: blue; }
+.chart_l div:nth-child(2)::before, .chart_l div:nth-child(11)::before { color: red; }
+.chart_l div:nth-child(3)::before, .chart_l div:nth-child(12)::before { color: orange; }
+.chart_l div:nth-child(4)::before, .chart_l div:nth-child(13)::before { color: green; }
+.chart_l div:nth-child(5)::before { color: purple; }
+.chart_l div:nth-child(6)::before { color: lightblue; }
 
 
 .swotbox {
@@ -668,6 +670,15 @@ td:not(.tdfront) {
 
 .portfolio .alist {
   list-style-image: url("../images/bulletbox_pt.png");
+}
+
+.chart_l .alist { list-style-image: none; }
+
+.chart_l .alist::before {
+  font-family: "fontawesome";
+  content: "";
+  margin-right: 10px;
+  background-color: inherit;
 }
 
 
@@ -1290,7 +1301,7 @@ padding-left: 8vw;
   }
 
   .subpara, .location {
-    font-size: 4.4vw;
+    font-size: 4.3vw;
     line-height: 3.9vw;
   }
 
@@ -2041,9 +2052,6 @@ table {
     .case-study {height:10800px;}
 
 }
-
-
-
 
 
 

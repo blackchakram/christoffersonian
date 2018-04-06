@@ -51,6 +51,7 @@ var $mockups_anim = false;
 var $deliverable_anim = false;
 var $future_anim = false;
 
+var $exp_project = false;
 
 var $windowtop = 0;
 var $windowbottom = 0;
@@ -74,7 +75,7 @@ $med7.velocity({opacity:1}, {duration:400, delay:1050});
 $setfour.velocity({opacity:1}, {duration:400, delay:1050});
 $med1.velocity({opacity:1}, {duration:400, delay:1200});
 $drk7.velocity({opacity:1}, {duration:400, delay:1350});
-$med13.velocity({opacity:1}, {duration:400, delay:1400});
+$med8.velocity({opacity:1}, {duration:400, delay:1400});
 $med2.velocity({opacity:1}, {duration:400, delay:1500});
 $med9.velocity({opacity:1}, {duration:400, delay:1500});
 $c_prt.velocity({opacity:1}, {duration:400, delay:1500});
@@ -102,9 +103,9 @@ $('.close_x, .close_form_x').hover(function(){$(this).css("color", "#777777");},
 $('.submit').hover(function(){$(this).css("background-color", "#CCCCCC");}, function(){$(this).css("background-color", "#FFFFFF");});
 
 $('.project, .blog').on({
-  mouseenter: function() { $(this).find('.centering .subtitle_icon .subpara').addClass('animated pulse'); },
-  mouseleave: function() { $(this).find('.centering .subtitle_icon .subpara').removeClass('animated pulse'); }
-})
+  mouseenter: function() { $(this).find('.centering .subtitle_icon .subpara').velocity( {scale:1.07}, {easing: "ease-in-out", duration: 300} ); },
+  mouseleave: function() { $(this).find('.centering .subtitle_icon .subpara').velocity( {scale:1}, {easing: "ease-in-out", duration: 300} ); }
+});
 
 
 // redraw the signature when clicked on
@@ -117,8 +118,15 @@ $('.sig').click(function(){
 $(window).scroll(function() {
   if ($exp_project == true) {
     if (!$expanded_thing.hasClass('about-me')) {drawicons();}
+    else {
+      if ($(window).scrollTop() > $mapbase - $(window).height() && $(window).width() >= 768)
+      {
+        $(document).scrollTop($mapbase - $(window).height());
+      }
+     }
+    }
   }
-});
+);
 
 
 function drawicons() {
@@ -126,56 +134,56 @@ function drawicons() {
 
   if ( $about_anim == false && $windowpos > $expanded_thing.find('.overview').offset().top && $expanded_thing.find('.overview').offset().top > $(window).scrollTop() )
   {
-    $expanded_thing.find('.overview .subtitle').addClass("animated fadeInLeft");
-    $expanded_thing.find('.overview .sub-blurb').addClass("animated fadeInRight");
+    $(".overview .subtitle").velocity({opacity:1}, {easing: "ease-in-out", duration: 1500});
+    $(".overview .sub-blurb").velocity({opacity:1}, {easing: "ease-in-out", duration: 1500});
     $about_anim = true;
   }
   if ( $tools_anim == false && $windowpos > $expanded_thing.find('.tools .content').offset().top && $expanded_thing.find('.tools .content').offset().top > $(window).scrollTop() )
   {
-    $expanded_thing.find('.tools .subtitle').addClass("animated fadeInLeft");
-    $expanded_thing.find('.tools .sub-blurb').addClass("animated fadeInRight");
+    $(".tools .subtitle").velocity({opacity:1}, {easing: "ease-in-out", duration: 1500});
+    $(".tools .sub-blurb").velocity({opacity:1}, {easing: "ease-in-out", duration: 1500});
     $tools_anim = true;
   }
   if ( $research_anim == false && $windowpos > $expanded_thing.find('.research .content').offset().top && $expanded_thing.find('.research .content').offset().top > $(window).scrollTop() )
   {
-    $expanded_thing.find('.research .subtitle').addClass("animated fadeInLeft");
-    $expanded_thing.find('.research .sub-blurb').addClass("animated fadeInRight");
+    $(".research .subtitle").velocity({opacity:1}, {easing: "ease-in-out", duration: 1500});
+    $(".research .sub-blurb").velocity({opacity:1}, {easing: "ease-in-out", duration: 1500});
     $research_anim = true;
   }
   if ( $mvp_anim == false && $windowpos > $expanded_thing.find('.mvp .content').offset().top && $expanded_thing.find('.mvp .content').offset().top > $(window).scrollTop() )
   {
-    $expanded_thing.find('.mvp .subtitle').addClass("animated fadeInLeft");
-    $expanded_thing.find('.mvp .sub-blurb').addClass("animated fadeInRight");
+    $(".mvp .subtitle").velocity({opacity:1}, {easing: "ease-in-out", duration: 1500});
+    $(".mvp .sub-blurb").velocity({opacity:1}, {easing: "ease-in-out", duration: 1500});
     $mvp_anim = true;
   }
   if ( $branding_anim == false && $windowpos > $expanded_thing.find('.branding .content').offset().top && $expanded_thing.find('.branding .content').offset().top > $(window).scrollTop() )
   {
-    $expanded_thing.find('.branding .subtitle').addClass("animated fadeInLeft");
-    $expanded_thing.find('.branding .sub-blurb').addClass("animated fadeInRight");
+    $(".branding .subtitle").velocity({opacity:1}, {easing: "ease-in-out", duration: 1500});
+    $(".branding .sub-blurb").velocity({opacity:1}, {easing: "ease-in-out", duration: 1500});
     $branding_anim = true;
   }
   if ( $ia_anim == false && $windowpos > $expanded_thing.find('.IA .content').offset().top && $expanded_thing.find('.IA .content').offset().top > $(window).scrollTop() )
   {
-    $expanded_thing.find('.IA .subtitle').addClass("animated fadeInLeft");
-    $expanded_thing.find('.IA .sub-blurb').addClass("animated fadeInRight");
+    $(".IA .subtitle").velocity({opacity:1}, {easing: "ease-in-out", duration: 1500});
+    $(".IA .sub-blurb").velocity({opacity:1}, {easing: "ease-in-out", duration: 1500});
     $ia_anim = true;
   }
   if ( $mockups_anim == false && $windowpos > $expanded_thing.find('.mockups .content').offset().top && $expanded_thing.find('.mockups .content').offset().top > $(window).scrollTop() )
   {
-    $expanded_thing.find('.mockups .subtitle').addClass("animated fadeInLeft");
-    $expanded_thing.find('.mockups .sub-blurb').addClass("animated fadeInRight");
+    $(".mockups .subtitle").velocity({opacity:1}, {easing: "ease-in-out", duration: 1500});
+    $(".mockups .sub-blurb").velocity({opacity:1}, {easing: "ease-in-out", duration: 1500});
     $mockups_anim = true;
   }
   if ( $deliverable_anim == false && $windowpos > $expanded_thing.find('.deliverable .content').offset().top && $expanded_thing.find('.deliverable .content').offset().top > $(window).scrollTop() )
   {
-    $expanded_thing.find('.deliverable .subtitle').addClass("animated fadeInLeft");
-    $expanded_thing.find('.deliverable .sub-blurb').addClass("animated fadeInRight");
+    $(".deliverable .subtitle").velocity({opacity:1}, {easing: "ease-in-out", duration: 1500});
+    $(".deliverable .sub-blurb").velocity({opacity:1}, {easing: "ease-in-out", duration: 1500});
     $mockups_anim = true;
   }
   if ( $future_anim == false && $windowpos > $expanded_thing.find('.future .content').offset().top && $expanded_thing.find('.future .content').offset().top > $(window).scrollTop() )
   {
-    $expanded_thing.find('.future .subtitle').addClass("animated fadeInLeft");
-    $expanded_thing.find('.future .sub-blurb').addClass("animated fadeInRight");
+    $(".future .subtitle").velocity({opacity:1}, {easing: "ease-in-out", duration: 1500});
+    $(".future .sub-blurb").velocity({opacity:1}, {easing: "ease-in-out", duration: 1500});
     $future_anim = true;
   }
 };
