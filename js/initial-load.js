@@ -69,6 +69,7 @@ $drk2.velocity({opacity:1}, {duration:400, delay:600});
 $med12.velocity({opacity:1}, {duration:400, delay:600});
 $drk11.velocity({opacity:1}, {duration:400, delay:600});
 $med5.velocity({opacity:1}, {duration:400, delay:750});
+$med13.velocity({opacity:1}, {duration:400, delay:800});
 $drk3.velocity({opacity:1}, {duration:400, delay:900});
 $c_apt.velocity({opacity:1}, {duration:400, delay:1050});
 $med7.velocity({opacity:1}, {duration:400, delay:1050});
@@ -103,8 +104,8 @@ $('.close_x, .close_form_x').hover(function(){$(this).css("color", "#777777");},
 $('.submit').hover(function(){$(this).css("background-color", "#CCCCCC");}, function(){$(this).css("background-color", "#FFFFFF");});
 
 $('.project, .blog').on({
-  mouseenter: function() { $(this).find('.centering .subtitle_icon .subpara').velocity( {scale:1.07}, {easing: "ease-in-out", duration: 300} ); },
-  mouseleave: function() { $(this).find('.centering .subtitle_icon .subpara').velocity( {scale:1}, {easing: "ease-in-out", duration: 300} ); }
+  mouseenter: function() { if ($exp_project == false){ $(this).velocity( {scale:1.07}, {easing: "ease-in-out", duration: 300} );} },
+  mouseleave: function() { if ($exp_project == false){ $(this).velocity( {scale:1}, {easing: "ease-in-out", duration: 300} );} }
 });
 
 

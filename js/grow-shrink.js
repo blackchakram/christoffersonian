@@ -49,6 +49,10 @@ if ($exp_project == false && $inprogress == false && $contactopen == false) // i
 
   $inprogress = true;
   $exp_project = true;
+  $(this).css("transform", "scale(1)");
+  $(this).css("z-index", "50");
+  /*$(this).velocity( {scale:1}, {easing: "ease-in-out", duration: 1} );*/
+
   expander($(this));
   setTimeout(function() {$inprogress = false;}, 1500); // slight delay to prevent double click starting it again
 }
