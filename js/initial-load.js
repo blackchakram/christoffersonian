@@ -104,8 +104,8 @@ $('.close_x, .close_form_x').hover(function(){$(this).css("color", "#777777");},
 $('.submit').hover(function(){$(this).css("background-color", "#CCCCCC");}, function(){$(this).css("background-color", "#FFFFFF");});
 
 $('.project, .blog').on({
-  mouseenter: function() { if ($exp_project == false){ $(this).velocity( {scale:1.07}, {easing: "ease-in-out", duration: 300} );} },
-  mouseleave: function() { if ($exp_project == false){ $(this).velocity( {scale:1}, {easing: "ease-in-out", duration: 300} );} }
+  mouseenter: function() { $(this).find('.centering .subtitle_icon .subpara').velocity( {opacity:0.4}, {easing: "ease-in-out", duration: 300} ); },
+  mouseleave: function() { $(this).find('.centering .subtitle_icon .subpara').velocity( {opacity:1}, {easing: "ease-in-out", duration: 300} ); }
 });
 
 

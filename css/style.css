@@ -138,7 +138,7 @@ video {
   position: absolute;
   display: block;
   font-family:"Exo 2", Helvetica, Arial, serif;
-  font-size: 5vw;
+  font-size: 6.7vw;
   right: 2vw;
   color:#333333;
   font-weight: lighter;
@@ -190,14 +190,6 @@ video {
 .contact-info {
   grid-area: 18 / 3 / 19 / 5;
 }
-
-.med1, .med2, .med3, .med4, .med5, .med6, .med7, .med8, .med9, .med10, .med11, .med12, .med13 {
-  z-index: -10;
-}
-
-.drk1, .drk2, .drk3, .drk4, .drk5, .drk6, .drk7, .drk8, .drk9, .drk10, .drk11, .drk12, .drk13 {
-   z-index: -10;
- }
 
 .logos {
   display: flex;
@@ -252,9 +244,10 @@ video {
   width: 100%;
   height: 100%;
   display: flex;
-  align-items: center;
+/*  align-items: center;*/
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
+  padding-left: 4vw;
 }
 
 .icons, .icon {
@@ -270,8 +263,8 @@ video {
   font-family: "Titillium Web", sans-serif;
   font-weight: 700;
   padding-top: 20px;
-  padding-left: 3vw;
-  padding-right: 3vw;
+/*  padding-left: 3vw;*/
+  padding-right: 4vw;
 }
 
 .location {
@@ -279,6 +272,7 @@ video {
   bottom: 3vw;
   position: absolute;
   color: black;
+  padding-left: 3vw;
 }
 
 .expand {
@@ -293,6 +287,7 @@ video {
   font-family:"Exo 2 bold", Helvetica, Arial, serif;
   font-size: 3.5vw;
   opacity: 1;
+  padding-bottom: 5vw;
 }
 
 .subtitle {
@@ -358,7 +353,7 @@ styling for case study parts
 
 .helping-hands .button div {
     background-color: #AFD6A5;
-    box-shadow: 0 1.5vw #97C38C;
+    box-shadow: 0 8px #97C38C;
 }
 
 .portfolio .button div {
@@ -418,6 +413,7 @@ styling for case study parts
   font-family: "Titillium Web";
   font-weight: 700;
   font-size: 6.75vw;
+  font-style: italic;
   float: right;
   text-align: right;
   position: relative;
@@ -721,10 +717,10 @@ td:not(.tdfront) {
 .portfolio .research {height:720vw;}
 .portfolio .IA {height: 250vw;}
 .portfolio .mockups {height: 400vw;}
-.portfolio .branding {height:1100vw;}
+.portfolio .branding {height: 825vw;}
 .portfolio .mvp {height: 170vw;}
 .portfolio .deliverable {height: 150vw;}
-.portfolio .future {height: 225vw;}
+.portfolio .future {height: 250vw;}
 
 
 .helping-hands .overview { background-image: url("../images/hh_overview_narrow.svg"); }
@@ -1054,7 +1050,7 @@ textarea {
   }
 
   .sigprinted {
-    font-size: 4.2vw;
+    font-size: 5.6vw;
     right: 4vw;
   }
 
@@ -1063,13 +1059,20 @@ textarea {
   line-height: 4.9vw;
 }
 
+.subtitle_icon, .subtitle {
+  padding-bottom: 3vw;
+}
+
   .location {
   bottom: 2vw;
+  padding-left: 2vw;
 }
 
   .icons {
     width: 16vw;
   }
+
+  .centering {padding-left: 3vw;}
 
   .main-grid, .case-study {
     grid-template-columns: repeat(6, calc(100vw/6));
@@ -1138,23 +1141,23 @@ textarea {height: 20vw;}
 
 .helping-hands .overview {height: 90vw;}
 .helping-hands .tools {height: 120vw;}
-.helping-hands .research {height:595vw;}
-.helping-hands .IA {height: 660vw;}
+.helping-hands .research {height:610vw;}
+.helping-hands .IA {height: 680vw;}
 .helping-hands .mockups {height: 685vw;}
 .helping-hands .branding {height:515vw;}
-.helping-hands .mvp {height: 190vw;}
+.helping-hands .mvp {height: 200vw;}
 .helping-hands .deliverable {height: 210vw;}
 .helping-hands .future {height: 350vw;}
 
 .portfolio .overview {height: 90vw;}
 .portfolio .tools {height: 125vw;}
-.portfolio .research {height:610vw;}
-.portfolio .IA {height: 200vw;}
-.portfolio .mockups {height: 350vw;}
-.portfolio .branding {height:950vw;}
+.portfolio .research {height:625vw;}
+.portfolio .IA {height: 210vw;}
+.portfolio .mockups {height: 360vw;}
+.portfolio .branding {height:685vw;}
 .portfolio .mvp {height: 140vw;}
 .portfolio .deliverable {height: 150vw;}
-.portfolio .future {height: 160vw;}
+.portfolio .future {height: 175vw;}
 
 
 th p {width: 11vw;}
@@ -1305,7 +1308,7 @@ padding-left: 8vw;
   }
 
   .sigprinted {
-    font-size: 3.4vw;
+    font-size: 4.5vw;
     right: 3.6vw;
   }
 
@@ -1316,7 +1319,10 @@ padding-left: 8vw;
 
   .location {
     bottom: 2vw;
+    padding-left: 2vw;
   }
+
+  .centering { padding-left: 2vw;}
 
   .icons {
     width: 12vw;
@@ -1324,6 +1330,7 @@ padding-left: 8vw;
 
   .subtitle, .subtitle_icon {
     font-size: 2vw;
+    padding-bottom: 2vw;
   }
 
   .subtitle {
@@ -1409,10 +1416,10 @@ padding-left: 8vw;
 .portfolio .research {height:395.2vw;}
 .portfolio .IA {height: 114vw;}
 .portfolio .mockups {height: 272vw;}
-.portfolio .branding {height:720vw;}
+.portfolio .branding {height:497vw;}
 .portfolio .mvp {height: 100vw;}
 .portfolio .deliverable {height: 121vw;}
-.portfolio .future {height: 118vw;}
+.portfolio .future {height: 129vw;}
 
 
 .helping-hands .overview { background-image: url("../images/hh_overview_wide.svg"); }
@@ -1671,22 +1678,19 @@ table {
 
   .sig {
     padding-top: 1.5vw;
-    padding-left: 47vw;
-    width: 40vw;
+    padding-left: 65vw;
+    width: 32vw;
   }
 
   .sigprinted {
-    font-size: 3.5vw;
+    font-size: 3.6vw;
     right: 3vw;
   }
 
   .subpara, .location {
-    font-size: 4.5vw;
+    font-size: 4.0vw;
     line-height: 3.8vw;
-  }
-
-  .location {
-    bottom: 1.5vw;
+    padding-right: 4vw;
   }
 
   .icons {
@@ -1802,10 +1806,10 @@ table {
 .portfolio .research {height: 3443px;}
 .portfolio .IA {height: 1024px;}
 .portfolio .mockups {height: 2633px;}
-.portfolio .branding {height:6919px;}
+.portfolio .branding {height:4493px;}
 .portfolio .mvp {height: 914px;}
 .portfolio .deliverable {height: 1134px;}
-.portfolio .future {height: 1017px;}
+.portfolio .future {height: 1100px;}
 
 
   .sub-blurb {
@@ -2083,24 +2087,24 @@ table {
 
   .sig {
     padding-top: 1.0vw;
-    padding-left: 58vw;
-    width: 40vw;
+    padding-left: 73vw;
+    width: 25vw;
   }
 
   .sigprinted {
-    font-size: 3.3vw;
+    font-size: 2.8vw;
     right: 2.0vw;
   }
 
   .subpara, .location {
-    font-size: 3.7vw;
-    line-height: 3.5vw;
+    font-size: 3.3vw;
+    line-height: 3.2vw;
     padding-top: 0;
-    padding-left: 1vw;
   }
 
   .location {
     bottom: 1vw;
+    padding-left: 1vw;
   }
 
   .icons {
@@ -2110,8 +2114,12 @@ table {
   .subtitle_icon {
     font-size: 1.3vw;
     margin: 20px auto 10px;
+    padding-bottom: 1vw;
   }
 
+  .centering {
+    padding-left: 1.5vw;
+  }
 
   .main-grid, .case-study {
     grid-template-columns: repeat(14, calc(100vw/14));
