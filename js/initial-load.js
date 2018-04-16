@@ -1,6 +1,4 @@
-/* this file does the initial loading of each logo and image
-to give the site a more slick appearance.
-*/
+/* this file does the initial loading of each logo and image to give the site a more slick appearance. */
 var $drk1 = $('.drk1');
 var $drk2 = $('.drk2');
 var $drk3 = $('.drk3');
@@ -57,44 +55,45 @@ var $windowtop = 0;
 var $windowbottom = 0;
 var $windowpos = 0;
 
+// fade in all the content on page load.
 $drk1.velocity({opacity:1}, {duration:400, delay:0});
-$med11.velocity({opacity:1}, {duration:400, delay:150});
-$med8.velocity({opacity:1}, {duration:400, delay:150});
-$setone.velocity({opacity:1}, {duration:400, delay:150});
-$med3.velocity({opacity:1}, {duration:400, delay:300});
-$drk9.velocity({opacity:1}, {duration:400, delay:350});
-$c_abt.velocity({opacity:1}, {duration:400, delay:450});
-$settwo.velocity({opacity:1}, {duration:400, delay:450});
-$drk2.velocity({opacity:1}, {duration:400, delay:600});
-$med12.velocity({opacity:1}, {duration:400, delay:600});
-$drk11.velocity({opacity:1}, {duration:400, delay:600});
-$med5.velocity({opacity:1}, {duration:400, delay:750});
-$med13.velocity({opacity:1}, {duration:400, delay:800});
-$drk3.velocity({opacity:1}, {duration:400, delay:900});
-$c_apt.velocity({opacity:1}, {duration:400, delay:1050});
-$med7.velocity({opacity:1}, {duration:400, delay:1050});
-$setfour.velocity({opacity:1}, {duration:400, delay:1050});
-$med1.velocity({opacity:1}, {duration:400, delay:1200});
-$drk7.velocity({opacity:1}, {duration:400, delay:1350});
-$med8.velocity({opacity:1}, {duration:400, delay:1400});
-$med2.velocity({opacity:1}, {duration:400, delay:1500});
-$med9.velocity({opacity:1}, {duration:400, delay:1500});
-$c_prt.velocity({opacity:1}, {duration:400, delay:1500});
-$c_hlp.velocity({opacity:1}, {duration:400, delay:1650});
-$setseven.velocity({opacity:1}, {duration:400, delay:1650});
-$drk6.velocity({opacity:1}, {duration:400, delay:1800});
-$c_blg.velocity({opacity:1}, {duration:400, delay:1800});
-$drk5.velocity({opacity:1}, {duration:400, delay:1950});
-$drk12.velocity({opacity:1}, {duration:400, delay:2000});
-$med4.velocity({opacity:1}, {duration:400, delay:2100});
-$med6.velocity({opacity:1}, {duration:400, delay:2250});
-$drk10.velocity({opacity:1}, {duration:400, delay:2250});
-$drk8.velocity({opacity:1}, {duration:400, delay:2300});
-$c_crn.velocity({opacity:1}, {duration:400, delay:2400});
-$drk13.velocity({opacity:1}, {duration:400, delay:2400});
-$setnine.velocity({opacity:1}, {duration:400, delay:2400});
-$med10.velocity({opacity:1}, {duration:400, delay:2400});
-$drk4.velocity({opacity:1}, {duration:400, delay:2550});
+$med11.velocity({opacity:1}, {duration:400, delay:75});
+$med8.velocity({opacity:1}, {duration:400, delay:75});
+$setone.velocity({opacity:1}, {duration:400, delay:75});
+$med3.velocity({opacity:1}, {duration:400, delay:150});
+$drk9.velocity({opacity:1}, {duration:400, delay:175});
+$c_abt.velocity({opacity:1}, {duration:400, delay:225});
+$settwo.velocity({opacity:1}, {duration:400, delay:225});
+$drk2.velocity({opacity:1}, {duration:400, delay:300});
+$med12.velocity({opacity:1}, {duration:400, delay:300});
+$drk11.velocity({opacity:1}, {duration:400, delay:300});
+$med5.velocity({opacity:1}, {duration:400, delay:350});
+$med13.velocity({opacity:1}, {duration:400, delay:400});
+$drk3.velocity({opacity:1}, {duration:400, delay:450});
+$c_apt.velocity({opacity:1}, {duration:400, delay:525});
+$med7.velocity({opacity:1}, {duration:400, delay:525});
+$setfour.velocity({opacity:1}, {duration:400, delay:525});
+$med1.velocity({opacity:1}, {duration:400, delay:600});
+$drk7.velocity({opacity:1}, {duration:400, delay:675});
+$med8.velocity({opacity:1}, {duration:400, delay:700});
+$med2.velocity({opacity:1}, {duration:400, delay:750});
+$med9.velocity({opacity:1}, {duration:400, delay:750});
+$c_prt.velocity({opacity:1}, {duration:400, delay:750});
+$c_hlp.velocity({opacity:1}, {duration:400, delay:825});
+$setseven.velocity({opacity:1}, {duration:400, delay:825});
+$drk6.velocity({opacity:1}, {duration:400, delay:900});
+$c_blg.velocity({opacity:1}, {duration:400, delay:900});
+$drk5.velocity({opacity:1}, {duration:400, delay:950});
+$drk12.velocity({opacity:1}, {duration:400, delay:1000});
+$med4.velocity({opacity:1}, {duration:400, delay:1050});
+$med6.velocity({opacity:1}, {duration:400, delay:1100});
+$drk10.velocity({opacity:1}, {duration:400, delay:1100});
+$drk8.velocity({opacity:1}, {duration:400, delay:1150});
+$c_crn.velocity({opacity:1}, {duration:400, delay:1200});
+$drk13.velocity({opacity:1}, {duration:400, delay:1200});
+$setnine.velocity({opacity:1}, {duration:400, delay:1200});
+$med10.velocity({opacity:1}, {duration:400, delay:1200});
+$drk4.velocity({opacity:1}, {duration:400, delay:1275});
 
 // animate a few elements on hover
 $('.linkedinicon').hover(function(){$(this).attr("src", "images/icon_linkedin_hover.svg");}, function(){$(this).attr("src", "images/icon_linkedin.svg");});
@@ -103,6 +102,7 @@ $('.ghicon').hover(function(){$(this).attr("src", "images/icon_github_hover.svg"
 $('.close_x, .close_form_x').hover(function(){$(this).css("color", "#777777");}, function(){$(this).css("color", "#000000");});
 $('.submit').hover(function(){$(this).css("background-color", "#CCCCCC");}, function(){$(this).css("background-color", "#FFFFFF");});
 
+// make the text for projects fade slightly on hover
 $('.project, .blog').on({
   mouseenter: function() { $(this).find('.centering .subtitle_icon .subpara').velocity( {opacity:0.4}, {easing: "ease-in-out", duration: 300} ); },
   mouseleave: function() { $(this).find('.centering .subtitle_icon .subpara').velocity( {opacity:1}, {easing: "ease-in-out", duration: 300} ); }
@@ -129,7 +129,7 @@ $(window).scroll(function() {
   }
 );
 
-
+// fades in the title and subtitle text for each section of a case study when it comes into view
 function drawicons() {
   $windowpos = $(window).scrollTop() + $(window).height();
 

@@ -37,7 +37,7 @@ $('.go-future').click(function(){ $(window).scrollTop($(this).parents().eq(3).fi
 
 // =================== EXPAND OR CONTRACT A CASE STUDY ========================
 
-$('.project').click(function(){
+$('.project').click(function(){     // when a project is clicked on
 if ($exp_project == false && $inprogress == false && $contactopen == false) // if a window not already expanded, expand one
 {
   if ($(this).hasClass('about-me'))
@@ -72,6 +72,7 @@ $('.close_x').click(function(){
     setTimeout(function() {$inprogress = false;}, 1500); // slight delay to prevent double click starting it again
   }
 
+// once a project window is done expanding
   if ($exp_image == true && $image_inprogress == false  && $contactopen == false)
     {
       $('body').css("overflow-y", "auto");
@@ -322,6 +323,7 @@ if ($(window).width() >= 1024 && !$self.hasClass('about-me')) {
   if ($self.hasClass('portfolio')) { $height = 16070 + $(window).width()/2; }
 }
 
+// actually expand the window itself
 $thing_to_expand.velocity({width: "100vw", height: $height + "px", top: -$self.offset().top + "px", left: -$self.offset().left-8 + "px" }, {delay: 500, easing: "ease-in-out", duration: 500});
 
 // if the window is wide enough, slide bottom of scroll by constant amount instead of by grid size
@@ -429,7 +431,7 @@ $('.future').css("z-index", "111");   // hack to make sure future section shows 
 };
 
 // ============================================================================
-
+// shrinks boxes back down to original size
 function condenser ($itself) {
 
 var $thing_to_condense =  $itself;
@@ -515,7 +517,7 @@ $('.detail .sub-blurb').css("opacity", "0");
 // grid dimensions and alter the expanded card accordingly if one
 // is currently expanded.
 $(window).resize(function() {
-  if ($exp_project == true)
+  if ($exp_project == true)   // if a project is open...
   {
     if (!$expanded_thing.hasClass('about-me')) {drawicons();}
 
@@ -526,7 +528,7 @@ $(window).resize(function() {
 
     var oldsize = sizecategory;     // grabs current size category to see if its about to cross a threshhold
 
-if ($expanded_thing.hasClass('helping-hands')) {
+if ($expanded_thing.hasClass('helping-hands')) {  // specifically change top image of case study if window expands or shrinks too much
     if ($(window).width() >= 768) {
       $('.titleoverlay').attr("src", "images/hh_title_overlay_large.svg");
     }else{
@@ -551,6 +553,7 @@ if ($expanded_thing.hasClass('helping-hands')) {
     }
     }
 
+    // resize case studies to their different responsive widths if the screen grows or shinks enough
     if ($(window).width() < 500) {
       if ($expanded_thing.hasClass('about-me')) {$(".drk4").css("grid-area", "10 / 2 / 33 / 3");}
       else {
@@ -627,6 +630,7 @@ if ($expanded_thing.hasClass('helping-hands')) {
       sizecategory = 5;
     };
 
+    // force case studies to have a certian height once the content is no longer full screen width
     if ($(window).width() >= 1024 && !$expanded_thing.hasClass('about-me')) {
       if ($expanded_thing.hasClass('helping-hands')) { $(this).css("height", 20570 + $(window).width()/2 + "px"); };
       if ($expanded_thing.hasClass('portfolio')) { $(this).css("height", 16070 + $(window).width()/2 + "px"); };
@@ -656,6 +660,7 @@ if ($expanded_thing.hasClass('helping-hands')) {
         clearTimeout(map12);
         clearTimeout(map13);
 
+        // remove arrows from the about me
         $('.arrow').removeClass('tri-top1 tri-top2 tri-right1 tri-right2 tri-left1 tri-left2 tri-bottom1 tri-bottom2');
 
         $('.skipanim').css("display", "inherit");
@@ -668,6 +673,7 @@ if ($expanded_thing.hasClass('helping-hands')) {
     });
   }
 
+  // resize the homepage on screen resize
   if ($exp_project == false)
   {
     if ($(window).width() < 500) { $(".drk4").css("grid-area", "12 / 4 / 13 / 5"); };
@@ -677,6 +683,7 @@ if ($expanded_thing.hasClass('helping-hands')) {
     if ($(window).width() >= 1440) { $(".drk4").css("grid-area", "8 / 7 / 9 / 8"); };
   }
 
+  // resize the image viewer if the lightbox is open. (Possibly obsolete now)
   if ($exp_image == true)
   {
     $('.image_viewer_wrapper').css("width", $(window).innerWidth() + "px");
