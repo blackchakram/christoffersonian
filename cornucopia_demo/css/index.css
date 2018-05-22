@@ -1,0 +1,45 @@
+body {
+  background-color: lightgray;
+}
+
+iframe {
+  width: 364px;
+  height: 640px;
+  border: 0;
+}
+
+.scrollable {
+  width: 376px;
+}
+
+.screen {
+  width: 410px;
+  height: 700px;
+  margin: 10px;
+  border: 0;
+  overflow-x: hidden;
+}
+
+img {
+  width: 270px;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+
+.subtitle {
+  position: absolute;
+  left: 20px;
+  top: 100px;
+}
+
+.allwrapper {
+  position: absolute;
+  top: 150px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.description {
+  font-weight: bold;
+}

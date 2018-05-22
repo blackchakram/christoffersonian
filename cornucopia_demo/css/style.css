@@ -1,0 +1,418 @@
+html {
+  font-family: Roboto;
+  background-image: url("../images/knitted_sweater_toptal_victoria_spahn.png");
+  background-repeat: repeat;
+  background-size: 120%;
+}
+
+.row { margin-bottom: 14px; }
+
+.wrapper {
+  width: 360px;
+}
+
+.cornlogo {
+  width: 80vw;
+  margin: 0 10vw;
+  top: 45%;
+  position: absolute;
+  opacity: 0.2;
+}
+
+.navbar-fixed {
+  margin-bottom: 16px;
+}
+
+/* push the title in the taskbar right the appropriate amount */
+.brand-logo {
+  margin-left: 64px;
+}
+
+/* space the "add item" bar from the header */
+.card-spacing {
+  margin-top: 16px;
+}
+
+/* center the "add item" bar contents properly */
+.card-spacing .col {
+  padding-top: 16px;
+  padding-bottom: 6px;
+}
+
+.card-spacing .col h6 {
+  margin-top: 4px;
+  margin-bottom: 14px;
+}
+
+/* push items left to line up with the aisle */
+.collection.with-header .collection-item {
+  margin-left: -14px;
+}
+
+/* widen the aisle header to match same size as the items */
+.collection.with-header .collection-header{
+  padding: 6px 20px;
+  border-bottom: none;
+}
+
+.collection .collection-item {
+  padding: 17px 20px;
+}
+
+.collection.with-header .collection-header h5, .page-footer h5 {
+  font-size: 1.3rem;
+}
+
+.collection.with-header .collection-item  .unit {
+  position: absolute;
+  right: 48px;
+}
+
+i.left { width: 24px; }
+
+.collection { margin-bottom: 0;}
+
+.handle {
+  position: absolute;
+}
+
+.handle { right: 16px; }
+.item { left: 56px;}
+
+h5 {
+  display: inline;
+}
+
+.item-bar {
+  border-bottom: 1px solid #e0e0e0;
+  width: 100vw;
+  position: absolute;
+  left: 40px;
+}
+
+.collection.with-header li {
+  border-bottom: none;
+}
+
+.fixed-action-btn {
+  position: fixed;
+  bottom: 80px;
+  right: 16px;
+}
+
+
+
+.page-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  padding-top: 10px;
+}
+
+.footer-line-2 {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  font-size: 1.1rem;
+  font-weight: lighter;
+}
+
+.count-price {
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  text-align: right;
+}
+
+.money {
+  font-size: 1.4rem;
+  padding-top: 0;
+}
+
+.money-underline {
+  background-color: #FFF350;
+  top:-8px;
+  position: relative;
+  width: 70px;
+  height: 2px;
+}
+
+/* MODIFIERS FOR WEEKLY_SETTINGS */
+
+.navbar-settings {
+  margin-bottom: -6px;
+}
+
+.switch label .lever {
+  margin-left: 0;
+}
+
+i.left.padded-icon {
+  margin-right: 28px;
+}
+
+.collection-item.valign-wrapper.collapseit {
+  height: 0;
+  margin: 0;
+  padding: 0;
+  overflow:hidden;
+}
+
+.switch label input[type="checkbox"]:checked + .lever::after {
+background-color: #FFC108;
+}
+
+[type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:before, [type="radio"].with-gap:checked+span:after {
+  border: 2px solid #FFC108;
+}
+
+[type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:after {
+  background-color: #FFC108;
+}
+
+li.collection-item label.indented-radio {
+  left: 32px;
+  position: relative;
+}
+
+[type="radio"]:not(:checked)+span, [type="radio"]:checked+span {
+  padding-left: 48px;
+}
+
+.item-bar-erase {
+  border-bottom: 2px solid #FFFFFF;
+  width: 100vw;
+  position: absolute;
+  margin-top: -2px;
+}
+
+/* MODIFIERS FOR ITEM_OPTIONS */
+.collection-item.valign-wrapper.double-line {
+  padding: 8px 20px;
+}
+
+.subline {
+  font-size: 13px;
+}
+
+.photo {
+  width: 50vw;
+  margin: auto;
+  margin-top: -25px;
+  z-index: 100;
+}
+
+img.icon {
+  margin-right: 28px;
+}
+
+.coupon-title {
+  font-size: 16px;
+  font-weight: bolder;
+}
+
+.item.coupon {
+  position: relative;
+  left: 16px;
+  margin-top: -24px;
+  margin-bottom: -16px;
+}
+
+span.dropdown {
+  position: absolute;
+  right: -56px;
+  width: 180px;
+  height: 72px;
+}
+
+
+.select-wrapper input.select-dropdown, .select-wrapper input.select-dropdown:focus {
+  border-bottom: 1px solid #FFC108;
+}
+
+.dropdown-content li>a, .dropdown-content li>span {
+  color: black;
+}
+
+.fullscreen {
+  position: absolute;
+  bottom: -60px;
+}
+
+
+/* MODIFIERS FOR LISTS */
+
+.alist .item, .alist .counter {
+  font-size: 16px;
+}
+
+.alist .item {
+  margin-left: -22px;
+}
+
+.alist .counter {
+  position: absolute;
+  right: 48px;
+}
+
+.alist .collection-item {
+  padding-left: 0;
+}
+
+.fixed-action-btn.low {
+  bottom: 16px;
+}
+
+
+.listbar {
+  overflow: hidden;
+  text-overflow: clip;
+  white-space: nowrap;
+  position: fixed;
+  right: 44px;
+  bottom: 20px;
+  width: 1px;
+  height: 48px;
+  background-color: white;
+  padding: 3px 6px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+}
+
+.listbar form input {
+  color: lightgray;
+  padding-left: 0;
+  font-size: 16px;
+}
+
+input:not([type]), input[type=text]:not(.browser-default), textarea.materialize-textarea {
+    border-bottom: none;
+}
+
+input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: none;
+  box-shadow: none;
+}
+
+.spacer {
+  height: 80px;
+}
+
+/* MODIFIERS FOR SELECT_STORE */
+
+.wrapper-map {
+  background-image: url("../images/map.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 1400px;
+}
+
+.store-listings {
+  height: 80px;
+  background-color: white;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+}
+
+.map-store {
+  font-size: 17px;
+  font-weight: bolder;
+  padding-top: 4px;
+}
+
+.footer-line-3 {
+  font-size: 14px;
+  margin-top: -4px;
+}
+
+.allstores {
+  position: fixed;
+  bottom: -8px;
+  height: 260px;
+  overflow-y: scroll;
+  width: 100vw;
+}
+
+.storeimg {
+  width: 135px;
+  padding-top: 9px;
+  right: 0;
+  position: absolute;
+}
+
+.store-btn {
+  position: fixed;
+  right: 16px;
+  bottom: 268px;
+}
+
+.storebar {
+  overflow: hidden;
+  text-overflow: clip;
+  white-space: nowrap;
+  position: fixed;
+  left: 10vw;
+  top: 72px;
+  width: 80vw;
+  height: 56px;
+  background-color: white;
+  padding: 8px 16px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+}
+
+.storebar form {
+  display: inline;
+}
+
+.store-icon {
+  position: absolute;
+  margin-right: 16px;
+  right: -4px;
+  top: 14px;
+}
+
+.activepin {
+  position: absolute;
+  top: 230px;
+  left: 52vw;
+}
+
+.inactivepin {
+  position: absolute;
+  top: 160px;
+  right: 25vw;
+}
+
+
+/* MODIFIERS FOR CHECKOUT */
+
+.barcode {
+  width: 360px;
+  margin-bottom: 16px;
+}
+
+.collapsible {
+    width: 360px;
+    background-color: white;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.collapsible-header {
+  font-size: 16px;
+  font-weight: bold;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.collapsible-body {
+  padding-top: 0;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.collapsible-header:focus {
+  outline: none;
+}
+
+.collapser {
+  position: absolute;
+  right: 0;
+}

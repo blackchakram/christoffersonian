@@ -162,33 +162,32 @@ video {
 }
 
 .blog {
-  grid-area: 17 / 1 / 19 / 3;
+  grid-area: 21 / 1 / 23 / 3;
   background-image: url("../images/bg_bl.jpg");
 }
 .about-me {
-  grid-area: 14 / 3 / 16 / 5;
+  grid-area: 18 / 3 / 20 / 5;
   background-image: url("../images/bg_port.jpg");
 }
 .helping-hands {
-  grid-area: 6 / 2 / 9 / 5;
+  grid-area: 10 / 2 / 13 / 5;
   background-image: url("../images/bg_hh.jpg");
 }
 .cornucopia {
-  grid-area: 13 / 1 / 15 / 5;
+  grid-area: 6 / 1 / 9 / 4;
   background-image: url("../images/bg_corn.jpg");/* ===============================  background-color: #F9F9F9; */
-  display: none;
 }
 .airport-navigator {
-  grid-area: 9 / 1 / 11 / 5;
+  grid-area: 13 / 1 / 15 / 5;
   background-image: url("../images/bg_an.jpg");/* ==================================  background-color: #F9F9F9; */
   display: none;
 }
 .portfolio {
-  grid-area: 10 / 1 / 13 / 4;
+  grid-area: 14 / 1 / 17 / 4;
   background-image: url("../images/bg_pt.jpg");
 }
 .contact-info {
-  grid-area: 18 / 3 / 19 / 5;
+  grid-area: 22 / 3 / 23 / 5;
 }
 
 .logos {
@@ -206,30 +205,30 @@ video {
 }
 
 /* layout for non-functional grid boxes */
-.drk1 {grid-area: 9 / 3 / 10 / 4;}
-.drk2 {grid-area: 5 / 2 / 6 / 3;}
-.drk3 {grid-area: 9 / 1 / 10 / 2;}
-.drk4 {grid-area: 12 / 4 / 13 / 5;}
-.drk5 {grid-area: 10 / 4 / 11 / 5;}
-.drk6 {grid-area: 13 / 1 / 15 / 3;}
-.drk7 {grid-area: 17 / 3 / 19 / 5;}
-.drk8 {grid-area: 7 / 1 / 8 / 2;}
-.drk9 {display: none;}
-.drk10 {display: none;}
+.drk1 {grid-area: 13 / 3 / 14 / 4;}
+.drk2 {grid-area: 9 / 2 / 10 / 3;}
+.drk3 {grid-area: 13 / 1 / 14 / 2;}
+.drk4 {grid-area: 16 / 4 / 17 / 5;}
+.drk5 {grid-area: 14 / 4 / 15 / 5;}
+.drk6 {grid-area: 17 / 1 / 19 / 3;}
+.drk7 {grid-area: 21 / 3 / 23 / 5;}
+.drk8 {grid-area: 11 / 1 / 12 / 2;}
+.drk9 {grid-area: 8 / 4 / 9 / 5;}
+.drk10 {grid-area: 5 / 4 / 6 / 5;}
 .drk11 {display: none;}
 .drk12 {display: none;}
 .drk13 {display: none;}
 
-.med1 {grid-area: 15 / 1 / 17 / 3;}
-.med2 {grid-area: 13 / 3 / 14 / 4;}
-.med3 {grid-area: 5 / 1 / 6 / 2;}
-.med4 {grid-area: 8 / 1 / 9 / 2;}
-.med5 {grid-area: 16 / 4 / 17 / 5;}
-.med6 {grid-area: 5 / 4 / 6 / 5;}
-.med7 {grid-area: 9 / 4 / 10 / 5;}
-.med8 {display: none;}
-.med9 {display: none;}
-.med10 {display: none;}
+.med1 {grid-area: 19 / 1 / 21 / 3;}
+.med2 {grid-area: 17 / 3 / 18 / 4;}
+.med3 {grid-area: 9 / 1 / 10 / 2;}
+.med4 {grid-area: 12 / 1 / 13 / 2;}
+.med5 {grid-area: 20 / 4 / 21 / 5;}
+.med6 {grid-area: 9 / 4 / 10 / 5;}
+.med7 {grid-area: 13 / 4 / 14 / 5;}
+.med8 {grid-area: 6 / 4 / 7 / 5;}
+.med9 {grid-area: 5 / 3 / 6 / 4;}
+.med10 {grid-area: 5 / 1 / 6 / 2;}
 .med11 {display: none;}
 .med12 {display: none;}
 .med13 {display: none;}
@@ -255,6 +254,8 @@ video {
   clear: both;
   width: 25vw;
 }
+
+.cornicon { width: 37.5vw; }
 
 .subpara, .location {
   font-size: 5.8vw;
@@ -324,8 +325,7 @@ video {
 }
 
 .helping-hands > .case-study { background-color: #CFEDC6; }
-.cornucopia > .case-study { background-color: #EEE5C0; }
-.airport-navigator > .case-study { background-color: #C2DCEE; }
+.cornucopia > .case-study { background-color: #C2DCEE; }
 .about-me > .case-study { background-color: #E4BAE3; }
 .portfolio > .case-study { background-color: #EDC7C9; }
 
@@ -361,6 +361,10 @@ styling for case study parts
     box-shadow: 0 1.5vw #C9999A;
 }
 
+.cornucopia .button div {
+    background-color: #C7DAED;
+    box-shadow: 0 15px #B6CCE4;
+}
 
 .case_study > li {
   opacity: 0;
@@ -398,8 +402,18 @@ styling for case study parts
   opacity: 0;
 }
 
+.titlesub {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+}
+
 .portfolio .study-title {
   background-image: url("../images/pt_phone.png");
+}
+
+.cornucopia .study-title {
+  background-image: url("../images/corn_title.jpg");
 }
 
 
@@ -545,6 +559,12 @@ styling for case study parts
   padding-bottom: 0;
 }
 
+.chart_title {
+  font-size: 4.0vw;
+  font-weight: 900;
+  padding-bottom: 7vw;
+}
+
 th p{
   transform: rotate(-60deg);
   padding-bottom: 20px;
@@ -552,6 +572,7 @@ th p{
   width: 14vw;
   font-weight: lighter;
   font-size: 3vw;
+  line-height: 3vw;
 }
 
 table {
@@ -673,6 +694,10 @@ td:not(.tdfront) {
   list-style-image: url("../images/bulletbox_hh.png");
 }
 
+.cornucopia .alist {
+    list-style-image: url("../images/bulletbox_corn.png");
+}
+
 .portfolio .alist {
   list-style-image: url("../images/bulletbox_pt.png");
 }
@@ -702,10 +727,37 @@ td:not(.tdfront) {
   margin-bottom: -1.5vw;
 }
 
+.infographic {
+  display: flex;
+  flex-wrap: wrap;
+}
+.surveypiece {
+  width: 41vw;
+  padding: 3vw 0;
+}
+.surveyicon {
+  width: 15vw;
+  padding-bottom: 5vw;
+  margin-left: 20vw;
+  opacity: 0.3;
+}
+
+.surveydetail {
+  width: 38vw;
+  margin-left: 3vw;
+}
+
+.pctg {
+  font-size: 9vw;
+  margin-top: -14vw;
+  margin-bottom: 3vw;
+  margin-left: -2vw;
+}
+
 .helping-hands .overview {height: 110vw;}
 .helping-hands .tools {height: 130vw;}
 .helping-hands .research {height:815vw;}
-.helping-hands .IA {height: 785vw;}
+.helping-hands .IA {height: 815vw;}
 .helping-hands .mockups {height: 785vw;}
 .helping-hands .branding {height:650vw;}
 .helping-hands .mvp {height: 250vw;}
@@ -721,6 +773,16 @@ td:not(.tdfront) {
 .portfolio .mvp {height: 170vw;}
 .portfolio .deliverable {height: 150vw;}
 .portfolio .future {height: 250vw;}
+
+.cornucopia .overview {height: 150vw;}
+.cornucopia .tools {height: 130vw;}
+.cornucopia .research {height:975vw;}
+.cornucopia .IA {height: 450vw;}
+.cornucopia .mockups {height: 390vw;}
+.cornucopia .branding {height: 605vw;}
+.cornucopia .mvp {height: 180vw;}
+.cornucopia .deliverable {height: 290vw;}
+.cornucopia .future {height: 350vw;}
 
 
 .helping-hands .overview { background-image: url("../images/hh_overview_narrow.svg"); }
@@ -742,6 +804,16 @@ td:not(.tdfront) {
 .portfolio .mvp { background-image: url("../images/pt_mvp_narrow.svg"); }
 .portfolio .deliverable { background-image: url("../images/pt_deliverable_narrow.svg"); }
 .portfolio .future { background-image: url("../images/pt_future_narrow.svg"); }
+
+.cornucopia .overview { background-image: url("../images/corn_overview_narrow.svg"); }
+.cornucopia .tools { background-image: url("../images/corn_toolsdeliverable_narrow.svg"); }
+.cornucopia .research { background-image: url("../images/corn_research_narrow.svg"); }
+.cornucopia .IA { background-image: url("../images/corn_ia_narrow.svg"); }
+.cornucopia .mockups { background-image: url("../images/corn_mockups_narrow.svg"); }
+.cornucopia .branding { background-image: url("../images/corn_branding_narrow.svg"); }
+.cornucopia .mvp { background-image: url("../images/corn_mvp_narrow.svg"); }
+.cornucopia .deliverable { background-image: url("../images/corn_deliverable_narrow.svg"); }
+.cornucopia .future { background-image: url("../images/corn_future_narrow.svg"); }
 
 /* =============== IMAGE VIEWER ============== */
 
@@ -906,11 +978,7 @@ textarea {
   position: relative;
   z-index: 4000;
 }
-/*
-.am-map div :not(.map-title, .arrow, .quest, .skills ul li){
-  font-size: 4.2vw;
-  background-color: #F2DFF9;
-}*/
+
 
 .map-title {
   display: flex;
@@ -1029,8 +1097,6 @@ textarea {
 
 
 
-
-
 /* =============== RESPONSIVE DESIGN ============== */
 /* ================================================ */
 
@@ -1072,6 +1138,8 @@ textarea {
     width: 16vw;
   }
 
+  .cornicon { width: 24vw; }
+
   .centering {padding-left: 3vw;}
 
   .main-grid, .case-study {
@@ -1080,13 +1148,13 @@ textarea {
   }
 
   .signature {grid-area: 1 / 1 / 5 / 7;}
-  .blog {grid-area: 17 / 4 / 19 / 7;}
-  .about-me {grid-area: 14 / 1 / 16 / 4;}
-  .helping-hands {grid-area: 6 / 1 / 9 / 5;}
-  .cornucopia {grid-area: 9 / 3 / 11 / 5;}
-  .airport-navigator {grid-area: 8 / 4 / 11 / 7;}
-  .portfolio { grid-area: 10 / 3 / 13 / 7;}
-  .contact-info { grid-area: 19 / 4 / 20 / 7; }
+  .blog {grid-area: 21 / 4 / 23 / 7;}
+  .about-me {grid-area: 18 / 1 / 20 / 4;}
+  .helping-hands {grid-area: 10 / 1 / 13 / 5;}
+  .cornucopia {grid-area: 6 / 3 / 9 / 7;}
+  .airport-navigator {grid-area: 12 / 4 / 15 / 7;}
+  .portfolio { grid-area: 14 / 3 / 17 / 7;}
+  .contact-info { grid-area: 23 / 4 / 24 / 7; }
 
   .contact-info img {
     width: 8vw;
@@ -1094,33 +1162,33 @@ textarea {
 
   .contact-info {top:-3vw;}
 
-  .drk1 {grid-area: 7 / 5 / 8 / 6;}
-  .drk2 {grid-area: 9 / 3 / 10 / 4;}
-  .drk3 {grid-area: 13 / 5 / 15 / 7;}
-  .drk4 {grid-area: 13 / 1 / 14 / 2;}
-  .drk5 {grid-area: 16 / 6 / 17 / 7;}
-  .drk6 {grid-area: 5 / 1 / 6 / 2;}
-  .drk7 {grid-area: 11 / 2 / 12 / 3;}
-  .drk8 {grid-area: 5 / 4 / 6 / 5;}
-  .drk9 {grid-area: 16 / 1 / 17 / 2; display: inherit;}
-  .drk10 {grid-area: 16 / 3 / 17 / 4; display: inherit;}
-  .drk11 {grid-area: 18 / 3 / 19 / 4; display: inherit;}
-  .drk12 {display: none;}
-  .drk13 {display: none;}
+  .drk1 {grid-area: 11 / 5 / 12 / 6;}
+  .drk2 {grid-area: 13 / 3 / 14 / 4;}
+  .drk3 {grid-area: 17 / 5 / 19 / 7;}
+  .drk4 {grid-area: 17 / 1 / 18 / 2;}
+  .drk5 {grid-area: 20 / 6 / 21 / 7;}
+  .drk6 {grid-area: 8 / 1 / 10 / 3;}
+  .drk7 {grid-area: 15 / 2 / 16 / 3;}
+  .drk8 {grid-area: 9 / 4 / 10 / 5;}
+  .drk9 {grid-area: 20 / 1 / 21 / 2; display: inherit;}
+  .drk10 {grid-area: 20 / 3 / 21 / 4; display: inherit;}
+  .drk11 {grid-area: 20 / 3 / 23 / 4; display: inherit;}
+  .drk12 {grid-area: 5 / 1 / 7 / 3; display: inherit;}
+  .drk13 {grid-area: 5 / 4 / 6 / 5; display: inherit;}
 
-  .med1 {grid-area: 17 / 1 / 19 / 3;}
-  .med2 {grid-area: 13 / 2 / 14 / 3;}
-  .med3 {grid-area: 9 / 1 / 11 / 3;}
-  .med4 {grid-area: 15 / 4 / 17 / 6;}
-  .med5 {grid-area: 5 / 3 / 6 / 4;}
-  .med6 {grid-area: 8 / 5 / 10 / 7;}
-  .med7 {grid-area: 12 / 1 / 13 / 2;}
-  .med8 {grid-area: 13 / 4 / 14 / 5; display: inherit;}
-  .med9 {grid-area: 5 / 5 / 7 / 7; display: inherit;}
-  .med10 {display: none;}
-  .med11 {display: none;}
-  .med12 {display: none;}
-  .med13 {display: none;}
+  .med1 {grid-area: 21 / 1 / 23 / 3;}
+  .med2 {grid-area: 17 / 2 / 18 / 3;}
+  .med3 {grid-area: 13 / 1 / 15 / 3;}
+  .med4 {grid-area: 19 / 4 / 21 / 6;}
+  .med5 {grid-area: 9 / 3 / 10 / 4;}
+  .med6 {grid-area: 12 / 5 / 14 / 7;}
+  .med7 {grid-area: 16 / 1 / 17 / 2;}
+  .med8 {grid-area: 17 / 4 / 18 / 5; display: inherit;}
+  .med9 {grid-area: 9 / 5 / 11 / 7; display: inherit;}
+  .med10 {grid-area: 7 / 2 / 8 / 3; display: inherit;}
+  .med11 {grid-area: 5 / 3 / 6 / 4; display: inherit;}
+  .med12 {grid-area: 5 / 3 / 6 / 4; display: inherit;}
+  .med13 {grid-area: 5 / 6 / 6 / 7; display: inherit;}
 
 .formholder {
   top:3vw;
@@ -1142,7 +1210,7 @@ textarea {height: 20vw;}
 .helping-hands .overview {height: 90vw;}
 .helping-hands .tools {height: 120vw;}
 .helping-hands .research {height:610vw;}
-.helping-hands .IA {height: 680vw;}
+.helping-hands .IA {height: 695vw;}
 .helping-hands .mockups {height: 685vw;}
 .helping-hands .branding {height:515vw;}
 .helping-hands .mvp {height: 200vw;}
@@ -1159,6 +1227,19 @@ textarea {height: 20vw;}
 .portfolio .deliverable {height: 150vw;}
 .portfolio .future {height: 175vw;}
 
+.cornucopia .overview {height: 120vw;}
+.cornucopia .tools {height: 125vw;}
+.cornucopia .research {height:715vw;}
+.cornucopia .IA {height: 375vw;}
+.cornucopia .mockups {height: 315vw;}
+.cornucopia .branding {height:465vw;}
+.cornucopia .mvp {height: 140vw;}
+.cornucopia .deliverable {height: 270vw;}
+.cornucopia .future {height: 250vw;}
+
+.surveypiece {
+  width: 39vw;
+}
 
 th p {width: 11vw;}
 
@@ -1176,6 +1257,10 @@ td, .tdfront {font-size: 3.1vw;}
 .names {font-size: 3.5vw;}
 
 .chart_l {line-height: 3.5vw;}
+
+.chart_r {
+  padding-bottom: 8vw;
+}
 
 .case-study > .detail { font-size: 3.25vw; }
 .tools pre {
@@ -1328,6 +1413,8 @@ padding-left: 8vw;
     width: 12vw;
   }
 
+  .cornicon { width: 18vw; }
+
   .subtitle, .subtitle_icon {
     font-size: 2vw;
     padding-bottom: 2vw;
@@ -1343,13 +1430,13 @@ padding-left: 8vw;
   }
 
   .signature {grid-area: 1 / 1 / 5 / 9;}
-  .blog{grid-area: 14 / 6 / 16 / 9;}
-  .about-me {grid-area: 14 / 1 / 16 / 4;}
-  .helping-hands {grid-area: 6 / 1 / 9 / 6;}
-  .cornucopia {grid-area: 5 / 7 / 9 / 9;}
-  .airport-navigator {grid-area: 5 / 1 / 7 / 5;}
-  .portfolio { grid-area: 10 / 4 / 13 / 9;}
-  .contact-info { grid-area: 15 / 6 / 16 / 9; }
+  .blog{grid-area: 18 / 6 / 20 / 9;}
+  .about-me {grid-area: 18 / 1 / 20 / 4;}
+  .helping-hands {grid-area: 10 / 1 / 13 / 6;}
+  .cornucopia {grid-area: 6 / 4 / 9 / 9;}
+  .airport-navigator {grid-area: 9 / 1 / 11 / 5;}
+  .portfolio { grid-area: 14 / 4 / 17 / 9;}
+  .contact-info { grid-area: 19 / 6 / 20 / 9; }
 
   .contact-info img {
     width: 6vw;
@@ -1357,33 +1444,33 @@ padding-left: 8vw;
 
   .contact-info {top:11vw;}
 
-  .drk1 {grid-area: 8 / 7 / 10 / 9;}
-  .drk2 {grid-area: 5 / 6 / 7 / 8;}
-  .drk3 {grid-area: 9 / 2 / 11 / 4;}
-  .drk4 {grid-area: 13 / 4 / 14 / 5;}
-  .drk5 {grid-area: 5 / 2 / 6 / 3;}
-  .drk6 {grid-area: 5 / 4 / 6 / 5;}
-  .drk7 {grid-area: 12 / 1 / 14 / 3;}
-  .drk8 {grid-area: 9 / 5 / 10 / 6;}
-  .drk9 {grid-area: 13 / 6 / 14 / 7; display: inherit;}
-  .drk10 {grid-area: 13 / 8 / 14 / 9; display: inherit;}
-  .drk11 {display: none;}
-  .drk12 {display: none;}
-  .drk13 {display: none;}
+  .drk1 {grid-area: 12 / 7 / 14 / 9;}
+  .drk2 {grid-area: 9 / 6 / 11 / 8;}
+  .drk3 {grid-area: 13 / 2 / 15 / 4;}
+  .drk4 {grid-area: 17 / 4 / 18 / 5;}
+  .drk5 {grid-area: 8 / 1 / 10 / 3;}
+  .drk6 {grid-area: 9 / 4 / 10 / 5;}
+  .drk7 {grid-area: 16 / 1 / 18 / 3;}
+  .drk8 {grid-area: 13 / 5 / 14 / 6;}
+  .drk9 {grid-area: 17 / 6 / 18 / 7; display: inherit;}
+  .drk10 {grid-area: 17 / 8 / 18 / 9; display: inherit;}
+  .drk11 {grid-area: 5 / 2 / 7 / 4; display: inherit;}
+  .drk12 {grid-area: 5 / 7 / 6 / 8; display: inherit;}
+  .drk13 {grid-area: 5 / 5 / 6 / 6; display: inherit;}
 
-  .med1 {grid-area: 14 / 4 / 16 / 6;}
-  .med2 {grid-area: 11 / 3 / 12 / 4;}
-  .med3 {grid-area: 6 / 8 / 7 / 9;}
-  .med4 {grid-area: 7 / 7 / 8 / 8;}
-  .med5 {grid-area: 11 / 1 / 12 / 2;}
-  .med6 {grid-area: 5 / 5 / 6 / 6;}
-  .med7 {grid-area: 8 / 6 / 9 / 7;}
-  .med8 {grid-area: 13 / 3 / 14 / 4; display: inherit;}
-  .med9 {grid-area: 13 / 7 / 14 / 8; display: inherit;}
-  .med10 {grid-area: 9 / 1 / 10 / 2; display: inherit;}
-  .med11 {display: none;}
-  .med12 {display: none;}
-  .med13 {display: none;}
+  .med1 {grid-area: 18 / 4 / 20 / 6;}
+  .med2 {grid-area: 15 / 3 / 16 / 4;}
+  .med3 {grid-area: 10 / 8 / 11 / 9;}
+  .med4 {grid-area: 11 / 7 / 12 / 8;}
+  .med5 {grid-area: 15 / 1 / 16 / 2;}
+  .med6 {grid-area: 9 / 5 / 10 / 6;}
+  .med7 {grid-area: 12 / 6 / 13 / 7;}
+  .med8 {grid-area: 17 / 3 / 18 / 4; display: inherit;}
+  .med9 {grid-area: 17 / 7 / 18 / 8; display: inherit;}
+  .med10 {grid-area: 13 / 1 / 14 / 2; display: inherit;}
+  .med11 {grid-area: 8 / 3 / 9 / 4; display: inherit;}
+  .med12 {grid-area: 6 / 1 / 7 / 2; display: inherit;}
+  .med13 {grid-area: 7 / 2 / 8 / 3; display: inherit;}
 
   .formholder {
     top:5vw;
@@ -1404,10 +1491,10 @@ padding-left: 8vw;
 .helping-hands .overview {height: 72vw;}
 .helping-hands .tools {height: 97vw;}
 .helping-hands .research {height:397vw;}
-.helping-hands .IA {height: 410vw;}
+.helping-hands .IA {height: 426vw;}
 .helping-hands .mockups {height: 475vw;}
 .helping-hands .branding {height:358vw;}
-.helping-hands .mvp {height: 135.5vw;}
+.helping-hands .mvp {height: 138vw;}
 .helping-hands .deliverable {height: 168vw;}
 .helping-hands .future {height: 215vw;}
 
@@ -1421,6 +1508,15 @@ padding-left: 8vw;
 .portfolio .deliverable {height: 121vw;}
 .portfolio .future {height: 129vw;}
 
+.cornucopia .overview {height: 78vw;}
+.cornucopia .tools {height: 97vw;}
+.cornucopia .research {height:446vw;}
+.cornucopia .IA {height: 243vw;}
+.cornucopia .mockups {height: 214vw;}
+.cornucopia .branding {height:305vw;}
+.cornucopia .mvp {height: 107vw;}
+.cornucopia .deliverable {height: 160vw;}
+.cornucopia .future {height: 152vw;}
 
 .helping-hands .overview { background-image: url("../images/hh_overview_wide.svg"); }
 .helping-hands .tools { background-image: url("../images/hh_tools_wide.svg"); }
@@ -1441,6 +1537,43 @@ padding-left: 8vw;
 .portfolio .mvp { background-image: url("../images/pt_mvp_wide.svg"); }
 .portfolio .deliverable { background-image: url("../images/pt_deliverable_wide.svg"); }
 .portfolio .future { background-image: url("../images/pt_future_wide.svg"); }
+
+.cornucopia .overview { background-image: url("../images/corn_overview_wide.svg"); }
+.cornucopia .tools { background-image: url("../images/corn_toolsdeliverable_wide.svg"); }
+.cornucopia .research { background-image: url("../images/corn_research_wide.svg"); }
+.cornucopia .IA { background-image: url("../images/corn_ia_wide.svg"); }
+.cornucopia .mockups { background-image: url("../images/corn_mockups_wide.svg"); }
+.cornucopia .branding { background-image: url("../images/corn_branding_wide.svg"); }
+.cornucopia .mvp { background-image: url("../images/corn_mvp_wide.svg"); }
+.cornucopia .deliverable { background-image: url("../images/corn_deliverable_wide.svg"); }
+.cornucopia .future { background-image: url("../images/corn_future_wide.svg"); }
+
+.corn-del1 {
+  width: 35vw;
+  margin: auto;
+}
+
+.surveypiece {
+  width: 18vw;
+}
+
+.surveyicon {
+  width: 7vw;
+  padding-bottom: 10vw;
+  margin-left: 7vw;
+}
+
+.surveydetail {
+  width: 15vw;
+  margin-left: 0;
+}
+
+.pctg {
+  font-size: 3vw;
+  margin-top: -14vw;
+  margin-bottom: 1vw;
+  margin-left: 0;
+}
 
 td, .tdfront {font-size: 2vw;}
 
@@ -1475,14 +1608,21 @@ table {
   padding-bottom: 5vw;
 }
 
-
-.chart_r { width: 30vw; }
+.chart_r {
+  width: 30vw;
+  padding-top: 5vw;
+}
 
 .chart_r img { width:23vw; }
 
 .chart {
   padding-bottom: 3vw;
   margin-bottom: -8vw;
+}
+
+.chart_title {
+  font-size: 2.5vw;
+  padding-bottom: 5vw;
 }
 
   .subimg img, .subi img {
@@ -1517,6 +1657,10 @@ table {
 
   .portfolio .study-title {
     background-image: url("../images/pt_phone_large.png");
+  }
+
+  .cornucopia .study-title {
+    background-image: url("../images/corn_title_large.jpg");
   }
 
   .sub-blurb {
@@ -1682,6 +1826,11 @@ table {
     width: 32vw;
   }
 
+  .button {
+    margin-top: 30px;
+    margin-bottom: 60px;
+  }
+
   .sigprinted {
     font-size: 3.6vw;
     right: 3vw;
@@ -1697,19 +1846,25 @@ table {
     width: 15vw;
   }
 
+  th p {
+    line-height: 25px;
+  }
+
+  .cornicon { width: 22.5vw; }
+
   .main-grid, .case-study {
     grid-template-columns: repeat(10, calc(100vw/10));
     grid-auto-rows: calc(100vw/10);
   }
 
   .signature {grid-area: 1 / 1 / 6 / 11;}
-  .blog{grid-area: 17 / 7 / 20 / 11;}
-  .about-me {grid-area: 17 / 1 / 20 / 5;}
-  .helping-hands {grid-area: 7 / 1 / 11 / 8;}
-  .cornucopia {grid-area: 3 / 9 / 7 / 11;}
+  .blog{grid-area: 15 / 5 / 18 / 11;}
+  .about-me {grid-area: 12 / 1 / 17 / 4;}
+  .helping-hands {grid-area: 7 / 6 / 10 / 11;}
+  .cornucopia {grid-area: 7 / 1 / 11 / 5;}
   .airport-navigator {grid-area: 5 / 3 / 7 / 7;}
-  .portfolio { grid-area: 12 / 4 / 16 / 11;}
-  .contact-info { grid-area: 19 / 8 / 20 / 11; }
+  .portfolio { grid-area: 11 / 6 / 14 / 11;}
+  .contact-info { grid-area: 17 / 8 / 18 / 11; }
 
   .contact-info img {
     width: 5vw;
@@ -1721,32 +1876,32 @@ table {
 
   .contact-info {top:7vw;}
 
-  .drk1 {grid-area: 14 / 2 / 16 / 4;}
+  .drk1 {grid-area: 15 / 4 / 16 / 5;}
   .drk2 {grid-area: 6 / 10 / 7 / 11;}
   .drk3 {grid-area: 6 / 5 / 7 / 6;}
-  .drk4 {grid-area: 18 / 5 / 20 / 7; display: inherit;}
-  .drk5 {grid-area: 9 / 8 / 12 / 11; display: inherit;}
+  .drk4 {grid-area: 17 / 2 / 18 / 3; display: inherit;}
+  .drk5 {grid-area: 10 / 9 / 11 / 10; display: inherit;}
   .drk6 {grid-area: 6 / 1 / 7 / 2; display: inherit;}
-  .drk7 {grid-area: 16 / 7 / 17 / 8; display: inherit;}
-  .drk8 {grid-area: 15 / 1 / 16 / 2; display: inherit;}
-  .drk9 {grid-area: 13 / 1 / 16 / 4; display: inherit;}
-  .drk10 {grid-area: 7 / 8 / 8 / 9; display: inherit;}
-  .drk11 {grid-area: 16 / 4 / 17 / 5; display: inherit;}
+  .drk7 {grid-area: 14 / 7 / 15 / 8; display: inherit;}
+  .drk8 {grid-area: 14 / 10 / 15 / 11; display: inherit;}
+  .drk9 {grid-area: 12 / 4 / 14 / 6; display: inherit;}
+  .drk10 {grid-area: 10 / 5 / 11 / 6; display: inherit;}
+  .drk11 {grid-area: 17 / 4 / 18 / 5; display: inherit;}
   .drk12 {grid-area: 11 / 3 / 12 / 4; display: inherit;}
   .drk13 {grid-area: 6 / 8 / 7 / 9; display: inherit;}
 
   .med1 {grid-area: 6 / 2 / 7 / 3;}
   .med2 {grid-area: 6 / 4 / 7 / 5;}
-  .med3 {grid-area: 16 / 3 / 17 / 4; display: inherit;}
+  .med3 {grid-area: 17 / 3 / 18 / 4; display: inherit;}
   .med4 {grid-area: 6 / 6 / 7 / 7; display: inherit;}
-  .med5 {grid-area: 16 / 9 / 17 / 10; display: inherit;}
-  .med6 {grid-area: 17 / 6 / 18 / 7; display: inherit;}
-  .med7 {grid-area: 7 / 9 / 9 / 11; display: inherit;}
-  .med8 {grid-area: 11 / 1 / 13 / 3; display: inherit;}
+  .med5 {grid-area: 14 / 9 / 15 / 10; display: inherit;}
+  .med6 {grid-area: 10 / 10 / 11 / 11; display: inherit;}
+  .med7 {grid-area: 8 / 5 / 9 / 6; display: inherit;}
+  .med8 {grid-area: 11 / 1 / 12 / 2; display: inherit;}
   .med9 {grid-area: 11 / 5 / 12 / 6; display: inherit;}
-  .med10 {grid-area: 16 / 5 / 17 / 6; display: inherit;}
-  .med11 {grid-area: 11 / 7 / 12 / 8; display: inherit;}
-  .med12 {grid-area: 16 / 1 / 17 / 2; display: inherit;}
+  .med10 {grid-area: 14 / 5 / 15 / 6; display: inherit;}
+  .med11 {grid-area: 10 / 7 / 11 / 8; display: inherit;}
+  .med12 {grid-area: 17 / 1 / 18 / 2; display: inherit;}
   .med13 {grid-area: 6 / 8 / 7 / 9; display: inherit;}
 
   .formholder {
@@ -1794,7 +1949,7 @@ table {
 .helping-hands .overview {height: 548px;}
 .helping-hands .tools {height: 810px;}
 .helping-hands .research {height: 3326px;}
-.helping-hands .IA {height: 3518px;}
+.helping-hands .IA {height: 3738px;}
 .helping-hands .mockups {height: 4347px;}
 .helping-hands .branding {height:3185px;}
 .helping-hands .mvp {height: 1207px;}
@@ -1811,6 +1966,36 @@ table {
 .portfolio .deliverable {height: 1134px;}
 .portfolio .future {height: 1100px;}
 
+.cornucopia .overview {height: 623px;}
+.cornucopia .tools {height: 810px;}
+.cornucopia .research {height: 3772px;}
+.cornucopia .IA {height: 2124px;}
+.cornucopia .mockups {height: 1900px;}
+.cornucopia .branding {height:2538px;}
+.cornucopia .mvp {height: 914px;}
+.cornucopia .deliverable {height: 1543px;}
+.cornucopia .future {height: 1200px;}
+
+.surveypiece {
+  width: 185px;
+  padding: 20px 0;
+}
+
+.surveyicon {
+  width: 65px;
+  padding-bottom: 120px;
+  margin-left: 80px;
+}
+
+.surveydetail {
+  width: 160px;
+}
+
+.pctg {
+  font-size: 35px;
+  margin-top: -152px;
+  margin-bottom: 15px;
+}
 
   .sub-blurb {
     font-size: 45px;
@@ -1843,6 +2028,7 @@ table {
   .chart_l .alist {
     padding-bottom:2px;
     top: -40px;
+/*    padding-top: 60px;*/
   }
 
   .chart_r {
@@ -1853,6 +2039,11 @@ table {
   .chart_r img {width: 220px;}
 
   .chart {padding-bottom: 100px;}
+
+  .chart_title {
+    font-size: 24px;
+    padding-bottom: 60px;
+  }
 
   .content th p {
     font-size: 18px;
@@ -2072,6 +2263,14 @@ table {
 
     .case-study {height:10800px;}
 
+    .corn-del1 {
+      width: 400px;
+    }
+
+    .button div {
+      padding: 10px 20px;
+    }
+
 }
 
 
@@ -2111,6 +2310,8 @@ table {
     width: 10vw;
   }
 
+  .cornicon { width: 15vw; }
+
   .subtitle_icon {
     font-size: 1.3vw;
     margin: 20px auto 10px;
@@ -2129,10 +2330,10 @@ table {
   .signature {grid-area: 1 / 1 / 7 / 15;}
   .blog {grid-area: 13 / 9 / 16 / 14;}
   .about-me {grid-area: 13 / 2 / 16 / 7;}
-  .helping-hands {grid-area: 8 / 1 / 12 / 7;}
-  .cornucopia {grid-area: 3 / 11 / 5 / 15;}
+  .helping-hands {grid-area: 8 / 1 / 12 / 5;}
+  .cornucopia {grid-area: 8 / 6 / 12 / 10;}
   .airport-navigator {grid-area: 5 / 2 / 7 / 6;}
-  .portfolio { grid-area: 8 / 9 / 12 / 15;}
+  .portfolio { grid-area: 8 / 11 / 12 / 15;}
   .contact-info { grid-area: 15 / 12 / 16 / 15; }
 
   .contact-info img {
@@ -2143,8 +2344,8 @@ table {
 
   .drk1 {grid-area: 7 / 1 / 8 / 2;}
   .drk2 {grid-area: 7 / 13 / 8 / 14;}
-  .drk3 {grid-area: 7 / 5 / 8 / 6;}
-  .drk4 {grid-area: 8 / 7 / 9 / 8;}
+  .drk3 {grid-area: 10 / 10 / 11 / 11;}
+  .drk4 {grid-area: 9 / 5 / 10 / 6;}
   .drk5 {grid-area: 15 / 1 / 16 / 2;}
   .drk6 {grid-area: 7 / 10 / 8 / 11; display: inherit;}
   .drk7 {grid-area: 7 / 8 / 8 / 9; display: inherit;}
@@ -2153,7 +2354,7 @@ table {
   .drk10 {grid-area: 12 / 2 / 13 / 3; display: inherit;}
   .drk11 {grid-area: 14 / 7 / 16 / 9; display: inherit;}
   .drk12 {grid-area: 13 / 14 / 14 / 15; display: inherit;}
-  .drk13 {grid-area: 10 / 7 / 12 / 9; display: inherit;}
+  .drk13 {grid-area: 11 / 5 / 12 / 6; display: inherit;}
 
   .med1 {grid-area: 12 / 8 / 13 / 9;}
   .med2 {grid-area: 7 / 11 / 8 / 12;}
@@ -2167,7 +2368,7 @@ table {
   .med10 {grid-area: 13 / 7 / 14 / 8; display: inherit;}
   .med11 {grid-area: 12 / 12 / 13 / 13; display: inherit;}
   .med12 {grid-area: 7 / 9 / 8 / 10; display: inherit;}
-  .med13 {grid-area: 9 / 8 / 10 / 9; display: inherit;}
+  .med13 {grid-area: 9 / 10 / 10 / 11; display: inherit;}
 
   .formholder {
     top:5vw;
